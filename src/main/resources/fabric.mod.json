@@ -1,0 +1,52 @@
+{
+	"schemaVersion": 1,
+	"id": "ghostcraft",
+	"version": "${version}",
+	"name": "GhostCraft",
+	"description": "The official GhostCraft mod.",
+	"authors": [
+		"klepticat",
+		"chilliplier",
+		"mortemos"
+	],
+	"contact": {
+		"homepage": "https://klepticat.neocities.org/"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/ghostcraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "org.klepticat.ghostcraft.GhostCraft"
+		],
+		"client": [
+			"org.klepticat.ghostcraft.GhostCraftClient"
+		],
+		"cardinal-components": [
+			"org.klepticat.ghostcraft.AllCardinalComponents"
+		]
+	},
+	"mixins": [
+		"ghostcraft.mixins.json",
+		{
+			"config": "ghostcraft.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*",
+		"cloth-config": "15.0.140",
+		"bettercombat": "2.0.3+1.21.1",
+		"playeranimator": "2.0.0-alpha1+1.21",
+		"trinkets": "3.10.0"
+	},
+
+	"custom": {
+		"cardinal-components": [
+			"ghostcraft:totem_tracker"
+		]
+	}
+}

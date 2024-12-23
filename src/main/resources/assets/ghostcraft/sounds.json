@@ -1,0 +1,12 @@
+{
+  "spell_cast": {
+    "sounds": [
+      "ghostcraft:item/spell"
+    ]
+  },
+  "totem_place": {
+    "sounds": [
+      "ghostcraft:item/totem_place"
+    ]
+  }
+}

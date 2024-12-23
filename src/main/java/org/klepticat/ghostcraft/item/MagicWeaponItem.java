@@ -1,0 +1,137 @@
+package org.klepticat.ghostcraft.item;
+
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.ProjectileEntity;
+import net.minecraft.item.BowItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.particle.DustParticleEffect;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.stat.Stats;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.UseAction;
+import net.minecraft.world.World;
+import org.joml.Vector3f;
+import org.klepticat.ghostcraft.AllSounds;
+import org.klepticat.ghostcraft.entity.SpellProjectileEntity;
+
+// TODO: Remove requirement for arrow ammo in inventory
+// TODO: Remove all references to arrows/bows. Eventually convert to extending RangedWeaponItem once all bow functionality is copied over?
+public class MagicWeaponItem extends BowItem {
+
+    private float projectileSpeed = 2.0f;
+    private MagicType magicType;
+
+    public MagicWeaponItem(MagicType magicType, Settings settings) {
+        super(settings);
+        this.magicType = magicType;
+    }
+
+    public MagicWeaponItem(Settings settings) {
+        super(settings);
+        this.magicType = MagicType.POTENT;
+    }
+
+    public Vector3f getMagicColor() {
+        switch(this.magicType) {
+            case MAGIC -> { return new Vector3f(0.66f, 0.0f, 0.66f); }
+            case DIRE -> { return new Vector3f(0.66f, 0.0f, 0.0f); }
+            case POTENT -> { return new Vector3f(0.33f, 1.0f, 0.33f); }
+            case ETHEREAL -> { return new Vector3f(0.33f, 0.33f, 1.0f); }
+            default -> { return new Vector3f(1.0f, 1.0f, 1.0f); }
+        }
+    }
+
+    public static float getPullTime() { return 5.0f; }
+
+    protected void shootAll(
+            ServerWorld world,
+            LivingEntity shooter,
+            Hand hand,
+            ItemStack stack,
+            float speed,
+            float divergence,
+            boolean critical
+    ) {
+        ItemStack itemStack = Items.ARROW.getDefaultStack();
+
+        ProjectileEntity projectileEntity = this.createArrowEntity(world, shooter, stack, itemStack, critical);
+        this.shoot(shooter, projectileEntity, speed, divergence);
+        world.spawnEntity(projectileEntity);
+        stack.damage(this.getWeaponStackDamage(itemStack), shooter, LivingEntity.getSlotForHand(hand));
+    }
+
+    @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        ItemStack itemStack = user.getStackInHand(hand);
+        user.setCurrentHand(hand);
+        return TypedActionResult.consume(itemStack);
+    }
+
+    @Override
+    public UseAction getUseAction(ItemStack stack) {
+        return UseAction.NONE;
+    }
+
+    public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
+        if (user instanceof PlayerEntity playerEntity) {
+            // gets number of ticks weapon has been pulled back for
+            int usedTime = this.getMaxUseTime(stack, user) - remainingUseTicks;
+            float f = Math.min(1.0f, usedTime / this.getPullTime());
+            if (!((double)f < 0.9)) {
+                if (world instanceof ServerWorld serverWorld) {
+                    this.shootAll(serverWorld, playerEntity, playerEntity.getActiveHand(), stack, projectileSpeed, 0.5F, f == 1.0F);
+                }
+
+                world.playSound(
+                        null,
+                        playerEntity.getX(),
+                        playerEntity.getY(),
+                        playerEntity.getZ(),
+                        AllSounds.SPELL_CAST,
+                        SoundCategory.PLAYERS,
+                        1.0F,
+                        1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F
+                );
+                playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
+            }
+        }
+    }
+
+    public static float getPullProgress(int useTicks) {
+        float f = (float)useTicks / 20.0F;
+        f = (f * f + f * 2.0F) / 3.0F;
+        if (f > 1.0F) {
+            f = 1.0F;
+        }
+
+        return f;
+    }
+
+    protected void shoot(LivingEntity shooter, ProjectileEntity projectile, float speed, float divergence) {
+        projectile.setVelocity(shooter, shooter.getPitch(), shooter.getYaw(), 0.0F, speed, divergence);
+    }
+
+    protected ProjectileEntity createArrowEntity(World world, LivingEntity shooter, ItemStack weaponStack, ItemStack projectileStack, boolean critical) {
+        ProjectileEntity projectileEntity = new SpellProjectileEntity(this.magicType, shooter, world);
+
+        return projectileEntity;
+    }
+
+//    @Override
+//    public int getMaxUseTime(ItemStack stack, LivingEntity user) {
+//        return 10000;
+//    }
+
+    @Override
+    public void usageTick(World world, LivingEntity user, ItemStack stack, int remainingUseTicks) {
+        if((this.getMaxUseTime(stack, user) - remainingUseTicks) >= 5 && !world.isClient) {
+            if(world instanceof ServerWorld serverWorld) {
+                serverWorld.spawnParticles(new DustParticleEffect(this.getMagicColor(),1.0f), user.getX(), user.getEyeY(), user.getZ(), 1, 0.5f, 0.5f, 0.5f, 5);
+            }
+        }
+    }
+}
