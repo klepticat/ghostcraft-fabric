@@ -1,7 +1,22 @@
 {
-  "spell_cast": {
+  "dire_charge": {
     "sounds": [
-      "ghostcraft:item/spell"
+      "ghostcraft:item/magic/dire_charge"
+    ]
+  },
+  "ethereal_charge": {
+    "sounds": [
+      "ghostcraft:item/magic/ethereal_charge"
+    ]
+  },
+  "magic_charge": {
+    "sounds": [
+      "ghostcraft:item/magic/magic_charge"
+    ]
+  },
+  "potent_charge": {
+    "sounds": [
+      "ghostcraft:item/magic/potent_charge"
     ]
   },
   "totem_place": {
