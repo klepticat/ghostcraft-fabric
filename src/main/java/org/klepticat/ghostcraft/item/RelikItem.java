@@ -2,7 +2,6 @@ package org.klepticat.ghostcraft.item;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.decoration.ArmorStandEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
@@ -11,7 +10,6 @@ import net.minecraft.item.ItemUsageContext;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
@@ -21,6 +19,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import org.klepticat.ghostcraft.AllEntityTypes;
 import org.klepticat.ghostcraft.AllSounds;
+import org.klepticat.ghostcraft.GhostCraft;
 import org.klepticat.ghostcraft.entity.TotemEntity;
 
 import java.util.function.Consumer;
@@ -32,8 +31,15 @@ public class RelikItem extends Item {
     // TODO: the radii of two totems shouldn't be able to overlap - distFromAToB > radiusA + radiusB
     // TODO: per-totem cooldowns
     // TODO: per-totem entity uptime
+    private double radius = 5.0;
+
     public RelikItem(Settings settings) {
         super(settings);
+    }
+
+    public RelikItem(double radius, Settings settings) {
+        this(settings);
+        this.radius = radius;
     }
 
     @Override
@@ -58,7 +64,7 @@ public class RelikItem extends Item {
 
                 if (world instanceof ServerWorld serverWorld) {
                     Consumer<ArmorStandEntity> consumer = EntityType.copier(serverWorld, itemStack, context.getPlayer());
-                    TotemEntity totem = new TotemEntity(AllEntityTypes.TOTEM, this, context.getPlayer(), serverWorld);
+                    TotemEntity totem = new TotemEntity(AllEntityTypes.TOTEM, this, this.radius, context.getPlayer(), serverWorld);
                     if (totem == null) {
                         return ActionResult.FAIL;
                     }

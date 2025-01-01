@@ -15,7 +15,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import org.klepticat.ghostcraft.AllItems;
+import org.klepticat.ghostcraft.AllCardinalComponents;
 import org.klepticat.ghostcraft.item.RelikItem;
 
 import java.util.UUID;
@@ -26,11 +26,11 @@ public class TotemEntity extends Entity implements Ownable {
     private Entity owner;
     private Box visibilityBoundingBox;
 
-    public TotemEntity(EntityType<? extends Entity> entityType, RelikItem totemItem, World world) {
-        super(entityType, world);
-        dataTracker.set(ITEM, totemItem.getDefaultStack());
-        this.visibilityBoundingBox = this.getBoundingBox();
-        this.ignoreCameraFrustum = true;
+    public double currentRadius = 0.0;
+
+    public TotemEntity(EntityType<? extends Entity> entityType, RelikItem totemItem, double radius, Entity owner, World world) {
+        this(entityType, totemItem, owner, world);
+        this.getComponent(AllCardinalComponents.TOTEM_RADIUS_TRACKER).set(radius);
     }
 
     public TotemEntity(EntityType<? extends Entity> entityType, RelikItem totemItem, Entity owner, World world) {
@@ -103,4 +103,11 @@ public class TotemEntity extends Entity implements Ownable {
     }
 
     public boolean isOwner(Entity entity) { return entity.getUuid().equals(this.ownerUuid); }
+
+    @Override
+    public void tick() {
+        super.tick();
+
+        if(this.currentRadius < this.getComponent(AllCardinalComponents.TOTEM_RADIUS_TRACKER).get()) this.currentRadius += this.getComponent(AllCardinalComponents.TOTEM_RADIUS_TRACKER).get() / 10.0;
+    }
 }
