@@ -18,8 +18,9 @@ import org.joml.Vector3f;
 import org.klepticat.ghostcraft.AllSounds;
 import org.klepticat.ghostcraft.entity.SpellProjectileEntity;
 
-// TODO: Remove requirement for arrow ammo in inventory
-// TODO: Remove all references to arrows/bows. Eventually convert to extending RangedWeaponItem once all bow functionality is copied over?
+// TODO: Remove all references to arrows/bows. Eventually convert to extending RangedWeaponItem once all bow functionality is copied over? - 70% there
+// TODO: add better visual/audio cues. gamefeel isn't good enough when charging.
+// TODO: dire: evil, sinister, dark, growly, grizzly, necromancy / ethereal: holy, light magic, healing magic / potent: goopy, mutation magic, transmutation magic / magic: generic magic sound, sparkly, twinkly, ars magica/noveau type sound?
 public class MagicWeaponItem extends BowItem {
 
     private float projectileSpeed = 2.0f;
@@ -35,17 +36,12 @@ public class MagicWeaponItem extends BowItem {
         this.magicType = MagicType.POTENT;
     }
 
-    public Vector3f getMagicColor() {
-        switch(this.magicType) {
-            case MAGIC -> { return new Vector3f(0.66f, 0.0f, 0.66f); }
-            case DIRE -> { return new Vector3f(0.66f, 0.0f, 0.0f); }
-            case POTENT -> { return new Vector3f(0.33f, 1.0f, 0.33f); }
-            case ETHEREAL -> { return new Vector3f(0.33f, 0.33f, 1.0f); }
-            default -> { return new Vector3f(1.0f, 1.0f, 1.0f); }
-        }
+        if(this.magicType == null) this.magicType = MagicType.MAGIC;
     }
 
-    public static float getPullTime() { return 5.0f; }
+    public float getPullTime() { return this.chargeTime; }
+
+    public static int getWeaponStackDamage() { return 1; }
 
     protected void shootAll(
             ServerWorld world,
@@ -91,9 +87,9 @@ public class MagicWeaponItem extends BowItem {
                         playerEntity.getX(),
                         playerEntity.getY(),
                         playerEntity.getZ(),
-                        AllSounds.SPELL_CAST,
+                        this.magicType.soundEvent,
                         SoundCategory.PLAYERS,
-                        1.0F,
+                        this.magicType.volume,
                         1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F
                 );
                 playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
@@ -121,16 +117,11 @@ public class MagicWeaponItem extends BowItem {
         return projectileEntity;
     }
 
-//    @Override
-//    public int getMaxUseTime(ItemStack stack, LivingEntity user) {
-//        return 10000;
-//    }
-
     @Override
     public void usageTick(World world, LivingEntity user, ItemStack stack, int remainingUseTicks) {
-        if((this.getMaxUseTime(stack, user) - remainingUseTicks) >= 5 && !world.isClient) {
-            if(world instanceof ServerWorld serverWorld) {
-                serverWorld.spawnParticles(new DustParticleEffect(this.getMagicColor(),1.0f), user.getX(), user.getEyeY(), user.getZ(), 1, 0.5f, 0.5f, 0.5f, 5);
+        if((this.getMaxUseTime(stack, user) - remainingUseTicks) >= this.getPullTime() && !world.isClient) {
+            if(world instanceof ServerWorld serverWorld && (remainingUseTicks % 2 == 0)) {
+                serverWorld.spawnParticles(new DustParticleEffect(this.magicType.color,1.0f), user.getX(), user.getEyeY(), user.getZ(), 1, 0.5f, 0.5f, 0.5f, 5);
             }
         }
     }

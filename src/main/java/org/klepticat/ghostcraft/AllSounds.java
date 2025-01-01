@@ -8,7 +8,10 @@ import net.minecraft.util.Identifier;
 import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
 
 public class AllSounds {
-    public static final SoundEvent SPELL_CAST = register("spell_cast");
+    public static final SoundEvent DIRE_CHARGE = register("dire_charge");
+    public static final SoundEvent MAGIC_CHARGE = register("magic_charge");
+    public static final SoundEvent ETHEREAL_CHARGE = register("ethereal_charge");
+    public static final SoundEvent POTENT_CHARGE = register("potent_charge");
     public static final SoundEvent TOTEM_PLACE = register("totem_place");
 
     public static void initialize() {}

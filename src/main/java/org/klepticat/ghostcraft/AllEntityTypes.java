@@ -11,7 +11,7 @@ import org.klepticat.ghostcraft.entity.TotemEntity;
 import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
 
 public class AllEntityTypes {
-    public static EntityType SPELL_PROJECTILE = register("spell_projectile", SpellProjectileEntity::new, 0.1f, 0.1f);
+    public static EntityType SPELL_PROJECTILE = register("spell_projectile", SpellProjectileEntity::new, 0.5f, 0.5f);
     public static EntityType TOTEM = register("totem", TotemEntity::new, 0.5f, 1.975f);
 
     public static void initialize() {}

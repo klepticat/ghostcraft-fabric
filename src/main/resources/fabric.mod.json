@@ -46,7 +46,8 @@
 
 	"custom": {
 		"cardinal-components": [
-			"ghostcraft:totem_tracker"
+			"ghostcraft:totem_tracker",
+			"ghostcraft:magic_type_tracker"
 		]
 	}
 }

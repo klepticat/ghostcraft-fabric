@@ -71,7 +71,7 @@ public class RelikItem extends Item {
                     totem.refreshPositionAndAngles(totem.getX(), totem.getY(), totem.getZ(), f, 0.0F);
                     serverWorld.spawnEntityAndPassengers(totem);
                     world.playSound(
-                            null, vec3d.x, vec3d.y, vec3d.z, AllSounds.TOTEM_PLACE, SoundCategory.PLAYERS, 1.0F, 1.0F
+                            null, vec3d.x, vec3d.y, vec3d.z, AllSounds.TOTEM_PLACE, SoundCategory.PLAYERS, 2.0F, 1.0F
                     );
                     serverWorld.spawnParticles(ParticleTypes.CLOUD, vec3d.x, vec3d.y, vec3d.z, 15, 0.2, 1.0, 0.2, 0.05);
                     totem.emitGameEvent(GameEvent.ENTITY_PLACE, context.getPlayer());
