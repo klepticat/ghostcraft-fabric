@@ -10,12 +10,13 @@ public class TotemTracker implements UUIDComponent {
 
     @Override
     public void readFromNbt(NbtCompound tag, RegistryWrapper.WrapperLookup registryLookup) {
-        this.totemUUID = tag.getUuid("uuid");
+        if(tag.containsUuid("uuid")) this.totemUUID = tag.getUuid("uuid");
+        else this.totemUUID = null;
     }
 
     @Override
     public void writeToNbt(NbtCompound tag, RegistryWrapper.WrapperLookup registryLookup) {
-        tag.putUuid("uuid", this.getUuid());
+        if(totemUUID != null) tag.putUuid("uuid", this.getUuid());
     }
 
     @Override
