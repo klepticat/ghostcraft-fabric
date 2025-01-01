@@ -28,6 +28,10 @@ import java.util.function.Consumer;
 import static org.klepticat.ghostcraft.AllCardinalComponents.TOTEM_TRACKER;
 
 public class RelikItem extends Item {
+    // TODO: radius buffs, different per-item type, maybe a tick method defined per item type? - method reference?
+    // TODO: the radii of two totems shouldn't be able to overlap - distFromAToB > radiusA + radiusB
+    // TODO: per-totem cooldowns
+    // TODO: per-totem entity uptime
     public RelikItem(Settings settings) {
         super(settings);
     }
