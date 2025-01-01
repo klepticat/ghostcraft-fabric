@@ -28,9 +28,10 @@ public class TotemEntity extends Entity implements Ownable {
 
     public double currentRadius = 0.0;
 
-    public TotemEntity(EntityType<? extends Entity> entityType, RelikItem totemItem, double radius, Entity owner, World world) {
+    public TotemEntity(EntityType<? extends Entity> entityType, RelikItem totemItem, double radius, int uptime, Entity owner, World world) {
         this(entityType, totemItem, owner, world);
         this.getComponent(AllCardinalComponents.TOTEM_RADIUS_TRACKER).set(radius);
+        this.getComponent(AllCardinalComponents.TOTEM_UPTIME_TRACKER).set(uptime);
     }
 
     public TotemEntity(EntityType<? extends Entity> entityType, RelikItem totemItem, Entity owner, World world) {
@@ -108,6 +109,12 @@ public class TotemEntity extends Entity implements Ownable {
     public void tick() {
         super.tick();
 
+        if(this.age >= this.getComponent(AllCardinalComponents.TOTEM_UPTIME_TRACKER).get() && this.getOwner() != null) {
+            this.getOwner().getComponent(AllCardinalComponents.TOTEM_TRACKER).setUuid(null);
+            this.discard();
+        }
+
         if(this.currentRadius < this.getComponent(AllCardinalComponents.TOTEM_RADIUS_TRACKER).get()) this.currentRadius += this.getComponent(AllCardinalComponents.TOTEM_RADIUS_TRACKER).get() / 10.0;
+        else this.currentRadius = this.getComponent(AllCardinalComponents.TOTEM_RADIUS_TRACKER).get();
     }
 }

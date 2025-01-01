@@ -1068,8 +1068,8 @@ public class AllItems {
         public static void initialize() {
         }
 
-        public static final Item ATL = register("atl", new RelikItem(5, new Item.Settings()));
-        public static final Item JACKS_POST = register("jacks_post", new RelikItem(15, new Item.Settings()));
+        public static final Item ATL = register("atl", new RelikItem(5, 300, new Item.Settings()));
+        public static final Item JACKS_POST = register("jacks_post", new RelikItem(15, 600, new Item.Settings()));
     }
 
     /**

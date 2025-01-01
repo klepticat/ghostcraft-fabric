@@ -16,6 +16,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.RotationAxis;
 import net.minecraft.util.math.Vec3d;
 import org.joml.Vector3f;
+import org.klepticat.ghostcraft.AllCardinalComponents;
 import org.klepticat.ghostcraft.GhostCraft;
 import org.klepticat.ghostcraft.entity.TotemEntity;
 
@@ -41,6 +42,7 @@ public class TotemEntityRenderer<T extends TotemEntity> extends EntityRenderer<T
         if (tickDelta < prevTickDelta) {
             double radius = totemEntity.currentRadius;
             int stepSize = 15;
+            double maxRadius = totemEntity.getComponent(AllCardinalComponents.TOTEM_RADIUS_TRACKER).get();
 
             Vec3d lastParticlePos = new Vec3d(totemEntity.getX() + radius, totemEntity.getY(), totemEntity.getZ());
 
@@ -49,14 +51,16 @@ public class TotemEntityRenderer<T extends TotemEntity> extends EntityRenderer<T
 
                 Vec3d particlePos = new Vec3d((radius) * Math.cos(angleRadians) + totemEntity.getX(), totemEntity.getY(), (radius) * Math.sin(angleRadians) + totemEntity.getZ());
 
-                ClientParticles.setParticleCount(10);
-                ClientParticles.spawnLine(
-                        new DustParticleEffect(new Vector3f(0.0f, 1.0f, 0.0f), 1.0f),
-                        totemEntity.getWorld(),
-                        lastParticlePos,
-                        particlePos,
-                        0.0f
-                );
+                if(maxRadius != 0.0) {
+                    ClientParticles.setParticleCount(10);
+                    ClientParticles.spawnLine(
+                            new DustParticleEffect(new Vector3f(0.0f, 1.0f, 0.0f), (float) (totemEntity.currentRadius / maxRadius)),
+                            totemEntity.getWorld(),
+                            lastParticlePos,
+                            particlePos,
+                            0.0f
+                    );
+                }
 
                 lastParticlePos = particlePos;
             }

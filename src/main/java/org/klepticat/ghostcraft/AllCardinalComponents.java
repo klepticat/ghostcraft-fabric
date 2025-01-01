@@ -5,6 +5,7 @@ import org.klepticat.ghostcraft.entity.SpellProjectileEntity;
 import org.klepticat.ghostcraft.entity.TotemEntity;
 import org.klepticat.ghostcraft.util.cardinalcomponent.MagicTypeTracker;
 import org.klepticat.ghostcraft.util.cardinalcomponent.TotemRadiusTracker;
+import org.klepticat.ghostcraft.util.cardinalcomponent.TotemUptimeTracker;
 import org.klepticat.ghostcraft.util.cardinalcomponent.TotemTracker;
 import org.ladysnake.cca.api.v3.component.ComponentKey;
 import org.ladysnake.cca.api.v3.component.ComponentRegistry;
@@ -18,11 +19,13 @@ public class AllCardinalComponents implements EntityComponentInitializer {
     public static final ComponentKey<TotemTracker> TOTEM_TRACKER = ComponentRegistry.getOrCreate(Identifier.of(MOD_ID, "totem_tracker"), TotemTracker.class);
     public static final ComponentKey<MagicTypeTracker> MAGIC_TYPE_TRACKER = ComponentRegistry.getOrCreate(Identifier.of(MOD_ID, "magic_type_tracker"), MagicTypeTracker.class);
     public static final ComponentKey<TotemRadiusTracker> TOTEM_RADIUS_TRACKER = ComponentRegistry.getOrCreate(Identifier.of(MOD_ID, "totem_radius_tracker"), TotemRadiusTracker.class);
+    public static final ComponentKey<TotemUptimeTracker> TOTEM_UPTIME_TRACKER = ComponentRegistry.getOrCreate(Identifier.of(MOD_ID, "totem_uptime_tracker"), TotemUptimeTracker.class);
 
     @Override
     public void registerEntityComponentFactories(EntityComponentFactoryRegistry registry) {
         registry.registerForPlayers(TOTEM_TRACKER, playerEntity -> new TotemTracker(), RespawnCopyStrategy.ALWAYS_COPY);
         registry.registerFor(SpellProjectileEntity.class, MAGIC_TYPE_TRACKER, spellProjectileEntity -> new MagicTypeTracker(spellProjectileEntity));
         registry.registerFor(TotemEntity.class, TOTEM_RADIUS_TRACKER, totemEntity -> new TotemRadiusTracker(totemEntity));
+        registry.registerFor(TotemEntity.class, TOTEM_UPTIME_TRACKER, totemEntity -> new TotemUptimeTracker());
     }
 }

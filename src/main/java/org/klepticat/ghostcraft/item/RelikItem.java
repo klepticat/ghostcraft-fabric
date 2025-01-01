@@ -19,7 +19,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import org.klepticat.ghostcraft.AllEntityTypes;
 import org.klepticat.ghostcraft.AllSounds;
-import org.klepticat.ghostcraft.GhostCraft;
 import org.klepticat.ghostcraft.entity.TotemEntity;
 
 import java.util.function.Consumer;
@@ -31,15 +30,17 @@ public class RelikItem extends Item {
     // TODO: the radii of two totems shouldn't be able to overlap - distFromAToB > radiusA + radiusB
     // TODO: per-totem cooldowns
     // TODO: per-totem entity uptime
-    private double radius = 5.0;
+    private double totemRadius = 5.0;
+    private int totemUptime = 0;
 
     public RelikItem(Settings settings) {
         super(settings);
     }
 
-    public RelikItem(double radius, Settings settings) {
+    public RelikItem(double totemRadius, int totemUptime, Settings settings) {
         this(settings);
-        this.radius = radius;
+        this.totemRadius = totemRadius;
+        this.totemUptime = totemUptime;
     }
 
     @Override
@@ -64,7 +65,7 @@ public class RelikItem extends Item {
 
                 if (world instanceof ServerWorld serverWorld) {
                     Consumer<ArmorStandEntity> consumer = EntityType.copier(serverWorld, itemStack, context.getPlayer());
-                    TotemEntity totem = new TotemEntity(AllEntityTypes.TOTEM, this, this.radius, context.getPlayer(), serverWorld);
+                    TotemEntity totem = new TotemEntity(AllEntityTypes.TOTEM, this, this.totemRadius, this.totemUptime, context.getPlayer(), serverWorld);
                     if (totem == null) {
                         return ActionResult.FAIL;
                     }
