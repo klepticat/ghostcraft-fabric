@@ -47,8 +47,7 @@ public abstract class EquipmentUseAnimationMixin {
                 matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees((float)l * -9.785F));
 
                 float mx = (float)item.getMaxUseTime(player) - ((float)player.getItemUseTimeLeft() - tickDelta + 1.0F);
-                GhostCraft.LOGGER.info(Float.toString(mx));
-                float fxx = mx / MagicWeaponItem.getPullTime();
+                float fxx = mx / ((MagicWeaponItem) item.getItem()).getPullTime();
                 fxx = (fxx * fxx + fxx * 2.0F) / 3.0F;
                 if (fxx > 1.0F) {
                     fxx = 1.0F;

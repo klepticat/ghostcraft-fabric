@@ -14,27 +14,31 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
-import org.joml.Vector3f;
-import org.klepticat.ghostcraft.AllSounds;
 import org.klepticat.ghostcraft.entity.SpellProjectileEntity;
 
 // TODO: Remove all references to arrows/bows. Eventually convert to extending RangedWeaponItem once all bow functionality is copied over? - 70% there
 // TODO: add better visual/audio cues. gamefeel isn't good enough when charging.
 // TODO: dire: evil, sinister, dark, growly, grizzly, necromancy / ethereal: holy, light magic, healing magic / potent: goopy, mutation magic, transmutation magic / magic: generic magic sound, sparkly, twinkly, ars magica/noveau type sound?
 public class MagicWeaponItem extends BowItem {
-
+    private int damage = 2;
+    private float chargeTime = 20.0f;
     private float projectileSpeed = 2.0f;
     private MagicType magicType;
 
+    public MagicWeaponItem(MagicType magicType, int damage, float chargeTime, Settings settings) {
+        this(magicType, settings);
+
+        this.damage = damage;
+        this.chargeTime = chargeTime;
+    }
+
     public MagicWeaponItem(MagicType magicType, Settings settings) {
-        super(settings);
+        this(settings);
         this.magicType = magicType;
     }
 
     public MagicWeaponItem(Settings settings) {
-        super(settings);
-        this.magicType = MagicType.POTENT;
-    }
+        super(settings.maxCount(1));
 
         if(this.magicType == null) this.magicType = MagicType.MAGIC;
     }
@@ -54,10 +58,10 @@ public class MagicWeaponItem extends BowItem {
     ) {
         ItemStack itemStack = Items.ARROW.getDefaultStack();
 
-        ProjectileEntity projectileEntity = this.createArrowEntity(world, shooter, stack, itemStack, critical);
+        ProjectileEntity projectileEntity = this.createProjectileEntity(world, shooter, critical);
         this.shoot(shooter, projectileEntity, speed, divergence);
         world.spawnEntity(projectileEntity);
-        stack.damage(this.getWeaponStackDamage(itemStack), shooter, LivingEntity.getSlotForHand(hand));
+        stack.damage(this.getWeaponStackDamage(), shooter, LivingEntity.getSlotForHand(hand));
     }
 
     @Override
@@ -74,7 +78,6 @@ public class MagicWeaponItem extends BowItem {
 
     public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
         if (user instanceof PlayerEntity playerEntity) {
-            // gets number of ticks weapon has been pulled back for
             int usedTime = this.getMaxUseTime(stack, user) - remainingUseTicks;
             float f = Math.min(1.0f, usedTime / this.getPullTime());
             if (!((double)f < 0.9)) {
@@ -111,8 +114,8 @@ public class MagicWeaponItem extends BowItem {
         projectile.setVelocity(shooter, shooter.getPitch(), shooter.getYaw(), 0.0F, speed, divergence);
     }
 
-    protected ProjectileEntity createArrowEntity(World world, LivingEntity shooter, ItemStack weaponStack, ItemStack projectileStack, boolean critical) {
-        ProjectileEntity projectileEntity = new SpellProjectileEntity(this.magicType, shooter, world);
+    protected ProjectileEntity createProjectileEntity(World world, LivingEntity shooter, boolean critical) {
+        ProjectileEntity projectileEntity = new SpellProjectileEntity(this.magicType, this.damage, shooter, world);
 
         return projectileEntity;
     }

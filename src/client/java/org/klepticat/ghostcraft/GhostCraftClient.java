@@ -55,7 +55,6 @@ public class GhostCraftClient implements ClientModInitializer {
 		TrinketRendererRegistry.registerRenderer(AllItems.KOBOLD_MASK, new HatRenderer());
 		TrinketRendererRegistry.registerRenderer(AllItems.LENNY_HAT, new HatRenderer());
 		TrinketRendererRegistry.registerRenderer(AllItems.LIL_SQUIRT_HAT, new HatRenderer());
-		TrinketRendererRegistry.registerRenderer(AllItems.OBSERVER_HAT, new HatRenderer());
 		TrinketRendererRegistry.registerRenderer(AllItems.ORC_CROWN_HAT, new HatRenderer());
 		TrinketRendererRegistry.registerRenderer(AllItems.POWER_TRIP_HAT, new HatRenderer());
 		TrinketRendererRegistry.registerRenderer(AllItems.PURPLE_FLORAL_CROWN_HAT, new HatRenderer());

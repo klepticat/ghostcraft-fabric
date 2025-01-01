@@ -15,10 +15,16 @@ import org.klepticat.ghostcraft.item.*;
 import static org.klepticat.ghostcraft.GhostCraft.LOGGER;
 import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
 
+/**
+ * @noinspection unused
+ */
 public class AllItems {
-    // WEAPONS
+    /**
+     * @noinspection unused
+     */ // WEAPONS
     static class AssassinItems {
-        public static void initialize() {};
+        public static void initialize() {
+        }
 
         public static final Item ASSASSINS_NUNCHUCKS = register("assassins_nunchucks", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -26,7 +32,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
         ));
         public static final Item BLOSSOM_SWORD = register("blossom_sword", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -34,7 +40,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
         ));
         public static final Item BONE_CHILL_BLADE = register("bone_chill_blade", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -42,7 +48,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item BURNING_KNIFE = register("burning_knife", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -50,7 +56,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item CANDLEKEEPERS_DIRK = register("candlekeepers_dirk", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -58,7 +64,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item CHILDS_COMPANION = register("childs_companion", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -66,7 +72,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item CLAW_GRIPPERS = register("claw_grippers", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -74,7 +80,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item COGWORK_BONESAW = register("cogwork_bonesaw", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -82,7 +88,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item CORRUPTED = register("corrupted", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -90,7 +96,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
         ));
         public static final Item CRESTED_LIFE_TAKER = register("crested_life_taker", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -98,7 +104,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item CYBERLIFE = register("cyberlife", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -106,7 +112,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
         ));
         public static final Item DAMNED_BLADE = register("damned_blade", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -114,7 +120,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item DEVILS_MAKER = register("devils_maker", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -122,7 +128,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item DREAM_RIPPER = register("dream_ripper", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -130,7 +136,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item DRUMSTICK = register("drumstick", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -138,7 +144,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item ELTORVURIA_BLADE = register("eltorvuria_blade", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -146,7 +152,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
         ));
         public static final Item ELVURS_SPITE = register("elvurs_spite", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -154,7 +160,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
         ));
         public static final Item EMERALD_CLAYMORE = register("emerald_claymore", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -162,7 +168,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item FERRYMANS_BARGAIN = register("ferrymans_bargain", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -170,7 +176,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item FOSSILIZED_KNIFE = register("fossilized_knife", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -178,7 +184,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item FROSTMOURN_CLAYMORE = register("frostmourn_claymore", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -186,7 +192,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item GARDEN_HOE = register("garden_hoe", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -194,7 +200,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item GEOMANCERS_ARCHAEOLOGY_MITT = register("geomancers_archaeology_mitt", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -202,7 +208,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item GOLDEN_PICK = register("golden_pick", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -210,7 +216,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item GRIPPERS = register("grippers", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -218,7 +224,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item HOOK = register("hook", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -226,7 +232,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item ICE_PICK = register("ice_pick", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -234,7 +240,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item IGNITED_KNIFE = register("ignited_knife", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -242,7 +248,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item INFECTED_HEROS_BLADE = register("infected_heros_blade", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -250,7 +256,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item IRONHOLM_BLADE = register("ironholm_blade", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -258,7 +264,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item JACKS_CRESCENT = register("jacks_crescent", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -266,7 +272,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
         ));
         public static final Item MAGENTA_MAYHEM = register("magenta_mayhem", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -274,7 +280,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item MEEPER = register("meeper", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -282,7 +288,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item MONTY = register("monty", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -290,7 +296,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item PERCOLATION = register("percolation", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -298,7 +304,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
         ));
         public static final Item PERMAFROST_BLADE = register("permafrost_blade", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -306,7 +312,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item POKIN_STICK = register("pokin_stick", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -314,7 +320,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item PRIDES_DANCE = register("prides_dance", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -322,7 +328,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item PUZZLING_KNIFE = register("puzzling_knife", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -330,7 +336,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item RAKKU_KUNAI = register("rakku_kunai", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -338,7 +344,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item RELIC_BLADE = register("relic_blade", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -346,7 +352,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item ROOKIE_KNIFE = register("rookie_knife", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -354,7 +360,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item RUBY_CRESTED_SHORTSWORD = register("ruby_crested_shortsword", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -362,7 +368,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item RUINED_BLADE = register("ruined_blade", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -370,7 +376,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item SAXOPHONE = register("saxophone", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -378,7 +384,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item SENTRY_GRASP = register("sentry_grasp", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -386,7 +392,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item SERAPHIM_SWORD = register("seraphim_sword", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -394,7 +400,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
         ));
         public static final Item SERPENTINE_SLICER = register("serpentine_slicer", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -402,7 +408,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item SHADEKIN_RAPIER = register("shadekin_rapier", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -410,7 +416,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item SILS_CLAW = register("sils_claw", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -418,7 +424,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
         ));
         public static final Item SIMPLE_KATANA = register("simple_katana", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -426,7 +432,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item SIPHON = register("siphon", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -434,7 +440,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item SOUL_STEALER = register("soul_stealer", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -442,7 +448,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item TEMPEST_TORRENT = register("tempest_torrent", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -450,7 +456,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item THIEFS_KNIFE = register("thiefs_knife", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -458,7 +464,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item TIORVAS_EMPATHY = register("tiorvas_empathy", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -466,7 +472,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
         ));
         public static final Item UNDERDARK_UNDERTAKER = register("underdark_undertaker", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -474,7 +480,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
         ));
         public static final Item UNDYING_LIGHT = register("undying_light", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -482,7 +488,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item VENOM_FANG = register("venom_fang", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -490,7 +496,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item VOODOO_VENGEANCE = register("voodoo_vengeance", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -498,7 +504,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item WILD_WANDERERS_CLAW = register("wild_wanderers_claw", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -506,7 +512,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item WOLVERINE_GRIPPERS = register("wolverine_grippers", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -514,7 +520,7 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item WOODEN_GAUNTLET = register("wooden_gauntlet", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -522,40 +528,556 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
     }
 
+    /**
+     * @noinspection unused
+     */
     static class MageItems {
-        public static void initialize() {};
+        public static void initialize() {
+        }
 
+        public static final Item FOUR_O_FOUR = register("404", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
+        ));
+        public static final Item ANNO_DOMINI = register("anno_domini", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item APOLLOS_APATHY = register("apollos_apathy", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item ARCANE_FOCUS_WAND = register("arcane_focus_wand", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+        ));
+        public static final Item ASSASSINS_QUARTERSTAFF = register("assassins_quarterstaff", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+        ));
+        public static final Item BLOSSOM_WAND = register("blossom_wand", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+        ));
+        public static final Item BOISTEROUS_BOLSTER = register("boisterous_bolster", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item BONE_CHILL_STAFF = register("bone_chill_staff", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item BONE_CLAD_WAND = register("bone_clad_wand", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+        ));
+        public static final Item BUTTON_MASHER = register("button_masher", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+        ));
+        public static final Item CANDLEKEEPERS_CRYPT = register("candlekeepers_crypt", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item CAPTAINS_STAFF = register("captains_staff", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item COGWORK_STAFF = register("cogwork_staff", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+        ));
+        public static final Item DARK_MOON = register("dark_moon", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item DARK_SCEPTER = register("dark_scepter", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item DECRYPTION = register("decryption", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+        ));
+        public static final Item DEVILS_SUMMONER = register("devils_summoner", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item DREAMERS_WAND = register("dreamers_wand", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item ELECTRIFIED_MANTLE = register("electrified_mantle", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+        ));
+        public static final Item ELTORVURIA_STAFF = register("eltorvuria_staff", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
+        ));
+        public static final Item ELVURS_REVENGE = register("elvurs_revenge", new MagicWeaponItem(
+                MagicType.ETHEREAL,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
+        ));
+        public static final Item ENGUARDE = register("enguarde", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+        ));
+        public static final Item FLORAL_CONQUEST = register("floral_conquest", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+        ));
+        public static final Item FORESIGHT = register("foresight", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+        ));
+        public static final Item FROSTMOURN_STAFF = register("frostmourn_staff", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item FOSSILIZED_STAFF = register("fossilized_staff", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
         public static final Item FUNKY_STICK = register("funky_stick", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+        ));
+        public static final Item FYNYKS_SCEPTER = register("fynyks_scepter", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item GENERALS_STAFF = register("generals_staff", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item GEOMANCERS_HERO = register("geomancers_hero", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item GLOBE_BONKER = register("globe_bonker", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+        ));
+        public static final Item GOLDEN_POKER = register("golden_poker", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item GHOULS_GUARDIAN = register("ghouls_guardian", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item GRACE_OF_LUNALIA = register("grace_of_lunalia", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item IRONHOLM_STAFF = register("ironholm_staff", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item JACK_OF_ALL_TRADES = register("jack_of_all_trades", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+        ));
+        public static final Item KNIGHTS_STAFF = register("knights_staff", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item KRAKEN_KANE = register("kraken_kane", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item LUNALIAS_BLESSING = register("lunalias_blessing", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item LUNALIAS_FORCE = register("lunalias_force", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item MOONWELLS_GRACE = register("moonwells_grace", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item MOP = register("mop", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+        ));
+        public static final Item NATURES_BOON = register("natures_boon", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+        ));
+        public static final Item PERMAFROST_STAFF = register("permafrost_staff", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item PINWHEEL = register("pinwheel", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+        ));
+        public static final Item POINTY_THING = register("pointy_thing", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item RAKKU_GLAIVE = register("rakku_glaive", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item RUBY_CRESTED_SCEPTER = register("ruby_crested_scepter", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item SANGUINE = register("sanguine", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
+        ));
+        public static final Item SENTRY_STAFF = register("sentry_staff", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item SERAPHIM_SCEPTER = register("seraphim_scepter", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+        ));
+        public static final Item SHADEKIN_HORIZON = register("shadekin_horizon", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item SILS_TOOTH = register("sils_tooth", new MagicWeaponItem(
+                MagicType.DIRE, 10, 45.0f,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
+        ));
+        public static final Item SOUL_GUIDER = register("soul_guider", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item SUNFLOWERS_GIFT = register("sunflowers_gift", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+        ));
+        public static final Item TIORVAS_GIFT = register("tiorvas_gift", new MagicWeaponItem(
                 MagicType.POTENT,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
                         1,
                         -1.6f
-                ))
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
         ));
-        public static final Item you_cant_see_this = register("you_cant_see_this", new MagicWeaponItem(
-                MagicType.DIRE,
+        public static final Item TOME_KEEPER = register("tome_keeper", new MagicWeaponItem(
+                MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        6,
-                        -2.0f
-                ))
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+        ));
+        public static final Item TRIBAL_WAND = register("tribal_wand", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item TRICKSTERS_FRIENDS = register("tricksters_friends", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item TUNDRAS_STAND = register("tundras_stand", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item VILLAGERS_CRADLE = register("villagers_cradle", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item WAND_OF_NIGHTMARES = register("wand_of_nightmares", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+        ));
+        public static final Item WAND_OF_THE_WILDS = register("wand_of_the_wilds", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item WICK_OF_FLAMES = register("wick_of_flames", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+        ));
+        public static final Item YOUNG_STAFF = register("young_staff", new MagicWeaponItem(
+                MagicType.MAGIC,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
     }
 
+    /**
+     * @noinspection unused
+     */
     static class ShamanItems {
-        public static void initialize() {};
+        public static void initialize() {
+        }
 
         public static final Item ATL = register("atl", new RelikItem(new Item.Settings()));
         public static final Item JACKS_POST = register("jacks_post", new RelikItem(new Item.Settings()));
     }
 
+    /**
+     * @noinspection unused
+     */
     static class WarriorItems {
-        public static void initialize() {};
+        public static void initialize() {
+        }
 
         public static final Item BANANA = register("banana", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -995,10 +1517,9 @@ public class AllItems {
                         ToolMaterials.WOOD,
                         3,
                         -2.4f
-                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE   )
+                )).component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
     }
-
 
 
     public static final Item CHOCOLATE = register("chocolate", new Item(new Item.Settings().food(ModFoodComponents.CHOCOLATE)));
@@ -1044,7 +1565,6 @@ public class AllItems {
     public static final Item KOBOLD_MASK = register("kobold_mask", new TrinketItem(new Item.Settings()));
     public static final Item LENNY_HAT = register("lenny", new TrinketItem(new Item.Settings()));
     public static final Item LIL_SQUIRT_HAT = register("lil_squirt", new TrinketItem(new Item.Settings()));
-    public static final Item OBSERVER_HAT = register("observer", new TrinketItem(new Item.Settings()));
     public static final Item ORC_CROWN_HAT = register("orc_crown", new TrinketItem(new Item.Settings()));
     public static final Item POWER_TRIP_HAT = register("power_trip", new TrinketItem(new Item.Settings()));
     public static final Item PURPLE_FLORAL_CROWN_HAT = register("purple_floral_crown", new TrinketItem(new Item.Settings()));
@@ -1073,9 +1593,7 @@ public class AllItems {
         WarriorItems.initialize();
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
-                .register((itemGroup) -> {
-                    itemGroup.addAfter(Items.PUMPKIN_PIE, AllItems.CHOCOLATE);
-                });
+                .register((itemGroup) -> itemGroup.addAfter(Items.PUMPKIN_PIE, AllItems.CHOCOLATE));
     }
 
     public static Item register(String id, Item item) {
