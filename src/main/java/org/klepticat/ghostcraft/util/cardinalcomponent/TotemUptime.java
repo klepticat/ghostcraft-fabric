@@ -3,7 +3,7 @@ package org.klepticat.ghostcraft.util.cardinalcomponent;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryWrapper;
 
-public class TotemUptimeTracker implements ShortComponent {
+public class TotemUptime implements ShortComponent {
     private short uptime = 0;
 
     @Override

@@ -5,11 +5,11 @@ import net.minecraft.registry.RegistryWrapper;
 import org.klepticat.ghostcraft.AllCardinalComponents;
 import org.ladysnake.cca.api.v3.component.sync.AutoSyncedComponent;
 
-public class TotemRadiusTracker implements FloatComponent, AutoSyncedComponent {
+public class TotemRadius implements FloatComponent, AutoSyncedComponent {
     private final Object provider;
     private float radius = 0;
 
-    public TotemRadiusTracker(Object provider) {
+    public TotemRadius(Object provider) {
         this.provider = provider;
     }
 
@@ -21,7 +21,7 @@ public class TotemRadiusTracker implements FloatComponent, AutoSyncedComponent {
     @Override
     public void set(float value) {
         this.radius = value;
-        AllCardinalComponents.TOTEM_RADIUS_TRACKER.sync(provider);
+        AllCardinalComponents.TOTEM_RADIUS.sync(provider);
     }
 
     @Override

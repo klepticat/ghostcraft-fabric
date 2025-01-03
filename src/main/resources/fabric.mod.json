@@ -46,10 +46,11 @@
 
 	"custom": {
 		"cardinal-components": [
-			"ghostcraft:totem_tracker",
+			"ghostcraft:player_totem",
 			"ghostcraft:magic_type_tracker",
-			"ghostcraft:totem_radius_tracker",
-			"ghostcraft:totem_uptime_tracker"
+			"ghostcraft:totem_radius",
+			"ghostcraft:totem_uptime",
+			"ghostcraft:totem_status_effect"
 		]
 	}
 }

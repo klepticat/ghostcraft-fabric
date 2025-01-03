@@ -3,11 +3,13 @@ package org.klepticat.ghostcraft.item;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.decoration.ArmorStandEntity;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.ActionResult;
@@ -23,24 +25,27 @@ import org.klepticat.ghostcraft.entity.TotemEntity;
 
 import java.util.function.Consumer;
 
-import static org.klepticat.ghostcraft.AllCardinalComponents.TOTEM_TRACKER;
+import static org.klepticat.ghostcraft.AllCardinalComponents.PLAYER_TOTEM;
 
 public class RelikItem extends Item {
     // TODO: radius buffs, different per-item type, maybe a tick method defined per item type? - method reference?
     // TODO: the radii of two totems shouldn't be able to overlap - distFromAToB > radiusA + radiusB
     // TODO: per-totem cooldowns
-    // TODO: per-totem entity uptime
-    private double totemRadius = 5.0;
-    private int totemUptime = 0;
+    private float totemRadius = 5.0f;
+    private short totemUptime = 0;
+    private byte effectAmplifier = 0;
+    private RegistryEntry<StatusEffect> statusEffect;
 
     public RelikItem(Settings settings) {
         super(settings);
     }
 
-    public RelikItem(double totemRadius, int totemUptime, Settings settings) {
+    public RelikItem(float totemRadius, short totemUptime, RegistryEntry<StatusEffect> statusEffect, byte effectAmplifier, Settings settings) {
         this(settings);
         this.totemRadius = totemRadius;
         this.totemUptime = totemUptime;
+        this.statusEffect = statusEffect;
+        this.effectAmplifier = effectAmplifier;
     }
 
     @Override
@@ -50,7 +55,7 @@ public class RelikItem extends Item {
         } else if(!(context.getWorld() instanceof ServerWorld)) {
             return ActionResult.SUCCESS;
         } else {
-            Entity existingTotem = ((ServerWorld) context.getWorld()).getEntity(TOTEM_TRACKER.get(context.getPlayer()).getUuid());
+            Entity existingTotem = ((ServerWorld) context.getWorld()).getEntity(PLAYER_TOTEM.get(context.getPlayer()).getUuid());
 
             World world = context.getWorld();
             ItemPlacementContext itemPlacementContext = new ItemPlacementContext(context);
@@ -65,7 +70,7 @@ public class RelikItem extends Item {
 
                 if (world instanceof ServerWorld serverWorld) {
                     Consumer<ArmorStandEntity> consumer = EntityType.copier(serverWorld, itemStack, context.getPlayer());
-                    TotemEntity totem = new TotemEntity(AllEntityTypes.TOTEM, this, this.totemRadius, this.totemUptime, context.getPlayer(), serverWorld);
+                    TotemEntity totem = new TotemEntity(AllEntityTypes.TOTEM, this, this.totemRadius, this.totemUptime, this.statusEffect, this.effectAmplifier, context.getPlayer(), serverWorld);
                     if (totem == null) {
                         return ActionResult.FAIL;
                     }
@@ -83,7 +88,7 @@ public class RelikItem extends Item {
                     serverWorld.spawnParticles(ParticleTypes.CLOUD, vec3d.x, vec3d.y, vec3d.z, 15, 0.2, 1.0, 0.2, 0.05);
                     totem.emitGameEvent(GameEvent.ENTITY_PLACE, context.getPlayer());
 
-                    TOTEM_TRACKER.get(context.getPlayer()).setUuid(totem.getUuid());
+                    PLAYER_TOTEM.get(context.getPlayer()).setUuid(totem.getUuid());
 
                     context.getPlayer().getItemCooldownManager().set(this, 5*20);
                 }

@@ -5,12 +5,12 @@ import net.minecraft.registry.RegistryWrapper;
 
 import java.util.UUID;
 
-public class TotemTracker implements UUIDComponent {
+public class PlayerTotem implements UUIDComponent {
     UUID totemUUID;
 
     @Override
     public void readFromNbt(NbtCompound tag, RegistryWrapper.WrapperLookup registryLookup) {
-        if(tag.containsUuid("uuid")) this.totemUUID = tag.getUuid("uuid");
+        if (tag.containsUuid("uuid")) this.totemUUID = tag.getUuid("uuid");
         else this.totemUUID = null;
     }
 

@@ -2,15 +2,19 @@ package org.klepticat.ghostcraft.entity;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Ownable;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
@@ -18,7 +22,9 @@ import org.jetbrains.annotations.Nullable;
 import org.klepticat.ghostcraft.AllCardinalComponents;
 import org.klepticat.ghostcraft.item.RelikItem;
 
+import java.util.List;
 import java.util.UUID;
+import java.util.function.Predicate;
 
 public class TotemEntity extends Entity implements Ownable {
     private static final TrackedData<ItemStack> ITEM = DataTracker.registerData(TotemEntity.class, TrackedDataHandlerRegistry.ITEM_STACK);
@@ -28,10 +34,11 @@ public class TotemEntity extends Entity implements Ownable {
 
     public float currentRadius = 0.0f;
 
-    public TotemEntity(EntityType<? extends Entity> entityType, RelikItem totemItem, float radius, short uptime, Entity owner, World world) {
+    public TotemEntity(EntityType<? extends Entity> entityType, RelikItem totemItem, float radius, short uptime, RegistryEntry<StatusEffect> effect, byte effectAmplifier, Entity owner, World world) {
         this(entityType, totemItem, owner, world);
-        this.getComponent(AllCardinalComponents.TOTEM_RADIUS_TRACKER).set(radius);
-        this.getComponent(AllCardinalComponents.TOTEM_UPTIME_TRACKER).set(uptime);
+        this.getComponent(AllCardinalComponents.TOTEM_RADIUS).set(radius);
+        this.getComponent(AllCardinalComponents.TOTEM_UPTIME).set(uptime);
+        this.getComponent(AllCardinalComponents.TOTEM_STATUS_EFFECT).setEffect(effect, effectAmplifier);
     }
 
     public TotemEntity(EntityType<? extends Entity> entityType, RelikItem totemItem, Entity owner, World world) {
@@ -109,12 +116,29 @@ public class TotemEntity extends Entity implements Ownable {
     public void tick() {
         super.tick();
 
-        if(this.age >= this.getComponent(AllCardinalComponents.TOTEM_UPTIME_TRACKER).get() && this.getOwner() != null) {
-            this.getOwner().getComponent(AllCardinalComponents.TOTEM_TRACKER).setUuid(null);
+        if (this.age >= this.getComponent(AllCardinalComponents.TOTEM_UPTIME).get() && this.getOwner() != null) {
+            this.getOwner().getComponent(AllCardinalComponents.PLAYER_TOTEM).setUuid(null);
             this.discard();
         }
 
-        if(this.currentRadius < this.getComponent(AllCardinalComponents.TOTEM_RADIUS_TRACKER).get()) this.currentRadius += this.getComponent(AllCardinalComponents.TOTEM_RADIUS_TRACKER).get() / 10.0;
-        else this.currentRadius = this.getComponent(AllCardinalComponents.TOTEM_RADIUS_TRACKER).get();
+        List<Entity> nearbyPlayers = this.getWorld().getOtherEntities(this, Box.of(this.getPos(), this.currentRadius * 2, this.currentRadius * 2, this.currentRadius * 2), new Predicate<Entity>() {
+            @Override
+            public boolean test(Entity entity) {
+                return entity.isAlive() && entity.isPlayer();
+            }
+        });
+
+        RegistryEntry<StatusEffect> statusEffect = this.getComponent(AllCardinalComponents.TOTEM_STATUS_EFFECT).getEffect();
+        byte amplifier = this.getComponent(AllCardinalComponents.TOTEM_STATUS_EFFECT).getAmplifier();
+
+        nearbyPlayers.forEach(player -> {
+            if (player.getPos().distanceTo(this.getPos()) > currentRadius) return;
+
+            ((LivingEntity) player).addStatusEffect(new StatusEffectInstance(statusEffect, 3, amplifier, true, true));
+        });
+
+        if (this.currentRadius < this.getComponent(AllCardinalComponents.TOTEM_RADIUS).get())
+            this.currentRadius += this.getComponent(AllCardinalComponents.TOTEM_RADIUS).get() / 10.0;
+        else this.currentRadius = this.getComponent(AllCardinalComponents.TOTEM_RADIUS).get();
     }
 }
