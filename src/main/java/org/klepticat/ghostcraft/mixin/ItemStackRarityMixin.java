@@ -26,6 +26,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.List;
 import java.util.function.Consumer;
 
+/** @noinspection UnresolvedMixinReference, UnresolvedMixinReference */
 @Mixin(ItemStack.class)
 public abstract class ItemStackRarityMixin {
     private static final Text DISABLED_TEXT = Text.translatable("item.disabled").formatted(Formatting.RED);

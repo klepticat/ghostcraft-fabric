@@ -3,26 +3,26 @@ package org.klepticat.ghostcraft.util.cardinalcomponent;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryWrapper;
 
-public class TotemUptimeTracker implements IntComponent {
-    private int uptime = 0;
+public class TotemUptimeTracker implements ShortComponent {
+    private short uptime = 0;
 
     @Override
-    public int get() {
+    public short get() {
         return uptime;
     }
 
     @Override
-    public void set(int value) {
+    public void set(short value) {
         this.uptime = value;
     }
 
     @Override
     public void readFromNbt(NbtCompound tag, RegistryWrapper.WrapperLookup registryLookup) {
-        this.set(tag.getInt("lifetime"));
+        this.set(tag.getShort("lifetime"));
     }
 
     @Override
     public void writeToNbt(NbtCompound tag, RegistryWrapper.WrapperLookup registryLookup) {
-        tag.putInt("lifetime", this.uptime);
+        tag.putShort("lifetime", this.uptime);
     }
 }

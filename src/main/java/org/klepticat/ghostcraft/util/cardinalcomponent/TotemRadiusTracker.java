@@ -3,35 +3,34 @@ package org.klepticat.ghostcraft.util.cardinalcomponent;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryWrapper;
 import org.klepticat.ghostcraft.AllCardinalComponents;
-import org.klepticat.ghostcraft.entity.TotemEntity;
 import org.ladysnake.cca.api.v3.component.sync.AutoSyncedComponent;
 
-public class TotemRadiusTracker implements DoubleComponent, AutoSyncedComponent {
+public class TotemRadiusTracker implements FloatComponent, AutoSyncedComponent {
     private final Object provider;
-    private double radius = 0;
+    private float radius = 0;
 
     public TotemRadiusTracker(Object provider) {
         this.provider = provider;
     }
 
     @Override
-    public double get() {
+    public float get() {
         return this.radius;
     }
 
     @Override
-    public void set(double value) {
+    public void set(float value) {
         this.radius = value;
         AllCardinalComponents.TOTEM_RADIUS_TRACKER.sync(provider);
     }
 
     @Override
     public void readFromNbt(NbtCompound tag, RegistryWrapper.WrapperLookup registryLookup) {
-        this.set(tag.getDouble("radius"));
+        this.set(tag.getFloat("radius"));
     }
 
     @Override
     public void writeToNbt(NbtCompound tag, RegistryWrapper.WrapperLookup registryLookup) {
-        tag.putDouble("radius", this.radius);
+        tag.putFloat("radius", this.radius);
     }
 }

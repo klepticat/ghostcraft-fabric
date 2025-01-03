@@ -17,6 +17,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+/** @noinspection UnresolvedMixinReference*/
 @Mixin(InGameHud.class)
 public abstract class HudRarityMixin {
     @Accessor("client")

@@ -26,9 +26,9 @@ public class TotemEntity extends Entity implements Ownable {
     private Entity owner;
     private Box visibilityBoundingBox;
 
-    public double currentRadius = 0.0;
+    public float currentRadius = 0.0f;
 
-    public TotemEntity(EntityType<? extends Entity> entityType, RelikItem totemItem, double radius, int uptime, Entity owner, World world) {
+    public TotemEntity(EntityType<? extends Entity> entityType, RelikItem totemItem, float radius, short uptime, Entity owner, World world) {
         this(entityType, totemItem, owner, world);
         this.getComponent(AllCardinalComponents.TOTEM_RADIUS_TRACKER).set(radius);
         this.getComponent(AllCardinalComponents.TOTEM_UPTIME_TRACKER).set(uptime);
