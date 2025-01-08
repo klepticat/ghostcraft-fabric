@@ -19,33 +19,34 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
+import org.klepticat.ghostcraft.AllCardinalComponents;
 import org.klepticat.ghostcraft.AllEntityTypes;
 import org.klepticat.ghostcraft.AllSounds;
 import org.klepticat.ghostcraft.entity.TotemEntity;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 import static org.klepticat.ghostcraft.AllCardinalComponents.PLAYER_TOTEM;
 
 public class RelikItem extends Item {
-    // TODO: radius buffs, different per-item type, maybe a tick method defined per item type? - method reference?
-    // TODO: the radii of two totems shouldn't be able to overlap - distFromAToB > radiusA + radiusB
-    // TODO: per-totem cooldowns
     private float totemRadius = 5.0f;
     private short totemUptime = 0;
     private byte effectAmplifier = 0;
+    private int cooldown = 0;
     private RegistryEntry<StatusEffect> statusEffect;
 
     public RelikItem(Settings settings) {
         super(settings);
     }
 
-    public RelikItem(float totemRadius, short totemUptime, RegistryEntry<StatusEffect> statusEffect, byte effectAmplifier, Settings settings) {
+    public RelikItem(float totemRadius, short totemUptime, int cooldown, RegistryEntry<StatusEffect> statusEffect, byte effectAmplifier, Settings settings) {
         this(settings);
         this.totemRadius = totemRadius;
         this.totemUptime = totemUptime;
         this.statusEffect = statusEffect;
         this.effectAmplifier = effectAmplifier;
+        this.cooldown = cooldown;
     }
 
     @Override
@@ -63,8 +64,15 @@ public class RelikItem extends Item {
             ItemStack itemStack = context.getStack();
             Vec3d vec3d = Vec3d.ofBottomCenter(blockPos);
             Box box = AllEntityTypes.TOTEM.getDimensions().getBoxAt(vec3d.getX(), vec3d.getY(), vec3d.getZ());
-            if (world.isSpaceEmpty(null, box) && world.getOtherEntities(null, box).isEmpty()) {
-                if(!(existingTotem == null)) {
+
+            List<TotemEntity> nearbyTotems = world.getEntitiesByClass(
+                    TotemEntity.class,
+                    Box.of(itemPlacementContext.getBlockPos().toCenterPos(), 100, 100, 100),
+                    entity -> (itemPlacementContext.getBlockPos().toCenterPos().distanceTo(entity.getPos()) <= this.totemRadius + entity.getComponent(AllCardinalComponents.TOTEM_RADIUS).get()) && entity.getOwner() != context.getPlayer()
+            );
+
+            if (world.isSpaceEmpty(null, box) && world.getOtherEntities(null, box).isEmpty() && nearbyTotems.isEmpty()) {
+                if (!(existingTotem == null)) {
                     existingTotem.discard();
                 }
 
@@ -83,14 +91,14 @@ public class RelikItem extends Item {
                     totem.refreshPositionAndAngles(totem.getX(), totem.getY(), totem.getZ(), f, 0.0F);
                     serverWorld.spawnEntityAndPassengers(totem);
                     world.playSound(
-                            null, vec3d.x, vec3d.y, vec3d.z, AllSounds.TOTEM_PLACE, SoundCategory.PLAYERS, 2.0F, 1.0F
+                            null, vec3d.x, vec3d.y, vec3d.z, AllSounds.TOTEM_PLACE, SoundCategory.PLAYERS, 4.0F, 1.0F
                     );
                     serverWorld.spawnParticles(ParticleTypes.CLOUD, vec3d.x, vec3d.y, vec3d.z, 15, 0.2, 1.0, 0.2, 0.05);
                     totem.emitGameEvent(GameEvent.ENTITY_PLACE, context.getPlayer());
 
                     PLAYER_TOTEM.get(context.getPlayer()).setUuid(totem.getUuid());
 
-                    context.getPlayer().getItemCooldownManager().set(this, 5*20);
+                    context.getPlayer().getItemCooldownManager().set(this, this.cooldown);
                 }
 
                 return ActionResult.success(world.isClient);

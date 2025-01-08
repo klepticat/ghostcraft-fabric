@@ -1068,8 +1068,776 @@ public class AllItems {
         public static void initialize() {
         }
 
-        public static final Item ATL = register("atl", new RelikItem(5.0f, ((short) 300), StatusEffects.RESISTANCE, (byte) 0, new Item.Settings()));
-        public static final Item JACKS_POST = register("jacks_post", new RelikItem(15.0f, ((short) 600), StatusEffects.FIRE_RESISTANCE, (byte) 0, new Item.Settings()));
+        public static final Item ANDRAS_WATCH = register(
+                "andras_watch",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+                )
+        );
+        public static final Item ARC_OF_THE_TUNDRA = register(
+                "arc_of_the_tundra",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+                )
+        );
+        public static final Item ASSASSINS_LANTERN = register(
+                "assassins_lantern",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+                )
+        );
+        public static final Item ATL = register(
+                "atl",
+                new RelikItem(
+                        5.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+                )
+        );
+        public static final Item ATLLA = register(
+                "atlla",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item ATLLANT = register(
+                "atllant",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item ATLLANTRIUS = register(
+                "atllantrius",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item BLAZING_TOTEM = register(
+                "blazing_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item BLIZZARD_TOTEM = register(
+                "blizzard_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item BLOOD_MOON = register(
+                "blood_moon",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
+                )
+        );
+        public static final Item BONE_CHILL_TOTEM = register(
+                "bone_chill_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+                )
+        );
+        public static final Item BROCCOLI = register(
+                "broccoli",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+                )
+        );
+        public static final Item BUTTON_MASHER = register(
+                "button_masher",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item BUTTON_PRESSER = register(
+                "button_presser",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item BUTTON_PUSHER = register(
+                "button_pusher",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item CANDLEKEEPERS_ANCHOR = register(
+                "candlekeepers_anchor",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+                )
+        );
+        public static final Item CHOKE_HOLD = register(
+                "choke_hold",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item CLOCKWORK_SUMMONER = register(
+                "clockwork_summoner",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item COGWORK_TOTEM = register(
+                "cogwork_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item DEVILS_ANCHOR = register(
+                "devils_anchor",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+                )
+        );
+        public static final Item DOLL_OF_THE_TRICKSTER = register(
+                "doll_of_the_trickster",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+                )
+        );
+        public static final Item DRUM_OF_DUMAH = register(
+                "drum_of_dumah",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item DUMDUMS_TOTEM = register(
+                "dumdums_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item ELTORVURIA_TOTEM = register(
+                "eltorvuria_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
+                )
+        );
+        public static final Item FALLEN_FALSE_GOD = register(
+                "fallen_false_god",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+                )
+        );
+        public static final Item FEATHERED_TOTEM = register(
+                "feathered_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item FLEDGED_TOTEM = register(
+                "fledged_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item FLIGHT_TOTEM = register(
+                "flight_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item FOSSILIZED_TOTEM = register(
+                "fossilized_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item FROSTMOURN_TOTEM = register(
+                "frostmourn_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+                )
+        );
+        public static final Item FRYING_PAN = register(
+                "frying_pan",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+                )
+        );
+        public static final Item FYNYKS_FLAME = register(
+                "fynyks_flame",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+                )
+        );
+        public static final Item GADGET = register(
+                "gadget",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item GEOMANCERS_TOTEM = register(
+                "geomancers_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item GLITCH = register(
+                "glitch",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
+                )
+        );
+        public static final Item GOLD_THORN_TOTEM = register(
+                "gold_thorn_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item GOLDEN_TOTEM = register(
+                "golden_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item HOLY_CRUCIBLE = register(
+                "holy_crucible",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item HOLY_GRAIL = register(
+                "holy_grail",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item ICICLE_TOTEM = register(
+                "icicle_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item INTERMEDIATE_TOTEM = register(
+                "intermediate_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item IRONHOLM_TOTEM = register(
+                "ironholm_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+                )
+        );
+        public static final Item JACKS_POST = register(
+                "jacks_post",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+                )
+        );
+        public static final Item JOLT_TOTEM = register(
+                "jolt_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item MATURED_TOTEM = register(
+                "matured_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item NIGHTS_GUIDE = register(
+                "nights_guide",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+                )
+        );
+        public static final Item PERMAFROST_SIGIL = register(
+                "permafrost_sigil",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+                )
+        );
+        public static final Item PUCKS_PANFLUTE = register(
+                "pucks_panflute",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item PUPPET_OF_THE_TRICKSTER = register(
+                "puppet_of_the_trickster",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+                )
+        );
+        public static final Item RUBY_CRESTED_TOTEM = register(
+                "ruby_crested_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item RUBY_TOTEM = register(
+                "ruby_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item SAKURA_GROVE_WAND = register(
+                "sakura_grove_wand",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+                )
+        );
+        public static final Item SENTRY_TOWER = register(
+                "sentry_tower",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item SERAPHIM_TOTEM = register(
+                "seraphim_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+                )
+        );
+        public static final Item SHADRAXS_PROTECTION = register(
+                "shadraxs_protection",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+                )
+        );
+        public static final Item SHIPWRIGHT_TOTEM = register(
+                "shipwright_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item SIGIL_OF_SEALING = register(
+                "sigil_of_sealing",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+                )
+        );
+        public static final Item SILS_DARK_MOON = register(
+                "sils_dark_moon",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
+                )
+        );
+        public static final Item SILK_WEAVERS_CAGE = register(
+                "silk_weavers_cage",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item SIMPLE_TOTEM = register(
+                "simple_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item SNOWFLAKE_TOTEM = register(
+                "snowflake_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item SORROWFUL_ANGEL = register(
+                "sorrowful_angel",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+                )
+        );
+        public static final Item SOUL_KEEPERS_CAGE = register(
+                "soul_keepers_cage",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)
+                )
+        );
+        public static final Item SPARKING_TOTEM = register(
+                "sparking_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+        public static final Item TIME_REWINDER = register(
+                "time_rewinder",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item TIORVAS_PASSION = register(
+                "tiorvas_passion",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
+                )
+        );
+        public static final Item TORRENT = register(
+                "torrent",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+                )
+        );
+        public static final Item TRIBUNAL_TOTEM = register(
+                "tribunal_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)
+                )
+        );
+        public static final Item VIGINERE = register(
+                "viginere",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+                )
+        );
+        public static final Item WINGED_RUBY_TOTEM = register(
+                "winged_ruby_totem",
+                new RelikItem(
+                        10.0f,
+                        ((short) 600),
+                        20,
+                        StatusEffects.FIRE_RESISTANCE,
+                        (byte) 0,
+                        new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
     }
 
     /**

@@ -1,13 +1,14 @@
 {
-	"required": true,
-	"package": "org.klepticat.ghostcraft.mixin.client",
-	"compatibilityLevel": "JAVA_21",
-	"client": [
-		"PlayerEntityRendererMixin",
-		"EquipmentUseAnimationMixin",
-		"HudRarityMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
+  "required": true,
+  "package": "org.klepticat.ghostcraft.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "EntityRendererMixin",
+    "EquipmentUseAnimationMixin",
+    "HudRarityMixin",
+    "PlayerEntityRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
 }

@@ -1,6 +1,5 @@
 package org.klepticat.ghostcraft.render.entity;
 
-import io.wispforest.owo.particles.ClientParticles;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
@@ -14,15 +13,10 @@ import net.minecraft.client.texture.Sprite;
 import net.minecraft.client.texture.SpriteAtlasTexture;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.particle.DustParticleEffect;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.Text;
-import net.minecraft.util.Colors;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.ColorHelper;
 import net.minecraft.util.math.RotationAxis;
-import net.minecraft.util.math.Vec3d;
-import org.joml.Vector3f;
 import org.klepticat.ghostcraft.AllCardinalComponents;
 import org.klepticat.ghostcraft.entity.TotemEntity;
 
@@ -46,36 +40,6 @@ public class TotemEntityRenderer<T extends TotemEntity> extends EntityRenderer<T
     @Override
     public void render(T totemEntity, float yaw, float tickDelta, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int light) {
         RegistryEntry<StatusEffect> statusEffect = totemEntity.getComponent(AllCardinalComponents.TOTEM_STATUS_EFFECT).getEffect();
-
-        if (tickDelta < prevTickDelta) {
-            double radius = totemEntity.currentRadius;
-            int stepSize = 15;
-            double maxRadius = totemEntity.getComponent(AllCardinalComponents.TOTEM_RADIUS).get();
-            int particleColor = Colors.WHITE;
-
-            if (statusEffect != null) particleColor = ColorHelper.Argb.withAlpha(255, statusEffect.value().getColor());
-
-            Vec3d lastParticlePos = new Vec3d(totemEntity.getX() + radius, totemEntity.getY(), totemEntity.getZ());
-
-            for (int angle = stepSize - 1; angle < 360; angle += stepSize) {
-                double angleRadians = (2 * Math.PI) * angle / 360;
-
-                Vec3d particlePos = new Vec3d((radius) * Math.cos(angleRadians) + totemEntity.getX(), totemEntity.getY(), (radius) * Math.sin(angleRadians) + totemEntity.getZ());
-
-                if (maxRadius != 0.0) {
-                    ClientParticles.setParticleCount(10);
-                    ClientParticles.spawnLine(
-                            new DustParticleEffect(new Vector3f(ColorHelper.Argb.getRed(particleColor) / 255.0f, ColorHelper.Argb.getGreen(particleColor) / 255.0f, ColorHelper.Argb.getBlue(particleColor) / 255.0f), (float) (totemEntity.currentRadius / maxRadius)),
-                            totemEntity.getWorld(),
-                            lastParticlePos,
-                            particlePos,
-                            0.0f
-                    );
-                }
-
-                lastParticlePos = particlePos;
-            }
-        }
 
         totemEntity.setCustomName(Text.literal(Double.toString(totemEntity.currentRadius)));
 
