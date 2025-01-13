@@ -18,13 +18,17 @@ public class AllCardinalComponents implements EntityComponentInitializer {
     public static final ComponentKey<TotemRadius> TOTEM_RADIUS = ComponentRegistry.getOrCreate(Identifier.of(MOD_ID, "totem_radius"), TotemRadius.class);
     public static final ComponentKey<TotemUptime> TOTEM_UPTIME = ComponentRegistry.getOrCreate(Identifier.of(MOD_ID, "totem_uptime"), TotemUptime.class);
     public static final ComponentKey<TotemStatusEffect> TOTEM_STATUS_EFFECT = ComponentRegistry.getOrCreate(Identifier.of(MOD_ID, "totem_status_effect"), TotemStatusEffect.class);
+    public static final ComponentKey<PlayerSouls> PLAYER_SOULS = ComponentRegistry.getOrCreate(Identifier.of(MOD_ID, "player_souls"), PlayerSouls.class);
+    public static final ComponentKey<PlayerMaxSouls> PLAYER_MAX_SOULS = ComponentRegistry.getOrCreate(Identifier.of(MOD_ID, "player_max_souls"), PlayerMaxSouls.class);
 
     @Override
     public void registerEntityComponentFactories(EntityComponentFactoryRegistry registry) {
         registry.registerForPlayers(PLAYER_TOTEM, playerEntity -> new PlayerTotem(), RespawnCopyStrategy.ALWAYS_COPY);
-        registry.registerFor(SpellProjectileEntity.class, MAGIC_TYPE_TRACKER, spellProjectileEntity -> new MagicTypeTracker(spellProjectileEntity));
-        registry.registerFor(TotemEntity.class, TOTEM_RADIUS, totemEntity -> new TotemRadius(totemEntity));
+        registry.registerForPlayers(PLAYER_SOULS, PlayerSouls::new, RespawnCopyStrategy.ALWAYS_COPY);
+        registry.registerForPlayers(PLAYER_MAX_SOULS, PlayerMaxSouls::new, RespawnCopyStrategy.ALWAYS_COPY);
+        registry.registerFor(SpellProjectileEntity.class, MAGIC_TYPE_TRACKER, MagicTypeTracker::new);
+        registry.registerFor(TotemEntity.class, TOTEM_RADIUS, TotemRadius::new);
         registry.registerFor(TotemEntity.class, TOTEM_UPTIME, totemEntity -> new TotemUptime());
-        registry.registerFor(TotemEntity.class, TOTEM_STATUS_EFFECT, totemEntity -> new TotemStatusEffect(totemEntity));
+        registry.registerFor(TotemEntity.class, TOTEM_STATUS_EFFECT, TotemStatusEffect::new);
     }
 }

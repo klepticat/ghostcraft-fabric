@@ -50,7 +50,9 @@
 			"ghostcraft:magic_type_tracker",
 			"ghostcraft:totem_radius",
 			"ghostcraft:totem_uptime",
-			"ghostcraft:totem_status_effect"
+			"ghostcraft:totem_status_effect",
+			"ghostcraft:player_souls",
+			"ghostcraft:player_max_souls"
 		]
 	}
 }

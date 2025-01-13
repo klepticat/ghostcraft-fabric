@@ -9,6 +9,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import org.klepticat.ghostcraft.command.DevCommands;
 import org.klepticat.ghostcraft.command.LightningCommand;
 import org.klepticat.ghostcraft.command.LoreCommand;
+import org.klepticat.ghostcraft.command.SoulsCommand;
 import org.klepticat.ghostcraft.networking.InvisKeyPayload;
 import org.klepticat.ghostcraft.networking.NightVisKeyPayload;
 import org.slf4j.Logger;
@@ -29,6 +30,7 @@ public class GhostCraft implements ModInitializer {
 		CommandRegistrationCallback.EVENT.register(new LoreCommand()::execute);
 		CommandRegistrationCallback.EVENT.register(new LightningCommand()::execute);
 		CommandRegistrationCallback.EVENT.register(new DevCommands()::execute);
+		CommandRegistrationCallback.EVENT.register(new SoulsCommand()::execute);
 
 		PayloadTypeRegistry.playC2S().register(InvisKeyPayload.ID, InvisKeyPayload.CODEC);
 		PayloadTypeRegistry.playC2S().register(NightVisKeyPayload.ID, NightVisKeyPayload.CODEC);

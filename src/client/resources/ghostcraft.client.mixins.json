@@ -5,7 +5,7 @@
   "client": [
     "EntityRendererMixin",
     "EquipmentUseAnimationMixin",
-    "HudRarityMixin",
+    "InGameHudMixin",
     "PlayerEntityRendererMixin"
   ],
   "injectors": {
