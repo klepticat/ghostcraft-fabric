@@ -3,10 +3,7 @@ package org.klepticat.ghostcraft;
 import dev.emi.trinkets.api.TrinketItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
-import net.minecraft.item.ToolMaterials;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -19,9 +16,88 @@ import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
  * @noinspection unused
  */
 public class AllItems {
+    // WEAPONS
+
     /**
      * @noinspection unused
-     */ // WEAPONS
+     */
+    static class ArcherItems {
+        public static void initialize() {
+        }
+
+        public static final Item ASSASSINS_CROSSBOW = register("assassins_crossbow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
+        public static final Item ATLLANTRIUS_POST = register("atllantrius_post", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item AZALEAS_FURY = register("azaleas_fury", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
+        public static final Item BANANA_BOW = register("banana_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
+        public static final Item BLIZZARD_SHOOTER = register("blizzard_shooter", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item BLOSSOM_BOW = register("blossom_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
+        public static final Item BLUNDERBUSS = register("blunderbuss", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
+        public static final Item BOLT_SHOOTER = register("bolt_shooter", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item BONE_CHILL_BOW = register("bone_chill_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item BOW_OF_FLAMES = register("bow_of_flames", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item BOW_OF_GALES = register("bow_of_gales", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item BOW_OF_THE_FJORD = register("bow_of_the_fjord", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item CANDLEKEEPERS_BOW = register("candlekeepers_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item CANDY_BOW = register("candy_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
+        public static final Item CHARMS_REQUIME = register("charms_requime", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item CHRONOS_BOW = register("chronos_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item CIPHER_BOW = register("cipher_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
+        public static final Item COGWORK_SHARP_SHOOTER = register("cogwork_sharp_shooter", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
+        public static final Item CROSSBOW_OF_THE_DAMNED = register("crossbow_of_the_damned", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item DARK_ECHO = register("dark_echo", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item DEATHS_GRASP = register("deaths_grasp", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item DEVILS_MARK = register("devils_mark", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item ELTORVURIA_BOW = register("eltorvuria_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
+        public static final Item ELVURS_WRATH = register("elvurs_wrath", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
+        public static final Item FEATHERED_BOW = register("feathered_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item FERNS_FURY = register("ferns_fury", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item FOSSILIZED_BOW = register("fossilized_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item FROSTMOURN_BOW = register("frostmourn_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item GEOMANCERS_BOW = register("geomancers_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item GHASTLY_BOW = register("ghastly_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
+        public static final Item GOLDEN_BOW = register("golden_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
+        public static final Item GOLDEN_DRAWSTRING = register("golden_drawstring", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item HARP = register("harp", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item HEAVY_CROSSBOW = register("heavy_crossbow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
+        public static final Item HEROS_BOW = register("heros_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item ICICLE_SHOOTER = register("icicle_shooter", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item IRONHOLM_BOW = register("ironholm_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item JACKS_RESPITE = register("jacks_respite", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
+        public static final Item JOLT_SHOOTER = register("jolt_shooter", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
+        public static final Item LIGHT_CROSSBOW = register("light_crossbow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
+        public static final Item LIVESTREAM = register("livestream", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
+        public static final Item LONG_BOW = register("long_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
+        public static final Item MALFUNCTIONED_BOW = register("malfunctioned_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
+        public static final Item MAN_THE_CANON = register("man_the_canon", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
+        public static final Item NETHERIAN_BOW = register("netherian_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item NGHTMARE_BOW = register("nghtmare_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item PERMAFROST_BOW = register("permafrost_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item RAKKU_BOW = register("rakku_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item RIFLE = register("rifle", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item RUBY_CRESTED_CROSSBOW = register("ruby_crested_crossbow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item SEEKER_BOW = register("seeker_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item SENTRY_BOW = register("sentry_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item SERAPHIM_BOW = register("seraphim_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
+        public static final Item SHADRAXS_WING = register("shadraxs_wing", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item SILS_STARE = register("sils_stare", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
+        public static final Item SIMPLE_BOW = register("simple_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
+        public static final Item SLINGSHOT = register("slingshot", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
+        public static final Item SNOWFLAKE_SHOOTER = register("snowflake_shooter", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item SOUL_SHOT = register("soul_shot", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item SPARK_SHOOTER = register("spark_shooter", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item TIORVAS_LOVE = register("tiorvas_love", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
+        public static final Item TNT_BLASTER = register("tnt_blaster", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item TWEAKED_CROSSBOW = register("tweaked_crossbow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
+        public static final Item VALIANT_BOW = register("valiant_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item VALOR_BOW = register("valor_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item VERDANT_BOW = register("verdant_bow", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item VIRUS = register("virus", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
+        public static final Item WAILING_GRIEF = register("wailing_grief", new BowItem(new Item.Settings().component(AllDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
+    }
+
+    /**
+     * @noinspection unused
+     */
     static class AssassinItems {
         public static void initialize() {
         }
@@ -2355,6 +2431,7 @@ public class AllItems {
     public static final Item POTENT_CHARGE = register("potent_charge", new Item(new Item.Settings()));
 
     public static void initialize() {
+        ArcherItems.initialize();
         AssassinItems.initialize();
         MageItems.initialize();
         ShamanItems.initialize();
