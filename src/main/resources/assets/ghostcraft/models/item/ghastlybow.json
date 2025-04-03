@@ -3,8 +3,8 @@
   "parent": "item/wynn/template/weapon",
   "textures": {
     "Fire Bow": "ghostcraft:item/weapons/archer/fire_tier_all",
-    "fire_gem1": "ghostcraft:item/weapons/anim/fire_core",
-    "fire_string": "ghostcraft:item/weapons/anim/fire_blade_flamelicks"
+    "fire_gem1": "ghostcraft:item/anim/fire_core",
+    "fire_string": "ghostcraft:item/anim/fire_blade_flamelicks"
   },
   "elements": [
     {

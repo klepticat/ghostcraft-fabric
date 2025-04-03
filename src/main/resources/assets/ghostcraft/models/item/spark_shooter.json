@@ -3,7 +3,7 @@
   "parent": "item/wynn/template/weapon",
   "textures": {
     "texture": "ghostcraft:item/weapons/archer/thunder_bow_all",
-    "thunderbolt_string": "ghostcraft:item/weapons/anim/thunder_arch"
+    "thunderbolt_string": "ghostcraft:item/anim/thunder_arch"
   },
   "elements": [
     {

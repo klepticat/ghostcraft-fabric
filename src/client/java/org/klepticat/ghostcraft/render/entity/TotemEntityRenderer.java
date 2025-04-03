@@ -17,18 +17,14 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.RotationAxis;
-import org.klepticat.ghostcraft.AllCardinalComponents;
+import org.klepticat.ghostcraft.GCCardinalComponents;
 import org.klepticat.ghostcraft.entity.TotemEntity;
 
 public class TotemEntityRenderer<T extends TotemEntity> extends EntityRenderer<T> {
-    private EntityRenderDispatcher renderDispatcher;
-    private ItemRenderer itemRenderer;
-
-    private float prevTickDelta = 0.0f;
+    private final ItemRenderer itemRenderer;
 
     public TotemEntityRenderer(EntityRendererFactory.Context context) {
         super(context);
-        this.renderDispatcher = context.getRenderDispatcher();
         this.itemRenderer = context.getItemRenderer();
     }
 
@@ -39,11 +35,9 @@ public class TotemEntityRenderer<T extends TotemEntity> extends EntityRenderer<T
 
     @Override
     public void render(T totemEntity, float yaw, float tickDelta, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int light) {
-        RegistryEntry<StatusEffect> statusEffect = totemEntity.getComponent(AllCardinalComponents.TOTEM_STATUS_EFFECT).getEffect();
+        RegistryEntry<StatusEffect> statusEffect = totemEntity.getComponent(GCCardinalComponents.TOTEM_STATUS_EFFECT).getEffect();
 
         totemEntity.setCustomName(Text.literal(Double.toString(totemEntity.currentRadius)));
-
-        prevTickDelta = tickDelta;
 
         // render item
         matrixStack.push();

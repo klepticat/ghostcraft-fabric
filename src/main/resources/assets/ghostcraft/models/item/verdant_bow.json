@@ -3,7 +3,7 @@
   "parent": "item/wynn/template/weapon",
   "textures": {
     "texture": "ghostcraft:item/weapons/archer/multi_tier_all",
-    "blade_glow": "ghostcraft:item/weapons/anim/multi_color_petals"
+    "blade_glow": "ghostcraft:item/anim/multi_color_petals"
   },
   "elements": [
     {

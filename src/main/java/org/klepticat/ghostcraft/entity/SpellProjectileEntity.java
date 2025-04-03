@@ -16,10 +16,9 @@ import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import org.klepticat.ghostcraft.AllCardinalComponents;
-import org.klepticat.ghostcraft.AllEntityTypes;
-import org.klepticat.ghostcraft.AllItems;
-import org.klepticat.ghostcraft.GhostCraft;
+import org.klepticat.ghostcraft.GCCardinalComponents;
+import org.klepticat.ghostcraft.GCEntityTypes;
+import org.klepticat.ghostcraft.GCItems;
 import org.klepticat.ghostcraft.item.MagicType;
 
 public class SpellProjectileEntity extends ProjectileEntity implements FlyingItemEntity {
@@ -39,21 +38,29 @@ public class SpellProjectileEntity extends ProjectileEntity implements FlyingIte
 
         if(this.magicType == null) {
             this.magicType = MagicType.MAGIC;
-            this.getComponent(AllCardinalComponents.MAGIC_TYPE_TRACKER).setMagicType(MagicType.MAGIC);
+            this.getComponent(GCCardinalComponents.MAGIC_TYPE_TRACKER).setMagicType(MagicType.MAGIC);
         }
     }
 
     public SpellProjectileEntity(MagicType magicType, LivingEntity owner, World world) {
-        this(AllEntityTypes.SPELL_PROJECTILE, world);
+        this(GCEntityTypes.SPELL_PROJECTILE, world);
 
         this.magicType = magicType;
-        this.getComponent(AllCardinalComponents.MAGIC_TYPE_TRACKER).setMagicType(magicType);
+        this.getComponent(GCCardinalComponents.MAGIC_TYPE_TRACKER).setMagicType(magicType);
 
         switch (this.magicType) {
-            case ETHEREAL -> { this.getDataTracker().set(ITEM, new ItemStack(AllItems.ETHEREAL_CHARGE)); }
-            case DIRE -> { this.getDataTracker().set(ITEM, new ItemStack(AllItems.DIRE_CHARGE)); }
-            case POTENT -> { this.getDataTracker().set(ITEM, new ItemStack(AllItems.POTENT_CHARGE)); }
-            default -> { this.getDataTracker().set(ITEM, new ItemStack(AllItems.MAGIC_CHARGE)); }
+            case ETHEREAL -> {
+                this.getDataTracker().set(ITEM, new ItemStack(GCItems.ETHEREAL_CHARGE));
+            }
+            case DIRE -> {
+                this.getDataTracker().set(ITEM, new ItemStack(GCItems.DIRE_CHARGE));
+            }
+            case POTENT -> {
+                this.getDataTracker().set(ITEM, new ItemStack(GCItems.POTENT_CHARGE));
+            }
+            default -> {
+                this.getDataTracker().set(ITEM, new ItemStack(GCItems.MAGIC_CHARGE));
+            }
         }
         this.setOwner(owner);
         this.setPosition(owner.getX(), owner.getEyeY() - 0.1F, owner.getZ());
@@ -122,16 +129,18 @@ public class SpellProjectileEntity extends ProjectileEntity implements FlyingIte
             h = 0.99F;
         }
 
-        //GhostCraft.LOGGER.info(this.getComponent(AllCardinalComponents.MAGIC_TYPE_TRACKER).getMagicType().toString());
+        //GhostCraft.LOGGER.info(this.getComponent(GCCardinalComponents.MAGIC_TYPE_TRACKER).getMagicType().toString());
 
-        this.getWorld().addParticle(new DustParticleEffect(this.getComponent(AllCardinalComponents.MAGIC_TYPE_TRACKER).getMagicType().color, 1.0f), d - vec3d.x * 0.25, e - vec3d.y * 0.25, f - vec3d.z * 0.25, vec3d.x, vec3d.y, vec3d.z);
+        this.getWorld().addParticle(new DustParticleEffect(this.getComponent(GCCardinalComponents.MAGIC_TYPE_TRACKER).getMagicType().color, 1.0f), d - vec3d.x * 0.25, e - vec3d.y * 0.25, f - vec3d.z * 0.25, vec3d.x, vec3d.y, vec3d.z);
 
         this.setVelocity(vec3d.multiply((double)h));
         this.applyGravity();
         this.setPosition(d, e, f);
     }
 
-    protected Item getDefaultItem() { return AllItems.MAGIC_CHARGE; }
+    protected Item getDefaultItem() {
+        return GCItems.MAGIC_CHARGE;
+    }
 
     @Override
     public ItemStack getStack() { return this.getDataTracker().get(ITEM); }

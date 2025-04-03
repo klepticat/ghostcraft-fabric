@@ -24,7 +24,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.ColorHelper;
 import net.minecraft.util.math.Vec3d;
 import org.joml.Vector3f;
-import org.klepticat.ghostcraft.AllCardinalComponents;
+import org.klepticat.ghostcraft.GCCardinalComponents;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 import org.spongepowered.asm.mixin.injection.At;
@@ -52,7 +52,7 @@ public abstract class EntityRendererMixin {
     ) {
         if (entity.isPlayer()) {
             PlayerEntity playerEntity = (PlayerEntity) entity;
-            EntityRenderer thisRenderer = (EntityRenderer) ((Object) this);
+            EntityRenderer __this = (EntityRenderer) ((Object) this);
 
             MinecraftClient.getInstance().getNetworkHandler().getDataQueryHandler().queryEntityNbt(entity.getId(), nbtCompound -> {
                 NbtList effectList = nbtCompound.getList("active_effects", NbtElement.COMPOUND_TYPE);
@@ -77,7 +77,7 @@ public abstract class EntityRendererMixin {
                 matrices.multiply(getDispatcher().getRotation());
                 matrices.scale(0.025F, -0.025F, 0.025F);
 
-                drawHeartContainer(playerEntity, matrices, vertexConsumerProvider, light, thisRenderer.getTextRenderer(), text);
+                drawHeartContainer(playerEntity, matrices, vertexConsumerProvider, light, __this.getTextRenderer(), text);
 
                 Sprite effectBackground = MinecraftClient.getInstance().getGuiAtlasManager().getSprite(Identifier.ofVanilla("hud/effect_background"));
 
@@ -89,7 +89,7 @@ public abstract class EntityRendererMixin {
                     float offset = 2.0f;
 
                     matrices.push();
-                    matrices.translate((-thisRenderer.getTextRenderer().getWidth(text) / 2.0f) + ((w + offset) * index) - 1.0f, -(h + offset) - 1.0f, 0.0f);
+                    matrices.translate((-__this.getTextRenderer().getWidth(text) / 2.0f) + ((w + offset) * index) - 1.0f, -(h + offset) - 1.0f, 0.0f);
 
                     Sprite effectSprite = MinecraftClient.getInstance().getStatusEffectSpriteManager().getSprite(effect.getEffectType());
 
@@ -160,7 +160,7 @@ public abstract class EntityRendererMixin {
         matrixStack.push();
 
         Text health = Text.literal(Integer.toString(Math.round(entity.getHealth())));
-        Text souls = Text.literal(Integer.toString(entity.getComponent(AllCardinalComponents.PLAYER_SOULS).get()));
+        Text souls = Text.literal(Integer.toString(entity.getComponent(GCCardinalComponents.PLAYER_SOULS).get()));
 
         float y = 0.0f;
         float healthX = (-textRenderer.getWidth(health)) - textRenderer.getWidth(labelText) / 2.0f - 2.0f;

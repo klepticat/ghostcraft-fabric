@@ -25,7 +25,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector3f;
-import org.klepticat.ghostcraft.AllCardinalComponents;
+import org.klepticat.ghostcraft.GCCardinalComponents;
 import org.klepticat.ghostcraft.item.RelikItem;
 
 import java.util.List;
@@ -35,15 +35,15 @@ public class TotemEntity extends Entity implements Ownable {
     private static final TrackedData<ItemStack> ITEM = DataTracker.registerData(TotemEntity.class, TrackedDataHandlerRegistry.ITEM_STACK);
     private UUID ownerUuid;
     private Entity owner;
-    private Box visibilityBoundingBox;
+    private final Box visibilityBoundingBox;
 
     public float currentRadius = 0.0f;
 
     public TotemEntity(EntityType<? extends Entity> entityType, RelikItem totemItem, float radius, short uptime, RegistryEntry<StatusEffect> effect, byte effectAmplifier, Entity owner, World world) {
         this(entityType, totemItem, owner, world);
-        this.getComponent(AllCardinalComponents.TOTEM_RADIUS).set(radius);
-        this.getComponent(AllCardinalComponents.TOTEM_UPTIME).set(uptime);
-        this.getComponent(AllCardinalComponents.TOTEM_STATUS_EFFECT).setEffect(effect, effectAmplifier);
+        this.getComponent(GCCardinalComponents.TOTEM_RADIUS).set(radius);
+        this.getComponent(GCCardinalComponents.TOTEM_UPTIME).set(uptime);
+        this.getComponent(GCCardinalComponents.TOTEM_STATUS_EFFECT).setEffect(effect, effectAmplifier);
     }
 
     public TotemEntity(EntityType<? extends Entity> entityType, RelikItem totemItem, Entity owner, World world) {
@@ -121,15 +121,15 @@ public class TotemEntity extends Entity implements Ownable {
     public void tick() {
         super.tick();
 
-        if (this.age >= this.getComponent(AllCardinalComponents.TOTEM_UPTIME).get() && this.getComponent(AllCardinalComponents.TOTEM_UPTIME).get() > 0) {
-            if (this.getOwner() != null) this.getOwner().getComponent(AllCardinalComponents.PLAYER_TOTEM).setUuid(null);
+        if (this.age >= this.getComponent(GCCardinalComponents.TOTEM_UPTIME).get() && this.getComponent(GCCardinalComponents.TOTEM_UPTIME).get() > 0) {
+            if (this.getOwner() != null) this.getOwner().getComponent(GCCardinalComponents.PLAYER_TOTEM).setUuid(null);
             this.discard();
         }
 
         List<Entity> nearbyPlayers = this.getWorld().getOtherEntities(this, Box.of(this.getPos(), this.currentRadius * 2, this.currentRadius * 2, this.currentRadius * 2), entity -> entity.isAlive() && entity.isPlayer());
 
-        RegistryEntry<StatusEffect> statusEffect = this.getComponent(AllCardinalComponents.TOTEM_STATUS_EFFECT).getEffect();
-        byte amplifier = this.getComponent(AllCardinalComponents.TOTEM_STATUS_EFFECT).getAmplifier();
+        RegistryEntry<StatusEffect> statusEffect = this.getComponent(GCCardinalComponents.TOTEM_STATUS_EFFECT).getEffect();
+        byte amplifier = this.getComponent(GCCardinalComponents.TOTEM_STATUS_EFFECT).getAmplifier();
 
         nearbyPlayers.forEach(player -> {
             if (player.getPos().distanceTo(this.getPos()) > currentRadius) return;
@@ -137,12 +137,12 @@ public class TotemEntity extends Entity implements Ownable {
             ((LivingEntity) player).addStatusEffect(new StatusEffectInstance(statusEffect, 3, amplifier, true, true));
         });
 
-        if (this.currentRadius < this.getComponent(AllCardinalComponents.TOTEM_RADIUS).get())
-            this.currentRadius += this.getComponent(AllCardinalComponents.TOTEM_RADIUS).get() / 10.0;
-        else this.currentRadius = this.getComponent(AllCardinalComponents.TOTEM_RADIUS).get();
+        if (this.currentRadius < this.getComponent(GCCardinalComponents.TOTEM_RADIUS).get())
+            this.currentRadius += this.getComponent(GCCardinalComponents.TOTEM_RADIUS).get() / 10.0;
+        else this.currentRadius = this.getComponent(GCCardinalComponents.TOTEM_RADIUS).get();
 
         if (this.getWorld().isClient()) {
-            double maxRadius = this.getComponent(AllCardinalComponents.TOTEM_RADIUS).get();
+            double maxRadius = this.getComponent(GCCardinalComponents.TOTEM_RADIUS).get();
             if (maxRadius != 0.0) {
                 double radius = this.currentRadius;
 

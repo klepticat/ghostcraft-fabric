@@ -3,7 +3,7 @@
   "parent": "item/wynn/template/weapon",
   "textures": {
     "texture": "ghostcraft:item/weapons/archer/water_tier_all",
-    "water_atom": "ghostcraft:item/weapons/anim/water_atom"
+    "water_atom": "ghostcraft:item/anim/water_atom"
   },
   "elements": [
     {

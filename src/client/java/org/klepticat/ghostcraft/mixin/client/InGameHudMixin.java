@@ -12,8 +12,8 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.ColorHelper;
-import org.klepticat.ghostcraft.AllCardinalComponents;
-import org.klepticat.ghostcraft.AllDataComponents;
+import org.klepticat.ghostcraft.GCCardinalComponents;
+import org.klepticat.ghostcraft.GCDataComponents;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 import org.spongepowered.asm.mixin.injection.At;
@@ -45,7 +45,7 @@ public abstract class InGameHudMixin {
     private boolean drewXp = false;
 
     @Inject(
-            method = "Lnet/minecraft/client/gui/hud/InGameHud;renderHeldItemTooltip(Lnet/minecraft/client/gui/DrawContext;)V",
+            method = "renderHeldItemTooltip(Lnet/minecraft/client/gui/DrawContext;)V",
             at = @At("HEAD"),
             cancellable = true
     )
@@ -54,10 +54,10 @@ public abstract class InGameHudMixin {
         if (getTooltipFade() > 0 && !getCurrentStack().isEmpty()) {
             MutableText mutableText;
 
-            if (!getCurrentStack().getComponents().contains(AllDataComponents.GC_RARITY)) {
+            if (!getCurrentStack().getComponents().contains(GCDataComponents.GC_RARITY)) {
                 mutableText = Text.empty().append(getCurrentStack().getName()).formatted(getCurrentStack().getRarity().getFormatting());
             } else {
-                mutableText = Text.empty().append(getCurrentStack().getName()).formatted(getCurrentStack().getComponents().get(AllDataComponents.GC_RARITY).getFormatting());
+                mutableText = Text.empty().append(getCurrentStack().getName()).formatted(getCurrentStack().getComponents().get(GCDataComponents.GC_RARITY).getFormatting());
             }
 
             if (getCurrentStack().contains(DataComponentTypes.CUSTOM_NAME)) {
@@ -85,7 +85,7 @@ public abstract class InGameHudMixin {
         callbackInfo.cancel();
     }
 
-    @Inject(method = "Lnet/minecraft/client/gui/hud/InGameHud;renderExperienceLevel(Lnet/minecraft/client/gui/DrawContext;Lnet/minecraft/client/render/RenderTickCounter;)V", at = @At("HEAD"))
+    @Inject(method = "renderExperienceLevel(Lnet/minecraft/client/gui/DrawContext;Lnet/minecraft/client/render/RenderTickCounter;)V", at = @At("HEAD"))
     private void moveExperienceLevel(DrawContext context, RenderTickCounter tickCounter, CallbackInfo callbackInfo) {
         context.push();
 
@@ -95,14 +95,14 @@ public abstract class InGameHudMixin {
         }
     }
 
-    @Inject(method = "Lnet/minecraft/client/gui/hud/InGameHud;renderExperienceLevel(Lnet/minecraft/client/gui/DrawContext;Lnet/minecraft/client/render/RenderTickCounter;)V", at = @At("TAIL"))
+    @Inject(method = "renderExperienceLevel(Lnet/minecraft/client/gui/DrawContext;Lnet/minecraft/client/render/RenderTickCounter;)V", at = @At("TAIL"))
     private void renderSoulLevel(DrawContext context, RenderTickCounter tickCounter, CallbackInfo callbackInfo) {
         context.pop();
 
         context.push();
         context.translate(3.0f, 8.0f, 0.0f);
 
-        String string = this.getClient().player.getComponent(AllCardinalComponents.PLAYER_SOULS).get() + "";
+        String string = this.getClient().player.getComponent(GCCardinalComponents.PLAYER_SOULS).get() + "";
         int j = (this.shouldRenderExperience() && getClient().player.experienceLevel > 0) ? (context.getScaledWindowWidth() / 2) : -2 + (context.getScaledWindowWidth() - ((InGameHud) (Object) this).getTextRenderer().getWidth(string)) / 2;
         int i = context.getScaledWindowHeight() - 31 - 4;
         context.drawText(((InGameHud) (Object) this).getTextRenderer(), string, j + 1, i, 0, false);
@@ -117,9 +117,9 @@ public abstract class InGameHudMixin {
         drewXp = false;
     }
 
-    @Inject(method = "Lnet/minecraft/client/gui/hud/InGameHud;renderExperienceBar(Lnet/minecraft/client/gui/DrawContext;I)V", at = @At("HEAD"))
+    @Inject(method = "renderExperienceBar(Lnet/minecraft/client/gui/DrawContext;I)V", at = @At("HEAD"))
     private void renderSoulBar(DrawContext context, int x, CallbackInfo callbackInfo) {
-        int k = (int) Math.min(((float) this.getClient().player.getComponent(AllCardinalComponents.PLAYER_SOULS).get() / (float) this.getClient().player.getComponent(AllCardinalComponents.PLAYER_MAX_SOULS).get() * 183.0f), 183.0f);
+        int k = (int) Math.min(((float) this.getClient().player.getComponent(GCCardinalComponents.PLAYER_SOULS).get() / (float) this.getClient().player.getComponent(GCCardinalComponents.PLAYER_MAX_SOULS).get() * 183.0f), 183.0f);
         int l = context.getScaledWindowHeight() - 32 + 3;
         RenderSystem.enableBlend();
         context.drawGuiTexture(Identifier.of(MOD_ID, "hud/soul_bar_background"), x, l, 182, 5);

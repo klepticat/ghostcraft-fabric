@@ -3,7 +3,7 @@
   "parent": "item/wynn/template/weapon",
   "textures": {
     "texture": "ghostcraft:item/weapons/archer/air_tier_all_0",
-    "air_anim3": "ghostcraft:item/weapons/anim/air_swirl"
+    "air_anim3": "ghostcraft:item/anim/air_swirl"
   },
   "elements": [
     {

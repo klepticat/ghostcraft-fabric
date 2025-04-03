@@ -3,7 +3,7 @@
   "parent": "item/wynn/template/weapon",
   "textures": {
     "0": "ghostcraft:item/generic/candle",
-    "1": "ghostcraft:item/weapons/anim/flame_small",
+    "1": "ghostcraft:item/anim/flame_small",
     "3": "ghostcraft:item/generic/wood_full",
     "4": "ghostcraft:item/generic/rose",
     "particle": "ghostcraft:item/generic/wood_full"

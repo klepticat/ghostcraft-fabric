@@ -1,11 +1,14 @@
 {
-	"required": true,
-	"package": "org.klepticat.ghostcraft.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ItemStackRarityMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "org.klepticat.ghostcraft.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ItemStackRarityMixin",
+    "LivingEntityMixin",
+    "PlayerDeathMixin",
+    "PlayerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

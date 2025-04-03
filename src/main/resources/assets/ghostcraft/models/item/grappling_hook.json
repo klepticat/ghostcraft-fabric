@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "ghostcraft:item/util/grappling_hook"
+  }
+}

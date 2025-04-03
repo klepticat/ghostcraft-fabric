@@ -2,7 +2,7 @@ package org.klepticat.ghostcraft.util.cardinalcomponent;
 
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryWrapper;
-import org.klepticat.ghostcraft.AllCardinalComponents;
+import org.klepticat.ghostcraft.GCCardinalComponents;
 import org.ladysnake.cca.api.v3.component.sync.AutoSyncedComponent;
 
 public class PlayerMaxSouls implements ByteComponent, AutoSyncedComponent {
@@ -23,7 +23,7 @@ public class PlayerMaxSouls implements ByteComponent, AutoSyncedComponent {
         if (value == 0) return;
 
         this.maxSouls = value;
-        AllCardinalComponents.PLAYER_MAX_SOULS.sync(provider);
+        GCCardinalComponents.PLAYER_MAX_SOULS.sync(provider);
     }
 
     @Override

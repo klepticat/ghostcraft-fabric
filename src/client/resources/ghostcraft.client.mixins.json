@@ -3,10 +3,13 @@
   "package": "org.klepticat.ghostcraft.mixin.client",
   "compatibilityLevel": "JAVA_21",
   "client": [
+    "CapeFeatureRendererMixin",
+    "ClientPlayerEntityMixin",
     "EntityRendererMixin",
-    "EquipmentUseAnimationMixin",
+    "HeldItemAnimationMixin",
     "InGameHudMixin",
-    "PlayerEntityRendererMixin"
+    "PlayerEntityRendererMixin",
+    "WorldRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

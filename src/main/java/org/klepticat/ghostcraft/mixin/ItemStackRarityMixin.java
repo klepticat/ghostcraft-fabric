@@ -16,7 +16,7 @@ import net.minecraft.text.Texts;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Rarity;
 import org.jetbrains.annotations.Nullable;
-import org.klepticat.ghostcraft.AllDataComponents;
+import org.klepticat.ghostcraft.GCDataComponents;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -46,8 +46,8 @@ public abstract class ItemStackRarityMixin {
 
             MutableText mutableText;
 
-            if(((ItemStack) (Object) this).getComponents().contains(AllDataComponents.GC_RARITY)) {
-                mutableText = Text.empty().append(this.getName()).formatted(((ItemStack) (Object) this).getComponents().get(AllDataComponents.GC_RARITY).getFormatting());
+            if (((ItemStack) (Object) this).getComponents().contains(GCDataComponents.GC_RARITY)) {
+                mutableText = Text.empty().append(this.getName()).formatted(((ItemStack) (Object) this).getComponents().get(GCDataComponents.GC_RARITY).getFormatting());
             } else {
                 mutableText = Text.empty().append(this.getName()).formatted(this.getRarity().getFormatting());
             }
@@ -125,8 +125,8 @@ public abstract class ItemStackRarityMixin {
 
         MutableText mutableText2 = Texts.bracketed(mutableText);
         if (!((ItemStack) (Object) this).isEmpty()) {
-            if(((ItemStack) (Object) this).getComponents().contains(AllDataComponents.GC_RARITY)) {
-                mutableText2 = Text.empty().append(this.getName()).formatted(((ItemStack) (Object) this).getComponents().get(AllDataComponents.GC_RARITY).getFormatting());
+            if (((ItemStack) (Object) this).getComponents().contains(GCDataComponents.GC_RARITY)) {
+                mutableText2 = Text.empty().append(this.getName()).formatted(((ItemStack) (Object) this).getComponents().get(GCDataComponents.GC_RARITY).getFormatting());
             } else {
                 mutableText2 = Text.empty().append(this.getName()).formatted(this.getRarity().getFormatting());
             }

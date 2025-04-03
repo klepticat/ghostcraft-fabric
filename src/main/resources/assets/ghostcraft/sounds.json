@@ -23,5 +23,12 @@
     "sounds": [
       "ghostcraft:item/totem_place"
     ]
+  },
+  "grapple": {
+    "sounds": [
+      "minecraft:item/bundle/drop_contents1",
+      "minecraft:item/bundle/drop_contents2",
+      "minecraft:item/bundle/drop_contents3"
+    ]
   }
 }

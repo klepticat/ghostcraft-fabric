@@ -7,7 +7,7 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
-import org.klepticat.ghostcraft.AllCardinalComponents;
+import org.klepticat.ghostcraft.GCCardinalComponents;
 import org.ladysnake.cca.api.v3.component.sync.AutoSyncedComponent;
 
 import java.util.Optional;
@@ -41,7 +41,7 @@ public class TotemStatusEffect implements StatusEffectComponent, AutoSyncedCompo
     @Override
     public void setEffect(RegistryEntry<StatusEffect> effect) {
         this.effect = effect;
-        AllCardinalComponents.TOTEM_STATUS_EFFECT.sync(provider);
+        GCCardinalComponents.TOTEM_STATUS_EFFECT.sync(provider);
     }
 
     @Override

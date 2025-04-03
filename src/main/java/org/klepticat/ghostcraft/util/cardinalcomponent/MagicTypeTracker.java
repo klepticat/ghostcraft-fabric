@@ -2,7 +2,7 @@ package org.klepticat.ghostcraft.util.cardinalcomponent;
 
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryWrapper;
-import org.klepticat.ghostcraft.AllCardinalComponents;
+import org.klepticat.ghostcraft.GCCardinalComponents;
 import org.klepticat.ghostcraft.item.MagicType;
 import org.ladysnake.cca.api.v3.component.sync.AutoSyncedComponent;
 
@@ -22,7 +22,7 @@ public class MagicTypeTracker implements MagicTypeComponent, AutoSyncedComponent
     @Override
     public void setMagicType(MagicType magicType) {
         this.magicType = magicType;
-        AllCardinalComponents.MAGIC_TYPE_TRACKER.sync(this.provider);
+        GCCardinalComponents.MAGIC_TYPE_TRACKER.sync(this.provider);
     }
 
     @Override

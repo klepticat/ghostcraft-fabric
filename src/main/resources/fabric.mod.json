@@ -23,7 +23,7 @@
 			"org.klepticat.ghostcraft.GhostCraftClient"
 		],
 		"cardinal-components": [
-			"org.klepticat.ghostcraft.AllCardinalComponents"
+			"org.klepticat.ghostcraft.GCCardinalComponents"
 		]
 	},
 	"mixins": [
@@ -52,7 +52,9 @@
 			"ghostcraft:totem_uptime",
 			"ghostcraft:totem_status_effect",
 			"ghostcraft:player_souls",
-			"ghostcraft:player_max_souls"
+			"ghostcraft:player_max_souls",
+			"ghostcraft:eye_bat_variant",
+			"ghostcraft:rat_variant"
 		]
 	}
 }

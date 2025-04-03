@@ -19,15 +19,15 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
-import org.klepticat.ghostcraft.AllCardinalComponents;
-import org.klepticat.ghostcraft.AllEntityTypes;
-import org.klepticat.ghostcraft.AllSounds;
+import org.klepticat.ghostcraft.GCCardinalComponents;
+import org.klepticat.ghostcraft.GCEntityTypes;
+import org.klepticat.ghostcraft.GCSounds;
 import org.klepticat.ghostcraft.entity.TotemEntity;
 
 import java.util.List;
 import java.util.function.Consumer;
 
-import static org.klepticat.ghostcraft.AllCardinalComponents.PLAYER_TOTEM;
+import static org.klepticat.ghostcraft.GCCardinalComponents.PLAYER_TOTEM;
 
 public class RelikItem extends Item {
     private float totemRadius = 5.0f;
@@ -63,12 +63,12 @@ public class RelikItem extends Item {
             BlockPos blockPos = itemPlacementContext.getBlockPos();
             ItemStack itemStack = context.getStack();
             Vec3d vec3d = Vec3d.ofBottomCenter(blockPos);
-            Box box = AllEntityTypes.TOTEM.getDimensions().getBoxAt(vec3d.getX(), vec3d.getY(), vec3d.getZ());
+            Box box = GCEntityTypes.TOTEM.getDimensions().getBoxAt(vec3d.getX(), vec3d.getY(), vec3d.getZ());
 
             List<TotemEntity> nearbyTotems = world.getEntitiesByClass(
                     TotemEntity.class,
                     Box.of(itemPlacementContext.getBlockPos().toCenterPos(), 100, 100, 100),
-                    entity -> (itemPlacementContext.getBlockPos().toCenterPos().distanceTo(entity.getPos()) <= this.totemRadius + entity.getComponent(AllCardinalComponents.TOTEM_RADIUS).get()) && entity.getOwner() != context.getPlayer()
+                    entity -> (itemPlacementContext.getBlockPos().toCenterPos().distanceTo(entity.getPos()) <= this.totemRadius + entity.getComponent(GCCardinalComponents.TOTEM_RADIUS).get()) && entity.getOwner() != context.getPlayer()
             );
 
             if (world.isSpaceEmpty(null, box) && world.getOtherEntities(null, box).isEmpty() && nearbyTotems.isEmpty()) {
@@ -78,7 +78,7 @@ public class RelikItem extends Item {
 
                 if (world instanceof ServerWorld serverWorld) {
                     Consumer<ArmorStandEntity> consumer = EntityType.copier(serverWorld, itemStack, context.getPlayer());
-                    TotemEntity totem = new TotemEntity(AllEntityTypes.TOTEM, this, this.totemRadius, this.totemUptime, this.statusEffect, this.effectAmplifier, context.getPlayer(), serverWorld);
+                    TotemEntity totem = new TotemEntity(GCEntityTypes.TOTEM, this, this.totemRadius, this.totemUptime, this.statusEffect, this.effectAmplifier, context.getPlayer(), serverWorld);
                     if (totem == null) {
                         return ActionResult.FAIL;
                     }
@@ -91,7 +91,7 @@ public class RelikItem extends Item {
                     totem.refreshPositionAndAngles(totem.getX(), totem.getY(), totem.getZ(), f, 0.0F);
                     serverWorld.spawnEntityAndPassengers(totem);
                     world.playSound(
-                            null, vec3d.x, vec3d.y, vec3d.z, AllSounds.TOTEM_PLACE, SoundCategory.PLAYERS, 4.0F, 1.0F
+                            null, vec3d.x, vec3d.y, vec3d.z, GCSounds.TOTEM_PLACE, SoundCategory.PLAYERS, 4.0F, 1.0F
                     );
                     serverWorld.spawnParticles(ParticleTypes.CLOUD, vec3d.x, vec3d.y, vec3d.z, 15, 0.2, 1.0, 0.2, 0.05);
                     totem.emitGameEvent(GameEvent.ENTITY_PLACE, context.getPlayer());
