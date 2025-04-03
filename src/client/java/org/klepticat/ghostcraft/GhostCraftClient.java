@@ -4,18 +4,50 @@ import dev.emi.trinkets.api.client.TrinketRendererRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.fabricmc.fabric.api.client.rendering.v1.LivingEntityFeatureRendererRegistrationCallback;
-import net.minecraft.client.render.entity.*;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.render.RenderTickCounter;
+import net.minecraft.client.render.entity.ArmorStandEntityRenderer;
+import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
+import net.minecraft.client.render.entity.PlayerEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
+import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.Identifier;
+import org.klepticat.ghostcraft.entity.GCPlayerEntityStickers;
 import org.klepticat.ghostcraft.render.WeehEntityRenderer;
 import org.klepticat.ghostcraft.render.entity.*;
 import org.klepticat.ghostcraft.render.entity.feature.ExtendedElytraFeatureRenderer;
 import org.klepticat.ghostcraft.render.entity.model.RatEntityModel;
 import org.klepticat.ghostcraft.render.item.trinkets.HatRenderer;
 
+import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
+
 public class GhostCraftClient implements ClientModInitializer {
-	@Override
-	public void onInitializeClient() {
+    private static void onHudRender(DrawContext drawContext, RenderTickCounter renderTickCounter) {
+        GCPlayerEntityStickers player = ((GCPlayerEntityStickers) MinecraftClient.getInstance().player);
+
+        assert player != null;
+        if (player.hasStickerSelected()) {
+            MatrixStack matrixStack = drawContext.getMatrices();
+
+            Identifier texture = Identifier.of(MOD_ID, "textures/gui/sticker_hud.png");
+
+            matrixStack.push();
+
+            matrixStack.translate(((float) drawContext.getScaledWindowWidth() / 2), ((float) drawContext.getScaledWindowHeight() / 2), 0);
+            matrixStack.scale(0.5f, 0.5f, 1.0f);
+
+            drawContext.drawTexture(texture, 12, 3, 0, 14, 73, 13, 73, 27);
+            drawContext.drawTexture(texture, 12, -15, 0, 0, 73, 13, 73, 27);
+
+            matrixStack.pop();
+        }
+    }
+
+    @Override
+    public void onInitializeClient() {
         GCKeyBindings.initialize();
 
         EntityRendererRegistry.register(GCEntityTypes.SPELL_PROJECTILE, FlyingItemEntityRenderer::new);
@@ -40,6 +72,8 @@ public class GhostCraftClient implements ClientModInitializer {
                 registrationHelper.register(new ExtendedElytraFeatureRenderer<>(entityRenderer, context.getModelLoader()));
             }
         });
+
+        HudRenderCallback.EVENT.register(GhostCraftClient::onHudRender);
 
         TrinketRendererRegistry.registerRenderer(GCItems.ARACHNOPHOBIA_HAT, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.BEARD_MASK, new HatRenderer());
@@ -92,5 +126,5 @@ public class GhostCraftClient implements ClientModInitializer {
         TrinketRendererRegistry.registerRenderer(GCItems.SPORELING_HAT, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.VALKYRIE_HELM_HAT, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.WEREWOLF_MASK, new HatRenderer());
-	}
+    }
 }
