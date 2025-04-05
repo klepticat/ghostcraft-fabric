@@ -77,6 +77,7 @@ public class RelikItem extends Item {
                 }
 
                 if (world instanceof ServerWorld serverWorld) {
+                    // Why is this here I don't know what this does lol
                     Consumer<ArmorStandEntity> consumer = EntityType.copier(serverWorld, itemStack, context.getPlayer());
                     TotemEntity totem = new TotemEntity(GCEntityTypes.TOTEM, this, this.totemRadius, this.totemUptime, this.statusEffect, this.effectAmplifier, context.getPlayer(), serverWorld);
                     if (totem == null) {

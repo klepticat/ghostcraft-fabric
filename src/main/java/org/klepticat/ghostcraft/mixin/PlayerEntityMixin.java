@@ -1,12 +1,11 @@
 package org.klepticat.ghostcraft.mixin;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import org.klepticat.ghostcraft.GCEntityTypes;
@@ -19,6 +18,8 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
+
+import static org.klepticat.ghostcraft.GCCardinalComponents.PLAYER_STICKER;
 
 @Mixin(PlayerEntity.class)
 public class PlayerEntityMixin implements GCPlayerEntityStickers {
@@ -49,6 +50,10 @@ public class PlayerEntityMixin implements GCPlayerEntityStickers {
     public boolean placeSticker(Sticker sticker, Vec3d position, Direction direction) {
         PlayerEntity __this = (PlayerEntity) (Object) this;
 
+        Entity existingSticker = ((ServerWorld) __this.getWorld()).getEntity(PLAYER_STICKER.get(__this).getUuid());
+
+        if (existingSticker != null) existingSticker.discard();
+
         if (__this.getWorld() instanceof ServerWorld world) {
             Vec3d stickerPos = position.add(0.0, -0.5, 0.0);
 
@@ -56,6 +61,8 @@ public class PlayerEntityMixin implements GCPlayerEntityStickers {
             stickerEntity.setPosition(stickerPos);
 
             world.spawnEntityAndPassengers(stickerEntity);
+
+            PLAYER_STICKER.get(__this).setUuid(stickerEntity.getUuid());
 
             return true;
         } else return false;

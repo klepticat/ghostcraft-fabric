@@ -2,16 +2,12 @@ package org.klepticat.ghostcraft.gui.screen;
 
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.texture.TextureManager;
-import net.minecraft.client.toast.SystemToast;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import org.joml.Vector2i;
 import org.klepticat.ghostcraft.GCRegistries;
-import org.klepticat.ghostcraft.GhostCraft;
 import org.klepticat.ghostcraft.entity.GCPlayerEntityStickers;
 import org.klepticat.ghostcraft.stickers.Sticker;
 
@@ -57,7 +53,7 @@ public class StickerSelectScreen extends Screen {
         for (int i = 0; i < stickers.size(); i++) {
             drawContext.getMatrices().push();
             drawContext.getMatrices().translate(x + 9, y + 18, 0);
-            drawContext.getMatrices().translate(i * 18, 0, 0);
+            drawContext.getMatrices().translate(i % 9 * 18, Math.floorDiv(i, 9) * 18, 0);
             drawContext.getMatrices().scale(0.03125f, 0.03125f, 1);
             drawContext.drawTexture(stickers.get(i).getTexture(), 0, 0, 0, 0, 512, 512, 512, 512);
             drawContext.getMatrices().pop();
@@ -69,7 +65,7 @@ public class StickerSelectScreen extends Screen {
             drawContext.fillGradient(RenderLayer.getGuiOverlay(), startX, startY, startX + 16, startY + 16, -2130706433, -2130706433, -1);
         }
 
-        drawContext.drawText(this.textRenderer, "Sticker Selector Test", 40, 40 - this.textRenderer.fontHeight - 10, 0xFFFFFFFF, true);
+        //drawContext.drawText(this.textRenderer, "Sticker Selector Test", 40, 40 - this.textRenderer.fontHeight - 10, 0xFFFFFFFF, true);
     }
 
     @Override

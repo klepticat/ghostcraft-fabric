@@ -1,5 +1,6 @@
 package org.klepticat.ghostcraft.render.entity;
 
+import net.minecraft.client.render.LightmapTextureManager;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -40,29 +41,29 @@ public class StickerEntityRenderer<T extends StickerEntity> extends EntityRender
                 .color(0xFFFFFFFF)
                 .texture(1, 0)
                 .overlay(OverlayTexture.DEFAULT_UV)
-                .light(light)
-                .normal(stackEntry, 0.0f, 1.0f, 0.0f)
+                .light(LightmapTextureManager.MAX_BLOCK_LIGHT_COORDINATE)
+                .normal(stackEntry, 0.0f, 1f, 0.0f)
 
                 .vertex(stackEntry.getPositionMatrix(), 0.5f, 0.5f, 0.0f)
                 .color(0xFFFFFFFF)
                 .texture(0, 0)
                 .overlay(OverlayTexture.DEFAULT_UV)
-                .light(light)
-                .normal(stackEntry, 0.0f, 1.0f, 0.0f)
+                .light(LightmapTextureManager.MAX_BLOCK_LIGHT_COORDINATE)
+                .normal(stackEntry, 0f, 1f, 0.0f)
 
                 .vertex(stackEntry.getPositionMatrix(), 0.5f, -0.5f, 0.0f)
                 .color(0xFFFFFFFF)
                 .texture(0, 1)
                 .overlay(OverlayTexture.DEFAULT_UV)
-                .light(light)
-                .normal(stackEntry, 0.0f, 1.0f, 0.0f)
+                .light(LightmapTextureManager.MAX_BLOCK_LIGHT_COORDINATE)
+                .normal(stackEntry, 0f, 1f, 0.0f)
 
                 .vertex(stackEntry.getPositionMatrix(), -0.5f, -0.5f, 0.0f)
                 .color(0xFFFFFFFF)
                 .texture(1, 1)
                 .overlay(OverlayTexture.DEFAULT_UV)
-                .light(light)
-                .normal(stackEntry, 0.0f, 1.0f, 0.0f);
+                .light(LightmapTextureManager.MAX_BLOCK_LIGHT_COORDINATE)
+                .normal(stackEntry, 0f, 1f, 0.0f);
 
         matrixStack.pop();
     }
