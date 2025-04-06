@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ghostcraft:block/tanglewood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ghostcraft:block/tanglewood"
+    },
+    "axis=z": {
+      "model": "ghostcraft:block/tanglewood",
+      "x": 90
+    }
+  }
+}

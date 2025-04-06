@@ -2,19 +2,25 @@ package org.klepticat.ghostcraft;
 
 import dev.emi.trinkets.api.client.TrinketRendererRegistry;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.fabricmc.fabric.api.client.rendering.v1.LivingEntityFeatureRendererRegistrationCallback;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.RenderTickCounter;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
+import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
 import net.minecraft.client.render.entity.ArmorStandEntityRenderer;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.render.entity.PlayerEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
+import org.klepticat.ghostcraft.block.entity.GCSignBlockEntity;
 import org.klepticat.ghostcraft.entity.GCPlayerEntityStickers;
 import org.klepticat.ghostcraft.render.WeehEntityRenderer;
 import org.klepticat.ghostcraft.render.entity.*;
@@ -126,5 +132,9 @@ public class GhostCraftClient implements ClientModInitializer {
         TrinketRendererRegistry.registerRenderer(GCItems.SPORELING_HAT, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.VALKYRIE_HELM_HAT, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.WEREWOLF_MASK, new HatRenderer());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.DARK_CHERRY_TRAPDOOR, RenderLayer.getCutout());
+
+        BlockEntityRendererFactories.register(((BlockEntityType<GCSignBlockEntity>) GCBlockEntities.SIGN), SignBlockEntityRenderer::new);
     }
 }

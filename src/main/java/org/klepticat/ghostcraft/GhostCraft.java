@@ -4,7 +4,6 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -34,6 +33,8 @@ public class GhostCraft implements ModInitializer {
 		GCDataComponents.initialize();
 		GCStickers.initialize();
 		GCAttachmentTypes.initialize();
+		GCBlocks.initialize();
+		GCBlockEntities.initialize();
 
 		CommandRegistrationCallback.EVENT.register(new LoreCommand()::execute);
 		CommandRegistrationCallback.EVENT.register(new LightningCommand()::execute);

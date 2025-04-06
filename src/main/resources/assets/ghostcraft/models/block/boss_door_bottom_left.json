@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "ghostcraft:block/boss_door_bottom",
+    "top": "ghostcraft:block/boss_door_top"
+  }
+}
