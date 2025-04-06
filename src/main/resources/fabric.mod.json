@@ -46,6 +46,7 @@
 
 	"custom": {
 		"cardinal-components": [
+			"ghostcraft:player_sticker",
 			"ghostcraft:player_totem",
 			"ghostcraft:magic_type_tracker",
 			"ghostcraft:totem_radius",

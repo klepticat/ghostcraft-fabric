@@ -1,7 +1,10 @@
 package org.klepticat.ghostcraft;
 
 import net.minecraft.util.Identifier;
-import org.klepticat.ghostcraft.entity.*;
+import org.klepticat.ghostcraft.entity.EyeBatEntity;
+import org.klepticat.ghostcraft.entity.RatEntity;
+import org.klepticat.ghostcraft.entity.SpellProjectileEntity;
+import org.klepticat.ghostcraft.entity.TotemEntity;
 import org.klepticat.ghostcraft.util.cardinalcomponent.*;
 import org.ladysnake.cca.api.v3.component.ComponentKey;
 import org.ladysnake.cca.api.v3.component.ComponentRegistry;
@@ -12,6 +15,7 @@ import org.ladysnake.cca.api.v3.entity.RespawnCopyStrategy;
 import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
 
 public class GCCardinalComponents implements EntityComponentInitializer {
+    public static final ComponentKey<PlayerSticker> PLAYER_STICKER = ComponentRegistry.getOrCreate(Identifier.of(MOD_ID, "player_sticker"), PlayerSticker.class);
     public static final ComponentKey<PlayerTotem> PLAYER_TOTEM = ComponentRegistry.getOrCreate(Identifier.of(MOD_ID, "player_totem"), PlayerTotem.class);
     public static final ComponentKey<MagicTypeTracker> MAGIC_TYPE_TRACKER = ComponentRegistry.getOrCreate(Identifier.of(MOD_ID, "magic_type_tracker"), MagicTypeTracker.class);
     public static final ComponentKey<TotemRadius> TOTEM_RADIUS = ComponentRegistry.getOrCreate(Identifier.of(MOD_ID, "totem_radius"), TotemRadius.class);
@@ -24,6 +28,7 @@ public class GCCardinalComponents implements EntityComponentInitializer {
 
     @Override
     public void registerEntityComponentFactories(EntityComponentFactoryRegistry registry) {
+        registry.registerForPlayers(PLAYER_STICKER, playerEntity -> new PlayerSticker(), RespawnCopyStrategy.ALWAYS_COPY);
         registry.registerForPlayers(PLAYER_TOTEM, playerEntity -> new PlayerTotem(), RespawnCopyStrategy.ALWAYS_COPY);
         registry.registerForPlayers(PLAYER_SOULS, PlayerSouls::new, RespawnCopyStrategy.ALWAYS_COPY);
         registry.registerForPlayers(PLAYER_MAX_SOULS, PlayerMaxSouls::new, RespawnCopyStrategy.ALWAYS_COPY);
