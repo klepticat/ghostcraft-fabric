@@ -1,5 +1,6 @@
 package org.klepticat.ghostcraft;
 
+import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
@@ -7,13 +8,12 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import org.klepticat.ghostcraft.block.GCSignBlock;
-import org.klepticat.ghostcraft.block.GCWallSignBlock;
+import org.jetbrains.annotations.Nullable;
+import org.klepticat.ghostcraft.block.BlockType;
 
+import java.util.function.BiFunction;
 import java.util.function.Function;
 
 import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
@@ -59,13 +59,25 @@ public class GCBlocks {
                     .luminance(state -> 5),
             true
     );
+    public static Block AURORA_CRYSTAL = register(
+            "aurora_crystal",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .solid()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
     public static Block BLEEDING_COIL = register(
             "bleeding_coil",
             Block::new,
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DARK_RED)
                     .strength(1.0F)
-                    .sounds(BlockSoundGroup.SHROOMLIGHT),
+                    .sounds(BlockSoundGroup.SHROOMLIGHT)
+                    .luminance(state -> 5),
             true
     );
     public static Block BLUE_NETHERRACK = register(
@@ -91,6 +103,7 @@ public class GCBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY),
             true
     );
+
     public static Block BROWN_GRANITE = register(
             "brown_granite",
             Block::new,
@@ -101,6 +114,24 @@ public class GCBlocks {
                     .strength(1.5F, 6.0F),
             true
     );
+    public static Block BROWN_GRANITE_STAIRS = register("brown_granite_stairs", settings -> new StairsBlock(BROWN_GRANITE.getDefaultState(), settings), AbstractBlock.Settings.copy(BROWN_GRANITE), true);
+    public static Block BROWN_GRANITE_SLAB = register("brown_granite_slab", SlabBlock::new, AbstractBlock.Settings.copy(BROWN_GRANITE), true);
+    public static Block BROWN_GRANITE_WALL = register("brown_granite_wall", WallBlock::new, AbstractBlock.Settings.copy(BROWN_GRANITE), true);
+
+    public static Block POLISHED_BROWN_GRANITE = register(
+            "polished_brown_granite",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DIRT_BROWN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.5F, 6.0F),
+            true
+    );
+    public static Block POLISHED_BROWN_GRANITE_STAIRS = register("polished_brown_granite_stairs", settings -> new StairsBlock(POLISHED_BROWN_GRANITE.getDefaultState(), settings), AbstractBlock.Settings.copy(POLISHED_BROWN_GRANITE), true);
+    public static Block POLISHED_BROWN_GRANITE_SLAB = register("polished_brown_granite_slab", SlabBlock::new, AbstractBlock.Settings.copy(POLISHED_BROWN_GRANITE), true);
+    public static Block POLISHED_BROWN_GRANITE_WALL = register("polished_brown_granite_wall", WallBlock::new, AbstractBlock.Settings.copy(POLISHED_BROWN_GRANITE), true);
+
     public static Block CANDY_CANE = register(
             "candy_cane_block",
             Block::new,
@@ -121,6 +152,7 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.FROGLIGHT),
             true
     );
+
     public static Block DARK_CHERRY_LOG = register(
             "dark_cherry_log",
             PillarBlock::new,
@@ -143,6 +175,28 @@ public class GCBlocks {
                     .burnable(),
             true
     );
+    public static Block STRIPPED_DARK_CHERRY_LOG = register(
+            "stripped_dark_cherry_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_DARK_CHERRY_WOOD = register(
+            "stripped_dark_cherry_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
     public static Block DARK_CHERRY_PLANKS = register(
             "dark_cherry_planks",
             Block::new,
@@ -154,9 +208,55 @@ public class GCBlocks {
                     .burnable(),
             true
     );
+    public static Block DARK_CHERRY_STAIRS = register(
+            "dark_cherry_stairs",
+            settings -> new StairsBlock(DARK_CHERRY_PLANKS.getDefaultState(), settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block DARK_CHERRY_SLAB = register(
+            "dark_cherry_slab",
+            SlabBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block DARK_CHERRY_FENCE = register(
+            "dark_cherry_fence",
+            FenceBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block DARK_CHERRY_FENCE_GATE = register(
+            "dark_cherry_fence_gate",
+            settings -> new FenceGateBlock(GCWoodTypes.DARK_CHERRY, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
     public static Block DARK_CHERRY_DOOR = register(
             "dark_cherry_door",
-            settings -> new DoorBlock(BlockSetType.OAK, settings),
+            settings -> new DoorBlock(BlockSetType.MANGROVE, settings),
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DARK_RED)
                     .instrument(NoteBlockInstrument.BASS)
@@ -177,6 +277,78 @@ public class GCBlocks {
                     .burnable(),
             true
     );
+    public static final Block DARK_CHERRY_PRESSURE_PLATE = register(
+            "dark_cherry_pressure_plate",
+            settings -> new PressurePlateBlock(BlockSetType.MANGROVE, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(0.5F)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true
+    );
+    public static final Block DARK_CHERRY_BUTTON = register(
+            "dark_cherry_button",
+            settings -> new ButtonBlock(BlockSetType.MANGROVE, 30, settings),
+            AbstractBlock.Settings.create()
+                    .noCollision()
+                    .strength(0.5F)
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true
+    );
+    public static Block DARK_CHERRY_SIGN = register(
+            "dark_cherry_sign",
+            settings -> new SignBlock(GCWoodTypes.DARK_CHERRY, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(1.0F)
+                    .burnable(),
+            false
+    );
+    public static final Block DARK_CHERRY_WALL_SIGN = register(
+            "dark_cherry_wall_sign",
+            settings -> new WallSignBlock(GCWoodTypes.DARK_CHERRY, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(1.0F)
+                    .dropsLike(DARK_CHERRY_SIGN)
+                    .burnable(),
+            false
+    );
+    public static Block DARK_CHERRY_HANGING_SIGN = register(
+            "dark_cherry_hanging_sign",
+            settings -> new HangingSignBlock(GCWoodTypes.DARK_CHERRY, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .burnable(),
+            false
+    );
+    public static Block DARK_CHERRY_WALL_HANGING_SIGN = register(
+            "dark_cherry_wall_hanging_sign",
+            settings -> new WallHangingSignBlock(GCWoodTypes.DARK_CHERRY, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .dropsLike(DARK_CHERRY_HANGING_SIGN)
+                    .burnable(),
+            false
+    );
+
     public static Block EBONY_LOG = register(
             "ebony_log",
             PillarBlock::new,
@@ -188,8 +360,8 @@ public class GCBlocks {
                     .burnable(),
             true
     );
-    public static Block STRIPPED_EBONY_LOG = register(
-            "stripped_ebony_log",
+    public static Block EBONY_WOOD = register(
+            "ebony_wood",
             PillarBlock::new,
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DEEPSLATE_GRAY)
@@ -199,8 +371,8 @@ public class GCBlocks {
                     .burnable(),
             true
     );
-    public static Block EBONY_WOOD = register(
-            "ebony_wood",
+    public static Block STRIPPED_EBONY_LOG = register(
+            "stripped_ebony_log",
             PillarBlock::new,
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DEEPSLATE_GRAY)
@@ -232,6 +404,52 @@ public class GCBlocks {
                     .burnable(),
             true
     );
+    public static Block EBONY_STAIRS = register(
+            "ebony_stairs",
+            settings -> new StairsBlock(EBONY_PLANKS.getDefaultState(), settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block EBONY_SLAB = register(
+            "ebony_slab",
+            SlabBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block EBONY_FENCE = register(
+            "ebony_fence",
+            FenceBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block EBONY_FENCE_GATE = register(
+            "ebony_fence_gate",
+            settings -> new FenceGateBlock(GCWoodTypes.EBONY, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
     public static Block EBONY_DOOR = register(
             "ebony_door",
             settings -> new DoorBlock(BlockSetType.OAK, settings),
@@ -255,9 +473,31 @@ public class GCBlocks {
                     .burnable(),
             true
     );
+    public static final Block EBONY_PRESSURE_PLATE = register(
+            "ebony_pressure_plate",
+            settings -> new PressurePlateBlock(BlockSetType.OAK, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(0.5F)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true
+    );
+    public static final Block EBONY_BUTTON = register(
+            "ebony_button",
+            settings -> new ButtonBlock(BlockSetType.OAK, 30, settings),
+            AbstractBlock.Settings.create()
+                    .noCollision()
+                    .strength(0.5F)
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true
+    );
     public static Block EBONY_SIGN = register(
             "ebony_sign",
-            settings -> new GCSignBlock(WoodType.OAK, settings),
+            settings -> new SignBlock(GCWoodTypes.EBONY, settings),
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DEEPSLATE_GRAY)
                     .solid()
@@ -265,11 +505,11 @@ public class GCBlocks {
                     .noCollision()
                     .strength(1.0F)
                     .burnable(),
-            true
+            false
     );
     public static final Block EBONY_WALL_SIGN = register(
             "ebony_wall_sign",
-            settings -> new GCWallSignBlock(WoodType.OAK, settings),
+            settings -> new WallSignBlock(GCWoodTypes.EBONY, settings),
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DEEPSLATE_GRAY)
                     .solid()
@@ -282,15 +522,29 @@ public class GCBlocks {
     );
     public static Block EBONY_HANGING_SIGN = register(
             "ebony_hanging_sign",
-            settings -> new HangingSignBlock(WoodType.OAK, settings),
+            settings -> new HangingSignBlock(GCWoodTypes.EBONY, settings),
             AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DARK_RED)
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(3.0F)
                     .nonOpaque()
                     .burnable(),
-            true
+            false
     );
+    public static Block EBONY_WALL_HANGING_SIGN = register(
+            "ebony_wall_hanging_sign",
+            settings -> new WallHangingSignBlock(GCWoodTypes.EBONY, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .dropsLike(EBONY_HANGING_SIGN)
+                    .burnable(),
+            false
+    );
+
     public static Block ENCHANTED_LEAVES = register(
             "enchanted_leaves",
             LeavesBlock::new,
@@ -329,16 +583,7 @@ public class GCBlocks {
                     .allowsSpawning(Blocks::never),
             true
     );
-    public static Block POLISHED_BROWN_GRANITE = register(
-            "polished_brown_granite",
-            Block::new,
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DIRT_BROWN)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresTool()
-                    .strength(1.5F, 6.0F),
-            true
-    );
+
     public static Block SLATE = register(
             "slate",
             Block::new,
@@ -349,6 +594,10 @@ public class GCBlocks {
                     .strength(1.5F, 6.0F),
             true
     );
+    public static Block SLATE_STAIRS = register("slate_stairs", settings -> new StairsBlock(SLATE.getDefaultState(), settings), AbstractBlock.Settings.copy(SLATE), true);
+    public static Block SLATE_SLAB = register("slate_slab", SlabBlock::new, AbstractBlock.Settings.copy(SLATE), true);
+    public static Block SLATE_WALL = register("slate_wall", WallBlock::new, AbstractBlock.Settings.copy(SLATE), true);
+
     public static Block TANGLEWOOD_LOG = register(
             "tanglewood_log",
             PillarBlock::new,
@@ -404,24 +653,950 @@ public class GCBlocks {
             true
     );
 
+    public static Block APPLE_CRATE = register(
+            "apple_crate",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block BEETROOT_CRATE = register(
+            "beetroot_crate",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block GOLDEN_APPLE_CRATE = register(
+            "golden_apple_crate",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GOLD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block GOLDEN_CARROT_CRATE = register(
+            "golden_carrot_crate",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GOLD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block CARROT_CRATE = register(
+            "carrot_crate",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.ORANGE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block POTATO_CRATE = register(
+            "potato_crate",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PALE_YELLOW)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block BERRY_SACK = register(
+            "berry_sack",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block COCOA_BEANS_SACK = register(
+            "cocoa_beans_sack",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BROWN)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block GLOWBERRY_SACK = register(
+            "glowberry_sack",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.YELLOW)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block GUNPOWDER_SACK = register(
+            "gunpowder_sack",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block NETHER_WART_SACK = register(
+            "nether_wart_sack",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+
+    public static Block BLACK_CORUNDUM = register(
+            "black_corundum",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_BLACK)
+                    .solid()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block BLACK_CORUNDUM_CLUSTER = register(
+            "black_corundum_cluster",
+            settings -> new AmethystClusterBlock(8, 3, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_BLACK)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block BLUE_CORUNDUM = register(
+            "blue_corundum",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .solid()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block BLUE_CORUNDUM_CLUSTER = register(
+            "blue_corundum_cluster",
+            settings -> new AmethystClusterBlock(8, 3, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block GREEN_CORUNDUM = register(
+            "green_corundum",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.EMERALD_GREEN)
+                    .solid()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block GREEN_CORUNDUM_CLUSTER = register(
+            "green_corundum_cluster",
+            settings -> new AmethystClusterBlock(8, 3, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.EMERALD_GREEN)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block INDIGO_CORUNDUM = register(
+            "indigo_corundum",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .solid()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block INDIGO_CORUNDUM_CLUSTER = register(
+            "indigo_corundum_cluster",
+            settings -> new AmethystClusterBlock(8, 3, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block ORANGE_CORUNDUM = register(
+            "orange_corundum",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.ORANGE)
+                    .solid()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block ORANGE_CORUNDUM_CLUSTER = register(
+            "orange_corundum_cluster",
+            settings -> new AmethystClusterBlock(8, 3, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.ORANGE)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block RED_CORUNDUM = register(
+            "red_corundum",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_RED)
+                    .solid()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block RED_CORUNDUM_CLUSTER = register(
+            "red_corundum_cluster",
+            settings -> new AmethystClusterBlock(8, 3, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_RED)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block VIOLET_CORUNDUM = register(
+            "violet_corundum",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.MAGENTA)
+                    .solid()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block VIOLET_CORUNDUM_CLUSTER = register(
+            "violet_corundum_cluster",
+            settings -> new AmethystClusterBlock(8, 3, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.MAGENTA)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block WHITE_CORUNDUM = register(
+            "white_corundum",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE_GRAY)
+                    .solid()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block WHITE_CORUNDUM_CLUSTER = register(
+            "white_corundum_cluster",
+            settings -> new AmethystClusterBlock(8, 3, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE_GRAY)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block YELLOW_CORUNDUM = register(
+            "yellow_corundum",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.YELLOW)
+                    .solid()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+    public static Block YELLOW_CORUNDUM_CLUSTER = register(
+            "yellow_corundum_cluster",
+            settings -> new AmethystClusterBlock(8, 3, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.YELLOW)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .strength(1.5F)
+                    .luminance(state -> 5),
+            true
+    );
+
+    public static Block BLACK_TERRACOTTA_BRICK = register(
+            "black_terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_BLACK)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+    public static Block BLUE_TERRACOTTA_BRICK = register(
+            "blue_terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_BLUE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+    public static Block BROWN_TERRACOTTA_BRICK = register(
+            "brown_terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+    public static Block CYAN_TERRACOTTA_BRICK = register(
+            "cyan_terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+    public static Block GRAY_TERRACOTTA_BRICK = register(
+            "gray_terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_GRAY)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+    public static Block GREEN_TERRACOTTA_BRICK = register(
+            "green_terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+    public static Block LIGHT_BLUE_TERRACOTTA_BRICK = register(
+            "light_blue_terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+    public static Block LIGHT_GRAY_TERRACOTTA_BRICK = register(
+            "light_gray_terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+    public static Block LIME_TERRACOTTA_BRICK = register(
+            "lime_terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_LIME)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+    public static Block MAGENTA_TERRACOTTA_BRICK = register(
+            "magenta_terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_MAGENTA)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+    public static Block ORANGE_TERRACOTTA_BRICK = register(
+            "orange_terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_ORANGE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+    public static Block PINK_TERRACOTTA_BRICK = register(
+            "pink_terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_PINK)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+    public static Block PURPLE_TERRACOTTA_BRICK = register(
+            "purple_terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_PURPLE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+    public static Block RED_TERRACOTTA_BRICK = register(
+            "red_terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+    public static Block TERRACOTTA_BRICK = register(
+            "terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+    public static Block WHITE_TERRACOTTA_BRICK = register(
+            "white_terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+    public static Block YELLOW_TERRACOTTA_BRICK = register(
+            "yellow_terracotta_brick",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_YELLOW)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(1.25F, 4.2F),
+            true
+    );
+
+    public static Block CHISELED_SCULK_STONE = register(
+            "chiseled_sculk_stone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE_BRICKS),
+            true
+    );
+
+    public static Block COBBLED_SCULK_STONE = register(
+            "cobbled_sculk_stone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static Block COBBLED_SCULK_STONE_STAIRS = register(
+            "cobbled_sculk_stone_stairs",
+            settings -> new StairsBlock(COBBLED_SCULK_STONE.getDefaultState(), settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static Block COBBLED_SCULK_STONE_SLAB = register(
+            "cobbled_sculk_stone_slab",
+            SlabBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static Block COBBLED_SCULK_STONE_WALL = register(
+            "cobbled_sculk_stone_wall",
+            WallBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+
+    public static Block CUT_SCULK_STONE = register(
+            "cut_sculk_stone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE_TILES),
+            true
+    );
+    public static Block CUT_SCULK_STONE_STAIRS = register(
+            "cut_sculk_stone_stairs",
+            settings -> new StairsBlock(CUT_SCULK_STONE.getDefaultState(), settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE_TILES),
+            true
+    );
+    public static Block CUT_SCULK_STONE_SLAB = register(
+            "cut_sculk_stone_slab",
+            SlabBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE_TILES),
+            true
+    );
+
+    public static Block POLISHED_SCULK_STONE = register(
+            "polished_sculk_stone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static Block POLISHED_SCULK_STONE_STAIRS = register(
+            "polished_sculk_stone_stairs",
+            settings -> new StairsBlock(POLISHED_SCULK_STONE.getDefaultState(), settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static Block POLISHED_SCULK_STONE_SLAB = register(
+            "polished_sculk_stone_slab",
+            SlabBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static Block POLISHED_SCULK_STONE_WALL = register(
+            "polished_sculk_stone_wall",
+            WallBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+
+    public static Block SCULK_STONE = register(
+            "sculk_stone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static Block SCULK_STONE_STAIRS = register(
+            "sculk_stone_stairs",
+            settings -> new StairsBlock(SCULK_STONE.getDefaultState(), settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static Block SCULK_STONE_SLAB = register(
+            "sculk_stone_slab",
+            SlabBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static Block SCULK_STONE_WALL = register(
+            "sculk_stone_wall",
+            WallBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+
+    public static Block SCULK_STONE_BRICKS = register(
+            "sculk_stone_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE_BRICKS),
+            true
+    );
+    public static Block SCULK_STONE_BRICKS_STAIRS = register(
+            "sculk_stone_bricks_stairs",
+            settings -> new StairsBlock(SCULK_STONE_BRICKS.getDefaultState(), settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE_BRICKS),
+            true
+    );
+    public static Block SCULK_STONE_BRICKS_SLAB = register(
+            "sculk_stone_bricks_slab",
+            SlabBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE_BRICKS),
+            true
+    );
+    public static Block SCULK_STONE_BRICKS_WALL = register(
+            "sculk_stone_bricks_wall",
+            WallBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE_BRICKS),
+            true
+    );
+
+    public static Block SCULK_STONE_TILES = register(
+            "sculk_stone_tiles",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE_TILES),
+            true
+    );
+    public static Block SCULK_STONE_TILES_SLAB = register(
+            "sculk_stone_tiles_slab",
+            SlabBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE_TILES),
+            true
+    );
+
+    public static Block SMOOTH_SCULK_STONE = register(
+            "smooth_sculk_stone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static Block SMOOTH_SCULK_STONE_STAIRS = register(
+            "smooth_sculk_stone_stairs",
+            settings -> new StairsBlock(SMOOTH_SCULK_STONE.getDefaultState(), settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static Block SMOOTH_SCULK_STONE_SLAB = register(
+            "smooth_sculk_stone_slab",
+            SlabBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static Block SMOOTH_SCULK_STONE_WALL = register(
+            "smooth_sculk_stone_wall",
+            WallBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+
+    public static Block BUDDING_SMARAGDANT_CRYSTAL = register(
+            "budding_smaragdant_crystal",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BRIGHT_TEAL)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+    public static Block SMARAGDANT_CRYSTAL = register(
+            "smaragdant_crystal",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BRIGHT_TEAL)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+    public static Block SMARAGDANT_CRYSTAL_BRICKS = register(
+            "smaragdant_crystal_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BRIGHT_TEAL)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+    public static Block POLISHED_SMARAGDANT_CRYSTAL = register(
+            "polished_smaragdant_crystal",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BRIGHT_TEAL)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+    public static Block SMARAGDANT_CRYSTAL_TILES = register(
+            "smaragdant_crystal_tiles",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BRIGHT_TEAL)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+    public static Block SMARAGDANT_CRYSTAL_PILLAR = register(
+            "smaragdant_crystal_pillar",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BRIGHT_TEAL)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+    public static Block SMARAGDANT_CRYSTAL_SHARD = register(
+            "smaragdant_crystal_shard",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BRIGHT_TEAL)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+
     public static void initialize() {
     }
 
-    private static Block register(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings blockSettings, boolean registerItem) {
+    private static <T extends BlockItem> Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings blockSettings, @Nullable BiFunction<Block, Item.Settings, T> itemFactory) {
         Identifier identifier = Identifier.of(MOD_ID, name);
 
-        RegistryKey<Block> blockKey = RegistryKey.of(RegistryKeys.BLOCK, identifier);
+        Block block = blockFactory.apply(blockSettings);
 
-        Block block = factory.apply(blockSettings);
-
-        if (registerItem) {
-            RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, identifier);
-
-            BlockItem item = new BlockItem(block, new Item.Settings());
+        if (itemFactory != null) {
+            T item = itemFactory.apply(block, new Item.Settings());
 
             Registry.register(Registries.ITEM, identifier, item);
         }
 
         return Registry.register(Registries.BLOCK, identifier, block);
+    }
+
+    private static <T extends BlockItem> ImmutableMap<BlockType, Block> registerWoodSet(String name, AbstractBlock.Settings blockSettings, WoodType woodType) {
+        Block planks = register(name.concat("_planks"), Block::new, blockSettings, true);
+
+        Block stairs = register(
+                name.concat("_stairs"),
+                settings -> new StairsBlock(planks.getDefaultState(), settings),
+                AbstractBlock.Settings.copy(planks),
+                true
+        );
+        Block slab = register(
+                name.concat("_slab"),
+                SlabBlock::new,
+                AbstractBlock.Settings.copy(planks),
+                true
+        );
+
+        Block fence = register(
+                name.concat("_fence"),
+                FenceBlock::new,
+                AbstractBlock.Settings.copy(planks)
+                        .solid(),
+                true
+        );
+        Block fenceGate = register(
+                name.concat("_fence_gate"),
+                settings -> new FenceGateBlock(woodType, settings),
+                AbstractBlock.Settings.copy(planks)
+                        .solid(),
+                true
+        );
+
+        Block door = register(
+                name.concat("_door"),
+                settings -> new DoorBlock(BlockSetType.OAK, settings),
+                AbstractBlock.Settings.copy(planks)
+                        .strength(3.0f)
+                        .nonOpaque()
+                        .pistonBehavior(PistonBehavior.DESTROY),
+                true
+        );
+        Block trapdoor = register(
+                name.concat("_trapdoor"),
+                settings -> new TrapdoorBlock(BlockSetType.OAK, settings),
+                AbstractBlock.Settings.copy(planks)
+                        .strength(3.0f)
+                        .nonOpaque(),
+                true
+        );
+
+        Block pressure_plate = register(
+                name.concat("_pressure_plate"),
+                settings -> new TrapdoorBlock(BlockSetType.OAK, settings),
+                AbstractBlock.Settings.copy(planks)
+                        .solid()
+                        .noCollision()
+                        .strength(0.5f)
+                        .pistonBehavior(PistonBehavior.DESTROY),
+                true
+        );
+        Block button = register(
+                name.concat("_button"),
+                settings -> new ButtonBlock(BlockSetType.OAK, 30, settings),
+                AbstractBlock.Settings.copy(planks)
+                        .noCollision()
+                        .strength(0.5f)
+                        .pistonBehavior(PistonBehavior.DESTROY),
+                true
+        );
+
+        return ImmutableMap.of(
+                BlockType.CUBE, planks,
+                BlockType.STAIRS, stairs,
+                BlockType.SLAB, slab,
+                BlockType.FENCE, fence,
+                BlockType.GATE, fenceGate,
+                BlockType.PRESSURE_PLATE, pressure_plate,
+                BlockType.BUTTON, button,
+                BlockType.TRAPDOOR, trapdoor,
+                BlockType.DOOR, door
+        );
+    }
+
+    private static Block register(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings blockSettings, boolean registerItem) {
+        return register(name, factory, blockSettings, registerItem ? BlockItem::new : null);
     }
 }

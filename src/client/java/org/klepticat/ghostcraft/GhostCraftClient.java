@@ -7,20 +7,16 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.fabricmc.fabric.api.client.rendering.v1.LivingEntityFeatureRendererRegistrationCallback;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.RenderTickCounter;
-import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
-import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
 import net.minecraft.client.render.entity.ArmorStandEntityRenderer;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.render.entity.PlayerEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
-import org.klepticat.ghostcraft.block.entity.GCSignBlockEntity;
 import org.klepticat.ghostcraft.entity.GCPlayerEntityStickers;
 import org.klepticat.ghostcraft.render.WeehEntityRenderer;
 import org.klepticat.ghostcraft.render.entity.*;
@@ -135,6 +131,14 @@ public class GhostCraftClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.DARK_CHERRY_TRAPDOOR, RenderLayer.getCutout());
 
-        BlockEntityRendererFactories.register(((BlockEntityType<GCSignBlockEntity>) GCBlockEntities.SIGN), SignBlockEntityRenderer::new);
+        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.BLACK_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.BLUE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.GREEN_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.INDIGO_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.ORANGE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.RED_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.VIOLET_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.WHITE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.YELLOW_CORUNDUM_CLUSTER, RenderLayer.getCutout());
     }
 }

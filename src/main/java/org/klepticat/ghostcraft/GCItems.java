@@ -2376,11 +2376,10 @@ public class GCItems {
     }
     //</editor-fold>
 
+    //<editor-fold desc="ElytraItems">
     static class ElytraItems {
         public static void initialize() {
         }
-
-        ;
 
         public static final Item BAT_DARK = register("bat_dark", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bat_dark.png")));
         public static final Item BAT_GREEN = register("bat_green", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bat_green.png")));
@@ -2413,6 +2412,12 @@ public class GCItems {
         public static final Item VAMPIRE = register("vampire", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/vampire.png")));
         public static final Item VEX_WINGS = register("vex_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/vex.png")));
     }
+    //</editor-fold>
+
+    public static final Item DARK_CHERRY_SIGN = register("dark_cherry_sign", new SignItem(new Item.Settings(), GCBlocks.DARK_CHERRY_SIGN, GCBlocks.DARK_CHERRY_WALL_SIGN));
+    public static final Item DARK_CHERRY_HANGING_SIGN = register("dark_cherry_hanging_sign", new HangingSignItem(GCBlocks.DARK_CHERRY_HANGING_SIGN, GCBlocks.DARK_CHERRY_WALL_HANGING_SIGN, new Item.Settings()));
+    public static final Item EBONY_SIGN = register("ebony_sign", new SignItem(new Item.Settings(), GCBlocks.EBONY_SIGN, GCBlocks.EBONY_WALL_SIGN));
+    public static final Item EBONY_HANGING_SIGN = register("ebony_hanging_sign", new HangingSignItem(GCBlocks.EBONY_HANGING_SIGN, GCBlocks.EBONY_WALL_HANGING_SIGN, new Item.Settings()));
 
     public static final Item CHOCOLATE = register("chocolate", new Item(new Item.Settings().food(ModFoodComponents.CHOCOLATE)));
 
