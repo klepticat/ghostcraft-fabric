@@ -17,6 +17,7 @@ import net.minecraft.client.render.entity.PlayerEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
+import org.klepticat.ghostcraft.block.BlockType;
 import org.klepticat.ghostcraft.entity.GCPlayerEntityStickers;
 import org.klepticat.ghostcraft.render.WeehEntityRenderer;
 import org.klepticat.ghostcraft.render.entity.*;
@@ -24,6 +25,8 @@ import org.klepticat.ghostcraft.render.entity.feature.ExtendedElytraFeatureRende
 import org.klepticat.ghostcraft.render.entity.model.RatEntityModel;
 import org.klepticat.ghostcraft.render.item.trinkets.HatRenderer;
 
+import static org.klepticat.ghostcraft.GCBlocks.DARK_CHERRY_SET;
+import static org.klepticat.ghostcraft.GCBlocks.GLOWSHROOM_SET;
 import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
 
 public class GhostCraftClient implements ClientModInitializer {
@@ -86,7 +89,6 @@ public class GhostCraftClient implements ClientModInitializer {
         TrinketRendererRegistry.registerRenderer(GCItems.CANDLE_KEEPER_HAT, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.CELESTIAL_BAND_HAT, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.CELESTIAL_HOOD_HAT, new HatRenderer());
-        TrinketRendererRegistry.registerRenderer(GCItems.CENTURION_HAND_FAN_HAT, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.CHIEFTAIN_HELM_HAT, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.DARK_HOOD_SHORT_HAT, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.DEATHS_HAND_HAT, new HatRenderer());
@@ -129,7 +131,9 @@ public class GhostCraftClient implements ClientModInitializer {
         TrinketRendererRegistry.registerRenderer(GCItems.VALKYRIE_HELM_HAT, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.WEREWOLF_MASK, new HatRenderer());
 
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.DARK_CHERRY_TRAPDOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DARK_CHERRY_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GLOWSHROOM_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GLOWSHROOM_SET.get(BlockType.DOOR), RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.BLACK_CORUNDUM_CLUSTER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.BLUE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
@@ -140,5 +144,7 @@ public class GhostCraftClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.VIOLET_CORUNDUM_CLUSTER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.WHITE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.YELLOW_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.SMARAGDANT_CRYSTAL_SHARD, RenderLayer.getCutout());
     }
 }

@@ -2,11 +2,14 @@ package org.klepticat.ghostcraft;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Items;
 import net.minecraft.util.math.Vec3d;
 import org.klepticat.ghostcraft.command.DevCommands;
 import org.klepticat.ghostcraft.command.LightningCommand;
@@ -35,6 +38,7 @@ public class GhostCraft implements ModInitializer {
 		GCAttachmentTypes.initialize();
 		GCBlocks.initialize();
 		GCBlockEntities.initialize();
+        GCItemGroups.initialize();
 
 		CommandRegistrationCallback.EVENT.register(new LoreCommand()::execute);
 		CommandRegistrationCallback.EVENT.register(new LightningCommand()::execute);
@@ -61,5 +65,11 @@ public class GhostCraft implements ModInitializer {
 					((GCPlayerEntityStickers) playerEntity).placeSticker(placeStickerPayload.sticker(), new Vec3d(placeStickerPayload.position()), placeStickerPayload.direction());
 			});
 		});
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {
+            content.addAfter(Items.REINFORCED_DEEPSLATE, Items.DRIPSTONE_BLOCK, GCBlocks.DRIPSTONE_STAIRS, GCBlocks.DRIPSTONE_SLAB, GCBlocks.DRIPSTONE_WALL);
+            content.addAfter(Items.NETHERRACK, GCBlocks.NETHERRACK_STAIRS, GCBlocks.NETHERRACK_SLAB, GCBlocks.NETHERRACK_WALL, GCBlocks.NETHERRACK_FENCE);
+            content.addAfter(Items.SMOOTH_BASALT, GCBlocks.SMOOTH_BASALT_STAIRS, GCBlocks.SMOOTH_BASALT_SLAB, GCBlocks.SMOOTH_BASALT_WALL);
+        });
 	}
 }

@@ -4,7 +4,6 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.item.ItemRenderer;
@@ -42,7 +41,7 @@ public class TotemEntityRenderer<T extends TotemEntity> extends EntityRenderer<T
         // render item
         matrixStack.push();
 
-        matrixStack.translate(0.0f, 0.30f, 0.0f);
+        matrixStack.translate(0.0f, 0.0f, 0.0f);
         matrixStack.multiply(RotationAxis.NEGATIVE_Y.rotation(((float) Math.PI) * (yaw + 180.0f) / 180.0f));
         matrixStack.multiply(RotationAxis.POSITIVE_X.rotation((float) Math.PI / 2.0f));
         matrixStack.scale(0.5f, 0.5f, 0.5f);

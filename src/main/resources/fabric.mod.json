@@ -60,5 +60,6 @@
 			"ghostcraft:eye_bat_variant",
 			"ghostcraft:rat_variant"
 		]
-	}
+	},
+	"accessWidener": "ghostcraft.accesswidener"
 }

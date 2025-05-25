@@ -1,6 +1,7 @@
 package org.klepticat.ghostcraft;
 
 import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
@@ -13,12 +14,16 @@ import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
 import org.klepticat.ghostcraft.block.BlockType;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
 import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
 
 public class GCBlocks {
+    public static List<Block> ALL = new ArrayList<>();
+
     public static Block ADENDA_LEAVES = register(
             "adenda_leaves",
             LeavesBlock::new,
@@ -54,7 +59,7 @@ public class GCBlocks {
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.LAPIS_BLUE)
                     .solid()
-                    .sounds(BlockSoundGroup.SHROOMLIGHT)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
                     .strength(1.5F)
                     .luminance(state -> 5),
             true
@@ -77,7 +82,7 @@ public class GCBlocks {
                     .mapColor(MapColor.DARK_RED)
                     .strength(1.0F)
                     .sounds(BlockSoundGroup.SHROOMLIGHT)
-                    .luminance(state -> 5),
+                    .luminance(state -> 1),
             true
     );
     public static Block BLUE_NETHERRACK = register(
@@ -91,6 +96,23 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.NETHERRACK),
             true
     );
+    public static Block BLUE_NETHERRACK_STAIRS = register("blue_netherrack_stairs", settings -> new StairsBlock(BLUE_NETHERRACK.getDefaultState(), settings), AbstractBlock.Settings.copy(BLUE_NETHERRACK), true);
+    public static Block BLUE_NETHERRACK_SLAB = register("blue_netherrack_slab", SlabBlock::new, AbstractBlock.Settings.copy(BLUE_NETHERRACK), true);
+    public static Block BLUE_NETHERRACK_WALL = register("blue_netherrack_wall", WallBlock::new, AbstractBlock.Settings.copy(BLUE_NETHERRACK), true);
+
+    public static Block NETHERRACK_STAIRS = register("netherrack_stairs", settings -> new StairsBlock(Blocks.NETHERRACK.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.NETHERRACK), true);
+    public static Block NETHERRACK_SLAB = register("netherrack_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.NETHERRACK), true);
+    public static Block NETHERRACK_WALL = register("netherrack_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.NETHERRACK), true);
+    public static Block NETHERRACK_FENCE = register("netherrack_fence", FenceBlock::new, AbstractBlock.Settings.copy(Blocks.NETHERRACK), true);
+
+    public static Block DRIPSTONE_STAIRS = register("dripstone_stairs", settings -> new StairsBlock(Blocks.DRIPSTONE_BLOCK.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.DRIPSTONE_BLOCK), true);
+    public static Block DRIPSTONE_SLAB = register("dripstone_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.DRIPSTONE_BLOCK), true);
+    public static Block DRIPSTONE_WALL = register("dripstone_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.DRIPSTONE_BLOCK), true);
+
+    public static Block SMOOTH_BASALT_STAIRS = register("smooth_basalt_stairs", settings -> new StairsBlock(Blocks.SMOOTH_BASALT.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.SMOOTH_BASALT), true);
+    public static Block SMOOTH_BASALT_SLAB = register("smooth_basalt_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.SMOOTH_BASALT), true);
+    public static Block SMOOTH_BASALT_WALL = register("smooth_basalt_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.SMOOTH_BASALT), true);
+
     public static Block BOSS_DOOR = register(
             "boss_door",
             settings -> new DoorBlock(BlockSetType.OAK, settings),
@@ -197,108 +219,18 @@ public class GCBlocks {
                     .burnable(),
             true
     );
-    public static Block DARK_CHERRY_PLANKS = register(
-            "dark_cherry_planks",
-            Block::new,
+
+    public static ImmutableMap<BlockType, Block> DARK_CHERRY_SET = registerWoodSet(
+            "dark_cherry",
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DARK_RED)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F, 3.0f)
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable(),
-            true
+            GCWoodTypes.DARK_CHERRY
     );
-    public static Block DARK_CHERRY_STAIRS = register(
-            "dark_cherry_stairs",
-            settings -> new StairsBlock(DARK_CHERRY_PLANKS.getDefaultState(), settings),
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DARK_RED)
-                    .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F, 3.0f)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .burnable(),
-            true
-    );
-    public static Block DARK_CHERRY_SLAB = register(
-            "dark_cherry_slab",
-            SlabBlock::new,
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DARK_RED)
-                    .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F, 3.0f)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .burnable(),
-            true
-    );
-    public static Block DARK_CHERRY_FENCE = register(
-            "dark_cherry_fence",
-            FenceBlock::new,
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DARK_RED)
-                    .solid()
-                    .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F, 3.0f)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .burnable(),
-            true
-    );
-    public static Block DARK_CHERRY_FENCE_GATE = register(
-            "dark_cherry_fence_gate",
-            settings -> new FenceGateBlock(GCWoodTypes.DARK_CHERRY, settings),
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DARK_RED)
-                    .solid()
-                    .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F, 3.0f)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .burnable(),
-            true
-    );
-    public static Block DARK_CHERRY_DOOR = register(
-            "dark_cherry_door",
-            settings -> new DoorBlock(BlockSetType.MANGROVE, settings),
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DARK_RED)
-                    .instrument(NoteBlockInstrument.BASS)
-                    .strength(3.0F)
-                    .nonOpaque()
-                    .burnable()
-                    .pistonBehavior(PistonBehavior.DESTROY),
-            true
-    );
-    public static Block DARK_CHERRY_TRAPDOOR = register(
-            "dark_cherry_trapdoor",
-            settings -> new TrapdoorBlock(BlockSetType.MANGROVE, settings),
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DARK_RED)
-                    .instrument(NoteBlockInstrument.BASS)
-                    .strength(3.0F)
-                    .nonOpaque()
-                    .burnable(),
-            true
-    );
-    public static final Block DARK_CHERRY_PRESSURE_PLATE = register(
-            "dark_cherry_pressure_plate",
-            settings -> new PressurePlateBlock(BlockSetType.MANGROVE, settings),
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DARK_RED)
-                    .solid()
-                    .instrument(NoteBlockInstrument.BASS)
-                    .noCollision()
-                    .strength(0.5F)
-                    .burnable()
-                    .pistonBehavior(PistonBehavior.DESTROY),
-            true
-    );
-    public static final Block DARK_CHERRY_BUTTON = register(
-            "dark_cherry_button",
-            settings -> new ButtonBlock(BlockSetType.MANGROVE, 30, settings),
-            AbstractBlock.Settings.create()
-                    .noCollision()
-                    .strength(0.5F)
-                    .pistonBehavior(PistonBehavior.DESTROY),
-            true
-    );
+
     public static Block DARK_CHERRY_SIGN = register(
             "dark_cherry_sign",
             settings -> new SignBlock(GCWoodTypes.DARK_CHERRY, settings),
@@ -393,108 +325,74 @@ public class GCBlocks {
                     .burnable(),
             true
     );
-    public static Block EBONY_PLANKS = register(
-            "ebony_planks",
-            Block::new,
+
+    public static ImmutableMap<BlockType, Block> EBONY_SET = registerWoodSet(
+            "ebony",
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DEEPSLATE_GRAY)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F, 3.0f)
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable(),
-            true
+            GCWoodTypes.EBONY
     );
-    public static Block EBONY_STAIRS = register(
-            "ebony_stairs",
-            settings -> new StairsBlock(EBONY_PLANKS.getDefaultState(), settings),
+
+    public static Block ANCHOR_LOG = register(
+            "anchor_log",
+            PillarBlock::new,
             AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .mapColor(MapColor.GREEN)
                     .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F, 3.0f)
+                    .strength(2.0F)
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable(),
             true
     );
-    public static Block EBONY_SLAB = register(
-            "ebony_slab",
-            SlabBlock::new,
+    public static Block ANCHOR_WOOD = register(
+            "anchor_wood",
+            PillarBlock::new,
             AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .mapColor(MapColor.GREEN)
                     .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F, 3.0f)
+                    .strength(2.0F)
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable(),
             true
     );
-    public static Block EBONY_FENCE = register(
-            "ebony_fence",
-            FenceBlock::new,
+    public static Block STRIPPED_ANCHOR_LOG = register(
+            "stripped_anchor_log",
+            PillarBlock::new,
             AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DEEPSLATE_GRAY)
-                    .solid()
+                    .mapColor(MapColor.GREEN)
                     .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F, 3.0f)
+                    .strength(2.0F)
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable(),
             true
     );
-    public static Block EBONY_FENCE_GATE = register(
-            "ebony_fence_gate",
-            settings -> new FenceGateBlock(GCWoodTypes.EBONY, settings),
+    public static Block STRIPPED_ANCHOR_WOOD = register(
+            "stripped_anchor_wood",
+            PillarBlock::new,
             AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DEEPSLATE_GRAY)
-                    .solid()
+                    .mapColor(MapColor.GREEN)
                     .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F, 3.0f)
+                    .strength(2.0F)
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable(),
             true
     );
-    public static Block EBONY_DOOR = register(
-            "ebony_door",
-            settings -> new DoorBlock(BlockSetType.OAK, settings),
+
+    public static ImmutableMap<BlockType, Block> ANCHOR_SET = registerWoodSet(
+            "anchor",
             AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .mapColor(MapColor.GREEN)
                     .instrument(NoteBlockInstrument.BASS)
-                    .strength(3.0F)
-                    .nonOpaque()
-                    .burnable()
-                    .pistonBehavior(PistonBehavior.DESTROY),
-            true
-    );
-    public static Block EBONY_TRAPDOOR = register(
-            "ebony_trapdoor",
-            settings -> new TrapdoorBlock(BlockSetType.OAK, settings),
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DEEPSLATE_GRAY)
-                    .instrument(NoteBlockInstrument.BASS)
-                    .strength(3.0F)
-                    .nonOpaque()
+                    .strength(2.0F, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD)
                     .burnable(),
-            true
+            GCWoodTypes.ANCHOR
     );
-    public static final Block EBONY_PRESSURE_PLATE = register(
-            "ebony_pressure_plate",
-            settings -> new PressurePlateBlock(BlockSetType.OAK, settings),
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DEEPSLATE_GRAY)
-                    .solid()
-                    .instrument(NoteBlockInstrument.BASS)
-                    .noCollision()
-                    .strength(0.5F)
-                    .burnable()
-                    .pistonBehavior(PistonBehavior.DESTROY),
-            true
-    );
-    public static final Block EBONY_BUTTON = register(
-            "ebony_button",
-            settings -> new ButtonBlock(BlockSetType.OAK, 30, settings),
-            AbstractBlock.Settings.create()
-                    .noCollision()
-                    .strength(0.5F)
-                    .pistonBehavior(PistonBehavior.DESTROY),
-            true
-    );
+
     public static Block EBONY_SIGN = register(
             "ebony_sign",
             settings -> new SignBlock(GCWoodTypes.EBONY, settings),
@@ -545,6 +443,40 @@ public class GCBlocks {
             false
     );
 
+    public static Block TANGLEWOOD_LOG = register(
+            "tanglewood_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block TANGLEWOOD = register(
+            "tanglewood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static ImmutableMap<BlockType, Block> TANGLEWOOD_SET = registerWoodSet(
+            "tanglewood",
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            GCWoodTypes.TANGLEWOOD,
+            true
+    );
+
     public static Block ENCHANTED_LEAVES = register(
             "enchanted_leaves",
             LeavesBlock::new,
@@ -559,7 +491,8 @@ public class GCBlocks {
                     .blockVision(Blocks::never)
                     .burnable()
                     .pistonBehavior(PistonBehavior.DESTROY)
-                    .solidBlock(Blocks::never),
+                    .solidBlock(Blocks::never)
+                    .luminance(value -> 15),
             true
     );
     public static Block END_MOSS = register(
@@ -598,39 +531,6 @@ public class GCBlocks {
     public static Block SLATE_SLAB = register("slate_slab", SlabBlock::new, AbstractBlock.Settings.copy(SLATE), true);
     public static Block SLATE_WALL = register("slate_wall", WallBlock::new, AbstractBlock.Settings.copy(SLATE), true);
 
-    public static Block TANGLEWOOD_LOG = register(
-            "tanglewood_log",
-            PillarBlock::new,
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.LAPIS_BLUE)
-                    .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F)
-                    .sounds(BlockSoundGroup.NETHER_STEM)
-                    .burnable(),
-            true
-    );
-    public static Block TANGLEWOOD = register(
-            "tanglewood",
-            PillarBlock::new,
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.LAPIS_BLUE)
-                    .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F)
-                    .sounds(BlockSoundGroup.NETHER_STEM)
-                    .burnable(),
-            true
-    );
-    public static Block TANGLEWOOD_PLANKS = register(
-            "tanglewood_planks",
-            Block::new,
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.LAPIS_BLUE)
-                    .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F, 3.0f)
-                    .sounds(BlockSoundGroup.NETHER_WOOD)
-                    .burnable(),
-            true
-    );
     public static Block TEMPLE_BRICKS = register(
             "temple_bricks",
             Block::new,
@@ -641,15 +541,21 @@ public class GCBlocks {
                     .strength(3.0F, 9.0F),
             true
     );
+    public static Block TEMPLE_BRICKS_STAIRS = register("temple_bricks_stairs", settings -> new StairsBlock(TEMPLE_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(TEMPLE_BRICKS), true);
+    public static Block TEMPLE_BRICKS_SLAB = register("temple_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(TEMPLE_BRICKS), true);
+    public static Block TEMPLE_BRICKS_WALL = register("temple_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(TEMPLE_BRICKS), true);
+
     public static Block VOID = register(
             "void",
             Block::new,
             AbstractBlock.Settings.create()
-                    .mapColor(MapColor.BLACK)
+                    .mapColor(MapColor.WHITE)
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .strength(-1.0F, 3600000.0F)
                     .dropsNothing()
-                    .allowsSpawning(Blocks::never),
+                    .allowsSpawning(Blocks::never)
+                    .luminance(value -> 15)
+                    .emissiveLighting((state, world, pos) -> true),
             true
     );
 
@@ -1497,6 +1403,65 @@ public class GCBlocks {
             true
     );
 
+    public static ImmutableMap<BlockType, Block> GLOWSHROOM_SET = registerWoodSet("mossy_glowshroom", AbstractBlock.Settings.copy(Blocks.BROWN_MUSHROOM_BLOCK), WoodType.WARPED);
+    public static Block GLOWSHROOM_LOG = register(
+            "mossy_glowshroom_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block GLOWSHROOM_WOOD = register(
+            "mossy_glowshroom_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_GLOWSHROOM_LOG = register(
+            "stripped_mossy_glowshroom_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_GLOWSHROOM_WOOD = register(
+            "stripped_mossy_glowshroom_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block GLOWSHROOM_HYMENOPHORE = register(
+            "mossy_glowshroom_hymenophore",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+
+    public static ImmutableSet<ImmutableMap<BlockType, Block>> BLOCK_SETS = ImmutableSet.of(EBONY_SET, DARK_CHERRY_SET, GLOWSHROOM_SET, TANGLEWOOD_SET, ANCHOR_SET);
+
     public static void initialize() {
     }
 
@@ -1511,10 +1476,20 @@ public class GCBlocks {
             Registry.register(Registries.ITEM, identifier, item);
         }
 
+        ALL.add(block);
+
         return Registry.register(Registries.BLOCK, identifier, block);
     }
 
+    private static Block register(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings blockSettings, boolean registerItem) {
+        return register(name, factory, blockSettings, registerItem ? BlockItem::new : null);
+    }
+
     private static <T extends BlockItem> ImmutableMap<BlockType, Block> registerWoodSet(String name, AbstractBlock.Settings blockSettings, WoodType woodType) {
+        return registerWoodSet(name, blockSettings, woodType, false);
+    }
+
+    private static <T extends BlockItem> ImmutableMap<BlockType, Block> registerWoodSet(String name, AbstractBlock.Settings blockSettings, WoodType woodType, boolean registerWall) {
         Block planks = register(name.concat("_planks"), Block::new, blockSettings, true);
 
         Block stairs = register(
@@ -1565,7 +1540,7 @@ public class GCBlocks {
 
         Block pressure_plate = register(
                 name.concat("_pressure_plate"),
-                settings -> new TrapdoorBlock(BlockSetType.OAK, settings),
+                settings -> new PressurePlateBlock(BlockSetType.OAK, settings),
                 AbstractBlock.Settings.copy(planks)
                         .solid()
                         .noCollision()
@@ -1583,20 +1558,33 @@ public class GCBlocks {
                 true
         );
 
-        return ImmutableMap.of(
-                BlockType.CUBE, planks,
-                BlockType.STAIRS, stairs,
-                BlockType.SLAB, slab,
-                BlockType.FENCE, fence,
-                BlockType.GATE, fenceGate,
-                BlockType.PRESSURE_PLATE, pressure_plate,
-                BlockType.BUTTON, button,
-                BlockType.TRAPDOOR, trapdoor,
-                BlockType.DOOR, door
-        );
-    }
+        if (registerWall) {
+            Block wall = register(name.concat("_wall"), WallBlock::new, AbstractBlock.Settings.copy(planks), true);
 
-    private static Block register(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings blockSettings, boolean registerItem) {
-        return register(name, factory, blockSettings, registerItem ? BlockItem::new : null);
+            return ImmutableMap.of(
+                    BlockType.CUBE, planks,
+                    BlockType.STAIRS, stairs,
+                    BlockType.SLAB, slab,
+                    BlockType.FENCE, fence,
+                    BlockType.GATE, fenceGate,
+                    BlockType.PRESSURE_PLATE, pressure_plate,
+                    BlockType.BUTTON, button,
+                    BlockType.TRAPDOOR, trapdoor,
+                    BlockType.DOOR, door,
+                    BlockType.WALL, wall
+            );
+        } else {
+            return ImmutableMap.of(
+                    BlockType.CUBE, planks,
+                    BlockType.STAIRS, stairs,
+                    BlockType.SLAB, slab,
+                    BlockType.FENCE, fence,
+                    BlockType.GATE, fenceGate,
+                    BlockType.PRESSURE_PLATE, pressure_plate,
+                    BlockType.BUTTON, button,
+                    BlockType.TRAPDOOR, trapdoor,
+                    BlockType.DOOR, door
+            );
+        }
     }
 }

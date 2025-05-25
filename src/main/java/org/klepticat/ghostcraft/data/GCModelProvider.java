@@ -3,7 +3,16 @@ package org.klepticat.ghostcraft.data;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
+import net.minecraft.registry.Registries;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
+import org.klepticat.ghostcraft.block.BlockType;
+
+import java.util.ArrayList;
+import java.util.HashSet;
 
 import static org.klepticat.ghostcraft.GCBlocks.*;
 
@@ -18,13 +27,11 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(AURITE);
         blockStateModelGenerator.registerSimpleCubeAll(AURORA_CRYSTAL);
         blockStateModelGenerator.registerSimpleCubeAll(BLEEDING_COIL);
-        blockStateModelGenerator.registerSimpleCubeAll(BLUE_NETHERRACK);
         blockStateModelGenerator.registerSimpleCubeAll(CANDY_CANE);
         blockStateModelGenerator.registerSimpleCubeAll(CHOGGY_BLOGGY);
         blockStateModelGenerator.registerSimpleCubeAll(ENCHANTED_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(END_MOSS);
         blockStateModelGenerator.registerSimpleCubeAll(NOISE);
-        blockStateModelGenerator.registerSimpleCubeAll(TEMPLE_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(VOID);
 
 
@@ -101,48 +108,59 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(ANCIENT_OAK_DOOR);
         blockStateModelGenerator.registerDoor(BOSS_DOOR);
 
+        createLogWithVariants(GLOWSHROOM_LOG, 4, blockStateModelGenerator);
+        createWoodWithVariants(GLOWSHROOM_WOOD, GLOWSHROOM_LOG, 4, blockStateModelGenerator);
+        createLogWithVariants(STRIPPED_GLOWSHROOM_LOG, 4, blockStateModelGenerator);
+        createWoodWithVariants(STRIPPED_GLOWSHROOM_WOOD, STRIPPED_GLOWSHROOM_LOG, 4, blockStateModelGenerator);
+        createCubeWithVariants(GLOWSHROOM_HYMENOPHORE, 3, blockStateModelGenerator);
 
-        BlockStateModelGenerator.BlockTexturePool ebonyPool = blockStateModelGenerator.registerCubeAllModelTexturePool(EBONY_PLANKS);
+        createLogWithVariants(ANCHOR_LOG, 2, blockStateModelGenerator);
+        createWoodWithVariants(ANCHOR_WOOD, ANCHOR_LOG, 2, blockStateModelGenerator);
+        createLogWithVariants(STRIPPED_ANCHOR_LOG, 2, blockStateModelGenerator);
+        createWoodWithVariants(STRIPPED_ANCHOR_WOOD, STRIPPED_ANCHOR_LOG, 2, blockStateModelGenerator);
 
         blockStateModelGenerator.registerLog(EBONY_LOG).log(EBONY_LOG).wood(EBONY_WOOD);
         blockStateModelGenerator.registerLog(STRIPPED_EBONY_LOG).log(STRIPPED_EBONY_LOG).wood(STRIPPED_EBONY_WOOD);
 
-        blockStateModelGenerator.registerDoor(EBONY_DOOR);
-        blockStateModelGenerator.registerTrapdoor(EBONY_TRAPDOOR);
-
         blockStateModelGenerator.registerHangingSign(EBONY_LOG, EBONY_HANGING_SIGN, EBONY_WALL_HANGING_SIGN);
 
-        ebonyPool.stairs(EBONY_STAIRS);
-        ebonyPool.slab(EBONY_SLAB);
-
-        ebonyPool.button(EBONY_BUTTON);
-        ebonyPool.pressurePlate(EBONY_PRESSURE_PLATE);
-
-        ebonyPool.fence(EBONY_FENCE);
-        ebonyPool.fenceGate(EBONY_FENCE_GATE);
-
-        //ebonyPool.sign(EBONY_SIGN);
-
-
-        BlockStateModelGenerator.BlockTexturePool darkCherryPool = blockStateModelGenerator.registerCubeAllModelTexturePool(DARK_CHERRY_PLANKS);
-
-        blockStateModelGenerator.registerDoor(DARK_CHERRY_DOOR);
-        blockStateModelGenerator.registerTrapdoor(DARK_CHERRY_TRAPDOOR);
+        blockStateModelGenerator.registerLog(TANGLEWOOD_LOG).log(TANGLEWOOD_LOG).wood(TANGLEWOOD);
 
         blockStateModelGenerator.registerLog(DARK_CHERRY_LOG).log(DARK_CHERRY_LOG).wood(DARK_CHERRY_WOOD);
         blockStateModelGenerator.registerLog(STRIPPED_DARK_CHERRY_LOG).log(STRIPPED_DARK_CHERRY_LOG).wood(STRIPPED_DARK_CHERRY_WOOD);
 
         blockStateModelGenerator.registerHangingSign(STRIPPED_DARK_CHERRY_LOG, DARK_CHERRY_HANGING_SIGN, DARK_CHERRY_WALL_HANGING_SIGN);
 
-        darkCherryPool.stairs(DARK_CHERRY_STAIRS);
-        darkCherryPool.slab(DARK_CHERRY_SLAB);
+        BlockStateModelGenerator.BlockTexturePool blueNetherrackPool = blockStateModelGenerator.registerCubeAllModelTexturePool(BLUE_NETHERRACK);
 
-        darkCherryPool.button(DARK_CHERRY_BUTTON);
-        darkCherryPool.pressurePlate(DARK_CHERRY_PRESSURE_PLATE);
+        blueNetherrackPool.stairs(BLUE_NETHERRACK_STAIRS);
+        blueNetherrackPool.slab(BLUE_NETHERRACK_SLAB);
+        blueNetherrackPool.wall(BLUE_NETHERRACK_WALL);
 
-        darkCherryPool.fence(DARK_CHERRY_FENCE);
-        darkCherryPool.fenceGate(DARK_CHERRY_FENCE_GATE);
+        BlockStateModelGenerator.BlockTexturePool netherrackPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.NETHERRACK);
 
+        netherrackPool.stairs(NETHERRACK_STAIRS);
+        netherrackPool.slab(NETHERRACK_SLAB);
+        netherrackPool.wall(NETHERRACK_WALL);
+        netherrackPool.fence(NETHERRACK_FENCE);
+
+        BlockStateModelGenerator.BlockTexturePool templeBrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(TEMPLE_BRICKS);
+
+        templeBrickPool.stairs(TEMPLE_BRICKS_STAIRS);
+        templeBrickPool.slab(TEMPLE_BRICKS_SLAB);
+        templeBrickPool.wall(TEMPLE_BRICKS_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool dripstonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.DRIPSTONE_BLOCK);
+
+        dripstonePool.stairs(DRIPSTONE_STAIRS);
+        dripstonePool.slab(DRIPSTONE_SLAB);
+        dripstonePool.wall(DRIPSTONE_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool smoothBasaltPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.SMOOTH_BASALT);
+
+        smoothBasaltPool.stairs(SMOOTH_BASALT_STAIRS);
+        smoothBasaltPool.slab(SMOOTH_BASALT_SLAB);
+        smoothBasaltPool.wall(SMOOTH_BASALT_WALL);
 
         BlockStateModelGenerator.BlockTexturePool brownGranitePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BROWN_GRANITE);
 
@@ -156,13 +174,11 @@ public class GCModelProvider extends FabricModelProvider {
         polishedBrownGranitePool.slab(POLISHED_BROWN_GRANITE_SLAB);
         polishedBrownGranitePool.wall(POLISHED_BROWN_GRANITE_WALL);
 
-
         BlockStateModelGenerator.BlockTexturePool slatePool = blockStateModelGenerator.registerCubeAllModelTexturePool(SLATE);
 
         slatePool.stairs(SLATE_STAIRS);
         slatePool.slab(SLATE_SLAB);
         slatePool.wall(SLATE_WALL);
-
 
         blockStateModelGenerator.registerSimpleCubeAll(CHISELED_SCULK_STONE);
 
@@ -211,7 +227,25 @@ public class GCModelProvider extends FabricModelProvider {
                 crystalCluster(SMARAGDANT_CRYSTAL_SHARD, blockStateModelGenerator)
         );
 
-        BlockStateModelGenerator.BlockTexturePool smoothSculkPool = blockStateModelGenerator.regi(SMOOTH_SCULK_STONE);
+        BLOCK_SETS.forEach(blockSet -> {
+            blockStateModelGenerator.registerDoor(blockSet.get(BlockType.DOOR));
+            blockStateModelGenerator.registerTrapdoor(blockSet.get(BlockType.TRAPDOOR));
+
+            BlockStateModelGenerator.BlockTexturePool blockTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(blockSet.get(BlockType.CUBE));
+
+            blockTexturePool.stairs(blockSet.get(BlockType.STAIRS));
+            blockTexturePool.slab(blockSet.get(BlockType.SLAB));
+
+            blockTexturePool.button(blockSet.get(BlockType.BUTTON));
+            blockTexturePool.pressurePlate(blockSet.get(BlockType.PRESSURE_PLATE));
+
+            blockTexturePool.fence(blockSet.get(BlockType.FENCE));
+            blockTexturePool.fenceGate(blockSet.get(BlockType.GATE));
+
+            if (blockSet.containsKey(BlockType.WALL)) {
+                blockTexturePool.wall(blockSet.get(BlockType.WALL));
+            }
+        });
     }
 
     @Override
@@ -231,5 +265,130 @@ public class GCModelProvider extends FabricModelProvider {
                         )
                 )
         ).coordinate(generator.createUpDefaultFacingVariantMap());
+    }
+
+    public static void createCubeWithVariants(Block block, int variants, BlockStateModelGenerator generator) {
+        HashSet<BlockStateVariant> blockStateVariants = new HashSet<>();
+
+        blockStateVariants.add(BlockStateVariant.create().put(VariantSettings.MODEL, TexturedModel.CUBE_ALL.upload(block, generator.modelCollector)));
+
+        for (int i = 0; i < variants; i++) {
+            int finalI = i;
+
+            TexturedModel texturedModel = TexturedModel.getCubeAll(Registries.BLOCK.getId(block).withPath(path -> "block/" + path + "_" + (finalI + 2)));
+            Identifier identifier = texturedModel.upload(block, "_" + (i + 2), generator.modelCollector);
+            blockStateVariants.add(BlockStateVariant.create().put(VariantSettings.MODEL, identifier));
+        }
+
+        generator.blockStateCollector.accept(
+                VariantsBlockStateSupplier.create(
+                        block,
+                        blockStateVariants.toArray(new BlockStateVariant[0])
+                )
+        );
+    }
+
+    public static void createLogWithVariants(Block block, int variants, BlockStateModelGenerator generator) {
+        HashSet<BlockStateVariant> xBlockStateVariants = new HashSet<>();
+        HashSet<BlockStateVariant> yBlockStateVariants = new HashSet<>();
+        HashSet<BlockStateVariant> zBlockStateVariants = new HashSet<>();
+
+        TextureMap textureMap = TextureMap.sideEnd(Registries.BLOCK.getId(block).withPath(path -> "block/" + path + "_side"), Registries.BLOCK.getId(block).withPath(path -> "block/" + path + "_top"));
+
+        TexturedModel texturedModel = new TexturedModel(textureMap, Models.CUBE_COLUMN);
+        //TexturedModel texturedModel2 = new TexturedModel(textureMap, Models.CUBE_COLUMN_HORIZONTAL);
+
+        Identifier identifier = texturedModel.upload(block, generator.modelCollector);
+        //Identifier identifier2 = texturedModel2.upload(block, generator.modelCollector);
+
+        xBlockStateVariants.add(createAxisVariantX(identifier));
+        yBlockStateVariants.add(createAxisVariantY(identifier));
+        zBlockStateVariants.add(createAxisVariantZ(identifier));
+
+        for (int i = 0; i < variants; i++) {
+            int finalI = i;
+
+            TextureMap variantTextureMap = TextureMap.sideEnd(
+                    Registries.BLOCK.getId(block).withPath(path -> "block/" + path + "_side" + "_" + (finalI + 2)),
+                    Registries.BLOCK.getId(block).withPath(path -> "block/" + path + "_top")
+            );
+            TexturedModel variantTexturedModel = new TexturedModel(variantTextureMap, Models.CUBE_COLUMN);
+            Identifier variantIdentifier = variantTexturedModel.upload(block, "_" + (i + 2), generator.modelCollector);
+
+            xBlockStateVariants.add(createAxisVariantX(variantIdentifier));
+            yBlockStateVariants.add(createAxisVariantY(variantIdentifier));
+            zBlockStateVariants.add(createAxisVariantZ(variantIdentifier));
+        }
+
+        generator.blockStateCollector.accept(
+                VariantsBlockStateSupplier.create(block)
+                        .coordinate(
+                                BlockStateVariantMap.create(Properties.AXIS)
+                                        .register(Direction.Axis.X, new ArrayList<>(xBlockStateVariants))
+                                        .register(Direction.Axis.Y, new ArrayList<>(yBlockStateVariants))
+                                        .register(Direction.Axis.Z, new ArrayList<>(zBlockStateVariants))
+                        )
+        );
+    }
+
+    public static void createWoodWithVariants(Block block, Block logBlock, int variants, BlockStateModelGenerator generator) {
+        HashSet<BlockStateVariant> xBlockStateVariants = new HashSet<>();
+        HashSet<BlockStateVariant> yBlockStateVariants = new HashSet<>();
+        HashSet<BlockStateVariant> zBlockStateVariants = new HashSet<>();
+
+        TextureMap textureMap = TextureMap.sideEnd(Registries.BLOCK.getId(logBlock).withPath(path -> "block/" + path + "_side"), Registries.BLOCK.getId(logBlock).withPath(path -> "block/" + path + "_side"));
+
+        TexturedModel texturedModel = new TexturedModel(textureMap, Models.CUBE_COLUMN);
+        //TexturedModel texturedModel2 = new TexturedModel(textureMap, Models.CUBE_COLUMN_HORIZONTAL);
+
+        Identifier identifier = texturedModel.upload(block, generator.modelCollector);
+        //Identifier identifier2 = texturedModel2.upload(block, generator.modelCollector);
+
+        xBlockStateVariants.add(createAxisVariantX(identifier));
+        yBlockStateVariants.add(createAxisVariantY(identifier));
+        zBlockStateVariants.add(createAxisVariantZ(identifier));
+
+        for (int i = 0; i < variants; i++) {
+            int finalI = i;
+
+            TextureMap variantTextureMap = TextureMap.sideEnd(
+                    Registries.BLOCK.getId(logBlock).withPath(path -> "block/" + path + "_side" + "_" + (finalI + 2)),
+                    Registries.BLOCK.getId(logBlock).withPath(path -> "block/" + path + "_side" + "_" + (finalI + 2))
+            );
+            TexturedModel variantTexturedModel = new TexturedModel(variantTextureMap, Models.CUBE_COLUMN);
+            Identifier variantIdentifier = variantTexturedModel.upload(block, "_" + (i + 2), generator.modelCollector);
+
+            xBlockStateVariants.add(createAxisVariantX(variantIdentifier));
+            yBlockStateVariants.add(createAxisVariantY(variantIdentifier));
+            zBlockStateVariants.add(createAxisVariantZ(variantIdentifier));
+        }
+
+        generator.blockStateCollector.accept(
+                VariantsBlockStateSupplier.create(block)
+                        .coordinate(
+                                BlockStateVariantMap.create(Properties.AXIS)
+                                        .register(Direction.Axis.X, new ArrayList<>(xBlockStateVariants))
+                                        .register(Direction.Axis.Y, new ArrayList<>(yBlockStateVariants))
+                                        .register(Direction.Axis.Z, new ArrayList<>(zBlockStateVariants))
+                        )
+        );
+    }
+
+    public static BlockStateVariant createAxisVariantX(Identifier identifier) {
+        return BlockStateVariant.create()
+                .put(VariantSettings.MODEL, identifier)
+                .put(VariantSettings.X, VariantSettings.Rotation.R90)
+                .put(VariantSettings.Y, VariantSettings.Rotation.R90);
+    }
+
+    public static BlockStateVariant createAxisVariantY(Identifier identifier) {
+        return BlockStateVariant.create()
+                .put(VariantSettings.MODEL, identifier);
+    }
+
+    public static BlockStateVariant createAxisVariantZ(Identifier identifier) {
+        return BlockStateVariant.create()
+                .put(VariantSettings.MODEL, identifier)
+                .put(VariantSettings.X, VariantSettings.Rotation.R90);
     }
 }
