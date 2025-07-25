@@ -38,6 +38,8 @@ public class GhostCraft implements ModInitializer {
 		GCAttachmentTypes.initialize();
 		GCBlocks.initialize();
 		GCBlockEntities.initialize();
+        GCInstruments.initialize();
+
         GCItemGroups.initialize();
 
 		CommandRegistrationCallback.EVENT.register(new LoreCommand()::execute);

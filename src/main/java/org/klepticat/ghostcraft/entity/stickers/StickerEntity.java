@@ -11,6 +11,8 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.klepticat.ghostcraft.GCAttachmentTypes;
+import org.klepticat.ghostcraft.GCCardinalComponents;
+import org.klepticat.ghostcraft.GhostCraft;
 import org.klepticat.ghostcraft.stickers.Sticker;
 
 import java.util.UUID;
@@ -54,6 +56,14 @@ public class StickerEntity extends Entity implements Ownable {
             this.owner = owner;
             this.ownerUuid = owner.getUuid();
         }
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+
+        if (this.getOwner() != null && this.getOwner().getComponent(GCCardinalComponents.PLAYER_STICKER).getUuid() != this.getUuid())
+            this.kill();
     }
 
     @Override

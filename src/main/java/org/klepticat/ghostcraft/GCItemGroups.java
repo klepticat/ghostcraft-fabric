@@ -1,14 +1,20 @@
 package org.klepticat.ghostcraft;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.klepticat.ghostcraft.block.BlockType;
 
+import java.util.Comparator;
+import java.util.stream.Collectors;
+
 import static org.klepticat.ghostcraft.GCBlocks.*;
+import static org.klepticat.ghostcraft.GCItems.*;
 import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
 
 public class GCItemGroups {
@@ -204,6 +210,202 @@ public class GCItemGroups {
                 entries.add(SMOOTH_SCULK_STONE_STAIRS);
                 entries.add(SMOOTH_SCULK_STONE_SLAB);
                 entries.add(SMOOTH_SCULK_STONE_WALL);
+            })
+    );
+
+    private static final ItemGroup GC_ITEMS = register("items", FabricItemGroup.builder()
+            .icon(BOSS_KEY::getDefaultStack)
+            .entries((displayContext, entries) -> {
+                entries.add(SMILER);
+                entries.add(LIMBO);
+                entries.add(GRIM_LANTERN);
+                entries.add(WarriorItems.EARLY_RETIREMENT);
+                entries.add(LIMINAL_LANTERN);
+                entries.add(GoatHornItem.getStackForInstrument(LIMBY_FLUTE, Registries.INSTRUMENT.entryOf(Instruments.DREAM_GOAT_HORN)));
+                entries.add(GoatHornItem.getStackForInstrument(VIC_FLUTE, Registries.INSTRUMENT.entryOf(Instruments.SING_GOAT_HORN)));
+                entries.add(GoatHornItem.getStackForInstrument(MEI_FLUTE, Registries.INSTRUMENT.entryOf(GCInstruments.MEI_FLUTE)));
+                entries.add(SENTIENT_SPELLBOOK);
+                entries.add(CYAN_MACAW_FEATHER);
+                entries.add(CLOSED_ORB);
+                entries.add(SICKLE);
+                entries.add(COPPER_COIN);
+                entries.add(SILVER_COIN);
+                entries.add(GOLD_COIN);
+                entries.add(EMBEDDED_GEM);
+                entries.add(WARP_GEM);
+                entries.add(COMMUNICATOR);
+                entries.add(BOSS_KEY);
+                entries.add(BROKEN_KEY);
+                entries.add(DRACONIC_KEY);
+                entries.add(GOLD_KEY);
+                entries.add(MUTATED_KEY);
+                entries.add(RUSTED_KEY);
+                entries.add(SILVER_KEY);
+                entries.add(TAINTED_KEY);
+                entries.add(BLACK_KEY);
+                entries.add(BROWN_KEY);
+                entries.add(RED_KEY);
+                entries.add(ORANGE_KEY);
+                entries.add(YELLOW_KEY);
+                entries.add(LIME_KEY);
+                entries.add(GREEN_KEY);
+                entries.add(CYAN_KEY);
+                entries.add(LIGHT_BLUE_KEY);
+                entries.add(BLUE_KEY);
+                entries.add(PURPLE_KEY);
+                entries.add(MAGENTA_KEY);
+                entries.add(PINK_KEY);
+            })
+    );
+
+    private static final ItemGroup GC_MOB_DROPS = register("mob_drops", FabricItemGroup.builder()
+            .icon(FLESH::getDefaultStack)
+            .entries((displayContext, entries) -> {
+                entries.add(ARTHROPOD_CHUNK);
+                entries.add(ARTHROPOD_CHUNK_COOKED);
+                entries.add(COBALT_SCALE);
+                entries.add(FLESH);
+                entries.add(MUTATION);
+                entries.add(GUMMY_SLIME);
+                entries.add(SPIDER_SILK);
+                entries.add(WING);
+                entries.add(WITCH_THUMB);
+                entries.add(ZOMBACON);
+                entries.add(ZOMBIE_LEG);
+                entries.add(FEATHER_FYNYKS);
+                entries.add(FEATHER_LINI);
+                entries.add(FEATHER_PARROT);
+                entries.add(HIDE_BEAR);
+                entries.add(HIDE_PANDA);
+                entries.add(HIDE_POLAR);
+                entries.add(HIDE_CREEPER);
+                entries.add(HIDE_CROCODILE);
+                entries.add(HIDE_FOX);
+                entries.add(HIDE_MONSTER);
+                entries.add(HIDE_MOOSHROOM);
+                entries.add(HIDE_PHANTOM);
+                entries.add(HIDE_PIG);
+                entries.add(HIDE_SNIFFER);
+                entries.add(HIDE_STRIDER);
+                entries.add(TENTACLE_PINK);
+                entries.add(TENTACLE_SEVERED);
+                entries.add(TENDRIL_DARK);
+                entries.add(TENDRIL_SCULK);
+                entries.add(BRAIN);
+                entries.add(HEART);
+                entries.add(STOMACH);
+                entries.add(EYE);
+                entries.add(EYE_INSECTOID);
+                entries.add(EYE_STRANGE);
+                entries.add(EYE_WATCHFUL);
+                entries.add(EYE_WEEPING);
+                entries.add(BONE_BITS);
+                entries.add(BONE_CARBON);
+                entries.add(BONE_DOG);
+                entries.add(BONE_RIBS);
+                entries.add(BONE_SPINE);
+                entries.add(ANIMAL_TEETH);
+                entries.add(TOOTH);
+                entries.add(FANGS_SHARP);
+                entries.add(FANGS_DULL);
+                entries.add(UNICORN_HORN);
+                entries.add(SKULL_DENTED);
+                entries.add(SKULL_EMPTY);
+                entries.add(SKULL_GUYS);
+                entries.add(SKULL_JAWLESS);
+                entries.add(SKULL_JIM);
+                entries.add(SKULL_LAUGH);
+            })
+    );
+
+    private static final ItemGroup GC_PLACEABLES = register("placeables", FabricItemGroup.builder()
+            .icon(LIMBO::getDefaultStack)
+            .entries((displayContext, entries) -> {
+                entries.add(LIMBO);
+                entries.add(SMILER);
+                entries.addAll(WANTED_POSTERS_SET.stream().map(Item::getDefaultStack).toList());
+            })
+    );
+
+    private static final ItemGroup GC_ACCESSORIES = register("accessories", FabricItemGroup.builder()
+            .icon(VERDANT_BRACER::getDefaultStack)
+            .entries((displayContext, entries) -> {
+                entries.addAll(NECKLACE_SET.stream().sorted(Comparator.comparing(Item::toString)).map(Item::getDefaultStack).toList());
+                entries.addAll(RING_SET.stream().sorted(Comparator.comparing(Item::toString)).map(Item::getDefaultStack).toList());
+                entries.addAll(BRACELET_SET.stream().sorted(Comparator.comparing(Item::toString)).map(Item::getDefaultStack).toList());
+            })
+    );
+
+    private static final ItemGroup GC_GIZMOS = register("gizmos", FabricItemGroup.builder()
+            .icon(GEAR_BRONZE::getDefaultStack)
+            .entries((displayContext, entries) -> {
+                entries.add(CAMERA);
+                entries.add(CANISTER_REINFORCED);
+                entries.add(CAPACITOR);
+                entries.add(CARD);
+                entries.add(CERAMIC_FUSE);
+                entries.add(CIRCUIT_BOARD);
+                entries.add(COIL);
+                entries.add(COMPOSITE_PLATING);
+                entries.add(DIODE);
+                entries.add(ELECTRIC_MOTOR);
+                entries.add(ELECTRICAL_CABLES);
+                entries.add(GEAR_BUSHING);
+                entries.add(GEAR_STEEL);
+                entries.add(GEAR_BRONZE);
+                entries.add(HEAT_SINK);
+                entries.add(INPUT_SELECTOR);
+                entries.add(INSULATION_CERAMIC);
+                entries.add(LAMINATED_COIL);
+                entries.add(LIGHTBULB);
+                entries.add(MECHANISM_COMPLEX);
+                entries.add(MECHANISM_SIMPLE);
+                entries.add(METAL_BAR);
+                entries.add(METAL_SCRAP);
+                entries.add(MOTOR);
+                entries.add(OBSIDIAN_STICK);
+                entries.add(OPERATIONAL_AMPLIFIERS);
+                entries.add(PIPE_WATERPROOF);
+                entries.add(PISTON_CASING);
+                entries.add(PISTON_DISK);
+                entries.add(PISTON_PARTS);
+                entries.add(PISTON_ROD);
+                entries.add(PLATE_BRONZE);
+                entries.add(PLATE_STEEL);
+                entries.add(PLATE_TITANIUM);
+                entries.add(RAM_CHIP);
+                entries.add(RESISTOR);
+                entries.add(RESONATOR);
+                entries.add(ROUTING_TICKET);
+                entries.add(RUSTED_METAL_SHEET);
+                entries.add(SAW_IRON);
+                entries.add(SCREW);
+                entries.add(SKELETON_KEY);
+                entries.add(SMALL_DIODE);
+                entries.add(SMALL_SCREW);
+                entries.add(SOLDERING_IRON);
+                entries.add(SSD);
+                entries.add(TITANIUM_HEAT_COIL);
+                entries.add(TOOL_SPIKE_MAUL_STEEL);
+                entries.add(TOROID_COIL);
+                entries.add(TRACK_PARTS);
+                entries.add(TRACK_SPIKE);
+                entries.add(TRAIN_WHEEL_BIG);
+                entries.add(TRAIN_WHEEL_SMALL);
+                entries.add(TRANSFORMER);
+                entries.add(TUBE_NORMAL);
+                entries.add(TUBE_ONE_WAY);
+                entries.add(TUBE_VALVE);
+                entries.add(VEHICLE_KEY);
+                entries.add(WIRES);
+                entries.add(WRENCH);
+            })
+    );
+
+    private static final ItemGroup GC_MOTH = register("moth", FabricItemGroup.builder()
+            .icon(DEATH_MOTH::getDefaultStack)
+            .entries((displayContext, entries) -> {
+                entries.add(DEATH_MOTH);
             })
     );
 

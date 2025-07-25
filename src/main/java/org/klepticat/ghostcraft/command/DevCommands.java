@@ -3,7 +3,6 @@ package org.klepticat.ghostcraft.command;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.google.gson.JsonPrimitive;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import net.minecraft.command.CommandRegistryAccess;
@@ -13,7 +12,6 @@ import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.JsonHelper;
 import org.klepticat.ghostcraft.util.json.TagJSON;
 
 import java.io.IOException;
@@ -21,7 +19,6 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import static net.minecraft.server.command.CommandManager.*;
@@ -108,19 +105,49 @@ public class DevCommands implements Command {
 
                                     try {
                                         JsonObject translationJson = JsonParser.parseReader(Files.newBufferedReader(file, StandardCharsets.UTF_8)).getAsJsonObject();
-                                        translationJson.addProperty(itemKey, StringArgumentType.getString(context, "translation"));
+                                        String translation = StringArgumentType.getString(context, "translation");
+
+                                        translationJson.addProperty(itemKey, translation);
 
                                         String translationJsonString = new Gson().toJson(translationJson);
 
                                         Files.writeString(file, translationJsonString, StandardOpenOption.TRUNCATE_EXISTING);
 
-                                        context.getSource().sendFeedback(() -> Text.literal("Added translation for item"), false);
+                                        context.getSource().sendFeedback(() -> Text.literal("Added translation to item %s".formatted(itemKey)), false);
 
                                         return 1;
                                     } catch (IOException e) {
                                         throw new RuntimeException(e);
                                     }
                                 })
+                        )
+                )
+                .then(literal("manual_translate")
+                        .then(argument("key", StringArgumentType.word())
+                                .then(argument("translation", StringArgumentType.greedyString())
+                                        .executes(context -> {
+                                            String key = StringArgumentType.getString(context, "key");
+
+                                            Path file = Paths.get("../src/main/resources/assets/ghostcraft/lang/en_us.json");
+
+                                            try {
+                                                JsonObject translationJson = JsonParser.parseReader(Files.newBufferedReader(file, StandardCharsets.UTF_8)).getAsJsonObject();
+                                                String translation = StringArgumentType.getString(context, "translation");
+
+                                                translationJson.addProperty(key, StringArgumentType.getString(context, "translation"));
+
+                                                String translationJsonString = new Gson().toJson(translationJson);
+
+                                                Files.writeString(file, translationJsonString, StandardOpenOption.TRUNCATE_EXISTING);
+
+                                                context.getSource().sendFeedback(() -> Text.literal("Added translation to %s".formatted(key)), false);
+
+                                                return 1;
+                                            } catch (IOException e) {
+                                                throw new RuntimeException(e);
+                                            }
+                                        })
+                                )
                         )
                 )
         );

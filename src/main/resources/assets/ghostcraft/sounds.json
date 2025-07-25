@@ -30,5 +30,10 @@
       "minecraft:item/bundle/drop_contents2",
       "minecraft:item/bundle/drop_contents3"
     ]
+  },
+  "mei_flute": {
+    "sounds": [
+      "ghostcraft:item/instruments/mei_flute"
+    ]
   }
 }

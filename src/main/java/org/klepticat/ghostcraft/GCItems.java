@@ -2,12 +2,18 @@ package org.klepticat.ghostcraft;
 
 import dev.emi.trinkets.api.TrinketItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.tag.InstrumentTags;
 import net.minecraft.util.Identifier;
+import org.jetbrains.annotations.Nullable;
 import org.klepticat.ghostcraft.item.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 import static org.klepticat.ghostcraft.GhostCraft.LOGGER;
 import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
@@ -23,7 +29,6 @@ public class GCItems {
      * @noinspection unused
      */
     static class ArcherItems {
-        //</editor-fold>
         public static void initialize() {
         }
 
@@ -2054,6 +2059,14 @@ public class GCItems {
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
+        public static final Item EARLY_RETIREMENT = register("early_retirement", new MeleeWeaponItem(
+                ToolMaterials.WOOD,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        3,
+                        -2.4f
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
         public static final Item EMERALD_SPEAR = register("emerald_spear", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
@@ -2433,6 +2446,7 @@ public class GCItems {
         public static final Item PLANE = register("plane", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/plane.png")));
         public static final Item RAINBOW = register("rainbow", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/rainbow.png")));
         public static final Item RAVEN_WINGS = register("raven_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/raven.png")));
+        public static final Item RAVNA_WINGS = register("ravna_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/ravna.png")));
         public static final Item SKELYTRA = register("skelytra", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/skelytra.png")));
         public static final Item VAMPIRE = register("vampire", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/vampire.png")));
         public static final Item VEX_WINGS = register("vex_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/vex.png")));
@@ -2500,14 +2514,265 @@ public class GCItems {
 
     public static final Item GRAPPLING_HOOK = register("grappling_hook", new GrapplingHookItem(new Item.Settings()));
 
-    public static final Item REFLECTING_NECKLACE = register("reflecting_necklace", new AttributeTrinketItem(new Item.Settings(), StatusEffects.RESISTANCE, 2));
-
-
     // CHARGES
     public static final Item DIRE_CHARGE = register("dire_charge", new Item(new Item.Settings()));
     public static final Item ETHEREAL_CHARGE = register("ethereal_charge", new Item(new Item.Settings()));
     public static final Item MAGIC_CHARGE = register("magic_charge", new Item(new Item.Settings()));
     public static final Item POTENT_CHARGE = register("potent_charge", new Item(new Item.Settings()));
+
+    // PERSONAL ITEMS
+    public static final Item CLOSED_ORB = register("closed_orb", new Item(new Item.Settings()));
+    public static final Item LIMINAL_LANTERN = register("liminal_lantern", new Item(new Item.Settings()));
+    public static final Item GRIM_LANTERN = register("grim_lantern", new Item(new Item.Settings()));
+
+    public static final Item SENTIENT_SPELLBOOK = register("sentient_spellbook", new Item(new Item.Settings()));
+    public static final Item CYAN_MACAW_FEATHER = register("cyan_macaw_feather", new Item(new Item.Settings()));
+
+    public static final Item SICKLE = register("sickle", new Item(new Item.Settings()));
+
+    public static final Item LIMBY_FLUTE = register("limby_flute", new GoatHornItem(new Item.Settings().component(DataComponentTypes.INSTRUMENT, Registries.INSTRUMENT.entryOf(Instruments.DREAM_GOAT_HORN)), InstrumentTags.REGULAR_GOAT_HORNS));
+    public static final Item VIC_FLUTE = register("vic_flute", new GoatHornItem(new Item.Settings().component(DataComponentTypes.INSTRUMENT, Registries.INSTRUMENT.entryOf(Instruments.SING_GOAT_HORN)), InstrumentTags.REGULAR_GOAT_HORNS));
+    public static final Item MEI_FLUTE = register("mei_flute", new GoatHornItem(new Item.Settings().component(DataComponentTypes.INSTRUMENT, Registries.INSTRUMENT.entryOf(GCInstruments.MEI_FLUTE)), InstrumentTags.REGULAR_GOAT_HORNS));
+
+    // PLACEABLES
+    public static final Item DEATH_MOTH = register("death_moth", new Item(new Item.Settings()));
+    public static final Item SMILER = register("smiler", new Item(new Item.Settings()));
+    public static final Item LIMBO = register("limbo", new Item(new Item.Settings()));
+
+    public static HashSet<Item> WANTED_POSTERS_SET = new HashSet<>();
+
+    public static final Item CEDRIC_POSTER = registerWithSet("cedric_poster", new Item(new Item.Settings()), WANTED_POSTERS_SET);
+    public static final Item CONVICT_POSTER = registerWithSet("convict_poster", new Item(new Item.Settings()), WANTED_POSTERS_SET);
+    public static final Item GRIM_POSTER = registerWithSet("grim_poster", new Item(new Item.Settings()), WANTED_POSTERS_SET);
+    public static final Item LANTHUR_POSTER = registerWithSet("lanthur_poster", new Item(new Item.Settings()), WANTED_POSTERS_SET);
+    public static final Item LIMBY_POSTER = registerWithSet("limby_poster", new Item(new Item.Settings()), WANTED_POSTERS_SET);
+    public static final Item MEI_POSTER = registerWithSet("mei_poster", new Item(new Item.Settings()), WANTED_POSTERS_SET);
+    public static final Item RAVNA_POSTER = registerWithSet("ravna_poster", new Item(new Item.Settings()), WANTED_POSTERS_SET);
+    public static final Item SILVER_POSTER = registerWithSet("silver_poster", new Item(new Item.Settings()), WANTED_POSTERS_SET);
+    public static final Item SPARKLES_POSTER = registerWithSet("sparkles_poster", new Item(new Item.Settings()), WANTED_POSTERS_SET);
+    public static final Item VIC_POSTER = registerWithSet("vic_poster", new Item(new Item.Settings()), WANTED_POSTERS_SET);
+
+    // KEYS
+    public static final Item BOSS_KEY = register("boss_key", new Item(new Item.Settings()));
+    public static final Item BROKEN_KEY = register("broken_key", new Item(new Item.Settings()));
+    public static final Item DRACONIC_KEY = register("draconic_key", new Item(new Item.Settings()));
+    public static final Item GOLD_KEY = register("gold_key", new Item(new Item.Settings()));
+    public static final Item MUTATED_KEY = register("mutated_key", new Item(new Item.Settings()));
+    public static final Item RUSTED_KEY = register("rusted_key", new Item(new Item.Settings()));
+    public static final Item SILVER_KEY = register("silver_key", new Item(new Item.Settings()));
+    public static final Item TAINTED_KEY = register("tainted_key", new Item(new Item.Settings()));
+    public static final Item BLACK_KEY = register("black_key", new Item(new Item.Settings()));
+    public static final Item BROWN_KEY = register("brown_key", new Item(new Item.Settings()));
+    public static final Item RED_KEY = register("red_key", new Item(new Item.Settings()));
+    public static final Item ORANGE_KEY = register("orange_key", new Item(new Item.Settings()));
+    public static final Item YELLOW_KEY = register("yellow_key", new Item(new Item.Settings()));
+    public static final Item LIME_KEY = register("lime_key", new Item(new Item.Settings()));
+    public static final Item GREEN_KEY = register("green_key", new Item(new Item.Settings()));
+    public static final Item CYAN_KEY = register("cyan_key", new Item(new Item.Settings()));
+    public static final Item LIGHT_BLUE_KEY = register("light_blue_key", new Item(new Item.Settings()));
+    public static final Item BLUE_KEY = register("blue_key", new Item(new Item.Settings()));
+    public static final Item PURPLE_KEY = register("purple_key", new Item(new Item.Settings()));
+    public static final Item MAGENTA_KEY = register("magenta_key", new Item(new Item.Settings()));
+    public static final Item PINK_KEY = register("pink_key", new Item(new Item.Settings()));
+
+    // MISC
+    public static final Item WARP_GEM = register("warp_gem", new Item(new Item.Settings()));
+    public static final Item EMBEDDED_GEM = register("embedded_gem", new Item(new Item.Settings()));
+    public static final Item COMMUNICATOR = register("communicator", new Item(new Item.Settings()));
+
+    // MOB DROPS
+    public static final Item ARTHROPOD_CHUNK = register("arthropod_chunk", new Item(new Item.Settings()));
+    public static final Item ARTHROPOD_CHUNK_COOKED = register("arthropod_chunk_cooked", new Item(new Item.Settings()));
+    public static final Item COBALT_SCALE = register("cobalt_scale", new Item(new Item.Settings()));
+    public static final Item FLESH = register("flesh", new Item(new Item.Settings()));
+    public static final Item MUTATION = register("mutation", new Item(new Item.Settings()));
+    public static final Item GUMMY_SLIME = register("gummy_slime", new Item(new Item.Settings()));
+    public static final Item SPIDER_SILK = register("spider_silk", new Item(new Item.Settings()));
+    public static final Item WING = register("wing", new Item(new Item.Settings()));
+    public static final Item WITCH_THUMB = register("witch_thumb", new Item(new Item.Settings()));
+    public static final Item ZOMBACON = register("zombacon", new Item(new Item.Settings()));
+    public static final Item ZOMBIE_LEG = register("zombie_leg", new Item(new Item.Settings()));
+
+    public static final Item FEATHER_FYNYKS = register("feather_fynyks", new Item(new Item.Settings()));
+    public static final Item FEATHER_LINI = register("feather_lini", new Item(new Item.Settings()));
+    public static final Item FEATHER_PARROT = register("feather_parrot", new Item(new Item.Settings()));
+
+    public static final Item HIDE_BEAR = register("hide_bear", new Item(new Item.Settings()));
+    public static final Item HIDE_PANDA = register("hide_panda", new Item(new Item.Settings()));
+    public static final Item HIDE_POLAR = register("hide_polar", new Item(new Item.Settings()));
+    public static final Item HIDE_CREEPER = register("hide_creeper", new Item(new Item.Settings()));
+    public static final Item HIDE_CROCODILE = register("hide_crocodile", new Item(new Item.Settings()));
+    public static final Item HIDE_FOX = register("hide_fox", new Item(new Item.Settings()));
+    public static final Item HIDE_MONSTER = register("hide_monster", new Item(new Item.Settings()));
+    public static final Item HIDE_MOOSHROOM = register("hide_mooshroom", new Item(new Item.Settings()));
+    public static final Item HIDE_PHANTOM = register("hide_phantom", new Item(new Item.Settings()));
+    public static final Item HIDE_PIG = register("hide_pig", new Item(new Item.Settings()));
+    public static final Item HIDE_SNIFFER = register("hide_sniffer", new Item(new Item.Settings()));
+    public static final Item HIDE_STRIDER = register("hide_strider", new Item(new Item.Settings()));
+
+    public static final Item TENTACLE_PINK = register("tentacle_pink", new Item(new Item.Settings()));
+    public static final Item TENTACLE_SEVERED = register("tentacle_severed", new Item(new Item.Settings()));
+    public static final Item TENDRIL_DARK = register("tendril_dark", new Item(new Item.Settings()));
+    public static final Item TENDRIL_SCULK = register("tendril_sculk", new Item(new Item.Settings()));
+
+    public static final Item BRAIN = register("brain", new Item(new Item.Settings()));
+    public static final Item HEART = register("heart", new Item(new Item.Settings()));
+    public static final Item STOMACH = register("stomach", new Item(new Item.Settings()));
+    public static final Item EYE = register("eye", new Item(new Item.Settings()));
+    public static final Item EYE_INSECTOID = register("eye_insectoid", new Item(new Item.Settings()));
+    public static final Item EYE_STRANGE = register("eye_strange", new Item(new Item.Settings()));
+    public static final Item EYE_WATCHFUL = register("eye_watchful", new Item(new Item.Settings()));
+    public static final Item EYE_WEEPING = register("eye_weeping", new Item(new Item.Settings()));
+
+    public static final Item BONE_BITS = register("bone_bits", new Item(new Item.Settings()));
+    public static final Item BONE_CARBON = register("bone_carbon", new Item(new Item.Settings()));
+    public static final Item BONE_DOG = register("bone_dog", new Item(new Item.Settings()));
+    public static final Item BONE_RIBS = register("bone_ribs", new Item(new Item.Settings()));
+    public static final Item BONE_SPINE = register("bone_spine", new Item(new Item.Settings()));
+
+    public static final Item ANIMAL_TEETH = register("animal_teeth", new Item(new Item.Settings()));
+    public static final Item TOOTH = register("tooth", new Item(new Item.Settings()));
+    public static final Item FANGS_SHARP = register("fangs_sharp", new Item(new Item.Settings()));
+    public static final Item FANGS_DULL = register("fangs_dull", new Item(new Item.Settings()));
+    public static final Item UNICORN_HORN = register("unicorn_horn", new Item(new Item.Settings()));
+
+    public static final Item SKULL_DENTED = register("skull_dented", new Item(new Item.Settings()));
+    public static final Item SKULL_EMPTY = register("skull_empty", new Item(new Item.Settings()));
+    public static final Item SKULL_GUYS = register("skull_guys", new Item(new Item.Settings()));
+    public static final Item SKULL_JAWLESS = register("skull_jawless", new Item(new Item.Settings()));
+    public static final Item SKULL_JIM = register("skull_jim", new Item(new Item.Settings()));
+    public static final Item SKULL_LAUGH = register("skull_laugh", new Item(new Item.Settings()));
+
+    // LOOT ITEMS
+    public static HashSet<Item> RING_SET = new HashSet<>();
+    public static HashSet<Item> BRACELET_SET = new HashSet<>();
+    public static HashSet<Item> NECKLACE_SET = new HashSet<>();
+
+    public static final Item BIXBITE_RING = registerWithSet("bixbite_ring", new TrinketItem(new Item.Settings()), RING_SET);
+    public static final Item BRASS_RING = registerWithSet("brass_ring", new TrinketItem(new Item.Settings()), RING_SET);
+    public static final Item CHALCEDONY_RING = registerWithSet("chalcedony_ring", new TrinketItem(new Item.Settings()), RING_SET);
+    public static final Item CITRINE_RING = registerWithSet("citrine_ring", new TrinketItem(new Item.Settings()), RING_SET);
+    public static final Item GARNET_RING = registerWithSet("garnet_ring", new TrinketItem(new Item.Settings()), RING_SET);
+    public static final Item JASPER_RING = registerWithSet("jasper_ring", new TrinketItem(new Item.Settings()), RING_SET);
+    public static final Item PEARL_RING = registerWithSet("pearl_ring", new TrinketItem(new Item.Settings()), RING_SET);
+    public static final Item PERIDOT_RING = registerWithSet("peridot_ring", new TrinketItem(new Item.Settings()), RING_SET);
+    public static final Item ROSE_RING = registerWithSet("rose_ring", new TrinketItem(new Item.Settings()), RING_SET);
+    public static final Item SILVER_RING = registerWithSet("silver_ring", new TrinketItem(new Item.Settings()), RING_SET);
+    public static final Item SODALITE_RING = registerWithSet("sodalite_ring", new TrinketItem(new Item.Settings()), RING_SET);
+    public static final Item TOPAZ_RING = registerWithSet("topaz_ring", new TrinketItem(new Item.Settings()), RING_SET);
+    public static final Item YELLOW_DRAVITE_RING = registerWithSet("yellow_dravite_ring", new TrinketItem(new Item.Settings()), RING_SET);
+    public static final Item ZIRCON_RING = registerWithSet("zircon_ring", new TrinketItem(new Item.Settings()), RING_SET);
+
+    public static final Item ENGAGEMENT_RING = registerWithSet("engagement_ring", new TrinketItem(new Item.Settings()), RING_SET);
+    public static final Item WEDDING_BAND = registerWithSet("wedding_band", new TrinketItem(new Item.Settings()), RING_SET);
+
+    public static final Item CLAW_NECKLACE = registerWithSet("claw_necklace", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+    public static final Item DEW_DROP = registerWithSet("dew_drop", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+    public static final Item HOLY_PENDANT = registerWithSet("holy_pendant", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+    public static final Item STAR_FRAGMENT = registerWithSet("star_fragment", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+    public static final Item STAR_PENDANT = registerWithSet("star_pendant", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+    public static final Item SUN_FRAGMENT = registerWithSet("sun_fragment", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+    public static final Item TOOTH_NECKLACE = registerWithSet("tooth_necklace", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+
+    public static final Item GORONS_TEAR = registerWithSet("gorons_tear", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+    public static final Item MERMAIDS_TEAR = registerWithSet("mermaids_tear", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+    public static final Item MOONS_TEAR = registerWithSet("moons_tear", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+    public static final Item SUNS_TEAR = registerWithSet("suns_tear", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+    public static final Item ZORAS_TEAR = registerWithSet("zoras_tear", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+
+    public static final Item GOLD_BAND = registerWithSet("gold_band", new TrinketItem(new Item.Settings()), BRACELET_SET);
+    public static final Item IRON_BAND = registerWithSet("iron_band", new TrinketItem(new Item.Settings()), BRACELET_SET);
+    public static final Item LEATHER_BANGLE = registerWithSet("leather_bangle", new TrinketItem(new Item.Settings()), BRACELET_SET);
+    public static final Item LEATHER_BRACER = registerWithSet("leather_bracer", new TrinketItem(new Item.Settings()), BRACELET_SET);
+    public static final Item MYTHRIL_BANGLE = registerWithSet("mythril_bangle", new TrinketItem(new Item.Settings()), BRACELET_SET);
+    public static final Item MYTHRIL_BAND = registerWithSet("mythril_band", new TrinketItem(new Item.Settings()), BRACELET_SET);
+
+    public static final Item EMERALD_BANGLE = registerWithSet("emerald_bangle", new TrinketItem(new Item.Settings()), BRACELET_SET);
+    public static final Item EMERALD_BRACER = registerWithSet("emerald_bracer", new TrinketItem(new Item.Settings()), BRACELET_SET);
+    public static final Item EMERALD_PENDANT = registerWithSet("emerald_pendant", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+    public static final Item EMERALD_RING = registerWithSet("emerald_ring", new TrinketItem(new Item.Settings()), RING_SET);
+
+    public static final Item RUBY_BANGLE = registerWithSet("ruby_bangle", new TrinketItem(new Item.Settings()), BRACELET_SET);
+    public static final Item RUBY_BRACER = registerWithSet("ruby_bracer", new TrinketItem(new Item.Settings()), BRACELET_SET);
+    public static final Item RUBY_PENDANT = registerWithSet("ruby_pendant", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+
+    public static final Item SAPPHIRE_BANGLE = registerWithSet("sapphire_bangle", new TrinketItem(new Item.Settings()), BRACELET_SET);
+    public static final Item SAPPHIRE_BRACER = registerWithSet("sapphire_bracer", new TrinketItem(new Item.Settings()), BRACELET_SET);
+    public static final Item SAPPHIRE_PENDANT = registerWithSet("sapphire_pendant", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+
+    public static final Item VERDANT_BRACELET = registerWithSet("verdant_bracelet", new TrinketItem(new Item.Settings()), BRACELET_SET);
+    public static final Item VERDANT_BRACER = registerWithSet("verdant_bracer", new TrinketItem(new Item.Settings()), BRACELET_SET);
+    public static final Item VERDANT_NECKLACE = registerWithSet("verdant_necklace", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+    public static final Item VERDANT_PENDANT = registerWithSet("verdant_pendant", new TrinketItem(new Item.Settings()), NECKLACE_SET);
+    public static final Item VERDANT_RING = registerWithSet("verdant_ring", new TrinketItem(new Item.Settings()), RING_SET);
+    public static final Item VERDANT_BAND = registerWithSet("verdant_band", new TrinketItem(new Item.Settings()), RING_SET);
+
+    // COINS
+    public static final Item COPPER_COIN = register("copper_coin", new Item(new Item.Settings()));
+    public static final Item SILVER_COIN = register("silver_coin", new Item(new Item.Settings()));
+    public static final Item GOLD_COIN = register("gold_coin", new Item(new Item.Settings()));
+
+    // GIZMOS
+    public static final Item CAMERA = register("camera", new Item(new Item.Settings()));
+    public static final Item CANISTER_REINFORCED = register("canister_reinforced", new Item(new Item.Settings()));
+    public static final Item CAPACITOR = register("capacitor", new Item(new Item.Settings()));
+    public static final Item CARD = register("card", new Item(new Item.Settings()));
+    public static final Item CERAMIC_FUSE = register("ceramic_fuse", new Item(new Item.Settings()));
+    public static final Item CIRCUIT_BOARD = register("circuit_board", new Item(new Item.Settings()));
+    public static final Item COIL = register("coil", new Item(new Item.Settings()));
+    public static final Item COMPOSITE_PLATING = register("composite_plating", new Item(new Item.Settings()));
+    public static final Item DIODE = register("diode", new Item(new Item.Settings()));
+    public static final Item ELECTRIC_MOTOR = register("electric_motor", new Item(new Item.Settings()));
+    public static final Item ELECTRICAL_CABLES = register("electrical_cables", new Item(new Item.Settings()));
+    public static final Item GEAR_BUSHING = register("gear_bushing", new Item(new Item.Settings()));
+    public static final Item GEAR_STEEL = register("gear_steel", new Item(new Item.Settings()));
+    public static final Item GEAR_BRONZE = register("gear_bronze", new Item(new Item.Settings()));
+    public static final Item HEAT_SINK = register("heat_sink", new Item(new Item.Settings()));
+    public static final Item INPUT_SELECTOR = register("input_selector", new Item(new Item.Settings()));
+    public static final Item INSULATION_CERAMIC = register("insulation_ceramic", new Item(new Item.Settings()));
+    public static final Item LAMINATED_COIL = register("laminated_coil", new Item(new Item.Settings()));
+    public static final Item LIGHTBULB = register("lightbulb", new Item(new Item.Settings()));
+    public static final Item MECHANISM_COMPLEX = register("mechanism_complex", new Item(new Item.Settings()));
+    public static final Item MECHANISM_SIMPLE = register("mechanism_simple", new Item(new Item.Settings()));
+    public static final Item METAL_BAR = register("metal_bar", new Item(new Item.Settings()));
+    public static final Item METAL_SCRAP = register("metal_scrap", new Item(new Item.Settings()));
+    public static final Item MOTOR = register("motor", new Item(new Item.Settings()));
+    public static final Item OBSIDIAN_STICK = register("obsidian_stick", new Item(new Item.Settings()));
+    public static final Item OPERATIONAL_AMPLIFIERS = register("operational_amplifiers", new Item(new Item.Settings()));
+    public static final Item PIPE_WATERPROOF = register("pipe_waterproof", new Item(new Item.Settings()));
+    public static final Item PISTON_CASING = register("piston_casing", new Item(new Item.Settings()));
+    public static final Item PISTON_DISK = register("piston_disk", new Item(new Item.Settings()));
+    public static final Item PISTON_PARTS = register("piston_parts", new Item(new Item.Settings()));
+    public static final Item PISTON_ROD = register("piston_rod", new Item(new Item.Settings()));
+    public static final Item PLATE_BRONZE = register("plate_bronze", new Item(new Item.Settings()));
+    public static final Item PLATE_STEEL = register("plate_steel", new Item(new Item.Settings()));
+    public static final Item PLATE_TITANIUM = register("plate_titanium", new Item(new Item.Settings()));
+    public static final Item RAM_CHIP = register("ram_chip", new Item(new Item.Settings()));
+    public static final Item RESISTOR = register("resistor", new Item(new Item.Settings()));
+    public static final Item RESONATOR = register("resonator", new Item(new Item.Settings()));
+    public static final Item ROUTING_TICKET = register("routing_ticket", new Item(new Item.Settings()));
+    public static final Item RUSTED_METAL_SHEET = register("rusted_metal_sheet", new Item(new Item.Settings()));
+    public static final Item SAW_IRON = register("saw_iron", new Item(new Item.Settings()));
+    public static final Item SCREW = register("screw", new Item(new Item.Settings()));
+    public static final Item SKELETON_KEY = register("skeleton_key", new Item(new Item.Settings()));
+    public static final Item SMALL_DIODE = register("small_diode", new Item(new Item.Settings()));
+    public static final Item SMALL_SCREW = register("small_screw", new Item(new Item.Settings()));
+    public static final Item SOLDERING_IRON = register("soldering_iron", new Item(new Item.Settings()));
+    public static final Item SSD = register("ssd", new Item(new Item.Settings()));
+    public static final Item TITANIUM_HEAT_COIL = register("titanium_heat_coil", new Item(new Item.Settings()));
+    public static final Item TOOL_SPIKE_MAUL_STEEL = register("tool_spike_maul_steel", new Item(new Item.Settings()));
+    public static final Item TOROID_COIL = register("toroid_coil", new Item(new Item.Settings()));
+    public static final Item TRACK_PARTS = register("track_parts", new Item(new Item.Settings()));
+    public static final Item TRACK_SPIKE = register("track_spike", new Item(new Item.Settings()));
+    public static final Item TRAIN_WHEEL_BIG = register("train_wheel_big", new Item(new Item.Settings()));
+    public static final Item TRAIN_WHEEL_SMALL = register("train_wheel_small", new Item(new Item.Settings()));
+    public static final Item TRANSFORMER = register("transformer", new Item(new Item.Settings()));
+    public static final Item TUBE_NORMAL = register("tube_normal", new Item(new Item.Settings()));
+    public static final Item TUBE_ONE_WAY = register("tube_one_way", new Item(new Item.Settings()));
+    public static final Item TUBE_VALVE = register("tube_valve", new Item(new Item.Settings()));
+    public static final Item VEHICLE_KEY = register("vehicle_key", new Item(new Item.Settings()));
+    public static final Item WIRES = register("wires", new Item(new Item.Settings()));
+    public static final Item WRENCH = register("wrench", new Item(new Item.Settings()));
 
     public static void initialize() {
         ArcherItems.initialize();
@@ -2527,5 +2792,13 @@ public class GCItems {
         LOGGER.info("[GHOSTCRAFT] Registering {}...", id);
 
         return Registry.register(Registries.ITEM, modItemID, item);
+    }
+
+    public static Item registerWithSet(String id, Item item, HashSet<Item> set) {
+        Item registeredItem = register(id, item);
+
+        set.add(registeredItem);
+
+        return registeredItem;
     }
 }
