@@ -23,6 +23,7 @@ import org.klepticat.ghostcraft.GCCardinalComponents;
 import org.klepticat.ghostcraft.GCEntityTypes;
 import org.klepticat.ghostcraft.GCSounds;
 import org.klepticat.ghostcraft.entity.TotemEntity;
+import org.klepticat.ghostcraft.util.types.TotemData;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -35,6 +36,7 @@ public class RelikItem extends Item {
     private byte effectAmplifier = 0;
     private int cooldown = 0;
     private RegistryEntry<StatusEffect> statusEffect;
+    private TotemData.TotemParticle particleEffect = TotemData.TotemParticle.makeDustParticle(1, 1, 1, 1);
 
     public RelikItem(Settings settings) {
         super(settings);
@@ -47,6 +49,11 @@ public class RelikItem extends Item {
         this.statusEffect = statusEffect;
         this.effectAmplifier = effectAmplifier;
         this.cooldown = cooldown;
+    }
+
+    public RelikItem(float totemRadius, short totemUptime, int cooldown, TotemData.TotemParticle particleEffect, RegistryEntry<StatusEffect> statusEffect, byte effectAmplifier, Settings settings) {
+        this(totemRadius, totemUptime, cooldown, statusEffect, effectAmplifier, settings);
+        this.particleEffect = particleEffect;
     }
 
     @Override
@@ -68,7 +75,7 @@ public class RelikItem extends Item {
             List<TotemEntity> nearbyTotems = world.getEntitiesByClass(
                     TotemEntity.class,
                     Box.of(itemPlacementContext.getBlockPos().toCenterPos(), 100, 100, 100),
-                    entity -> (itemPlacementContext.getBlockPos().toCenterPos().distanceTo(entity.getPos()) <= this.totemRadius + entity.getComponent(GCCardinalComponents.TOTEM_RADIUS).get()) && entity.getOwner() != context.getPlayer()
+                    entity -> (itemPlacementContext.getBlockPos().toCenterPos().distanceTo(entity.getPos()) <= this.totemRadius + entity.getComponent(GCCardinalComponents.TOTEM_DATA).getRadius()) && entity.getOwner() != context.getPlayer()
             );
 
             if (world.isSpaceEmpty(null, box) && world.getOtherEntities(null, box).isEmpty() && nearbyTotems.isEmpty()) {
@@ -79,7 +86,20 @@ public class RelikItem extends Item {
                 if (world instanceof ServerWorld serverWorld) {
                     // Why is this here I don't know what this does lol
                     Consumer<ArmorStandEntity> consumer = EntityType.copier(serverWorld, itemStack, context.getPlayer());
-                    TotemEntity totem = new TotemEntity(GCEntityTypes.TOTEM, this, this.totemRadius, this.totemUptime, this.statusEffect, this.effectAmplifier, context.getPlayer(), serverWorld);
+                    TotemEntity totem = new TotemEntity(
+                            GCEntityTypes.TOTEM,
+                            this,
+                            new TotemData(
+                                    this.statusEffect,
+                                    this.effectAmplifier,
+                                    this.particleEffect,
+                                    this.totemUptime,
+                                    this.totemRadius
+                            ),
+                            context.getPlayer(),
+                            serverWorld
+                    );
+
                     if (totem == null) {
                         return ActionResult.FAIL;
                     }

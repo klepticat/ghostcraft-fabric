@@ -15,18 +15,18 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
-import net.minecraft.particle.DustParticleEffect;
+import net.minecraft.particle.ParticleEffect;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.Colors;
 import net.minecraft.util.math.Box;
-import net.minecraft.util.math.ColorHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import org.joml.Vector3f;
 import org.klepticat.ghostcraft.GCCardinalComponents;
 import org.klepticat.ghostcraft.item.RelikItem;
+import org.klepticat.ghostcraft.util.cardinalcomponent.TotemDataComponent;
+import org.klepticat.ghostcraft.util.types.TotemData;
 
 import java.util.List;
 import java.util.UUID;
@@ -39,11 +39,11 @@ public class TotemEntity extends Entity implements Ownable {
 
     public float currentRadius = 0.0f;
 
-    public TotemEntity(EntityType<? extends Entity> entityType, RelikItem totemItem, float radius, short uptime, RegistryEntry<StatusEffect> effect, byte effectAmplifier, Entity owner, World world) {
+    private float hue;
+
+    public TotemEntity(EntityType<? extends Entity> entityType, RelikItem totemItem, TotemData totemData, Entity owner, World world) {
         this(entityType, totemItem, owner, world);
-        this.getComponent(GCCardinalComponents.TOTEM_RADIUS).set(radius);
-        this.getComponent(GCCardinalComponents.TOTEM_UPTIME).set(uptime);
-        this.getComponent(GCCardinalComponents.TOTEM_STATUS_EFFECT).setEffect(effect, effectAmplifier);
+        this.getComponent(GCCardinalComponents.TOTEM_DATA).set(totemData);
     }
 
     public TotemEntity(EntityType<? extends Entity> entityType, RelikItem totemItem, Entity owner, World world) {
@@ -121,15 +121,17 @@ public class TotemEntity extends Entity implements Ownable {
     public void tick() {
         super.tick();
 
-        if (this.age >= this.getComponent(GCCardinalComponents.TOTEM_UPTIME).get() && this.getComponent(GCCardinalComponents.TOTEM_UPTIME).get() > 0) {
+        TotemDataComponent totemData = this.getComponent(GCCardinalComponents.TOTEM_DATA);
+
+        if (this.age >= totemData.getUptime() && totemData.getUptime() > 0) {
             if (this.getOwner() != null) this.getOwner().getComponent(GCCardinalComponents.PLAYER_TOTEM).setUuid(null);
             this.discard();
         }
 
         List<Entity> nearbyPlayers = this.getWorld().getOtherEntities(this, Box.of(this.getPos(), this.currentRadius * 2, this.currentRadius * 2, this.currentRadius * 2), entity -> entity.isAlive() && entity.isPlayer());
 
-        RegistryEntry<StatusEffect> statusEffect = this.getComponent(GCCardinalComponents.TOTEM_STATUS_EFFECT).getEffect();
-        byte amplifier = this.getComponent(GCCardinalComponents.TOTEM_STATUS_EFFECT).getAmplifier();
+        RegistryEntry<StatusEffect> statusEffect = totemData.getEffect();
+        byte amplifier = totemData.getAmplifier();
 
         nearbyPlayers.forEach(player -> {
             if (player.getPos().distanceTo(this.getPos()) > currentRadius) return;
@@ -137,22 +139,54 @@ public class TotemEntity extends Entity implements Ownable {
             ((LivingEntity) player).addStatusEffect(new StatusEffectInstance(statusEffect, 3, amplifier, true, true));
         });
 
-        if (this.currentRadius < this.getComponent(GCCardinalComponents.TOTEM_RADIUS).get())
-            this.currentRadius += this.getComponent(GCCardinalComponents.TOTEM_RADIUS).get() / 10.0;
-        else this.currentRadius = this.getComponent(GCCardinalComponents.TOTEM_RADIUS).get();
+        double maxRadius = totemData.getRadius();
+
+        // grow radius on placement
+        if (this.currentRadius < maxRadius)
+            this.currentRadius += (float) (maxRadius / 10.0);
+        else this.currentRadius = (float) maxRadius;
 
         if (this.getWorld().isClient()) {
-            double maxRadius = this.getComponent(GCCardinalComponents.TOTEM_RADIUS).get();
             if (maxRadius != 0.0) {
+                RegistryWrapper.WrapperLookup wrapperLookup = getWorld().getRegistryManager();
+
                 double radius = this.currentRadius;
 
                 int stepSize = 15;
-                int particleColor = Colors.WHITE;
-
-                if (statusEffect != null)
-                    particleColor = ColorHelper.Argb.withAlpha(255, statusEffect.value().getColor());
 
                 Vec3d lastParticlePos = new Vec3d(this.getX() + radius, this.getY(), this.getZ());
+
+                float h = ((hue % 360) / 60) % 6;
+                float r, g, b;
+
+                if (h < 1) {
+                    r = 1;
+                    g = h;
+                    b = 0;
+                } else if (h < 2) {
+                    r = 2 - h;
+                    g = 1;
+                    b = 0;
+                } else if (h < 3) {
+                    r = 0;
+                    g = 1;
+                    b = h - 2;
+                } else if (h < 4) {
+                    r = 0;
+                    g = 4 - h;
+                    b = 1;
+                } else if (h < 5) {
+                    r = h - 4;
+                    g = 0;
+                    b = 1;
+                } else {
+                    r = 1;
+                    g = 0;
+                    b = 6 - h;
+                }
+
+
+                ParticleEffect particleEffect = totemData.getParticle().isRainbow() ? TotemData.TotemParticle.makeDustParticle(r, g, b, 1.0f).getParticle(wrapperLookup) : totemData.getParticle().getParticle(wrapperLookup);
 
                 // particle ring
                 for (int angle = stepSize; angle <= 360; angle += stepSize) {
@@ -162,7 +196,7 @@ public class TotemEntity extends Entity implements Ownable {
 
                     ClientParticles.setParticleCount((int) Math.round(maxRadius * 0.5));
                     ClientParticles.spawnLine(
-                            new DustParticleEffect(new Vector3f(ColorHelper.Argb.getRed(particleColor) / 255.0f, ColorHelper.Argb.getGreen(particleColor) / 255.0f, ColorHelper.Argb.getBlue(particleColor) / 255.0f), (float) (this.currentRadius / maxRadius)),
+                            particleEffect,
                             this.getWorld(),
                             lastParticlePos,
                             particlePos,
@@ -182,7 +216,7 @@ public class TotemEntity extends Entity implements Ownable {
                     Vec3d particlePos = new Vec3d((radius) * Math.cos(randomYaw) * Math.sin(randomPitch) + this.getX(), radius * Math.cos(randomPitch) + this.getY(), (radius) * Math.sin(randomYaw) * Math.sin(randomPitch) + this.getZ());
 
                     ClientParticles.spawn(
-                            new DustParticleEffect(new Vector3f(ColorHelper.Argb.getRed(particleColor) / 255.0f, ColorHelper.Argb.getGreen(particleColor) / 255.0f, ColorHelper.Argb.getBlue(particleColor) / 255.0f), (float) (this.currentRadius / maxRadius)),
+                            particleEffect,
                             this.getWorld(),
                             particlePos,
                             0.1f
@@ -190,5 +224,7 @@ public class TotemEntity extends Entity implements Ownable {
                 }
             }
         }
+
+        this.hue = this.hue > 360 ? hue - 360 : hue + 2;
     }
 }

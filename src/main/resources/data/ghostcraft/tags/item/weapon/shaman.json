@@ -17,7 +17,6 @@
     "ghostcraft:button_presser",
     "ghostcraft:button_pusher",
     "ghostcraft:candlekeepers_anchor",
-    "ghostcraft:choke_hold",
     "ghostcraft:clockwork_summoner",
     "ghostcraft:cogwork_totem",
     "ghostcraft:devils_anchor",
@@ -33,7 +32,6 @@
     "ghostcraft:frostmourn_totem",
     "ghostcraft:frying_pan",
     "ghostcraft:fynyks_flame",
-    "ghostcraft:gadget",
     "ghostcraft:geomancers_totem",
     "ghostcraft:glitch",
     "ghostcraft:gold_thorn_totem",
@@ -47,7 +45,6 @@
     "ghostcraft:jolt_totem",
     "ghostcraft:matured_totem",
     "ghostcraft:nights_guide",
-    "ghostcraft:permafrost_sigil",
     "ghostcraft:pucks_panflute",
     "ghostcraft:puppet_of_the_trickster",
     "ghostcraft:ruby_crested_totem",
@@ -60,7 +57,6 @@
     "ghostcraft:sigil_of_sealing",
     "ghostcraft:sils_dark_moon",
     "ghostcraft:silk_weavers_cage",
-    "ghostcraft:simple_totem",
     "ghostcraft:snowflake_totem",
     "ghostcraft:sorrowful_angel",
     "ghostcraft:soul_keepers_cage",
@@ -69,7 +65,6 @@
     "ghostcraft:tiorvas_passion",
     "ghostcraft:torrent",
     "ghostcraft:tribunal_totem",
-    "ghostcraft:viginere",
     "ghostcraft:winged_ruby_totem"
   ]
 }

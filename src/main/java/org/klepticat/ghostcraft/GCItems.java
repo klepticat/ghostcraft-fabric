@@ -5,15 +5,15 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.tag.InstrumentTags;
 import net.minecraft.util.Identifier;
-import org.jetbrains.annotations.Nullable;
 import org.klepticat.ghostcraft.item.*;
+import org.klepticat.ghostcraft.util.types.TotemData;
 
 import java.util.HashSet;
-import java.util.Set;
 
 import static org.klepticat.ghostcraft.GhostCraft.LOGGER;
 import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
@@ -1185,21 +1185,23 @@ public class GCItems {
         public static final Item ANDRAS_WATCH = register(
                 "andras_watch",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.ASH),
+                        StatusEffects.WITHER,
+                        (byte) 5,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
                 )
         );
         public static final Item ARC_OF_THE_TUNDRA = register(
                 "arc_of_the_tundra",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        new TotemData.TotemParticle(ParticleTypes.SNOWFLAKE),
+                        StatusEffects.WATER_BREATHING,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
                 )
@@ -1209,8 +1211,9 @@ public class GCItems {
                 new RelikItem(
                         10.0f,
                         ((short) 600),
-                        20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        10,
+                        new TotemData.TotemParticle(ParticleTypes.SOUL_FIRE_FLAME),
+                        StatusEffects.NIGHT_VISION,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
                 )
@@ -1218,10 +1221,11 @@ public class GCItems {
         public static final Item ATL = register(
                 "atl",
                 new RelikItem(
-                        5.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.RESISTANCE,
+                        TotemData.TotemParticle.makeDustParticle(0, 1, 0, 1),
+                        StatusEffects.SPEED,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
                 )
@@ -1232,39 +1236,43 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        TotemData.TotemParticle.makeDustParticle(0, 1, 0, 1),
+                        StatusEffects.SPEED,
+                        (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
         );
         public static final Item ATLLANT = register(
                 "atllant",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        TotemData.TotemParticle.makeDustParticle(0, 1, 0, 1),
+                        StatusEffects.SPEED,
+                        (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
         );
         public static final Item ATLLANTRIUS = register(
                 "atllantrius",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        TotemData.TotemParticle.makeDustParticle(0, 1, 0, 1),
+                        StatusEffects.SPEED,
+                        (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
         );
         public static final Item BLAZING_TOTEM = register(
                 "blazing_totem",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
+                        new TotemData.TotemParticle(ParticleTypes.FLAME),
                         StatusEffects.FIRE_RESISTANCE,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
@@ -1273,32 +1281,35 @@ public class GCItems {
         public static final Item BLIZZARD_TOTEM = register(
                 "blizzard_totem",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
+                        StatusEffects.SLOW_FALLING,
+                        (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
         );
         public static final Item BLOOD_MOON = register(
                 "blood_moon",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        TotemData.TotemParticle.makeDustParticle(1, 0, 0, 1),
+                        StatusEffects.STRENGTH,
+                        (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
                 )
         );
         public static final Item BONE_CHILL_TOTEM = register(
                 "bone_chill_totem",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        TotemData.TotemParticle.makeDustParticle(0, 1, 1, 1),
+                        StatusEffects.DOLPHINS_GRACE,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
                 )
@@ -1309,17 +1320,19 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        TotemData.TotemParticle.makeDustParticle(0, 1, 0, 1),
+                        StatusEffects.SATURATION,
+                        (byte) 3,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
                 )
         );
         public static final Item CANDLEKEEPERS_ANCHOR = register(
                 "candlekeepers_anchor",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
+                        new TotemData.TotemParticle(ParticleTypes.FLAME),
                         StatusEffects.FIRE_RESISTANCE,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
@@ -1331,30 +1344,21 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.CHERRY_LEAVES),
+                        StatusEffects.JUMP_BOOST,
+                        (byte) 1,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
-                )
-        );
-        public static final Item CHOKE_HOLD = register(
-                "choke_hold",
-                new RelikItem(
-                        10.0f,
-                        ((short) 600),
-                        20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
                 )
         );
         public static final Item CLOCKWORK_SUMMONER = register(
                 "clockwork_summoner",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.ELECTRIC_SPARK),
+                        StatusEffects.SPEED,
+                        (byte) 3,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
                 )
         );
@@ -1364,17 +1368,19 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.ELECTRIC_SPARK),
+                        StatusEffects.SPEED,
+                        (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
         );
         public static final Item DEVILS_ANCHOR = register(
                 "devils_anchor",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
+                        new TotemData.TotemParticle(ParticleTypes.DRIPPING_LAVA),
                         StatusEffects.FIRE_RESISTANCE,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
@@ -1386,7 +1392,8 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        new TotemData.TotemParticle(ParticleTypes.SOUL),
+                        StatusEffects.REGENERATION,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
                 )
@@ -1397,7 +1404,8 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        new TotemData.TotemParticle(ParticleTypes.NOTE),
+                        StatusEffects.GLOWING,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
                 )
@@ -1408,7 +1416,8 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        new TotemData.TotemParticle(ParticleTypes.ITEM_SLIME),
+                        StatusEffects.OOZING,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
@@ -1416,22 +1425,24 @@ public class GCItems {
         public static final Item ELTORVURIA_TOTEM = register(
                 "eltorvuria_totem",
                 new RelikItem(
-                        10.0f,
+                        25.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(),
+                        StatusEffects.RESISTANCE,
+                        (byte) 10,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
                 )
         );
         public static final Item FALLEN_FALSE_GOD = register(
                 "fallen_false_god",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.HEART),
+                        StatusEffects.HERO_OF_THE_VILLAGE,
+                        (byte) 3,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
                 )
         );
@@ -1441,7 +1452,8 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
+                        StatusEffects.SLOW_FALLING,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
@@ -1449,22 +1461,24 @@ public class GCItems {
         public static final Item FLEDGED_TOTEM = register(
                 "fledged_totem",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
+                        StatusEffects.SLOW_FALLING,
+                        (byte) 1,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
         );
         public static final Item FLIGHT_TOTEM = register(
                 "flight_totem",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
+                        StatusEffects.SLOW_FALLING,
+                        (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
                 )
         );
@@ -1474,18 +1488,20 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        TotemData.TotemParticle.makeDustParticle(1, 1, 1, 1),
+                        StatusEffects.HASTE,
+                        (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
                 )
         );
         public static final Item FROSTMOURN_TOTEM = register(
                 "frostmourn_totem",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        new TotemData.TotemParticle(ParticleTypes.SNOWFLAKE),
+                        StatusEffects.INVISIBILITY,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
                 )
@@ -1496,52 +1512,45 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.ENCHANTED_HIT),
+                        StatusEffects.SATURATION,
+                        (byte) 1,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
                 )
         );
         public static final Item FYNYKS_FLAME = register(
                 "fynyks_flame",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
+                        new TotemData.TotemParticle(ParticleTypes.FLAME),
                         StatusEffects.FIRE_RESISTANCE,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
                 )
         );
-        public static final Item GADGET = register(
-                "gadget",
-                new RelikItem(
-                        10.0f,
-                        ((short) 600),
-                        20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
-                )
-        );
         public static final Item GEOMANCERS_TOTEM = register(
                 "geomancers_totem",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        TotemData.TotemParticle.makeBlockParticle(Identifier.ofVanilla("stone")),
+                        StatusEffects.HASTE,
+                        (byte) 5,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
                 )
         );
         public static final Item GLITCH = register(
                 "glitch",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        TotemData.TotemParticle.makeDustParticle(0, 1, 0, 1),
+                        StatusEffects.ABSORPTION,
+                        (byte) 10,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
                 )
         );
@@ -1551,7 +1560,8 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        TotemData.TotemParticle.makeBlockParticle(Identifier.ofVanilla("sand")),
+                        StatusEffects.INFESTED,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
                 )
@@ -1559,11 +1569,12 @@ public class GCItems {
         public static final Item GOLDEN_TOTEM = register(
                 "golden_totem",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        TotemData.TotemParticle.makeBlockParticle(Identifier.ofVanilla("sand")),
+                        StatusEffects.INFESTED,
+                        (byte) 1,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
                 )
         );
@@ -1573,7 +1584,8 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        TotemData.TotemParticle.makeDustParticle(0.66f, 1, 0, 1),
+                        StatusEffects.GLOWING,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
@@ -1584,19 +1596,21 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.HAPPY_VILLAGER),
+                        StatusEffects.LUCK,
+                        (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
                 )
         );
         public static final Item ICICLE_TOTEM = register(
                 "icicle_totem",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
+                        StatusEffects.SLOW_FALLING,
+                        (byte) 1,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
         );
@@ -1614,18 +1628,19 @@ public class GCItems {
         public static final Item IRONHOLM_TOTEM = register(
                 "ironholm_totem",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.FLAME),
+                        StatusEffects.HASTE,
+                        (byte) 10,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
                 )
         );
         public static final Item JACKS_POST = register(
                 "jacks_post",
                 new RelikItem(
-                        10.0f,
+                        0.0f,
                         ((short) 600),
                         20,
                         StatusEffects.FIRE_RESISTANCE,
@@ -1639,40 +1654,32 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.ELECTRIC_SPARK),
+                        StatusEffects.SLOWNESS,
+                        (byte) 1,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
         );
         public static final Item MATURED_TOTEM = register(
                 "matured_totem",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.ITEM_COBWEB),
+                        StatusEffects.SLOW_FALLING,
+                        (byte) 1,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
         );
         public static final Item NIGHTS_GUIDE = register(
                 "nights_guide",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
-                )
-        );
-        public static final Item PERMAFROST_SIGIL = register(
-                "permafrost_sigil",
-                new RelikItem(
-                        10.0f,
-                        ((short) 600),
-                        20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        new TotemData.TotemParticle(ParticleTypes.ELECTRIC_SPARK),
+                        StatusEffects.NIGHT_VISION,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
                 )
@@ -1683,19 +1690,21 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.NOTE),
+                        StatusEffects.LUCK,
+                        (byte) 3,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
                 )
         );
         public static final Item PUPPET_OF_THE_TRICKSTER = register(
                 "puppet_of_the_trickster",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.SOUL),
+                        StatusEffects.WITHER,
+                        (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
                 )
         );
@@ -1705,7 +1714,8 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        TotemData.TotemParticle.makeEffectParticle(1, 1, 1, 1),
+                        StatusEffects.INVISIBILITY,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
                 )
@@ -1716,7 +1726,8 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        new TotemData.TotemParticle(ParticleTypes.FLAME),
+                        StatusEffects.JUMP_BOOST,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
@@ -1727,7 +1738,8 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        TotemData.TotemParticle.makeEffectParticle(0, 1, 0, 1),
+                        StatusEffects.NAUSEA,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
@@ -1735,11 +1747,12 @@ public class GCItems {
         public static final Item SAKURA_GROVE_WAND = register(
                 "sakura_grove_wand",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.CHERRY_LEAVES),
+                        StatusEffects.JUMP_BOOST,
+                        (byte) 3,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
                 )
         );
@@ -1749,30 +1762,33 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.WAX_OFF),
+                        StatusEffects.STRENGTH,
+                        (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
                 )
         );
         public static final Item SERAPHIM_TOTEM = register(
                 "seraphim_totem",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(),
+                        StatusEffects.JUMP_BOOST,
+                        (byte) 10,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
                 )
         );
         public static final Item SHADRAXS_PROTECTION = register(
                 "shadraxs_protection",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        TotemData.TotemParticle.makeEffectParticle(1, 0, 1, 1),
+                        StatusEffects.RESISTANCE,
+                        (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
                 )
         );
@@ -1782,7 +1798,8 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        new TotemData.TotemParticle(ParticleTypes.BUBBLE),
+                        StatusEffects.WATER_BREATHING,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
@@ -1790,43 +1807,35 @@ public class GCItems {
         public static final Item SIGIL_OF_SEALING = register(
                 "sigil_of_sealing",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.ENCHANT),
+                        StatusEffects.SLOWNESS,
+                        (byte) 10,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
                 )
         );
         public static final Item SILS_DARK_MOON = register(
                 "sils_dark_moon",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        TotemData.TotemParticle.makeDustParticle(1, 0, 0, 1),
+                        StatusEffects.STRENGTH,
+                        (byte) 10,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
                 )
         );
         public static final Item SILK_WEAVERS_CAGE = register(
                 "silk_weavers_cage",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
-                )
-        );
-        public static final Item SIMPLE_TOTEM = register(
-                "simple_totem",
-                new RelikItem(
-                        10.0f,
-                        ((short) 600),
-                        20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        new TotemData.TotemParticle(ParticleTypes.ITEM_COBWEB),
+                        StatusEffects.WEAVING,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
                 )
@@ -1837,7 +1846,8 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
+                        new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
+                        StatusEffects.SLOW_FALLING,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
@@ -1845,22 +1855,24 @@ public class GCItems {
         public static final Item SORROWFUL_ANGEL = register(
                 "sorrowful_angel",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.ENCHANT),
+                        StatusEffects.LEVITATION,
+                        (byte) 1,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
                 )
         );
         public static final Item SOUL_KEEPERS_CAGE = register(
                 "soul_keepers_cage",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.SCULK_SOUL),
+                        StatusEffects.ABSORPTION,
+                        (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
                 )
         );
@@ -1870,41 +1882,45 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.ELECTRIC_SPARK),
+                        StatusEffects.SLOWNESS,
+                        (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
         );
         public static final Item TIME_REWINDER = register(
                 "time_rewinder",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        TotemData.TotemParticle.makeEffectParticle(0, 0, 0, 1),
+                        StatusEffects.SLOWNESS,
+                        (byte) 10,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
                 )
         );
         public static final Item TIORVAS_PASSION = register(
                 "tiorvas_passion",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        TotemData.TotemParticle.makeDustParticle(1, 0, 1, 1),
+                        StatusEffects.DARKNESS,
+                        (byte) 10,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
                 )
         );
         public static final Item TORRENT = register(
                 "torrent",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        TotemData.TotemParticle.makeDustParticle(0.33f, 0.33f, 1, 1),
+                        StatusEffects.REGENERATION,
+                        (byte) 3,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
                 )
         );
@@ -1914,41 +1930,21 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        TotemData.TotemParticle.makeDustParticle(1, 1, 1, 1),
+                        StatusEffects.SLOW_FALLING,
+                        (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
-                )
-        );
-        public static final Item VIGINERE = register(
-                "viginere",
-                new RelikItem(
-                        10.0f,
-                        ((short) 600),
-                        20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
-                )
-        );
-        public static final Item VOODOO_VENGEANCE = register(
-                "voodoo_vengeance",
-                new RelikItem(
-                        10.0f,
-                        ((short) 600),
-                        20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
                 )
         );
         public static final Item WINGED_RUBY_TOTEM = register(
                 "winged_ruby_totem",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.FLAME),
+                        StatusEffects.JUMP_BOOST,
+                        (byte) 1,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
                 )
         );

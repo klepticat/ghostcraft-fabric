@@ -52,13 +52,11 @@
 			"ghostcraft:player_sticker",
 			"ghostcraft:player_totem",
 			"ghostcraft:magic_type_tracker",
-			"ghostcraft:totem_radius",
-			"ghostcraft:totem_uptime",
-			"ghostcraft:totem_status_effect",
 			"ghostcraft:player_souls",
 			"ghostcraft:player_max_souls",
 			"ghostcraft:eye_bat_variant",
-			"ghostcraft:rat_variant"
+			"ghostcraft:rat_variant",
+			"ghostcraft:totem_data"
 		]
 	},
 	"accessWidener": "ghostcraft.accesswidener"
