@@ -2,11 +2,9 @@ package org.klepticat.ghostcraft.mixin.client;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.EntityRenderer;
-import net.minecraft.client.texture.Sprite;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAttachmentType;
@@ -79,6 +77,7 @@ public abstract class EntityRendererMixin {
 
                 drawHeartContainer(playerEntity, matrices, vertexConsumerProvider, light, __this.getTextRenderer(), text);
 
+                /*
                 Sprite effectBackground = MinecraftClient.getInstance().getGuiAtlasManager().getSprite(Identifier.ofVanilla("hud/effect_background"));
 
                 for (StatusEffectInstance effect : statusEffectList.values()) {
@@ -150,6 +149,7 @@ public abstract class EntityRendererMixin {
                     matrices.pop();
                     matrices.pop();
                 }
+                */
 
                 matrices.pop();
             }

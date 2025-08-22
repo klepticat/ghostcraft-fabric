@@ -2247,6 +2247,14 @@ public class GCItems {
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
+        public static final Item PEARL_SPEAR = register("pearl_spear", new MeleeWeaponItem(
+                ToolMaterials.WOOD,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        3,
+                        -2.4f
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
         public static final Item PERMAFROST_SPEAR = register("permafrost_spear", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(

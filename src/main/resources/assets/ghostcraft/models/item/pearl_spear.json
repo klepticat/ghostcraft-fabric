@@ -1,6 +1,6 @@
 {
   "parent": "ghostcraft:sources/32xhandheld",
   "textures": {
-    "layer0": "ghostcraft:item/personal/sickle"
+    "layer0": "ghostcraft:item/weapons/pearl_spear"
   }
 }
