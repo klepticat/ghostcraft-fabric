@@ -1,17 +1,16 @@
 package org.klepticat.ghostcraft;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.klepticat.ghostcraft.block.BlockType;
 
 import java.util.Comparator;
-import java.util.stream.Collectors;
+import java.util.HashSet;
+import java.util.List;
 
 import static org.klepticat.ghostcraft.GCBlocks.*;
 import static org.klepticat.ghostcraft.GCItems.*;
@@ -30,6 +29,7 @@ public class GCItemGroups {
                 entries.add(AURORA_CRYSTAL);
                 entries.add(BLEEDING_COIL);
                 entries.add(CANDY_CANE);
+                entries.add(CABBAGE);
                 entries.add(CHOGGY_BLOGGY);
                 entries.add(END_MOSS);
                 entries.add(NOISE);
@@ -221,8 +221,8 @@ public class GCItemGroups {
                 entries.add(GRIM_LANTERN);
                 entries.add(WarriorItems.EARLY_RETIREMENT);
                 entries.add(LIMINAL_LANTERN);
-                entries.add(GoatHornItem.getStackForInstrument(LIMBY_FLUTE, Registries.INSTRUMENT.entryOf(Instruments.DREAM_GOAT_HORN)));
-                entries.add(GoatHornItem.getStackForInstrument(VIC_FLUTE, Registries.INSTRUMENT.entryOf(Instruments.SING_GOAT_HORN)));
+                entries.add(GoatHornItem.getStackForInstrument(LIMBY_FLUTE, Registries.INSTRUMENT.entryOf(GCInstruments.LIMBY_TOOT_TOOT)));
+                entries.add(GoatHornItem.getStackForInstrument(VIC_FLUTE, Registries.INSTRUMENT.entryOf(GCInstruments.VIC_FLUTE)));
                 entries.add(GoatHornItem.getStackForInstrument(MEI_FLUTE, Registries.INSTRUMENT.entryOf(GCInstruments.MEI_FLUTE)));
                 entries.add(SENTIENT_SPELLBOOK);
                 entries.add(CYAN_MACAW_FEATHER);
@@ -255,6 +255,16 @@ public class GCItemGroups {
                 entries.add(PURPLE_KEY);
                 entries.add(MAGENTA_KEY);
                 entries.add(PINK_KEY);
+                entries.add(PERFUME);
+                entries.add(ARCANE_POWDER);
+                entries.add(TREE_RESIN);
+                entries.add(HAMMER);
+                entries.add(CROWBAR);
+                entries.add(SPELL_SCROLL);
+                entries.addAll(toList(ROD_SET));
+                entries.addAll(toList(POUCH_SET));
+                entries.addAll(toList(GEMSTONE_SET));
+                entries.addAll(toList(EVO_SET));
             })
     );
 
@@ -315,6 +325,10 @@ public class GCItemGroups {
                 entries.add(SKULL_JAWLESS);
                 entries.add(SKULL_JIM);
                 entries.add(SKULL_LAUGH);
+                entries.add(RAW_SHADOW);
+                entries.add(SHADOW_EYE);
+                entries.add(SHADOW_TOOTH);
+                entries.add(SHADOW_TENDRIL);
             })
     );
 
@@ -323,16 +337,41 @@ public class GCItemGroups {
             .entries((displayContext, entries) -> {
                 entries.add(LIMBO);
                 entries.add(SMILER);
-                entries.addAll(WANTED_POSTERS_SET.stream().map(Item::getDefaultStack).toList());
+                entries.add(OMINOUS_EYES);
+                entries.add(FOLLY);
+                entries.add(NOTES);
+                entries.add(NOTICE_BOARD);
+                entries.add(GoatHornItem.getStackForInstrument(MARIAH, Registries.INSTRUMENT.entryOf(GCInstruments.MARIAH_ITS_TIME)));
+                entries.add(GoatHornItem.getStackForInstrument(MARIAH, Registries.INSTRUMENT.entryOf(GCInstruments.MARIAH_AHH)));
+                entries.addAll(toList(WANTED_POSTERS_SET));
+                entries.addAll(toList(FLAG_SET));
+                entries.addAll(toList(PUMPKIN_SET));
+                entries.addAll(toList(SKELETON_SET));
+                entries.addAll(toList(COFFIN_SET));
+                entries.addAll(toList(TOMBSTONE_SET));
+            })
+    );
+
+    private static final ItemGroup GC_FOODS = register("foods", FabricItemGroup.builder()
+            .icon(ICECREAM_SPRUG::getDefaultStack)
+            .entries((displayContext, entries) -> {
+                entries.addAll(toList(GENERIC_FOODS_SET));
+                entries.addAll(toList(BREAD_SET));
+                entries.addAll(toList(STRANGE_FOODS_SET));
+                entries.addAll(toList(FISH_SET));
+                entries.addAll(toList(GUMMY_SET));
+                entries.addAll(toList(ICE_CREAM_SET));
+                entries.add(ICECREAM_SPRUG);
+                entries.add(ICECREAM_SPURNGE);
             })
     );
 
     private static final ItemGroup GC_ACCESSORIES = register("accessories", FabricItemGroup.builder()
             .icon(VERDANT_BRACER::getDefaultStack)
             .entries((displayContext, entries) -> {
-                entries.addAll(NECKLACE_SET.stream().sorted(Comparator.comparing(Item::toString)).map(Item::getDefaultStack).toList());
-                entries.addAll(RING_SET.stream().sorted(Comparator.comparing(Item::toString)).map(Item::getDefaultStack).toList());
-                entries.addAll(BRACELET_SET.stream().sorted(Comparator.comparing(Item::toString)).map(Item::getDefaultStack).toList());
+                entries.addAll(toList(NECKLACE_SET));
+                entries.addAll(toList(RING_SET));
+                entries.addAll(toList(BRACELET_SET));
             })
     );
 
@@ -414,5 +453,9 @@ public class GCItemGroups {
 
     public static ItemGroup register(String name, ItemGroup.Builder itemGroupBuilder) {
         return Registry.register(Registries.ITEM_GROUP, Identifier.of(MOD_ID, name), itemGroupBuilder.displayName(Text.translatable("itemGroup." + MOD_ID + "." + name)).build());
+    }
+
+    public static List<ItemStack> toList(HashSet<Item> itemSet) {
+        return itemSet.stream().sorted(Comparator.comparing(Item::toString)).map(Item::getDefaultStack).toList();
     }
 }

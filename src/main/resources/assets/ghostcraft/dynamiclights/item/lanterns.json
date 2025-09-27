@@ -1,0 +1,10 @@
+{
+  "match": {
+    "items": [
+      "ghostcraft:liminal_lantern",
+      "ghostcraft:grim_lantern"
+    ]
+  },
+  "luminance": 15,
+  "water_sensitive": false
+}

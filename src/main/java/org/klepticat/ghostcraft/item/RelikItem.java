@@ -39,7 +39,7 @@ public class RelikItem extends Item {
     private TotemData.TotemParticle particleEffect = TotemData.TotemParticle.makeDustParticle(1, 1, 1, 1);
 
     public RelikItem(Settings settings) {
-        super(settings);
+        super(settings.maxCount(1));
     }
 
     public RelikItem(float totemRadius, short totemUptime, int cooldown, RegistryEntry<StatusEffect> statusEffect, byte effectAmplifier, Settings settings) {

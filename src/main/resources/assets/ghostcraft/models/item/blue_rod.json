@@ -1,0 +1,14 @@
+{
+  "parent": "item/handheld_rod",
+  "textures": {
+    "layer0": "ghostcraft:item/util/rods/blue_rod"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "cast": 1
+      },
+      "model": "ghostcraft:item/blue_rod_cast"
+    }
+  ]
+}

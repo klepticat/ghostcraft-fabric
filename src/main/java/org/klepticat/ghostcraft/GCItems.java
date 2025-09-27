@@ -3,6 +3,8 @@ package org.klepticat.ghostcraft;
 import dev.emi.trinkets.api.TrinketItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.FoodComponent;
+import net.minecraft.component.type.FoodComponents;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.particle.ParticleTypes;
@@ -32,74 +34,74 @@ public class GCItems {
         public static void initialize() {
         }
 
-        public static final Item ASSASSINS_CROSSBOW = register("assassins_crossbow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
-        public static final Item ATLLANTRIUS_POST = register("atllantrius_post", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item AZALEAS_FURY = register("azaleas_fury", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
-        public static final Item BANANA_BOW = register("banana_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
-        public static final Item BLIZZARD_SHOOTER = register("blizzard_shooter", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item BLOSSOM_BOW = register("blossom_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
-        public static final Item BLUNDERBUSS = register("blunderbuss", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
-        public static final Item BOLT_SHOOTER = register("bolt_shooter", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item BONE_CHILL_BOW = register("bone_chill_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item BOW_OF_FLAMES = register("bow_of_flames", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item BOW_OF_GALES = register("bow_of_gales", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item BOW_OF_THE_FJORD = register("bow_of_the_fjord", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item CANDLEKEEPERS_BOW = register("candlekeepers_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item CANDY_BOW = register("candy_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
-        public static final Item CHARMS_REQUIME = register("charms_requime", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item CHRONOS_BOW = register("chronos_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item CIPHER_BOW = register("cipher_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
-        public static final Item COGWORK_SHARP_SHOOTER = register("cogwork_sharp_shooter", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
-        public static final Item CROSSBOW_OF_THE_DAMNED = register("crossbow_of_the_damned", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item DARK_ECHO = register("dark_echo", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item DEATHS_GRASP = register("deaths_grasp", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item DEVILS_MARK = register("devils_mark", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item ELTORVURIA_BOW = register("eltorvuria_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
-        public static final Item ELVURS_WRATH = register("elvurs_wrath", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
-        public static final Item FEATHERED_BOW = register("feathered_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item FERNS_FURY = register("ferns_fury", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item FOSSILIZED_BOW = register("fossilized_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item FROSTMOURN_BOW = register("frostmourn_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item GEOMANCERS_BOW = register("geomancers_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item GHASTLY_BOW = register("ghastly_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item GOLDEN_BOW = register("golden_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
-        public static final Item GOLDEN_DRAWSTRING = register("golden_drawstring", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item HARP = register("harp", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item HEAVY_CROSSBOW = register("heavy_crossbow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
-        public static final Item HEROS_BOW = register("heros_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item ICICLE_SHOOTER = register("icicle_shooter", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item IRONHOLM_BOW = register("ironholm_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item JACKS_RESPITE = register("jacks_respite", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
-        public static final Item JOLT_SHOOTER = register("jolt_shooter", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item LIGHT_CROSSBOW = register("light_crossbow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
-        public static final Item LIVESTREAM = register("livestream", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
-        public static final Item LONG_BOW = register("long_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
-        public static final Item MALFUNCTIONED_BOW = register("malfunctioned_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
-        public static final Item MAN_THE_CANON = register("man_the_canon", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
-        public static final Item NETHERIAN_BOW = register("netherian_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item NGHTMARE_BOW = register("nightmare_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item PERMAFROST_BOW = register("permafrost_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item RAKKU_BOW = register("rakku_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item RIFLE = register("rifle", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item RUBY_CRESTED_CROSSBOW = register("ruby_crested_crossbow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item SEEKER_BOW = register("seeker_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item SENTRY_BOW = register("sentry_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item SERAPHIM_BOW = register("seraphim_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
-        public static final Item SHADRAXS_WING = register("shadraxs_wing", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item SILS_STARE = register("sils_stare", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
-        public static final Item SIMPLE_BOW = register("simple_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
-        public static final Item SLINGSHOT = register("slingshot", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
-        public static final Item SNOWFLAKE_SHOOTER = register("snowflake_shooter", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item SOUL_SHOT = register("soul_shot", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item SPARK_SHOOTER = register("spark_shooter", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item TIORVAS_LOVE = register("tiorvas_love", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
-        public static final Item TNT_BLASTER = register("tnt_blaster", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
-        public static final Item TWEAKED_CROSSBOW = register("tweaked_crossbow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
-        public static final Item VALIANT_BOW = register("valiant_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item VALOR_BOW = register("valor_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item VERDANT_BOW = register("verdant_bow", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
-        public static final Item VIRUS = register("virus", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
-        public static final Item WAILING_GRIEF = register("wailing_grief", new BowItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
+        public static final Item ASSASSINS_CROSSBOW = register("assassins_crossbow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
+        public static final Item ATLLANTRIUS_POST = register("atllantrius_post", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item AZALEAS_FURY = register("azaleas_fury", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
+        public static final Item BANANA_BOW = register("banana_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
+        public static final Item BLIZZARD_SHOOTER = register("blizzard_shooter", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item BLOSSOM_BOW = register("blossom_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
+        public static final Item BLUNDERBUSS = register("blunderbuss", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
+        public static final Item BOLT_SHOOTER = register("bolt_shooter", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item BONE_CHILL_BOW = register("bone_chill_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item BOW_OF_FLAMES = register("bow_of_flames", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item BOW_OF_GALES = register("bow_of_gales", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item BOW_OF_THE_FJORD = register("bow_of_the_fjord", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item CANDLEKEEPERS_BOW = register("candlekeepers_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item CANDY_BOW = register("candy_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
+        public static final Item CHARMS_REQUIME = register("charms_requime", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item CHRONOS_BOW = register("chronos_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item CIPHER_BOW = register("cipher_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
+        public static final Item COGWORK_SHARP_SHOOTER = register("cogwork_sharp_shooter", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
+        public static final Item CROSSBOW_OF_THE_DAMNED = register("crossbow_of_the_damned", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item DARK_ECHO = register("dark_echo", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item DEATHS_GRASP = register("deaths_grasp", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item DEVILS_MARK = register("devils_mark", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item ELTORVURIA_BOW = register("eltorvuria_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
+        public static final Item ELVURS_WRATH = register("elvurs_wrath", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
+        public static final Item FEATHERED_BOW = register("feathered_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item FERNS_FURY = register("ferns_fury", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item FOSSILIZED_BOW = register("fossilized_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item FROSTMOURN_BOW = register("frostmourn_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item GEOMANCERS_BOW = register("geomancers_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item GHASTLY_BOW = register("ghastly_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item GOLDEN_BOW = register("golden_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
+        public static final Item GOLDEN_DRAWSTRING = register("golden_drawstring", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item HARP = register("harp", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item HEAVY_CROSSBOW = register("heavy_crossbow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
+        public static final Item HEROS_BOW = register("heros_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item ICICLE_SHOOTER = register("icicle_shooter", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item IRONHOLM_BOW = register("ironholm_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item JACKS_RESPITE = register("jacks_respite", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
+        public static final Item JOLT_SHOOTER = register("jolt_shooter", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item LIGHT_CROSSBOW = register("light_crossbow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
+        public static final Item LIVESTREAM = register("livestream", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
+        public static final Item LONG_BOW = register("long_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
+        public static final Item MALFUNCTIONED_BOW = register("malfunctioned_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
+        public static final Item MAN_THE_CANON = register("man_the_canon", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
+        public static final Item NETHERIAN_BOW = register("netherian_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item NGHTMARE_BOW = register("nightmare_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item PERMAFROST_BOW = register("permafrost_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item RAKKU_BOW = register("rakku_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item RIFLE = register("rifle", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item RUBY_CRESTED_CROSSBOW = register("ruby_crested_crossbow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item SEEKER_BOW = register("seeker_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item SENTRY_BOW = register("sentry_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item SERAPHIM_BOW = register("seraphim_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
+        public static final Item SHADRAXS_WING = register("shadraxs_wing", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item SILS_STARE = register("sils_stare", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
+        public static final Item SIMPLE_BOW = register("simple_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
+        public static final Item SLINGSHOT = register("slingshot", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
+        public static final Item SNOWFLAKE_SHOOTER = register("snowflake_shooter", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item SOUL_SHOT = register("soul_shot", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item SPARK_SHOOTER = register("spark_shooter", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item TIORVAS_LOVE = register("tiorvas_love", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
+        public static final Item TNT_BLASTER = register("tnt_blaster", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
+        public static final Item TWEAKED_CROSSBOW = register("tweaked_crossbow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
+        public static final Item VALIANT_BOW = register("valiant_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item VALOR_BOW = register("valor_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item VERDANT_BOW = register("verdant_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
+        public static final Item VIRUS = register("virus", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
+        public static final Item WAILING_GRIEF = register("wailing_grief", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)));
     }
     //</editor-fold>
 
@@ -1434,6 +1436,18 @@ public class GCItems {
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
                 )
         );
+        public static final Item ELVURS_TOTEM = register(
+                "elvurs_totem",
+                new RelikItem(
+                        20.0f,
+                        ((short) 600),
+                        20,
+                        new TotemData.TotemParticle(ParticleTypes.TRIAL_OMEN),
+                        StatusEffects.RESISTANCE,
+                        (byte) 10,
+                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
+                )
+        );
         public static final Item FALLEN_FALSE_GOD = register(
                 "fallen_false_god",
                 new RelikItem(
@@ -2039,6 +2053,14 @@ public class GCItems {
                         -2.0f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
         ));
+        public static final Item DEATHSWORD = register("deathsword", new MeleeWeaponItem(
+                ToolMaterials.WOOD,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        4,
+                        -2.0f
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+        ));
         public static final Item DEVILS_CONQUEST = register("devils_conquest", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
@@ -2207,6 +2229,14 @@ public class GCItems {
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
+        public static final Item MACH_HAMMER = register("mach_hammer", new MeleeWeaponItem(
+                ToolMaterials.WOOD,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        3,
+                        -2.4f
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.LEGENDARY)
+        ));
         public static final Item MAKESHIFT_AXE = register("makeshift_axe", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
@@ -2270,6 +2300,14 @@ public class GCItems {
                         3,
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item QUARTERSTAFF = register("quarterstaff", new MeleeWeaponItem(
+                ToolMaterials.WOOD,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        3,
+                        -2.4f
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item RAKKU_HEART_RIPPER = register("rakku_heart_ripper", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -2419,41 +2457,44 @@ public class GCItems {
     //</editor-fold>
 
     //<editor-fold desc="ElytraItems">
-    static class ElytraItems {
-        public static void initialize() {
+    public static class ElytraItems {
+        private static void initialize() {
         }
 
-        public static final Item BAT_DARK = register("bat_dark", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bat_dark.png")));
-        public static final Item BAT_GREEN = register("bat_green", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bat_green.png")));
-        public static final Item BAT_ORANGE = register("bat_orange", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bat_orange.png")));
-        public static final Item BAT_VIOLET = register("bat_violet", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bat_violet.png")));
-        public static final Item BED = register("bed_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bed.png")));
-        public static final Item BEE = register("bee_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bee.png")));
-        public static final Item BROOM = register("broom", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/broom.png")));
-        public static final Item CARDBOARD = register("cardboard_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/cardboard.png")));
-        public static final Item CEDRIC_WINGS = register("cedric_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/cedric.png")));
-        public static final Item COBWEB_WINGS = register("cobweb_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/cobweb.png")));
-        public static final Item DATA_WINGS = register("data_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/data.png")));
-        public static final Item DOVE = register("dove_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/dove.png")));
-        public static final Item ECLIPSE_BLUE = register("eclipse_blue", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/eclipse_blue.png")));
-        public static final Item ECLIPSE_TAN = register("eclipse_tan", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/eclipse_tan.png")));
-        public static final Item ELYSIUM = register("elysium", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/elysium.png")));
-        public static final Item ENDERDRAGON_WINGS = register("enderdragon_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/enderdragon.png")));
-        public static final Item GHOST = register("ghost", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/ghost.png")));
-        public static final Item GLASS = register("glass", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/glass.png")));
-        public static final Item HAND = register("hand", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/hand.png")));
-        public static final Item HANGGLIDER_BLUE = register("hangglider_blue", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/hangglider_blue.png")));
-        public static final Item HANGGLIDER_GREEN = register("hangglider_green", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/hangglider_green.png")));
-        public static final Item HANGGLIDER_MAGENTA = register("hangglider_magenta", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/hangglider_magenta.png")));
-        public static final Item HECTEYE = register("hecteye", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/hecteye.png")));
-        public static final Item LIMBY_WINGS = register("limby_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/limby.png")));
-        public static final Item PLANE = register("plane", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/plane.png")));
-        public static final Item RAINBOW = register("rainbow", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/rainbow.png")));
-        public static final Item RAVEN_WINGS = register("raven_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/raven.png")));
-        public static final Item RAVNA_WINGS = register("ravna_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/ravna.png")));
-        public static final Item SKELYTRA = register("skelytra", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/skelytra.png")));
-        public static final Item VAMPIRE = register("vampire", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/vampire.png")));
-        public static final Item VEX_WINGS = register("vex_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/vex.png")));
+        public static HashSet<Item> ELYTRA_SET = new HashSet<>();
+
+        public static final Item BAT_DARK = registerWithSet("bat_dark", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bat_dark.png")), ELYTRA_SET);
+        public static final Item BAT_GREEN = registerWithSet("bat_green", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bat_green.png")), ELYTRA_SET);
+        public static final Item BAT_ORANGE = registerWithSet("bat_orange", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bat_orange.png")), ELYTRA_SET);
+        public static final Item BAT_VIOLET = registerWithSet("bat_violet", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bat_violet.png")), ELYTRA_SET);
+        public static final Item BED = registerWithSet("bed_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bed.png")), ELYTRA_SET);
+        public static final Item BEE = registerWithSet("bee_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bee.png")), ELYTRA_SET);
+        public static final Item BROOM = registerWithSet("broom", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/broom.png")), ELYTRA_SET);
+        public static final Item CARDBOARD = registerWithSet("cardboard_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/cardboard.png")), ELYTRA_SET);
+        public static final Item CEDRIC_WINGS = registerWithSet("cedric_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/cedric.png")), ELYTRA_SET);
+        public static final Item COBWEB_WINGS = registerWithSet("cobweb_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/cobweb.png")), ELYTRA_SET);
+        public static final Item DATA_WINGS = registerWithSet("data_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/data.png")), ELYTRA_SET);
+        public static final Item DOVE = registerWithSet("dove_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/dove.png")), ELYTRA_SET);
+        public static final Item ECLIPSE_BLUE = registerWithSet("eclipse_blue", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/eclipse_blue.png")), ELYTRA_SET);
+        public static final Item ECLIPSE_TAN = registerWithSet("eclipse_tan", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/eclipse_tan.png")), ELYTRA_SET);
+        public static final Item ELYSIUM = registerWithSet("elysium", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/elysium.png")), ELYTRA_SET);
+        public static final Item ENDERDRAGON_WINGS = registerWithSet("enderdragon_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/enderdragon.png")), ELYTRA_SET);
+        public static final Item FLANNELMOTH_WINGS = registerWithSet("flannelmoth_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/flannelmoth.png")), ELYTRA_SET);
+        public static final Item GHOST = registerWithSet("ghost", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/ghost.png")), ELYTRA_SET);
+        public static final Item GLASS = registerWithSet("glass", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/glass.png")), ELYTRA_SET);
+        public static final Item HAND = registerWithSet("hand", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/hand.png")), ELYTRA_SET);
+        public static final Item HANGGLIDER_BLUE = registerWithSet("hangglider_blue", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/hangglider_blue.png")), ELYTRA_SET);
+        public static final Item HANGGLIDER_GREEN = registerWithSet("hangglider_green", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/hangglider_green.png")), ELYTRA_SET);
+        public static final Item HANGGLIDER_MAGENTA = registerWithSet("hangglider_magenta", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/hangglider_magenta.png")), ELYTRA_SET);
+        public static final Item HECTEYE = registerWithSet("hecteye", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/hecteye.png")), ELYTRA_SET);
+        public static final Item LIMBY_WINGS = registerWithSet("limby_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/limby.png")), ELYTRA_SET);
+        public static final Item PLANE = registerWithSet("plane", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/plane.png")), ELYTRA_SET);
+        public static final Item RAINBOW = registerWithSet("rainbow", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/rainbow.png")), ELYTRA_SET);
+        public static final Item RAVEN_WINGS = registerWithSet("raven_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/raven.png")), ELYTRA_SET);
+        public static final Item RAVNA_WINGS = registerWithSet("ravna_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/ravna.png")), ELYTRA_SET);
+        public static final Item SKELYTRA = registerWithSet("skelytra", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/skelytra.png")), ELYTRA_SET);
+        public static final Item VAMPIRE = registerWithSet("vampire", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/vampire.png")), ELYTRA_SET);
+        public static final Item VEX_WINGS = registerWithSet("vex_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/vex.png")), ELYTRA_SET);
     }
     //</editor-fold>
 
@@ -2462,7 +2503,144 @@ public class GCItems {
     public static final Item EBONY_SIGN = register("ebony_sign", new SignItem(new Item.Settings(), GCBlocks.EBONY_SIGN, GCBlocks.EBONY_WALL_SIGN));
     public static final Item EBONY_HANGING_SIGN = register("ebony_hanging_sign", new HangingSignItem(GCBlocks.EBONY_HANGING_SIGN, GCBlocks.EBONY_WALL_HANGING_SIGN, new Item.Settings()));
 
-    public static final Item CHOCOLATE = register("chocolate", new Item(new Item.Settings().food(ModFoodComponents.CHOCOLATE)));
+    // FOODS
+    private static final FoodComponent trashFood = new FoodComponent.Builder().nutrition(1).saturationModifier(0.5f).alwaysEdible().build();
+    private static final FoodComponent junkFood = new FoodComponent.Builder().nutrition(2).saturationModifier(0.5f).alwaysEdible().build();
+    private static final FoodComponent betterJunkFood = new FoodComponent.Builder().nutrition(4).saturationModifier(1.0f).alwaysEdible().build();
+    private static final FoodComponent normalFood = new FoodComponent.Builder().nutrition(5).saturationModifier(2.0f).alwaysEdible().build();
+
+    public static HashSet<Item> GENERIC_FOODS_SET = new HashSet<>();
+
+    public static final Item CHOCOLATE = registerWithSet("chocolate", new Item(new Item.Settings().food(ModFoodComponents.CHOCOLATE)), GENERIC_FOODS_SET);
+
+    public static final Item SPICY_NACHOS = registerWithSet("spicy_nachos", new Item(new Item.Settings().food(betterJunkFood)), GENERIC_FOODS_SET);
+    public static final Item SPICY_FRIES = registerWithSet("spicy_fries", new Item(new Item.Settings().food(betterJunkFood)), GENERIC_FOODS_SET);
+
+    public static final Item MONSTER_HEART = registerWithSet("monster_heart", new Item(new Item.Settings().food(FoodComponents.GOLDEN_APPLE)), GENERIC_FOODS_SET);
+
+    public static final Item BANANA_FOOD = registerWithSet("banana_food", new Item(new Item.Settings().food(normalFood)), GENERIC_FOODS_SET);
+
+    public static final Item CANDY_APPLE = registerWithSet("candy_apple", new Item(new Item.Settings().food(betterJunkFood)), GENERIC_FOODS_SET);
+    public static final Item CANDY_APPLE_GREEN = registerWithSet("candy_apple_green", new Item(new Item.Settings().food(betterJunkFood)), GENERIC_FOODS_SET);
+    public static final Item CARAMEL_APPLE = registerWithSet("caramel_apple", new Item(new Item.Settings().food(betterJunkFood)), GENERIC_FOODS_SET);
+
+    public static final Item CANDY_CORN = registerWithSet("candy_corn", new Item(new Item.Settings().food(junkFood)), GENERIC_FOODS_SET);
+
+    public static final Item COOKIE_BAR = registerWithSet("cookie_bar", new Item(new Item.Settings().food(junkFood)), GENERIC_FOODS_SET);
+
+    public static final Item FONDANT_PUMPKIN = registerWithSet("fondant_pumpkin", new Item(new Item.Settings().food(junkFood)), GENERIC_FOODS_SET);
+
+    public static final Item HONEY_SWEET = registerWithSet("honey_sweet", new Item(new Item.Settings().food(junkFood)), GENERIC_FOODS_SET);
+
+    public static final Item LEMON_STORM = registerWithSet("lemon_storm", new Item(new Item.Settings().food(junkFood)), GENERIC_FOODS_SET);
+
+    public static final Item SUGAR_PLUMS = registerWithSet("sugar_plums", new Item(new Item.Settings().food(junkFood)), GENERIC_FOODS_SET);
+
+    public static final Item PEAS = registerWithSet("peas", new Item(new Item.Settings()), GENERIC_FOODS_SET);
+
+    public static HashSet<Item> GUMMY_SET = new HashSet<>();
+
+    public static final Item BEAR_BLUEBERRY = registerWithSet("bear_blueberry", new Item(new Item.Settings().food(junkFood)), GUMMY_SET);
+    public static final Item BEAR_CHERRY = registerWithSet("bear_cherry", new Item(new Item.Settings().food(junkFood)), GUMMY_SET);
+    public static final Item BEAR_LIME = registerWithSet("bear_lime", new Item(new Item.Settings().food(junkFood)), GUMMY_SET);
+    public static final Item BEAR_ORANGE = registerWithSet("bear_orange", new Item(new Item.Settings().food(junkFood)), GUMMY_SET);
+    public static final Item BEAR_PINEAPPLE = registerWithSet("bear_pineapple", new Item(new Item.Settings().food(junkFood)), GUMMY_SET);
+    public static final Item BRAIN_LIME = registerWithSet("brain_lime", new Item(new Item.Settings().food(junkFood)), GUMMY_SET);
+    public static final Item BRAIN_STRAWBERRY = registerWithSet("brain_strawberry", new Item(new Item.Settings().food(junkFood)), GUMMY_SET);
+    public static final Item PUFFERGUM_FISH = registerWithSet("puffergum_fish", new Item(new Item.Settings().food(junkFood)), GUMMY_SET);
+    public static final Item SOUR_SARDINE = registerWithSet("sour_sardine", new Item(new Item.Settings().food(junkFood)), GUMMY_SET);
+    public static final Item WORM_FIZZY = registerWithSet("worm_fizzy", new Item(new Item.Settings().food(junkFood)), GUMMY_SET);
+    public static final Item WORM_FRUITY = registerWithSet("worm_fruity", new Item(new Item.Settings().food(junkFood)), GUMMY_SET);
+    public static final Item WORM_SOUR = registerWithSet("worm_sour", new Item(new Item.Settings().food(junkFood)), GUMMY_SET);
+
+    public static HashSet<Item> BREAD_SET = new HashSet<>();
+
+    public static final Item BANANA_BREAD = registerWithSet("banana_bread", new Item(new Item.Settings().food(normalFood)), BREAD_SET);
+    public static final Item CHRISTMAS_PUDDING = registerWithSet("christmas_pudding", new Item(new Item.Settings().food(normalFood)), BREAD_SET);
+    public static final Item FRUITCAKE = registerWithSet("fruitcake", new Item(new Item.Settings().food(normalFood)), BREAD_SET);
+    public static final Item ONIGIRI = registerWithSet("onigiri", new Item(new Item.Settings().food(normalFood)), BREAD_SET);
+    public static final Item PIZZA = registerWithSet("pizza", new Item(new Item.Settings().food(normalFood)), BREAD_SET);
+    public static final Item TOFU = registerWithSet("tofu", new Item(new Item.Settings().food(normalFood)), BREAD_SET);
+
+    public static HashSet<Item> STRANGE_FOODS_SET = new HashSet<>();
+
+    public static final Item SPOON = registerWithSet("spoon", new Item(new Item.Settings().food(trashFood)), STRANGE_FOODS_SET);
+    public static final Item FORK = registerWithSet("fork", new Item(new Item.Settings().food(trashFood)), STRANGE_FOODS_SET);
+    public static final Item PEBBLES = registerWithSet("pebbles", new Item(new Item.Settings().food(trashFood)), STRANGE_FOODS_SET);
+
+    public static final Item PENCIL_YELLOW = registerWithSet("pencil_yellow", new Item(new Item.Settings().food(trashFood)), STRANGE_FOODS_SET);
+    public static final Item PENCIL_RED = registerWithSet("pencil_red", new Item(new Item.Settings().food(trashFood)), STRANGE_FOODS_SET);
+    public static final Item PENCIL_GREEN = registerWithSet("pencil_green", new Item(new Item.Settings().food(trashFood)), STRANGE_FOODS_SET);
+    public static final Item PENCIL_BLUE = registerWithSet("pencil_blue", new Item(new Item.Settings().food(trashFood)), STRANGE_FOODS_SET);
+
+    public static HashSet<Item> ICE_CREAM_SET = new HashSet<>();
+
+    public static final Item ICECREAM_BLACK = registerWithSet("icecream_black", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_BLACKBERRY = registerWithSet("icecream_blackberry", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_BUTTERSCOTCH = registerWithSet("icecream_butterscotch", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_CAKE = registerWithSet("icecream_cake", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_CHOCDIP = registerWithSet("icecream_chocdip", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_CHOCOLATE = registerWithSet("icecream_chocolate", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_COCONUT = registerWithSet("icecream_coconut", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_COFFEE = registerWithSet("icecream_coffee", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_COTTONCANDY = registerWithSet("icecream_cottoncandy", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_MANGO = registerWithSet("icecream_mango", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_MATCHA = registerWithSet("icecream_matcha", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_MINT = registerWithSet("icecream_mint", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_NEAPOLITAN = registerWithSet("icecream_neapolitan", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_OREO = registerWithSet("icecream_oreo", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_RAINBOW = registerWithSet("icecream_rainbow", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_REDVELVET = registerWithSet("icecream_redvelvet", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_STRAWBERRY = registerWithSet("icecream_strawberry", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item ICECREAM_VANILLA = registerWithSet("icecream_vanilla", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+
+    public static final Item SOFTSERVE_BLACK = registerWithSet("softserve_black", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_BLACKBERRY = registerWithSet("softserve_blackberry", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_BUTTERSCOTCH = registerWithSet("softserve_butterscotch", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_CAKE = registerWithSet("softserve_cake", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_CHOCDIP = registerWithSet("softserve_chocdip", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_CHOCOLATE = registerWithSet("softserve_chocolate", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_COCONUT = registerWithSet("softserve_coconut", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_COFFEE = registerWithSet("softserve_coffee", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_COTTONCANDY = registerWithSet("softserve_cottoncandy", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_MANGO = registerWithSet("softserve_mango", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_MATCHA = registerWithSet("softserve_matcha", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_MINT = registerWithSet("softserve_mint", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_NEAPOLITAN = registerWithSet("softserve_neapolitan", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_OREO = registerWithSet("softserve_oreo", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_RAINBOW = registerWithSet("softserve_rainbow", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_REDVELVET = registerWithSet("softserve_redvelvet", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_STRAWBERRY = registerWithSet("softserve_strawberry", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+    public static final Item SOFTSERVE_VANILLA = registerWithSet("softserve_vanilla", new Item(new Item.Settings().food(junkFood)), ICE_CREAM_SET);
+
+    public static final Item ICECREAM_SPRUG = register("icecream_sprug", new Item(new Item.Settings().food(junkFood)));
+    public static final Item ICECREAM_SPURNGE = register("icecream_spurnge", new Item(new Item.Settings().food(junkFood)));
+
+    public static HashSet<Item> FISH_SET = new HashSet<>();
+
+    public static final Item ANEMONE = registerWithSet("anemone", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item ANGELFISH = registerWithSet("angelfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item ANGLER = registerWithSet("angler", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item BLOOD_LAMPREY = registerWithSet("blood_lamprey", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item BUTTERFLY_FISH = registerWithSet("butterfly_fish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item COELACANTH = registerWithSet("coelacanth", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item DESENSITIZER_JELLY = registerWithSet("desensitizer_jelly", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item DORY = registerWithSet("dory", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item ENDER_FISH = registerWithSet("ender_fish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item FIRE_CORAL = registerWithSet("fire_coral", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item FISH_SKELETON = registerWithSet("fish_skeleton", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item GIANT_RED_JELLY = registerWithSet("giant_red_jelly", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item GREEN_ALGAE = registerWithSet("green_algae", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item MANTA_RAY = registerWithSet("manta_ray", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item MANTIS_SHRIMP = registerWithSet("mantis_shrimp", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item MOLAMOLA = registerWithSet("molamola", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item MOON_JELLY = registerWithSet("moon_jelly", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item MORAY_EEL = registerWithSet("moray_eel", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item PHEROMONE_FISH = registerWithSet("pheromone_fish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item SEA_SLUG = registerWithSet("sea_slug", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item STINGRAY = registerWithSet("stingray", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item URCHIN = registerWithSet("urchin", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item ZEBRAFISH = registerWithSet("zebrafish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
 
     // ACCESSORIES
     public static final Item ARACHNOPHOBIA_HAT = register("arachnophobia", new TrinketItem(new Item.Settings()));
@@ -2504,8 +2682,10 @@ public class GCItems {
     public static final Item KOBOLD_MASK = register("kobold_mask", new TrinketItem(new Item.Settings()));
     public static final Item LENNY_HAT = register("lenny", new TrinketItem(new Item.Settings()));
     public static final Item LIL_SQUIRT_HAT = register("lil_squirt", new TrinketItem(new Item.Settings()));
+    public static final Item MACH_HAT = register("mach_hat", new TrinketItem(new Item.Settings()));
     public static final Item ORC_CROWN_HAT = register("orc_crown", new TrinketItem(new Item.Settings()));
     public static final Item POWER_TRIP_HAT = register("power_trip", new TrinketItem(new Item.Settings()));
+    public static final Item PRETTY_PRINCESS_HAT = register("pretty_princess_hat", new TrinketItem(new Item.Settings()));
     public static final Item PURPLE_FLORAL_CROWN_HAT = register("purple_floral_crown", new TrinketItem(new Item.Settings()));
     public static final Item SAMURAI_HELM_HAT = register("samurai_helm", new TrinketItem(new Item.Settings()));
     public static final Item SERAPHIM_CROWN_HAT = register("seraphim_crown", new TrinketItem(new Item.Settings()));
@@ -2517,6 +2697,9 @@ public class GCItems {
     public static final Item WEREWOLF_MASK = register("werewolf_mask", new TrinketItem(new Item.Settings()));
 
     public static final Item GRAPPLING_HOOK = register("grappling_hook", new GrapplingHookItem(new Item.Settings()));
+    public static final Item CROWBAR = register("crowbar", new Item(new Item.Settings()));
+    public static final Item HAMMER = register("hammer", new Item(new Item.Settings()));
+    public static final Item SPELL_SCROLL = register("spell_scroll", new Item(new Item.Settings()));
 
     // CHARGES
     public static final Item DIRE_CHARGE = register("dire_charge", new Item(new Item.Settings()));
@@ -2534,14 +2717,20 @@ public class GCItems {
 
     public static final Item SICKLE = register("sickle", new Item(new Item.Settings()));
 
-    public static final Item LIMBY_FLUTE = register("limby_flute", new GoatHornItem(new Item.Settings().component(DataComponentTypes.INSTRUMENT, Registries.INSTRUMENT.entryOf(Instruments.DREAM_GOAT_HORN)), InstrumentTags.REGULAR_GOAT_HORNS));
-    public static final Item VIC_FLUTE = register("vic_flute", new GoatHornItem(new Item.Settings().component(DataComponentTypes.INSTRUMENT, Registries.INSTRUMENT.entryOf(Instruments.SING_GOAT_HORN)), InstrumentTags.REGULAR_GOAT_HORNS));
-    public static final Item MEI_FLUTE = register("mei_flute", new GoatHornItem(new Item.Settings().component(DataComponentTypes.INSTRUMENT, Registries.INSTRUMENT.entryOf(GCInstruments.MEI_FLUTE)), InstrumentTags.REGULAR_GOAT_HORNS));
+    public static final Item LIMBY_FLUTE = register("limby_flute", new GoatHornItem(new Item.Settings().maxCount(1), InstrumentTags.GOAT_HORNS));
+    public static final Item VIC_FLUTE = register("vic_flute", new GoatHornItem(new Item.Settings().maxCount(1), InstrumentTags.GOAT_HORNS));
+    public static final Item MEI_FLUTE = register("mei_flute", new GoatHornItem(new Item.Settings().maxCount(1), InstrumentTags.GOAT_HORNS));
+    public static final Item KAT_BALL = register("kat_ball", new GoatHornItem(new Item.Settings().maxCount(1), InstrumentTags.GOAT_HORNS));
 
     // PLACEABLES
     public static final Item DEATH_MOTH = register("death_moth", new Item(new Item.Settings()));
     public static final Item SMILER = register("smiler", new Item(new Item.Settings()));
+    public static final Item OMINOUS_EYES = register("ominous_eyes", new Item(new Item.Settings()));
+    public static final Item FOLLY = register("folly", new Item(new Item.Settings()));
     public static final Item LIMBO = register("limbo", new Item(new Item.Settings()));
+    public static final Item NOTES = register("notes", new Item(new Item.Settings()));
+    public static final Item NOTICE_BOARD = register("notice_board", new Item(new Item.Settings()));
+    public static final Item MARIAH = register("mariah", new GoatHornItem(new Item.Settings().maxCount(1), InstrumentTags.GOAT_HORNS));
 
     public static HashSet<Item> WANTED_POSTERS_SET = new HashSet<>();
 
@@ -2555,6 +2744,75 @@ public class GCItems {
     public static final Item SILVER_POSTER = registerWithSet("silver_poster", new Item(new Item.Settings()), WANTED_POSTERS_SET);
     public static final Item SPARKLES_POSTER = registerWithSet("sparkles_poster", new Item(new Item.Settings()), WANTED_POSTERS_SET);
     public static final Item VIC_POSTER = registerWithSet("vic_poster", new Item(new Item.Settings()), WANTED_POSTERS_SET);
+
+    // PUMPKIN
+    public static HashSet<Item> PUMPKIN_SET = new HashSet<>();
+
+    public static final Item PUMPKIN_CREEPER = registerWithSet("pumpkin_creeper", new Item(new Item.Settings()), PUMPKIN_SET);
+    public static final Item PUMPKIN_DERP = registerWithSet("pumpkin_derp", new Item(new Item.Settings()), PUMPKIN_SET);
+    public static final Item PUMPKIN_FANG = registerWithSet("pumpkin_fang", new Item(new Item.Settings()), PUMPKIN_SET);
+    public static final Item PUMPKIN_PICKAXE = registerWithSet("pumpkin_pickaxe", new Item(new Item.Settings()), PUMPKIN_SET);
+    public static final Item PUMPKIN_SAD = registerWithSet("pumpkin_sad", new Item(new Item.Settings()), PUMPKIN_SET);
+    public static final Item PUMPKIN_SHULKER = registerWithSet("pumpkin_shulker", new Item(new Item.Settings()), PUMPKIN_SET);
+    public static final Item PUMPKIN_SINISTER = registerWithSet("pumpkin_sinister", new Item(new Item.Settings()), PUMPKIN_SET);
+    public static final Item PUMPKIN_SLIME = registerWithSet("pumpkin_slime", new Item(new Item.Settings()), PUMPKIN_SET);
+    public static final Item PUMPKIN_SMILE = registerWithSet("pumpkin_smile", new Item(new Item.Settings()), PUMPKIN_SET);
+    public static final Item PUMPKIN_STEVE = registerWithSet("pumpkin_steve", new Item(new Item.Settings()), PUMPKIN_SET);
+    public static final Item PUMPKIN_VILLAGER = registerWithSet("pumpkin_villager", new Item(new Item.Settings()), PUMPKIN_SET);
+
+    // COFFIN
+    public static HashSet<Item> COFFIN_SET = new HashSet<>();
+
+    public static final Item COFFIN_STONE = registerWithSet("coffin_stone", new Item(new Item.Settings()), COFFIN_SET);
+    public static final Item COFFIN_STONE_DARK = registerWithSet("coffin_stone_dark", new Item(new Item.Settings()), COFFIN_SET);
+
+    // TOMBSTONE
+    public static HashSet<Item> TOMBSTONE_SET = new HashSet<>();
+
+    public static final Item TOMBSTONE_BIG = registerWithSet("tombstone_big", new Item(new Item.Settings()), TOMBSTONE_SET);
+    public static final Item TOMBSTONE_BIG_DARK = registerWithSet("tombstone_big_dark", new Item(new Item.Settings()), TOMBSTONE_SET);
+    public static final Item TOMBSTONE_MEDIUM = registerWithSet("tombstone_medium", new Item(new Item.Settings()), TOMBSTONE_SET);
+    public static final Item TOMBSTONE_MEDIUM_DARK = registerWithSet("tombstone_medium_dark", new Item(new Item.Settings()), TOMBSTONE_SET);
+    public static final Item TOMBSTONE_SMALL = registerWithSet("tombstone_small", new Item(new Item.Settings()), TOMBSTONE_SET);
+    public static final Item TOMBSTONE_SMALL_DARK = registerWithSet("tombstone_small_dark", new Item(new Item.Settings()), TOMBSTONE_SET);
+
+    // SKELETONS
+    public static HashSet<Item> SKELETON_SET = new HashSet<>();
+
+    public static final Item SLUMPED_SKELETON = registerWithSet("slumped_skeleton", new Item(new Item.Settings()), SKELETON_SET);
+    public static final Item SLUMPED_WITHER_SKELETON = registerWithSet("slumped_wither_skeleton", new Item(new Item.Settings()), SKELETON_SET);
+    public static final Item RIBS_PLACEABLE = registerWithSet("ribs_placeable", new Item(new Item.Settings()), SKELETON_SET);
+    public static final Item RIBCAGE_PLACEABLE = registerWithSet("ribcage_placeable", new Item(new Item.Settings()), SKELETON_SET);
+
+    // PRIDE FLAGS
+    public static HashSet<Item> FLAG_SET = new HashSet<>();
+
+    public static final Item PRIDE_FLAG_TRANSGENDER = registerWithSet("pride_flag_transgender", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_TRAINSEXUAL = registerWithSet("pride_flag_trainsexual", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_TWO_SPIRIT = registerWithSet("pride_flag_two_spirit", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_AGENDER = registerWithSet("pride_flag_agender", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_ALLY = registerWithSet("pride_flag_ally", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_ANDROGYNOUS = registerWithSet("pride_flag_androgynous", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_AROMANTIC = registerWithSet("pride_flag_aromantic", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_ASEXUAL = registerWithSet("pride_flag_asexual", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_BISEXUAL = registerWithSet("pride_flag_bisexual", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_DEMIBOY = registerWithSet("pride_flag_demiboy", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_DEMIFLUID = registerWithSet("pride_flag_demifluid", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_DEMIFLUX = registerWithSet("pride_flag_demiflux", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_DEMIGIRL = registerWithSet("pride_flag_demigirl", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_DEMINONBINARY = registerWithSet("pride_flag_deminonbinary", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_DEMIROMANTIC = registerWithSet("pride_flag_demiromantic", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_DEMISEXUAL = registerWithSet("pride_flag_demisexual", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_GAY = registerWithSet("pride_flag_gay", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_GAY_MLM = registerWithSet("pride_flag_gay_mlm", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_GENDERFLUID = registerWithSet("pride_flag_genderfluid", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_GENDERQUEER = registerWithSet("pride_flag_genderqueer", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_INTERSEX = registerWithSet("pride_flag_intersex", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_LESBIAN = registerWithSet("pride_flag_lesbian", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_NEUTROIS = registerWithSet("pride_flag_neutrois", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_NONBINARY = registerWithSet("pride_flag_nonbinary", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_PANSEXUAL = registerWithSet("pride_flag_pansexual", new Item(new Item.Settings()), FLAG_SET);
+    public static final Item PRIDE_FLAG_POLYSEXUAL = registerWithSet("pride_flag_polysexual", new Item(new Item.Settings()), FLAG_SET);
 
     // KEYS
     public static final Item BOSS_KEY = register("boss_key", new Item(new Item.Settings()));
@@ -2583,6 +2841,42 @@ public class GCItems {
     public static final Item WARP_GEM = register("warp_gem", new Item(new Item.Settings()));
     public static final Item EMBEDDED_GEM = register("embedded_gem", new Item(new Item.Settings()));
     public static final Item COMMUNICATOR = register("communicator", new Item(new Item.Settings()));
+    public static final Item ARCANE_POWDER = register("arcane_powder", new Item(new Item.Settings()));
+    public static final Item TREE_RESIN = register("tree_resin", new Item(new Item.Settings()));
+
+    // POUCHES
+    public static final HashSet<Item> POUCH_SET = new HashSet<>();
+
+    public static final Item BLACK_POUCH = registerWithSet("black_pouch", new Item(new Item.Settings()), POUCH_SET);
+    public static final Item BLUE_POUCH = registerWithSet("blue_pouch", new Item(new Item.Settings()), POUCH_SET);
+    public static final Item BROWN_POUCH = registerWithSet("brown_pouch", new Item(new Item.Settings()), POUCH_SET);
+    public static final Item CYAN_POUCH = registerWithSet("cyan_pouch", new Item(new Item.Settings()), POUCH_SET);
+    public static final Item GRAY_POUCH = registerWithSet("gray_pouch", new Item(new Item.Settings()), POUCH_SET);
+    public static final Item GREEN_POUCH = registerWithSet("green_pouch", new Item(new Item.Settings()), POUCH_SET);
+    public static final Item LIGHT_BLUE_POUCH = registerWithSet("light_blue_pouch", new Item(new Item.Settings()), POUCH_SET);
+    public static final Item LIGHT_GRAY_POUCH = registerWithSet("light_gray_pouch", new Item(new Item.Settings()), POUCH_SET);
+    public static final Item LIME_POUCH = registerWithSet("lime_pouch", new Item(new Item.Settings()), POUCH_SET);
+    public static final Item MAGENTA_POUCH = registerWithSet("magenta_pouch", new Item(new Item.Settings()), POUCH_SET);
+    public static final Item ORANGE_POUCH = registerWithSet("orange_pouch", new Item(new Item.Settings()), POUCH_SET);
+    public static final Item PINK_POUCH = registerWithSet("pink_pouch", new Item(new Item.Settings()), POUCH_SET);
+    public static final Item PURPLE_POUCH = registerWithSet("purple_pouch", new Item(new Item.Settings()), POUCH_SET);
+    public static final Item RED_POUCH = registerWithSet("red_pouch", new Item(new Item.Settings()), POUCH_SET);
+    public static final Item WHITE_POUCH = registerWithSet("white_pouch", new Item(new Item.Settings()), POUCH_SET);
+    public static final Item YELLOW_POUCH = registerWithSet("yellow_pouch", new Item(new Item.Settings()), POUCH_SET);
+
+    // EVO STONES
+    public static final HashSet<Item> EVO_SET = new HashSet<>();
+
+    public static final Item DAWN_STONE = registerWithSet("dawn_stone", new Item(new Item.Settings()), EVO_SET);
+    public static final Item DUSK_STONE = registerWithSet("dusk_stone", new Item(new Item.Settings()), EVO_SET);
+    public static final Item EARTH_STONE = registerWithSet("earth_stone", new Item(new Item.Settings()), EVO_SET);
+    public static final Item FIRE_STONE = registerWithSet("fire_stone", new Item(new Item.Settings()), EVO_SET);
+    public static final Item ICE_STONE = registerWithSet("ice_stone", new Item(new Item.Settings()), EVO_SET);
+    public static final Item LIGHT_STONE = registerWithSet("light_stone", new Item(new Item.Settings()), EVO_SET);
+    public static final Item MOON_STONE = registerWithSet("moon_stone", new Item(new Item.Settings()), EVO_SET);
+    public static final Item SUN_STONE = registerWithSet("sun_stone", new Item(new Item.Settings()), EVO_SET);
+    public static final Item THUNDER_STONE = registerWithSet("thunder_stone", new Item(new Item.Settings()), EVO_SET);
+    public static final Item WATER_STONE = registerWithSet("water_stone", new Item(new Item.Settings()), EVO_SET);
 
     // MOB DROPS
     public static final Item ARTHROPOD_CHUNK = register("arthropod_chunk", new Item(new Item.Settings()));
@@ -2647,6 +2941,11 @@ public class GCItems {
     public static final Item SKULL_JIM = register("skull_jim", new Item(new Item.Settings()));
     public static final Item SKULL_LAUGH = register("skull_laugh", new Item(new Item.Settings()));
 
+    public static final Item RAW_SHADOW = register("raw_shadow", new Item(new Item.Settings()));
+    public static final Item SHADOW_EYE = register("shadow_eye", new Item(new Item.Settings()));
+    public static final Item SHADOW_TENDRIL = register("shadow_tendril", new Item(new Item.Settings()));
+    public static final Item SHADOW_TOOTH = register("shadow_tooth", new Item(new Item.Settings()));
+
     // LOOT ITEMS
     public static HashSet<Item> RING_SET = new HashSet<>();
     public static HashSet<Item> BRACELET_SET = new HashSet<>();
@@ -2710,6 +3009,34 @@ public class GCItems {
     public static final Item VERDANT_PENDANT = registerWithSet("verdant_pendant", new TrinketItem(new Item.Settings()), NECKLACE_SET);
     public static final Item VERDANT_RING = registerWithSet("verdant_ring", new TrinketItem(new Item.Settings()), RING_SET);
     public static final Item VERDANT_BAND = registerWithSet("verdant_band", new TrinketItem(new Item.Settings()), RING_SET);
+
+    public static HashSet<Item> GEMSTONE_SET = new HashSet<>();
+
+    public static final Item AMBER = registerWithSet("amber", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item AURA_GEM = registerWithSet("aura_gem", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item CHRYSOPRASE = registerWithSet("chrysoprase", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item CITRINE = registerWithSet("citrine", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item FIRE_OPAL = registerWithSet("fire_opal", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item FLOURITE = registerWithSet("flourite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item GARNET = registerWithSet("garnet", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item JADE = registerWithSet("jade", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item KUNZITE = registerWithSet("kunzite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item LABRADORITE = registerWithSet("labradorite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item LUNA_STONE = registerWithSet("luna_stone", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item MOONS_TEAR_GEM = registerWithSet("moons_tear_gem", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item MOONSTONE = registerWithSet("moonstone", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item OPAL = registerWithSet("opal", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item RHODOLITE_GARNET = registerWithSet("rhodolite_garnet", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item RUBY = registerWithSet("ruby", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item SAPPHIRE = registerWithSet("sapphire", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item SILFITE = registerWithSet("silfite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item SPINEL = registerWithSet("spinel", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item SULFUR = registerWithSet("sulfur", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item TIGERSEYE = registerWithSet("tigerseye", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item TOPAZ = registerWithSet("topaz", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item WOLFSEYE = registerWithSet("wolfseye", new Item(new Item.Settings()), GEMSTONE_SET);
+
+    public static final Item PERFUME = register("perfume", new Item(new Item.Settings()));
 
     // COINS
     public static final Item COPPER_COIN = register("copper_coin", new Item(new Item.Settings()));
@@ -2777,6 +3104,18 @@ public class GCItems {
     public static final Item VEHICLE_KEY = register("vehicle_key", new Item(new Item.Settings()));
     public static final Item WIRES = register("wires", new Item(new Item.Settings()));
     public static final Item WRENCH = register("wrench", new Item(new Item.Settings()));
+
+    // TOOLS
+
+    public static HashSet<Item> ROD_SET = new HashSet<>();
+
+    public static final Item BLAZE_ROD = registerWithSet("blaze_rod", new FishingRodItem(new Item.Settings().maxDamage(64)), ROD_SET);
+    public static final Item BLUE_ROD = registerWithSet("blue_rod", new FishingRodItem(new Item.Settings().maxDamage(64)), ROD_SET);
+    public static final Item CANDY_ROD = registerWithSet("candy_rod", new FishingRodItem(new Item.Settings().maxDamage(64)), ROD_SET);
+    public static final Item GOLD_ROD = registerWithSet("gold_rod", new FishingRodItem(new Item.Settings().maxDamage(64)), ROD_SET);
+    public static final Item RUSTICK_ROD = registerWithSet("rustick_rod", new FishingRodItem(new Item.Settings().maxDamage(64)), ROD_SET);
+    public static final Item TWIG_ROD = registerWithSet("twig_rod", new FishingRodItem(new Item.Settings().maxDamage(64)), ROD_SET);
+    public static final Item UNDYING_ROD = registerWithSet("undying_rod", new FishingRodItem(new Item.Settings().maxDamage(64)), ROD_SET);
 
     public static void initialize() {
         ArcherItems.initialize();

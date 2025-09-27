@@ -1,0 +1,6 @@
+{
+  "parent": "item/fishing_rod",
+  "textures": {
+    "layer0": "ghostcraft:item/util/rods/gold_rod_cast"
+  }
+}

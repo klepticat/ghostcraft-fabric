@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.fabricmc.fabric.api.client.rendering.v1.LivingEntityFeatureRendererRegistrationCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.client.render.entity.ArmorStandEntityRenderer;
@@ -16,6 +17,9 @@ import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.render.entity.PlayerEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.FishingRodItem;
+import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import org.klepticat.ghostcraft.block.BlockType;
 import org.klepticat.ghostcraft.entity.GCPlayerEntityStickers;
@@ -69,6 +73,22 @@ public class GhostCraftClient implements ClientModInitializer {
         EntityRendererRegistry.register(GCEntityTypes.TRANSPORTWEHTION, context -> new TransportwehtionEntityRenderer(context, EntityModelLayers.CAMEL));
 
         EntityModelLayerRegistry.registerModelLayer(RatEntityModel.modelLayer, RatEntityModel::getTexturedModelData);
+
+        GCItems.ROD_SET.forEach(rodItem -> {
+            ModelPredicateProviderRegistry.register(rodItem, Identifier.ofVanilla("cast"), (stack, world, entity, seed) -> {
+                if (entity == null) {
+                    return 0.0F;
+                } else {
+                    boolean bl = entity.getMainHandStack() == stack;
+                    boolean bl2 = entity.getOffHandStack() == stack;
+                    if (entity.getMainHandStack().getItem() instanceof FishingRodItem) {
+                        bl2 = false;
+                    }
+
+                    return (bl || bl2) && entity instanceof PlayerEntity && ((PlayerEntity) entity).fishHook != null ? 1.0F : 0.0F;
+                }
+            });
+        });
 
         LivingEntityFeatureRendererRegistrationCallback.EVENT.register((entityType, entityRenderer, registrationHelper, context) -> {
             if (entityRenderer instanceof PlayerEntityRenderer) {
@@ -130,6 +150,7 @@ public class GhostCraftClient implements ClientModInitializer {
         TrinketRendererRegistry.registerRenderer(GCItems.SPORELING_HAT, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.VALKYRIE_HELM_HAT, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.WEREWOLF_MASK, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.MACH_HAT, new HatRenderer());
 
         BlockRenderLayerMap.INSTANCE.putBlock(DARK_CHERRY_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GLOWSHROOM_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());

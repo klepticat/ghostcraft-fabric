@@ -165,6 +165,19 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.BONE),
             true
     );
+
+    public static Block CABBAGE = register(
+            "cabbage",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .instrument(NoteBlockInstrument.BANJO)
+                    .requiresTool()
+                    .strength(0.5f)
+                    .sounds(BlockSoundGroup.WET_GRASS),
+            true
+    );
+
     public static Block CHOGGY_BLOGGY = register(
             "choggy_bloggy",
             Block::new,

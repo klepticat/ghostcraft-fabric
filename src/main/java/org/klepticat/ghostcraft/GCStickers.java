@@ -18,6 +18,7 @@ public class GCStickers {
     public static final Sticker ETHRIL_SNOOF = register("ethril_snoof", new Sticker(Identifier.of(MOD_ID, "textures/stickers/ethril_snoof.png"), true));
     public static final Sticker FRED_HAPPI = register("fred_happi", new Sticker(Identifier.of(MOD_ID, "textures/stickers/fred_happi.png"), true));
     public static final Sticker GRIM_UNO = register("grim_uno", new Sticker(Identifier.of(MOD_ID, "textures/stickers/grim_uno.png"), true));
+    public static final Sticker GRIM_NO_TRAINS = register("grim_no_trains", new Sticker(Identifier.of(MOD_ID, "textures/stickers/grim_no_trains.png"), true));
     public static final Sticker GUN = register("gun", new Sticker(Identifier.of(MOD_ID, "textures/stickers/gun.png"), true));
     public static final Sticker HEART_POP = register("heart_pop", new Sticker(Identifier.of(MOD_ID, "textures/stickers/heart_pop.png"), true));
     public static final Sticker JUST_FIXED_THIS = register("just_fixed_this", new Sticker(Identifier.of(MOD_ID, "textures/stickers/just_fixed_this.png"), true));
@@ -33,6 +34,8 @@ public class GCStickers {
     public static final Sticker NSFF = register("nsff", new Sticker(Identifier.of(MOD_ID, "textures/stickers/nsff.png"), true));
     public static final Sticker ONE_THING = register("one_thing", new Sticker(Identifier.of(MOD_ID, "textures/stickers/one_thing.png"), true));
     public static final Sticker RAVNA_WANTED = register("ravna_wanted", new Sticker(Identifier.of(MOD_ID, "textures/stickers/ravna_wanted.png"), true));
+    public static final Sticker RAVNA_SHINY = register("ravna_shiny", new Sticker(Identifier.of(MOD_ID, "textures/stickers/ravna_shiny.png"), true));
+    public static final Sticker RAVNA_DONT_LOOK = register("ravna_dont_look", new Sticker(Identifier.of(MOD_ID, "textures/stickers/ravna_dont_look.png"), true));
     public static final Sticker SHINGY_POG = register("shiny_pog", new Sticker(Identifier.of(MOD_ID, "textures/stickers/shiny_pog.png"), true));
     public static final Sticker SHORT_STACK = register("short_stack", new Sticker(Identifier.of(MOD_ID, "textures/stickers/short_stack.png"), true));
     public static final Sticker SHUT_IT = register("shut_it", new Sticker(Identifier.of(MOD_ID, "textures/stickers/shut_it.png"), true));
@@ -45,6 +48,7 @@ public class GCStickers {
     public static final Sticker VIC_SCHEMING = register("vic_scheming", new Sticker(Identifier.of(MOD_ID, "textures/stickers/vic_scheming.png"), true));
     public static final Sticker VIC_THWACK = register("vic_thwack", new Sticker(Identifier.of(MOD_ID, "textures/stickers/vic_thwack.png"), true));
     public static final Sticker VIC_WHEEZE = register("vic_wheeze", new Sticker(Identifier.of(MOD_ID, "textures/stickers/vic_wheeze.png"), true));
+    public static final Sticker VIC_THIS_IS_FINE = register("vic_this_is_fine", new Sticker(Identifier.of(MOD_ID, "textures/stickers/vic_this_is_fine.png"), true));
     public static final Sticker WEHGOD_KNOWS = register("wehgod_knows", new Sticker(Identifier.of(MOD_ID, "textures/stickers/wehgod_knows.png"), true));
 
     public static void initialize() {

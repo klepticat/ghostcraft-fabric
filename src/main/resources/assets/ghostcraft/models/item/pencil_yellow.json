@@ -1,0 +1,6 @@
+{
+  "parent": "ghostcraft:sources/32xhandheld",
+  "textures": {
+    "layer0": "ghostcraft:item/foods/inedibles/pencil_yellow"
+  }
+}

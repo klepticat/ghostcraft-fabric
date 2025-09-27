@@ -3,6 +3,7 @@
   "package": "org.klepticat.ghostcraft.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "CustomRodMixin",
     "ItemStackRarityMixin",
     "LivingEntityMixin",
     "PlayerDeathMixin",

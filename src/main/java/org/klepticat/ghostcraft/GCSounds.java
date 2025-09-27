@@ -17,6 +17,11 @@ public class GCSounds {
     public static final SoundEvent GRAPPLE = register("grapple");
 
     public static final RegistryEntry.Reference<SoundEvent> INSTRUMENT_MEI_FLUTE = registerReference("mei_flute");
+    public static final RegistryEntry.Reference<SoundEvent> INSTRUMENT_VIC_FLUTE = registerReference("vic_flute");
+    public static final RegistryEntry.Reference<SoundEvent> INSTRUMENT_LIMBY_TOOT_TOOT = registerReference("limby_toot_toot");
+    public static final RegistryEntry.Reference<SoundEvent> INSTRUMENT_KAT_BALL = registerReference("kat_ball");
+    public static final RegistryEntry.Reference<SoundEvent> INSTRUMENT_MARIAH_ITS_TIME = registerReference("mariah_its_time");
+    public static final RegistryEntry.Reference<SoundEvent> INSTRUMENT_MARIAH_AHH = registerReference("mariah_ahh");
 
     public static void initialize() {}
 

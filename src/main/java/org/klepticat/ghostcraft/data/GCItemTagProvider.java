@@ -34,10 +34,10 @@ public class GCItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(TagKey.of(Registries.ITEM.getKey(), Identifier.of("trinkets", "offhand/ring")))
                 .add(RINGS);
 
-        getOrCreateTagBuilder(TagKey.of(Registries.ITEM.getKey(), Identifier.of("trinkets", "hand/glove")))
+        getOrCreateTagBuilder(TagKey.of(Registries.ITEM.getKey(), Identifier.of("trinkets", "hand/wrist")))
                 .add(BRACELETS);
 
-        getOrCreateTagBuilder(TagKey.of(Registries.ITEM.getKey(), Identifier.of("trinkets", "offhand/glove")))
+        getOrCreateTagBuilder(TagKey.of(Registries.ITEM.getKey(), Identifier.of("trinkets", "offhand/wrist")))
                 .add(BRACELETS);
     }
 }

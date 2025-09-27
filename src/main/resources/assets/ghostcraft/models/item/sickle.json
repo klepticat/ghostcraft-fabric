@@ -1,5 +1,5 @@
 {
-  "parent": "ghostcraft:sources/32xhandheld",
+  "parent": "item/handheld",
   "textures": {
     "layer0": "ghostcraft:item/personal/sickle"
   }

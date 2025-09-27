@@ -5,16 +5,20 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
+import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
+import org.klepticat.ghostcraft.GCItems;
 import org.klepticat.ghostcraft.block.BlockType;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Optional;
 
 import static org.klepticat.ghostcraft.GCBlocks.*;
+import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
 
 public class GCModelProvider extends FabricModelProvider {
     public GCModelProvider(FabricDataOutput output) {
@@ -28,6 +32,7 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(AURORA_CRYSTAL);
         blockStateModelGenerator.registerSimpleCubeAll(BLEEDING_COIL);
         blockStateModelGenerator.registerSimpleCubeAll(CANDY_CANE);
+        blockStateModelGenerator.registerSimpleCubeAll(CABBAGE);
         blockStateModelGenerator.registerSimpleCubeAll(CHOGGY_BLOGGY);
         blockStateModelGenerator.registerSimpleCubeAll(ENCHANTED_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(END_MOSS);
@@ -250,7 +255,52 @@ public class GCModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        registerGeneratedItem(GCItems.RAW_SHADOW, "loot/mob_drops/shadow/", itemModelGenerator);
+        registerGeneratedItem(GCItems.SHADOW_TENDRIL, "loot/mob_drops/shadow/", itemModelGenerator);
+        registerGeneratedItem(GCItems.SHADOW_EYE, "loot/mob_drops/shadow/", itemModelGenerator);
+        registerGeneratedItem(GCItems.SHADOW_TOOTH, "loot/mob_drops/shadow/", itemModelGenerator);
+        registerGeneratedItem(GCItems.ARCANE_POWDER, "loot/", itemModelGenerator);
+        registerGeneratedItem(GCItems.TREE_RESIN, "loot/", itemModelGenerator);
+        registerHandheldItem(GCItems.HAMMER, "util/", itemModelGenerator);
+        registerHandheldItem(GCItems.CROWBAR, "util/", itemModelGenerator);
+        registerHandheldItem(GCItems.SPELL_SCROLL, "util/", itemModelGenerator);
+        registerPlaceableItem(GCItems.MARIAH, "placeables/", itemModelGenerator);
 
+        GCItems.GENERIC_FOODS_SET.forEach(item -> {
+            registerGeneratedItem(item, "foods/", itemModelGenerator);
+        });
+
+        GCItems.BREAD_SET.forEach(item -> {
+            registerGeneratedItem(item, "foods/", itemModelGenerator);
+        });
+
+        GCItems.GUMMY_SET.forEach(item -> {
+            registerGeneratedItem(item, "foods/gummies/", itemModelGenerator);
+        });
+
+        GCItems.FISH_SET.forEach(item -> {
+            registerGeneratedItem(item, "foods/fish/", itemModelGenerator);
+        });
+
+        GCItems.POUCH_SET.forEach(item -> {
+            registerGeneratedItem(item, "pouches/", itemModelGenerator);
+        });
+
+        GCItems.EVO_SET.forEach(item -> {
+            registerGeneratedItem(item, "evo_stones/", itemModelGenerator);
+        });
+
+        GCItems.FLAG_SET.forEach(item -> {
+            registerPlaceableItem(item, "placeables/flags/", itemModelGenerator);
+        });
+
+        GCItems.PUMPKIN_SET.forEach(item -> {
+            registerTileItem(item, "placeables/decorations/pumpkins/", itemModelGenerator);
+        });
+
+        GCItems.ElytraItems.ELYTRA_SET.forEach(item -> {
+            registerGeneratedItem(item, "elytra/", itemModelGenerator);
+        });
     }
 
     public static VariantsBlockStateSupplier crystalCluster(Block block, BlockStateModelGenerator generator) {
@@ -390,5 +440,29 @@ public class GCModelProvider extends FabricModelProvider {
         return BlockStateVariant.create()
                 .put(VariantSettings.MODEL, identifier)
                 .put(VariantSettings.X, VariantSettings.Rotation.R90);
+    }
+
+    public static void registerGeneratedItem(Item item, String prefix, ItemModelGenerator generator) {
+        Identifier itemId = Registries.ITEM.getId(item);
+        Models.GENERATED.upload(ModelIds.getItemModelId(item), TextureMap.layer0(itemId.withPrefixedPath(prefix).withPrefixedPath("item/")), generator.writer);
+    }
+
+    public static void registerHandheldItem(Item item, String prefix, ItemModelGenerator generator) {
+        Identifier itemId = Registries.ITEM.getId(item);
+        Models.HANDHELD.upload(ModelIds.getItemModelId(item), TextureMap.layer0(itemId.withPrefixedPath(prefix).withPrefixedPath("item/")), generator.writer);
+    }
+
+    public static void registerPlaceableItem(Item item, String prefix, ItemModelGenerator generator) {
+        Identifier itemId = Registries.ITEM.getId(item);
+        Model model = new Model(Optional.of(Identifier.of(MOD_ID, "sources/4x_placeable")), Optional.empty(), TextureKey.LAYER0);
+
+        model.upload(ModelIds.getItemModelId(item), TextureMap.layer0(itemId.withPrefixedPath(prefix).withPrefixedPath("item/")), generator.writer);
+    }
+
+    public static void registerTileItem(Item item, String prefix, ItemModelGenerator generator) {
+        Identifier itemId = Registries.ITEM.getId(item);
+        Model model = new Model(Optional.of(Identifier.of(MOD_ID, "sources/16x_tile")), Optional.empty(), TextureKey.LAYER0);
+
+        model.upload(ModelIds.getItemModelId(item), TextureMap.layer0(itemId.withPrefixedPath(prefix).withPrefixedPath("item/")), generator.writer);
     }
 }

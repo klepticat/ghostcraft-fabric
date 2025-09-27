@@ -1,0 +1,7 @@
+{
+  "__comment": "Designed by Sixfootblue with Cubik Studio - https://cubik.studio",
+  "parent": "ghostcraft:item/slumped_skeleton",
+  "textures": {
+    "texture": "ghostcraft:item/placeables/decorations/slumped_wither_skeleton"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "ghostcraft:sources/32x_handheld_middle",
+  "textures": {
+    "layer0": "ghostcraft:item/weapons/quarterstaff"
+  }
+}

@@ -35,5 +35,93 @@
     "sounds": [
       "ghostcraft:item/instruments/mei_flute"
     ]
+  },
+  "vic_flute": {
+    "sounds": [
+      "ghostcraft:item/instruments/vic_flute"
+    ]
+  },
+  "limby_toot_toot": {
+    "sounds": [
+      "ghostcraft:item/instruments/limby_toot_toot"
+    ]
+  },
+  "kat_ball": {
+    "sounds": [
+      "ghostcraft:item/instruments/kat_ball1",
+      "ghostcraft:item/instruments/kat_ball2",
+      "ghostcraft:item/instruments/kat_ball3",
+      "ghostcraft:item/instruments/kat_ball4",
+      "ghostcraft:item/instruments/kat_ball5",
+      "ghostcraft:item/instruments/kat_ball6",
+      "ghostcraft:item/instruments/kat_ball7",
+      "ghostcraft:item/instruments/kat_ball8",
+      "ghostcraft:item/instruments/kat_ball9"
+    ]
+  },
+  "enderguardian_theme": {
+    "sounds": [
+      "ghostcraft:enderguardian_theme"
+    ]
+  },
+  "harbinger_theme": {
+    "sounds": [
+      "ghostcraft:harbinger_theme"
+    ]
+  },
+  "leviathan_theme_0": {
+    "sounds": [
+      "ghostcraft:leviathan_theme"
+    ]
+  },
+  "leviathan_theme_1": {
+    "sounds": [
+      "ghostcraft:leviathan_theme_1"
+    ]
+  },
+  "leviathan_theme_2": {
+    "sounds": [
+      "ghostcraft:leviathan_theme_2"
+    ]
+  },
+  "maledictus_theme": {
+    "sounds": [
+      "ghostcraft:maledictus_theme"
+    ]
+  },
+  "maledictus_theme_disc": {
+    "sounds": [
+      "ghostcraft:maledictus_theme_disc"
+    ]
+  },
+  "monstrosity_theme": {
+    "sounds": [
+      "ghostcraft:monstrosity_theme"
+    ]
+  },
+  "remnant_theme": {
+    "sounds": [
+      "ghostcraft:remnant_theme"
+    ]
+  },
+  "ignis_theme": {
+    "sounds": [
+      "ghostcraft:ignis_theme"
+    ]
+  },
+  "mariah_all_i_want_song": {
+    "sounds": [
+      "ghostcraft:all_i_want_for_christmas"
+    ]
+  },
+  "mariah_ahh": {
+    "sounds": [
+      "ghostcraft:item/instruments/mariah_ahh"
+    ]
+  },
+  "mariah_its_time": {
+    "sounds": [
+      "ghostcraft:item/instruments/mariah_its_time"
+    ]
   }
 }
