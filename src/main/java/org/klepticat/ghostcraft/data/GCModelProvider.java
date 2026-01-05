@@ -38,6 +38,8 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(END_MOSS);
         blockStateModelGenerator.registerSimpleCubeAll(NOISE);
         blockStateModelGenerator.registerSimpleCubeAll(VOID);
+        blockStateModelGenerator.registerSimpleCubeAll(CHECK_MARK);
+        blockStateModelGenerator.registerSimpleCubeAll(X_MARK);
 
 
         blockStateModelGenerator.registerSimpleCubeAll(BLACK_TERRACOTTA_BRICK);

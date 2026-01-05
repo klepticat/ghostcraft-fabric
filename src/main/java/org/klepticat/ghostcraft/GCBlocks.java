@@ -187,7 +187,6 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.FROGLIGHT),
             true
     );
-
     public static Block DARK_CHERRY_LOG = register(
             "dark_cherry_log",
             PillarBlock::new,
@@ -455,7 +454,28 @@ public class GCBlocks {
                     .burnable(),
             false
     );
-
+    public static Block CHECK_MARK = register(
+            "check_mark",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(0.4F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block X_MARK = register(
+            "x_mark",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(0.4F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
     public static Block TANGLEWOOD_LOG = register(
             "tanglewood_log",
             PillarBlock::new,

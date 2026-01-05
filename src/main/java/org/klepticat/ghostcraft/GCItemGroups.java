@@ -35,6 +35,8 @@ public class GCItemGroups {
                 entries.add(NOISE);
                 entries.add(VOID);
 
+                entries.add(CHECK_MARK);
+
                 entries.add(BLUE_NETHERRACK);
                 entries.add(BLUE_NETHERRACK_STAIRS);
                 entries.add(BLUE_NETHERRACK_SLAB);
