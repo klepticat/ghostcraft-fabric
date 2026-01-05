@@ -1,8 +1,6 @@
 package org.klepticat.ghostcraft.item;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.decoration.ArmorStandEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
@@ -26,7 +24,6 @@ import org.klepticat.ghostcraft.entity.TotemEntity;
 import org.klepticat.ghostcraft.util.types.TotemData;
 
 import java.util.List;
-import java.util.function.Consumer;
 
 import static org.klepticat.ghostcraft.GCCardinalComponents.PLAYER_TOTEM;
 
@@ -84,8 +81,6 @@ public class RelikItem extends Item {
                 }
 
                 if (world instanceof ServerWorld serverWorld) {
-                    // Why is this here I don't know what this does lol
-                    Consumer<ArmorStandEntity> consumer = EntityType.copier(serverWorld, itemStack, context.getPlayer());
                     TotemEntity totem = new TotemEntity(
                             GCEntityTypes.TOTEM,
                             this,
