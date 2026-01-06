@@ -166,6 +166,7 @@ public class GCBlocks {
             true
     );
 
+
     public static Block CABBAGE = register(
             "cabbage",
             Block::new,
@@ -292,6 +293,70 @@ public class GCBlocks {
                     .burnable(),
             false
     );
+
+    public static Block COBBLED_LIGHT_DREADSTONE = register(
+            "cobbled_light_dreadstone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+
+
+
+    public static Block COBBLED_DREADSTONE = register(
+            "cobbled_dreadstone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block DREADSTONE_PILLAR = register(
+            "dreadstone_pillar",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block DREADSTONE_DOOR = register(
+            "dreadstone_door",
+            settings -> new DoorBlock(BlockSetType.OAK, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true
+    );
+    public static Block MARBLED_FLESH = register(
+            "marbled_flesh",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.RED)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.FROGLIGHT),
+            true
+    );
+    public static Block SCALED_FLESH = register(
+            "scaled_flesh",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.RED)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.FROGLIGHT),
+            true
+    );
+
 
     public static Block EBONY_LOG = register(
             "ebony_log",

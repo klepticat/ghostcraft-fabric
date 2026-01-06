@@ -25,6 +25,7 @@ public class GCItemGroups {
 
                 entries.add(ANCIENT_OAK_DOOR);
                 entries.add(BOSS_DOOR);
+
                 entries.add(AURITE);
                 entries.add(AURORA_CRYSTAL);
                 entries.add(BLEEDING_COIL);
@@ -36,6 +37,17 @@ public class GCItemGroups {
                 entries.add(VOID);
 
                 entries.add(CHECK_MARK);
+                entries.add(X_MARK);
+
+                entries.add(COBBLED_LIGHT_DREADSTONE);
+
+
+                entries.add(COBBLED_DREADSTONE);
+                entries.add(DREADSTONE_PILLAR);
+                entries.add(DREADSTONE_DOOR);
+
+                entries.add(MARBLED_FLESH);
+                entries.add(SCALED_FLESH);
 
                 entries.add(BLUE_NETHERRACK);
                 entries.add(BLUE_NETHERRACK_STAIRS);

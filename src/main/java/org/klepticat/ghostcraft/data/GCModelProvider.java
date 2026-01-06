@@ -115,6 +115,15 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(ANCIENT_OAK_DOOR);
         blockStateModelGenerator.registerDoor(BOSS_DOOR);
 
+
+        blockStateModelGenerator.registerSimpleCubeAll(COBBLED_LIGHT_DREADSTONE);
+
+        blockStateModelGenerator.registerSimpleCubeAll(COBBLED_DREADSTONE);
+        blockStateModelGenerator.registerSingleton(DREADSTONE_PILLAR, TexturedModel.SIDE_TOP_BOTTOM_WALL);
+        blockStateModelGenerator.registerDoor(DREADSTONE_DOOR);
+
+        blockStateModelGenerator.registerSimpleCubeAll(MARBLED_FLESH);
+
         createLogWithVariants(GLOWSHROOM_LOG, 4, blockStateModelGenerator);
         createWoodWithVariants(GLOWSHROOM_WOOD, GLOWSHROOM_LOG, 4, blockStateModelGenerator);
         createLogWithVariants(STRIPPED_GLOWSHROOM_LOG, 4, blockStateModelGenerator);
