@@ -115,14 +115,31 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(ANCIENT_OAK_DOOR);
         blockStateModelGenerator.registerDoor(BOSS_DOOR);
 
-
         blockStateModelGenerator.registerSimpleCubeAll(COBBLED_LIGHT_DREADSTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(TILED_LIGHT_DREADSTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(POLISHED_LIGHT_DREADSTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(RIVETED_LIGHT_DREADSTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(BLOODY_LIGHT_DREADSTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(BLOODY_LIGHT_DREADSTONE_BRICKS);
+        blockStateModelGenerator.registerDoor(LIGHT_DREADSTONE_DOOR);
+
 
         blockStateModelGenerator.registerSimpleCubeAll(COBBLED_DREADSTONE);
-        blockStateModelGenerator.registerSingleton(DREADSTONE_PILLAR, TexturedModel.SIDE_TOP_BOTTOM_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(TILED_COBBLED_DREADSTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(GRATED_DREADSTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_WINDOW);
+        blockStateModelGenerator.registerSimpleCubeAll(POLISHED_CHISELED_DREADSTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(POLISHED_DREADSTONE);
+        blockStateModelGenerator.registerSingleton(DREADSTONE_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
+        blockStateModelGenerator.registerSingleton(CHISELED_DREADSTONE, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
         blockStateModelGenerator.registerDoor(DREADSTONE_DOOR);
+        blockStateModelGenerator.registerDoor(LOCKED_DREADSTONE_DOOR);
 
         blockStateModelGenerator.registerSimpleCubeAll(MARBLED_FLESH);
+        blockStateModelGenerator.registerSimpleCubeAll(SCALED_FLESH);
+        blockStateModelGenerator.registerSimpleCubeAll(CRIMSON_WOOL);
 
         createLogWithVariants(GLOWSHROOM_LOG, 4, blockStateModelGenerator);
         createWoodWithVariants(GLOWSHROOM_WOOD, GLOWSHROOM_LOG, 4, blockStateModelGenerator);
@@ -146,6 +163,12 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(STRIPPED_DARK_CHERRY_LOG).log(STRIPPED_DARK_CHERRY_LOG).wood(STRIPPED_DARK_CHERRY_WOOD);
 
         blockStateModelGenerator.registerHangingSign(STRIPPED_DARK_CHERRY_LOG, DARK_CHERRY_HANGING_SIGN, DARK_CHERRY_WALL_HANGING_SIGN);
+
+        BlockStateModelGenerator.BlockTexturePool amethystPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.AMETHYST_BLOCK);
+
+        amethystPool.stairs(AMETHYST_STAIRS);
+        amethystPool.slab(AMETHYST_SLAB);
+        amethystPool.wall(AMETHYST_WALL);
 
         BlockStateModelGenerator.BlockTexturePool blueNetherrackPool = blockStateModelGenerator.registerCubeAllModelTexturePool(BLUE_NETHERRACK);
 

@@ -39,15 +39,31 @@ public class GCItemGroups {
                 entries.add(CHECK_MARK);
                 entries.add(X_MARK);
 
+
                 entries.add(COBBLED_LIGHT_DREADSTONE);
+                entries.add(TILED_LIGHT_DREADSTONE);
+                entries.add(POLISHED_LIGHT_DREADSTONE);
+                entries.add(RIVETED_LIGHT_DREADSTONE);
+                entries.add(BLOODY_LIGHT_DREADSTONE);
+                entries.add(BLOODY_LIGHT_DREADSTONE_BRICKS);
+                entries.add(LIGHT_DREADSTONE_DOOR);
 
-
+                entries.add(DREADSTONE_BLOCK);
+                entries.add(DREADSTONE_BRICKS);
+                entries.add(GRATED_DREADSTONE);
+                entries.add(DREADSTONE_WINDOW);
+                entries.add(POLISHED_CHISELED_DREADSTONE);
+                entries.add(POLISHED_DREADSTONE);
                 entries.add(COBBLED_DREADSTONE);
+                entries.add(TILED_COBBLED_DREADSTONE);
                 entries.add(DREADSTONE_PILLAR);
+                entries.add(CHISELED_DREADSTONE);
                 entries.add(DREADSTONE_DOOR);
+                entries.add(LOCKED_DREADSTONE_DOOR);
 
                 entries.add(MARBLED_FLESH);
                 entries.add(SCALED_FLESH);
+                entries.add(CRIMSON_WOOL);
 
                 entries.add(BLUE_NETHERRACK);
                 entries.add(BLUE_NETHERRACK_STAIRS);

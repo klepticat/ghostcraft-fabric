@@ -96,6 +96,10 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.NETHERRACK),
             true
     );
+    public static Block AMETHYST_STAIRS = register("amethyst_stairs", settings -> new StairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.DRIPSTONE_BLOCK), true);
+    public static Block AMETHYST_SLAB = register("amethyst_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK), true);
+    public static Block AMETHYST_WALL = register("amethyst_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK), true);
+
     public static Block BLUE_NETHERRACK_STAIRS = register("blue_netherrack_stairs", settings -> new StairsBlock(BLUE_NETHERRACK.getDefaultState(), settings), AbstractBlock.Settings.copy(BLUE_NETHERRACK), true);
     public static Block BLUE_NETHERRACK_SLAB = register("blue_netherrack_slab", SlabBlock::new, AbstractBlock.Settings.copy(BLUE_NETHERRACK), true);
     public static Block BLUE_NETHERRACK_WALL = register("blue_netherrack_wall", WallBlock::new, AbstractBlock.Settings.copy(BLUE_NETHERRACK), true);
@@ -304,11 +308,140 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+    public static Block TILED_LIGHT_DREADSTONE = register(
+            "tiled_light_dreadstone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block POLISHED_LIGHT_DREADSTONE = register(
+            "polished_light_dreadstone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block RIVETED_LIGHT_DREADSTONE = register(
+            "riveted_light_dreadstone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block BLOODY_LIGHT_DREADSTONE = register(
+            "bloody_light_dreadstone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block BLOODY_LIGHT_DREADSTONE_BRICKS = register(
+            "bloody_light_dreadstone_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
 
 
-
+    public static Block DREADSTONE_BLOCK = register(
+            "dreadstone_block",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block DREADSTONE_BRICKS = register(
+            "dreadstone_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block GRATED_DREADSTONE = register(
+            "grated_dreadstone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block DREADSTONE_WINDOW = register(
+            "dreadstone_window",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block POLISHED_CHISELED_DREADSTONE = register(
+            "polished_chiseled_dreadstone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block POLISHED_DREADSTONE = register(
+            "polished_dreadstone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
     public static Block COBBLED_DREADSTONE = register(
             "cobbled_dreadstone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block TILED_COBBLED_DREADSTONE = register(
+            "tiled_cobbled_dreadstone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block CHISELED_DREADSTONE = register(
+            "chiseled_dreadstone",
             Block::new,
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DEEPSLATE_GRAY)
@@ -327,6 +460,19 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+    public static Block LIGHT_DREADSTONE_DOOR = register(
+            "light_dreadstone_door",
+            settings -> new DoorBlock(BlockSetType.OAK, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .solidBlock(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .nonOpaque()
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true
+    );
     public static Block DREADSTONE_DOOR = register(
             "dreadstone_door",
             settings -> new DoorBlock(BlockSetType.OAK, settings),
@@ -334,6 +480,21 @@ public class GCBlocks {
                     .mapColor(MapColor.DEEPSLATE_GRAY)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(3.0F)
+                    .solidBlock(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .nonOpaque()
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true
+    );
+    public static Block LOCKED_DREADSTONE_DOOR = register(
+            "locked_dreadstone_door",
+            settings -> new DoorBlock(BlockSetType.OAK, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .solidBlock(Blocks::never)
+                    .blockVision(Blocks::never)
                     .nonOpaque()
                     .pistonBehavior(PistonBehavior.DESTROY),
             true
@@ -349,6 +510,15 @@ public class GCBlocks {
     );
     public static Block SCALED_FLESH = register(
             "scaled_flesh",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.RED)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.FROGLIGHT),
+            true
+    );
+    public static Block CRIMSON_WOOL = register(
+            "crimson_wool",
             Block::new,
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.RED)
