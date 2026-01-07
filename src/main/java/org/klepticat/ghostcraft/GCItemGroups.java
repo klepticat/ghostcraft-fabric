@@ -38,7 +38,9 @@ public class GCItemGroups {
 
                 entries.add(CHECK_MARK);
                 entries.add(X_MARK);
-
+                entries.add(GRATED_IRON_TRAPDOOR);
+                entries.add(GRATED_SPRUCE_TRAPDOOR);
+                entries.add(DREADWOOD_TRAPDOOR);
 
                 entries.add(COBBLED_LIGHT_DREADSTONE);
                 entries.add(TILED_LIGHT_DREADSTONE);
@@ -47,10 +49,15 @@ public class GCItemGroups {
                 entries.add(BLOODY_LIGHT_DREADSTONE);
                 entries.add(BLOODY_LIGHT_DREADSTONE_BRICKS);
                 entries.add(LIGHT_DREADSTONE_DOOR);
+                entries.add(LIGHT_DREADSTONE_TRAPDOOR);
 
                 entries.add(DREADSTONE_BLOCK);
                 entries.add(DREADSTONE_BRICKS);
                 entries.add(GRATED_DREADSTONE);
+                entries.add(DREADSTONE_GRATE);
+                entries.add(DREADSTONE_GLASS);
+                entries.add(DREADSTONE_BARS);
+                entries.add(DREADSTONE_LAMP);
                 entries.add(DREADSTONE_WINDOW);
                 entries.add(POLISHED_CHISELED_DREADSTONE);
                 entries.add(POLISHED_DREADSTONE);
@@ -59,6 +66,7 @@ public class GCItemGroups {
                 entries.add(DREADSTONE_PILLAR);
                 entries.add(CHISELED_DREADSTONE);
                 entries.add(DREADSTONE_DOOR);
+                entries.add(DREADSTONE_TRAPDOOR);
                 entries.add(LOCKED_DREADSTONE_DOOR);
 
                 entries.add(MARBLED_FLESH);

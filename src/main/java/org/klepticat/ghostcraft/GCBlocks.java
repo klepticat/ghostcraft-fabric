@@ -298,6 +298,50 @@ public class GCBlocks {
             false
     );
 
+    public static Block GRATED_SPRUCE_TRAPDOOR = register(
+            "grated_spruce_trapdoor",
+            settings -> new TrapdoorBlock(BlockSetType.STONE, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never),
+            true
+    );
+    public static Block GRATED_IRON_TRAPDOOR = register(
+            "grated_iron_trapdoor",
+            settings -> new TrapdoorBlock(BlockSetType.IRON, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.IRON_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never),
+            true
+    );
+    public static Block DREADWOOD_TRAPDOOR = register(
+            "dreadwood_trapdoor",
+            settings -> new TrapdoorBlock(BlockSetType.OAK, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BROWN)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .solidBlock(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .nonOpaque()
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true
+    );
+
     public static Block COBBLED_LIGHT_DREADSTONE = register(
             "cobbled_light_dreadstone",
             Block::new,
@@ -368,6 +412,54 @@ public class GCBlocks {
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(1.0F)
                     .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block DREADSTONE_GLASS = register(
+            "dreadstone_glass",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .solidBlock(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .nonOpaque()
+                    .strength(1.0F)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .sounds(BlockSoundGroup.GLASS),
+            true
+    );
+    public static Block DREADSTONE_GRATE = register(
+            "dreadstone_grate",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .solidBlock(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .nonOpaque()
+                    .strength(1.0F)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .sounds(BlockSoundGroup.METAL),
+            true
+    );
+    public static Block DREADSTONE_LAMP = register(
+            "dreadstone_lamp",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS),
+            true
+    );
+    public static Block DREADSTONE_BARS = register(
+            "dreadstone_bars",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.METAL),
             true
     );
     public static Block DREADSTONE_BRICKS = register(
@@ -462,33 +554,67 @@ public class GCBlocks {
     );
     public static Block LIGHT_DREADSTONE_DOOR = register(
             "light_dreadstone_door",
-            settings -> new DoorBlock(BlockSetType.OAK, settings),
+            settings -> new DoorBlock(BlockSetType.STONE, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never),
+            true
+    );
+    public static Block LIGHT_DREADSTONE_TRAPDOOR = register(
+            "light_dreadstone_trapdoor",
+            settings -> new TrapdoorBlock(BlockSetType.STONE, settings),
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DEEPSLATE_GRAY)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(3.0F)
-                    .solidBlock(Blocks::never)
-                    .blockVision(Blocks::never)
                     .nonOpaque()
-                    .pistonBehavior(PistonBehavior.DESTROY),
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never),
             true
     );
     public static Block DREADSTONE_DOOR = register(
             "dreadstone_door",
-            settings -> new DoorBlock(BlockSetType.OAK, settings),
+            settings -> new DoorBlock(BlockSetType.STONE, settings),
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DEEPSLATE_GRAY)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(3.0F)
-                    .solidBlock(Blocks::never)
-                    .blockVision(Blocks::never)
                     .nonOpaque()
-                    .pistonBehavior(PistonBehavior.DESTROY),
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never),
+            true
+    );
+    public static Block DREADSTONE_TRAPDOOR = register(
+            "dreadstone_trapdoor",
+            settings -> new TrapdoorBlock(BlockSetType.STONE, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never),
             true
     );
     public static Block LOCKED_DREADSTONE_DOOR = register(
             "locked_dreadstone_door",
-            settings -> new DoorBlock(BlockSetType.OAK, settings),
+            settings -> new DoorBlock(BlockSetType.IRON, settings),
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DEEPSLATE_GRAY)
                     .instrument(NoteBlockInstrument.BASS)
@@ -514,7 +640,7 @@ public class GCBlocks {
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.RED)
                     .strength(1.0F)
-                    .sounds(BlockSoundGroup.FROGLIGHT),
+                    .sounds(BlockSoundGroup.NYLIUM),
             true
     );
     public static Block CRIMSON_WOOL = register(
@@ -523,7 +649,7 @@ public class GCBlocks {
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.RED)
                     .strength(1.0F)
-                    .sounds(BlockSoundGroup.FROGLIGHT),
+                    .sounds(BlockSoundGroup.WOOL),
             true
     );
 

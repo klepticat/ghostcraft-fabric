@@ -114,6 +114,10 @@ public class GCModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerDoor(ANCIENT_OAK_DOOR);
         blockStateModelGenerator.registerDoor(BOSS_DOOR);
+        blockStateModelGenerator.registerTrapdoor(GRATED_IRON_TRAPDOOR);
+        blockStateModelGenerator.registerTrapdoor(GRATED_SPRUCE_TRAPDOOR);
+        blockStateModelGenerator.registerTrapdoor(DREADWOOD_TRAPDOOR);
+
 
         blockStateModelGenerator.registerSimpleCubeAll(COBBLED_LIGHT_DREADSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(TILED_LIGHT_DREADSTONE);
@@ -127,6 +131,10 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(COBBLED_DREADSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(TILED_COBBLED_DREADSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_BLOCK);
+       // blockStateModelGenerator.registerRedstoneLamp(DREADSTONE_LAMP);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GRATE);
+        //blockStateModelGenerator.registerIronBars(DREADSTONE_BARS);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS);
         blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(GRATED_DREADSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_WINDOW);
@@ -135,6 +143,7 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSingleton(DREADSTONE_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
         blockStateModelGenerator.registerSingleton(CHISELED_DREADSTONE, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
         blockStateModelGenerator.registerDoor(DREADSTONE_DOOR);
+        blockStateModelGenerator.registerTrapdoor(DREADSTONE_TRAPDOOR);
         blockStateModelGenerator.registerDoor(LOCKED_DREADSTONE_DOOR);
 
         blockStateModelGenerator.registerSimpleCubeAll(MARBLED_FLESH);
