@@ -1,7 +1,10 @@
 package org.klepticat.ghostcraft;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.item.*;
+import net.minecraft.item.GoatHornItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -71,7 +74,9 @@ public class GCItemGroups {
 
                 entries.add(MARBLED_FLESH);
                 entries.add(SCALED_FLESH);
+
                 entries.add(CRIMSON_WOOL);
+                entries.add(CRIMSON_CARPET);
 
                 entries.add(BLUE_NETHERRACK);
                 entries.add(BLUE_NETHERRACK_STAIRS);

@@ -53,6 +53,18 @@ public class GCBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY),
             true
     );
+    public static Block SKYRIS_BOOKSHELF = register(
+            "skyris_bookshelf",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .nonOpaque()
+                    .burnable(),
+            true
+    );
     public static Block AURITE = register(
             "aurite",
             Block::new,
@@ -416,16 +428,17 @@ public class GCBlocks {
     );
     public static Block DREADSTONE_GLASS = register(
             "dreadstone_glass",
-            Block::new,
+            TransparentBlock::new,
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DEEPSLATE_GRAY)
                     .instrument(NoteBlockInstrument.BASS)
-                    .solidBlock(Blocks::never)
-                    .blockVision(Blocks::never)
-                    .nonOpaque()
                     .strength(1.0F)
-                    .pistonBehavior(PistonBehavior.DESTROY)
-                    .sounds(BlockSoundGroup.GLASS),
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never),
             true
     );
     public static Block DREADSTONE_GRATE = register(
@@ -444,17 +457,18 @@ public class GCBlocks {
     );
     public static Block DREADSTONE_LAMP = register(
             "dreadstone_lamp",
-            Block::new,
+            RedstoneLampBlock::new,
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DEEPSLATE_GRAY)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(1.0F)
-                    .sounds(BlockSoundGroup.GLASS),
+                    .sounds(BlockSoundGroup.GLASS)
+                    .luminance(Blocks.createLightLevelFromLitBlockState(15)),
             true
     );
     public static Block DREADSTONE_BARS = register(
             "dreadstone_bars",
-            Block::new,
+            PaneBlock::new,
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DEEPSLATE_GRAY)
                     .instrument(NoteBlockInstrument.BASS)
@@ -650,6 +664,16 @@ public class GCBlocks {
                     .mapColor(MapColor.RED)
                     .strength(1.0F)
                     .sounds(BlockSoundGroup.WOOL),
+            true
+    );
+    public static Block CRIMSON_CARPET = register(
+            "crimson_carpet",
+            CarpetBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.RED)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .pistonBehavior(PistonBehavior.DESTROY),
             true
     );
 

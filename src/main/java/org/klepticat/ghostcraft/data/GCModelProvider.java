@@ -28,6 +28,9 @@ public class GCModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ADENDA_LEAVES);
+
+        blockStateModelGenerator.registerSimpleCubeAll(SKYRIS_BOOKSHELF);
+
         blockStateModelGenerator.registerSimpleCubeAll(AURITE);
         blockStateModelGenerator.registerSimpleCubeAll(AURORA_CRYSTAL);
         blockStateModelGenerator.registerSimpleCubeAll(BLEEDING_COIL);
@@ -126,14 +129,15 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(BLOODY_LIGHT_DREADSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(BLOODY_LIGHT_DREADSTONE_BRICKS);
         blockStateModelGenerator.registerDoor(LIGHT_DREADSTONE_DOOR);
+        blockStateModelGenerator.registerTrapdoor(LIGHT_DREADSTONE_TRAPDOOR);
 
 
         blockStateModelGenerator.registerSimpleCubeAll(COBBLED_DREADSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(TILED_COBBLED_DREADSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_BLOCK);
-       // blockStateModelGenerator.registerRedstoneLamp(DREADSTONE_LAMP);
+        registerRedstoneActivatedLamp(DREADSTONE_LAMP, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GRATE);
-        //blockStateModelGenerator.registerIronBars(DREADSTONE_BARS);
+        registerBars(DREADSTONE_BARS, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS);
         blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(GRATED_DREADSTONE);
@@ -148,7 +152,7 @@ public class GCModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleCubeAll(MARBLED_FLESH);
         blockStateModelGenerator.registerSimpleCubeAll(SCALED_FLESH);
-        blockStateModelGenerator.registerSimpleCubeAll(CRIMSON_WOOL);
+        blockStateModelGenerator.registerWoolAndCarpet(CRIMSON_WOOL, CRIMSON_CARPET);
 
         createLogWithVariants(GLOWSHROOM_LOG, 4, blockStateModelGenerator);
         createWoodWithVariants(GLOWSHROOM_WOOD, GLOWSHROOM_LOG, 4, blockStateModelGenerator);
@@ -308,6 +312,9 @@ public class GCModelProvider extends FabricModelProvider {
         registerHandheldItem(GCItems.CROWBAR, "util/", itemModelGenerator);
         registerHandheldItem(GCItems.SPELL_SCROLL, "util/", itemModelGenerator);
         registerPlaceableItem(GCItems.MARIAH, "placeables/", itemModelGenerator);
+
+        registerGeneratedItem(DARK_CHERRY_SIGN.asItem(), "", itemModelGenerator);
+        registerGeneratedItem(EBONY_SIGN.asItem(), "", itemModelGenerator);
 
         GCItems.GENERIC_FOODS_SET.forEach(item -> {
             registerGeneratedItem(item, "foods/", itemModelGenerator);
@@ -483,6 +490,86 @@ public class GCModelProvider extends FabricModelProvider {
         return BlockStateVariant.create()
                 .put(VariantSettings.MODEL, identifier)
                 .put(VariantSettings.X, VariantSettings.Rotation.R90);
+    }
+
+    public static void registerRedstoneActivatedLamp(Block block, BlockStateModelGenerator generator) {
+        Identifier identifier = TexturedModel.CUBE_ALL.upload(block, generator.modelCollector);
+        Identifier identifier2 = generator.createSubModel(block, "_on", Models.CUBE_ALL, TextureMap::all);
+        generator.blockStateCollector.accept(
+                VariantsBlockStateSupplier.create(block)
+                        .coordinate(
+                                BlockStateModelGenerator.createBooleanModelMap(Properties.LIT, identifier2, identifier)
+                        )
+        );
+    }
+
+    public static void registerBars(Block block, BlockStateModelGenerator generator) {
+        Identifier id_post_ends = ModelIds.getBlockSubModelId(block, "_post_ends");
+        Identifier id_post = ModelIds.getBlockSubModelId(block, "_post");
+        Identifier id_cap = ModelIds.getBlockSubModelId(block, "_cap");
+        Identifier id_cap_alt = ModelIds.getBlockSubModelId(block, "_cap_alt");
+        Identifier id_side = ModelIds.getBlockSubModelId(block, "_side");
+        Identifier id_side_alt = ModelIds.getBlockSubModelId(block, "_side_alt");
+
+        TextureKey bars = TextureKey.of("bars");
+
+        TextureMap barsMap = new TextureMap()
+                .put(TextureKey.PARTICLE, Registries.BLOCK.getId(block).withPrefixedPath("block/"))
+                .put(bars, Registries.BLOCK.getId(block).withPrefixedPath("block/"));
+
+
+        TextureMap barsAndEdgeMap = barsMap.copyAndAdd(TextureKey.EDGE, Registries.BLOCK.getId(block).withPrefixedPath("block/"));
+
+        Model cap = new Model(Optional.of(Identifier.of("block/iron_bars_cap")), Optional.empty(), TextureKey.PARTICLE, bars, TextureKey.EDGE);
+        Model cap_alt = new Model(Optional.of(Identifier.of("block/iron_bars_cap_alt")), Optional.empty(), TextureKey.PARTICLE, bars, TextureKey.EDGE);
+        Model side = new Model(Optional.of(Identifier.of("block/iron_bars_side")), Optional.empty(), TextureKey.PARTICLE, bars, TextureKey.EDGE);
+        Model side_alt = new Model(Optional.of(Identifier.of("block/iron_bars_side_alt")), Optional.empty(), TextureKey.PARTICLE, bars, TextureKey.EDGE);
+        Model post = new Model(Optional.of(Identifier.of("block/iron_bars_post")), Optional.empty(), TextureKey.PARTICLE, bars);
+        Model post_ends = new Model(Optional.of(Identifier.of("block/iron_bars_post_ends")), Optional.empty(), TextureKey.PARTICLE, TextureKey.EDGE);
+
+        cap.upload(id_cap, barsAndEdgeMap, generator.modelCollector);
+        cap_alt.upload(id_cap_alt, barsAndEdgeMap, generator.modelCollector);
+        side.upload(id_side, barsAndEdgeMap, generator.modelCollector);
+        side_alt.upload(id_side_alt, barsAndEdgeMap, generator.modelCollector);
+        post.upload(id_post, barsMap, generator.modelCollector);
+        post_ends.upload(id_post_ends, barsAndEdgeMap, generator.modelCollector);
+
+        generator.blockStateCollector
+                .accept(
+                        MultipartBlockStateSupplier.create(block)
+                                .with(BlockStateVariant.create().put(VariantSettings.MODEL, id_post_ends))
+                                .with(
+                                        When.create().set(Properties.NORTH, false).set(Properties.EAST, false).set(Properties.SOUTH, false).set(Properties.WEST, false),
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, id_post)
+                                )
+                                .with(
+                                        When.create().set(Properties.NORTH, true).set(Properties.EAST, false).set(Properties.SOUTH, false).set(Properties.WEST, false),
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, id_cap)
+                                )
+                                .with(
+                                        When.create().set(Properties.NORTH, false).set(Properties.EAST, true).set(Properties.SOUTH, false).set(Properties.WEST, false),
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, id_cap).put(VariantSettings.Y, VariantSettings.Rotation.R90)
+                                )
+                                .with(
+                                        When.create().set(Properties.NORTH, false).set(Properties.EAST, false).set(Properties.SOUTH, true).set(Properties.WEST, false),
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, id_cap_alt)
+                                )
+                                .with(
+                                        When.create().set(Properties.NORTH, false).set(Properties.EAST, false).set(Properties.SOUTH, false).set(Properties.WEST, true),
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, id_cap_alt).put(VariantSettings.Y, VariantSettings.Rotation.R90)
+                                )
+                                .with(When.create().set(Properties.NORTH, true), BlockStateVariant.create().put(VariantSettings.MODEL, id_side))
+                                .with(
+                                        When.create().set(Properties.EAST, true),
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, id_side).put(VariantSettings.Y, VariantSettings.Rotation.R90)
+                                )
+                                .with(When.create().set(Properties.SOUTH, true), BlockStateVariant.create().put(VariantSettings.MODEL, id_side_alt))
+                                .with(
+                                        When.create().set(Properties.WEST, true),
+                                        BlockStateVariant.create().put(VariantSettings.MODEL, id_side_alt).put(VariantSettings.Y, VariantSettings.Rotation.R90)
+                                )
+                );
+        generator.registerItemModel(block);
     }
 
     public static void registerGeneratedItem(Item item, String prefix, ItemModelGenerator generator) {

@@ -19,7 +19,6 @@ import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FishingRodItem;
-import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import org.klepticat.ghostcraft.block.BlockType;
 import org.klepticat.ghostcraft.entity.GCPlayerEntityStickers;
@@ -29,8 +28,7 @@ import org.klepticat.ghostcraft.render.entity.feature.ExtendedElytraFeatureRende
 import org.klepticat.ghostcraft.render.entity.model.RatEntityModel;
 import org.klepticat.ghostcraft.render.item.trinkets.HatRenderer;
 
-import static org.klepticat.ghostcraft.GCBlocks.DARK_CHERRY_SET;
-import static org.klepticat.ghostcraft.GCBlocks.GLOWSHROOM_SET;
+import static org.klepticat.ghostcraft.GCBlocks.*;
 import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
 
 public class GhostCraftClient implements ClientModInitializer {
@@ -155,6 +153,16 @@ public class GhostCraftClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(DARK_CHERRY_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GLOWSHROOM_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GLOWSHROOM_SET.get(BlockType.DOOR), RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_DOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_TRAPDOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(LOCKED_DREADSTONE_DOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GRATE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_BARS, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(GRATED_IRON_TRAPDOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GRATED_SPRUCE_TRAPDOOR, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.BLACK_CORUNDUM_CLUSTER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.BLUE_CORUNDUM_CLUSTER, RenderLayer.getCutout());

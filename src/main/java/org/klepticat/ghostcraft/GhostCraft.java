@@ -72,6 +72,7 @@ public class GhostCraft implements ModInitializer {
             content.addAfter(Items.REINFORCED_DEEPSLATE, Items.DRIPSTONE_BLOCK, GCBlocks.DRIPSTONE_STAIRS, GCBlocks.DRIPSTONE_SLAB, GCBlocks.DRIPSTONE_WALL);
             content.addAfter(Items.NETHERRACK, GCBlocks.NETHERRACK_STAIRS, GCBlocks.NETHERRACK_SLAB, GCBlocks.NETHERRACK_WALL, GCBlocks.NETHERRACK_FENCE);
             content.addAfter(Items.SMOOTH_BASALT, GCBlocks.SMOOTH_BASALT_STAIRS, GCBlocks.SMOOTH_BASALT_SLAB, GCBlocks.SMOOTH_BASALT_WALL);
+			content.addAfter(Items.AMETHYST_BLOCK, GCBlocks.AMETHYST_STAIRS, GCBlocks.AMETHYST_SLAB, GCBlocks.AMETHYST_WALL);
         });
 	}
 }
