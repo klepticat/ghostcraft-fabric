@@ -340,12 +340,32 @@ public class GCModelProvider extends FabricModelProvider {
             registerGeneratedItem(item, "evo_stones/", itemModelGenerator);
         });
 
+        GCItems.SPOOL_SET.forEach(item -> {
+            registerGeneratedItem(item, "tradeskill/spools/", itemModelGenerator);
+        });
+
+        GCItems.BAR_SET.forEach(item -> {
+            registerGeneratedItem(item, "tradeskill/ores-bars/", itemModelGenerator);
+        });
+
+        GCItems.FISHING_SET.forEach(item -> {
+            registerGeneratedItem(item, "tradeskill/fishing/", itemModelGenerator);
+        });
+
+        GCItems.MISC_SET.forEach(item -> {
+            registerGeneratedItem(item, "unsorted/", itemModelGenerator);
+        });
+
         GCItems.FLAG_SET.forEach(item -> {
             registerPlaceableItem(item, "placeables/flags/", itemModelGenerator);
         });
 
         GCItems.PUMPKIN_SET.forEach(item -> {
             registerTileItem(item, "placeables/decorations/pumpkins/", itemModelGenerator);
+        });
+
+        GCItems.GEMSTONE_SET.forEach(item -> {
+            registerTileItem(item, "loot/gemstones/", itemModelGenerator);
         });
 
         GCItems.ElytraItems.ELYTRA_SET.forEach(item -> {

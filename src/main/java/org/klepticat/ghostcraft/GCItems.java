@@ -3117,6 +3117,208 @@ public class GCItems {
     public static final Item TWIG_ROD = registerWithSet("twig_rod", new FishingRodItem(new Item.Settings().maxDamage(64)), ROD_SET);
     public static final Item UNDYING_ROD = registerWithSet("undying_rod", new FishingRodItem(new Item.Settings().maxDamage(64)), ROD_SET);
 
+
+
+
+
+
+    // UNSORTED FROM KATS STUFF ( CHILLI ZONE ) - please sort into your stuff how you see fit
+
+
+
+
+    //fish
+    public static final Item KOI = registerWithSet("koi", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item PICKLE = registerWithSet("pickle", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item PARROT_FISH = registerWithSet("parrotfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item REEF = registerWithSet("reef", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item SAMIN = registerWithSet("samin", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item STARFISH = registerWithSet("starfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item MOLTEN_EEL = registerWithSet("molten_eel", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item ANOMALOCARIS = registerWithSet("cuttlefish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item CATFISH = registerWithSet("catfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item BARBOACH = registerWithSet("barboach", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item GHOST_SHRIMP = registerWithSet("ghost_shrimp", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item HECTEYE_FISH = registerWithSet("hecteye_fish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item CANDY_CARP = registerWithSet("candy_carp", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item MINITHULHU = registerWithSet("minithulhu", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item ZOMBIE_FISH = registerWithSet("zombie_fish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item ANGLER_BLUE = registerWithSet("angler_blue", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item ANGY_TIM = registerWithSet("angy_tim", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item BLOBFISH = registerWithSet("blobfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item CLAM = registerWithSet("clam", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item COCKLE = registerWithSet("cockle", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item CRAB = registerWithSet("crab", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item EEL_B = registerWithSet("eel_b", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item EEL_ELE = registerWithSet("eel_ele", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item FLYING_FISH = registerWithSet("flying_fish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item GLACIERFISH = registerWithSet("glacierfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item HAPPY_TIM = registerWithSet("happy_tim", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item MUTANTCARP = registerWithSet("mutantcarp", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item OCTOPUS = registerWithSet("octopus", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item PERIWINKLE = registerWithSet("periwinkle", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item SEA_BUN = registerWithSet("sea_bun", new Item(new Item.Settings()), FISH_SET);
+    public static final Item SHRIMP = registerWithSet("shrimp", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item POCKET_SNIBLING = registerWithSet("snail", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item SPOOKFISH = registerWithSet("spookfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item SQUID = registerWithSet("squid", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item SQUID_G = registerWithSet("squid_g", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item SQUID_R = registerWithSet("squid_r", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+
+
+//bobbers, bait
+public static final HashSet<Item> FISHING_SET = new HashSet<>();
+    public static final Item LURE_BOBBER = registerWithSet("lure_bobber", new Item(new Item.Settings()), FISHING_SET);
+    public static final Item LURE_CURIO = registerWithSet("lure_curio", new Item(new Item.Settings()), FISHING_SET);
+    public static final Item LURE_DRESS = registerWithSet("lure_dress", new Item(new Item.Settings()), FISHING_SET);
+    public static final Item LURE_HOOK = registerWithSet("lure_hook", new Item(new Item.Settings()), FISHING_SET);
+    public static final Item LURE_SPIN = registerWithSet("lure_spin", new Item(new Item.Settings()), FISHING_SET);
+
+    public static final Item BAIT_C = registerWithSet("bait_c", new Item(new Item.Settings()), FISHING_SET);
+    public static final Item BAIT_M = registerWithSet("bait_m", new Item(new Item.Settings()), FISHING_SET);
+
+
+//THREAD SPOOLS
+    public static final HashSet<Item> SPOOL_SET = new HashSet<>();
+
+    public static final Item SPOOL_BLACK = registerWithSet("spool_black", new Item(new Item.Settings()), SPOOL_SET);
+    public static final Item SPOOL_BLUE = registerWithSet("spool_blue", new Item(new Item.Settings()), SPOOL_SET);
+    public static final Item SPOOL_BROWN = registerWithSet("spool_brown", new Item(new Item.Settings()), SPOOL_SET);
+    public static final Item SPOOL_CYAN = registerWithSet("spool_cyan", new Item(new Item.Settings()), SPOOL_SET);
+    public static final Item SPOOL_GRAY = registerWithSet("spool_gray", new Item(new Item.Settings()), SPOOL_SET);
+    public static final Item SPOOL_GREEN = registerWithSet("spool_green", new Item(new Item.Settings()), SPOOL_SET);
+    public static final Item SPOOL_LIGHTGRAY = registerWithSet("spool_lightgray", new Item(new Item.Settings()), SPOOL_SET);
+    public static final Item SPOOL_LIGHTBLUE = registerWithSet("spool_lightblue", new Item(new Item.Settings()), SPOOL_SET);
+    public static final Item SPOOL_LIME = registerWithSet("spool_lime", new Item(new Item.Settings()), SPOOL_SET);
+    public static final Item SPOOL_MAGENTA = registerWithSet("spool_magenta", new Item(new Item.Settings()), SPOOL_SET);
+    public static final Item SPOOL_ORANGE = registerWithSet("spool_orange", new Item(new Item.Settings()), SPOOL_SET);
+    public static final Item SPOOL_PINK = registerWithSet("spool_pink", new Item(new Item.Settings()), SPOOL_SET);
+    public static final Item SPOOL_PURPLE = registerWithSet("spool_purple", new Item(new Item.Settings()), SPOOL_SET);
+    public static final Item SPOOL_RED = registerWithSet("spool_red", new Item(new Item.Settings()), SPOOL_SET);
+    public static final Item SPOOL_WHITE = registerWithSet("spool_white", new Item(new Item.Settings()), SPOOL_SET);
+    public static final Item SPOOL_YELLOW = registerWithSet("spool_yellow", new Item(new Item.Settings()), SPOOL_SET);
+
+
+//misc
+public static final HashSet<Item> MISC_SET = new HashSet<>();
+
+    public static final Item ASH = registerWithSet("ash", new Item(new Item.Settings()), MISC_SET);
+    public static final Item OIL = registerWithSet("oil", new Item(new Item.Settings()), MISC_SET);
+    public static final Item GREASE = registerWithSet("grease", new Item(new Item.Settings()), MISC_SET);
+    public static final Item DRIFTWOOD = registerWithSet("driftwood", new Item(new Item.Settings()), MISC_SET);
+    public static final Item MUG = registerWithSet("mug", new Item(new Item.Settings()), MISC_SET);
+
+    public static final Item CONTRACT = registerWithSet("contract", new Item(new Item.Settings()), MISC_SET);
+    public static final Item INKWELL = registerWithSet("inkwell", new Item(new Item.Settings()), MISC_SET);
+    public static final Item NETHER_PAPER = registerWithSet("nether_paper", new Item(new Item.Settings()), MISC_SET);
+    public static final Item PARCHMENT = registerWithSet("parchment", new Item(new Item.Settings()), MISC_SET);
+    public static final Item PARCHMENT_SCROLL = registerWithSet("parchment_scroll", new Item(new Item.Settings()), MISC_SET);
+    public static final Item QUILL = registerWithSet("quill", new Item(new Item.Settings()), MISC_SET);
+    public static final Item GLOWSTONE_VIAL = registerWithSet("glowstone_vial", new Item(new Item.Settings()), MISC_SET);
+    public static final Item REDSTONE_VIAL = registerWithSet("redstone_vial", new Item(new Item.Settings()), MISC_SET);
+    public static final Item BARLEY = registerWithSet("barley", new Item(new Item.Settings()), MISC_SET);
+    public static final Item FUNKY_BUMGIN = registerWithSet("funky_bumgin", new Item(new Item.Settings()), MISC_SET);
+    public static final Item PUMBIM = registerWithSet("pumbim", new Item(new Item.Settings()), MISC_SET);
+    public static final Item STINKY_BUMGIN = registerWithSet("stinky_bumgin", new Item(new Item.Settings()), MISC_SET);
+
+//ores/bars/rocks
+public static final HashSet<Item> BAR_SET = new HashSet<>();
+
+
+    public static final Item BLOODSTONE_INGOT = registerWithSet("bloodstone", new Item(new Item.Settings()), BAR_SET);
+    public static final Item CHLOROPHYTE_INGOT = registerWithSet("chlorophyte", new Item(new Item.Settings()), BAR_SET);
+    public static final Item COBALT_INGOT = registerWithSet("cobalt_ingot", new Item(new Item.Settings()), BAR_SET);
+    public static final Item COBALT_ORE = registerWithSet("cobalt_ore", new Item(new Item.Settings()), BAR_SET);
+    public static final Item COILITE = registerWithSet("coilite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item COPPER_NUG = registerWithSet("copper_nug", new Item(new Item.Settings()), BAR_SET);
+    public static final Item EVERFROST_CRYSTAL = registerWithSet("ef_crystal", new Item(new Item.Settings()), BAR_SET);
+    public static final Item ELTORVURIA = registerWithSet("eltorvuria", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item ENDERITE_INGOT = registerWithSet("enderite_ingot", new Item(new Item.Settings()), BAR_SET);
+    public static final Item ENDERITE_SCRAP = registerWithSet("enderite_scrap", new Item(new Item.Settings()), BAR_SET);
+    public static final Item RAINBOW_INGOT = registerWithSet("rainbow_ingot", new Item(new Item.Settings()), BAR_SET);
+    public static final Item MANA_SHARD = registerWithSet("mana_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item RIFT_FRAGMENT = registerWithSet("rift_fragment", new Item(new Item.Settings()), BAR_SET);
+    public static final Item SCULK_INGOT = registerWithSet("sculk", new Item(new Item.Settings()), BAR_SET);
+    public static final Item SHADOWSTEEL_INGOT = registerWithSet("shadowsteel", new Item(new Item.Settings()), BAR_SET);
+    public static final Item SILVERINE_INGOT = registerWithSet("silverine", new Item(new Item.Settings()), BAR_SET);
+    public static final Item SOULSTEEL_INGOT = registerWithSet("soulsteel", new Item(new Item.Settings()), BAR_SET);
+    public static final Item STEEL_INGOT = registerWithSet("steel_bar", new Item(new Item.Settings()), BAR_SET);
+    public static final Item TECTILE = registerWithSet("tectile", new Item(new Item.Settings()), BAR_SET);
+    public static final Item UNSTABLE_WAND = registerWithSet("unstable_wand", new Item(new Item.Settings()), BAR_SET);
+    public static final Item URANIUM_CHUNK = registerWithSet("uranium_chunk", new Item(new Item.Settings()), BAR_SET);
+    public static final Item WARP_CORE = registerWithSet("warp", new Item(new Item.Settings()), BAR_SET);
+    public static final Item AURA_WAND = registerWithSet("aura_wand", new Item(new Item.Settings()), BAR_SET);
+
+
+    public static final Item FOSSIL_FEATHER = registerWithSet("fossil_feather", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item FOSSIL_HORSESHOE = registerWithSet("fossil_horseshoe", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item FOSSIL_SKULL = registerWithSet("fossil_skull", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item FOSSIL_IMPRINT = registerWithSet("fossil_imprint", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item MAGMAEGG = registerWithSet("magmaegg", new Item(new Item.Settings()), GEMSTONE_SET);
+
+    public static final Item SOUL_SHARD = registerWithSet("shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item SHADOW_GEM = registerWithSet("shadgem", new Item(new Item.Settings()), GEMSTONE_SET);
+
+    public static final Item FLUXITE_INGOT = registerWithSet("fluxite_ingot", new Item(new Item.Settings()), BAR_SET);
+    public static final Item COILITE_INGOT = registerWithSet("coilite_ingot", new Item(new Item.Settings()), BAR_SET);
+    public static final Item AURITE_INGOT = registerWithSet("aurite_ingot", new Item(new Item.Settings()), BAR_SET);
+
+
+    //ROCKS
+    public static final Item AERINITE = registerWithSet("aerinite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item AMBER_CHUNK = registerWithSet("amber_chunk", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item BIXBYITE = registerWithSet("bixbyite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item BLEEDING_GEODE = registerWithSet("bleedinggeode", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item CALCITE_GOLDEN = registerWithSet("calcite_golden", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item CHALCEDONY = registerWithSet("chalcedony", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item QUARTZ_CHERRY = registerWithSet("cherryquartz", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item CROWSTONE = registerWithSet("crow_stone", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item DEAD_GEODE = registerWithSet("deadgeode", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item DESERT_ROSE = registerWithSet("desertrose", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item RAW_EMERALD = registerWithSet("emerald_raw", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item ESPERITE = registerWithSet("esperite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item FAE_CRYSTAL = registerWithSet("fae", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item FLUORAPATITE = registerWithSet("fluorapatite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item GEMINITE = registerWithSet("geminite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item GHOST_CRYSTAL = registerWithSet("ghost_crystal", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item GRANITE_CHUNK = registerWithSet("granite_chunk", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item HELVITE = registerWithSet("helvite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item HEMATITE = registerWithSet("hematite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item IMMACULATE_DIAMOND = registerWithSet("immaculatediamond", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item INFESTED_GEODE = registerWithSet("infestedgeode", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item RAW_JADE = registerWithSet("jade_raw", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item JAGOITE = registerWithSet("jagoite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item JAMBORITE = registerWithSet("jamborite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item JASPER = registerWithSet("jasper", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item KYANITE = registerWithSet("kyanite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item LIMESTONE_CHUNK = registerWithSet("limestone", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item LOTUS_STONE = registerWithSet("lotus_stone", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item MALACHITE = registerWithSet("malachite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item MANA_CRYSTAL = registerWithSet("mana_crystal", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item MARBLE = registerWithSet("marble_chunk", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item MINKENITE = registerWithSet("minkenite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item MUDSTONE = registerWithSet("mudstone_chunk", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item NEPTUNITE = registerWithSet("neptunite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item BROWN_NEPTUNITE = registerWithSet("neptunite_brown", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item OBSIDIAN_CHUNK = registerWithSet("obsidian_chunk", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item OCEAN_PICTURE_STONE = registerWithSet("oceanite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item PUMICE_CHUNK = registerWithSet("pumice_chunk", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item PYRITE = registerWithSet("pyrite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item QUARTZ_SHARD = registerWithSet("quartz", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item RAW_AURITE = registerWithSet("raw_aurite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item ROSE_QUARTZ_SHARD = registerWithSet("rose", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item SAKURASTONE = registerWithSet("sakurastone", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item SANDSTONE_CHUNK = registerWithSet("sandstone_chunk", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item SLATE_CHUNK = registerWithSet("slate_chunk", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item SOAPSTONE_CHUNK = registerWithSet("soapstone_chunk", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item SOLSTONE = registerWithSet("solstone", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item SPECTRALITE = registerWithSet("spectralite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item STAR_BIT = registerWithSet("star_bit", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item THUNDEREGG = registerWithSet("thunderegg", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item UNCUT_GEODE = registerWithSet("uncutgeode", new Item(new Item.Settings()), GEMSTONE_SET);
+
+
+
     public static void initialize() {
         ArcherItems.initialize();
         AssassinItems.initialize();

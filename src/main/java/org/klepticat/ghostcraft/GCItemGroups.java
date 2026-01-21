@@ -308,6 +308,8 @@ public class GCItemGroups {
                 entries.addAll(toList(POUCH_SET));
                 entries.addAll(toList(GEMSTONE_SET));
                 entries.addAll(toList(EVO_SET));
+                entries.addAll(toList(BAR_SET));
+                entries.addAll(toList(SPOOL_SET));
             })
     );
 
