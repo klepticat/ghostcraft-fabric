@@ -3050,7 +3050,7 @@ public class GCItems {
     public static final Item CARD = register("card", new Item(new Item.Settings()));
     public static final Item CERAMIC_FUSE = register("ceramic_fuse", new Item(new Item.Settings()));
     public static final Item CIRCUIT_BOARD = register("circuit_board", new Item(new Item.Settings()));
-    public static final Item COIL = register("coil", new Item(new Item.Settings()));
+    public static final Item COPPER_COIL = register("copper_coil", new Item(new Item.Settings()));
     public static final Item COMPOSITE_PLATING = register("composite_plating", new Item(new Item.Settings()));
     public static final Item DIODE = register("diode", new Item(new Item.Settings()));
     public static final Item ELECTRIC_MOTOR = register("electric_motor", new Item(new Item.Settings()));
@@ -3316,7 +3316,8 @@ public static final HashSet<Item> BAR_SET = new HashSet<>();
     public static final Item STAR_BIT = registerWithSet("star_bit", new Item(new Item.Settings()), GEMSTONE_SET);
     public static final Item THUNDEREGG = registerWithSet("thunderegg", new Item(new Item.Settings()), GEMSTONE_SET);
     public static final Item UNCUT_GEODE = registerWithSet("uncutgeode", new Item(new Item.Settings()), GEMSTONE_SET);
-
+    public static final Item MANA_GEM = registerWithSet("mana_gem", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item SILVER_RUPEE = registerWithSet("silver_rupee", new Item(new Item.Settings()), GEMSTONE_SET);
 
 
     public static void initialize() {

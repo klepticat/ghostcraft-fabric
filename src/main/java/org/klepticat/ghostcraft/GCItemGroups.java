@@ -429,7 +429,7 @@ public class GCItemGroups {
                 entries.add(CARD);
                 entries.add(CERAMIC_FUSE);
                 entries.add(CIRCUIT_BOARD);
-                entries.add(COIL);
+                entries.add(COPPER_COIL);
                 entries.add(COMPOSITE_PLATING);
                 entries.add(DIODE);
                 entries.add(ELECTRIC_MOTOR);
