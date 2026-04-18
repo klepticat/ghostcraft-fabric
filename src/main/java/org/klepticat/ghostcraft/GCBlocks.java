@@ -354,7 +354,7 @@ public class GCBlocks {
             true
     );
 
-    public static Block COBBLED_LIGHT_DREADSTONE = register(
+    public static Block LIGHT_COBBLED_DREADSTONE = register(
             "cobbled_light_dreadstone",
             Block::new,
             AbstractBlock.Settings.create()
@@ -364,6 +364,10 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+    public static Block LIGHT_COBBLED_DREADSTONE_STAIRS = register("cobbled_light_dreadstone_stairs", settings -> new StairsBlock(LIGHT_COBBLED_DREADSTONE.getDefaultState(), settings), AbstractBlock.Settings.copy(LIGHT_COBBLED_DREADSTONE), true);
+    public static Block LIGHT_COBBLED_DREADSTONE_SLAB = register("cobbled_light_dreadstone_slab", SlabBlock::new, AbstractBlock.Settings.copy(LIGHT_COBBLED_DREADSTONE), true);
+    public static Block LIGHT_COBBLED_DREADSTONE_WALL = register("cobbled_light_dreadstone_wall", WallBlock::new, AbstractBlock.Settings.copy(LIGHT_COBBLED_DREADSTONE), true);
+
     public static Block TILED_LIGHT_DREADSTONE = register(
             "tiled_light_dreadstone",
             Block::new,
@@ -384,6 +388,10 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+    public static Block POLISHED_LIGHT_DREADSTONE_STAIRS = register("polished_light_dreadstone_stairs", settings -> new StairsBlock(POLISHED_LIGHT_DREADSTONE.getDefaultState(), settings), AbstractBlock.Settings.copy(POLISHED_LIGHT_DREADSTONE), true);
+    public static Block POLISHED_LIGHT_DREADSTONE_SLAB = register("polished_light_dreadstone_slab", SlabBlock::new, AbstractBlock.Settings.copy(POLISHED_LIGHT_DREADSTONE), true);
+    public static Block POLISHED_LIGHT_DREADSTONE_WALL = register("polished_light_dreadstone_wall", WallBlock::new, AbstractBlock.Settings.copy(POLISHED_LIGHT_DREADSTONE), true);
+
     public static Block RIVETED_LIGHT_DREADSTONE = register(
             "riveted_light_dreadstone",
             Block::new,
@@ -394,6 +402,10 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+    public static Block RIVETED_LIGHT_DREADSTONE_STAIRS = register("riveted_light_dreadstone_stairs", settings -> new StairsBlock(RIVETED_LIGHT_DREADSTONE.getDefaultState(), settings), AbstractBlock.Settings.copy(RIVETED_LIGHT_DREADSTONE), true);
+    public static Block RIVETED_LIGHT_DREADSTONE_SLAB = register("riveted_light_dreadstone_slab", SlabBlock::new, AbstractBlock.Settings.copy(RIVETED_LIGHT_DREADSTONE), true);
+    public static Block RIVETED_LIGHT_DREADSTONE_WALL = register("riveted_light_dreadstone_wall", WallBlock::new, AbstractBlock.Settings.copy(RIVETED_LIGHT_DREADSTONE), true);
+
     public static Block BLOODY_LIGHT_DREADSTONE = register(
             "bloody_light_dreadstone",
             Block::new,
@@ -404,6 +416,10 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+    public static Block BLOODY_LIGHT_DREADSTONE_STAIRS = register("bloody_light_dreadstone_stairs", settings -> new StairsBlock(BLOODY_LIGHT_DREADSTONE.getDefaultState(), settings), AbstractBlock.Settings.copy(BLOODY_LIGHT_DREADSTONE), true);
+    public static Block BLOODY_LIGHT_DREADSTONE_SLAB = register("bloody_light_dreadstone_slab", SlabBlock::new, AbstractBlock.Settings.copy(BLOODY_LIGHT_DREADSTONE), true);
+    public static Block BLOODY_LIGHT_DREADSTONE_WALL = register("bloody_light_dreadstone_wall", WallBlock::new, AbstractBlock.Settings.copy(BLOODY_LIGHT_DREADSTONE), true);
+
     public static Block BLOODY_LIGHT_DREADSTONE_BRICKS = register(
             "bloody_light_dreadstone_bricks",
             Block::new,
@@ -414,6 +430,9 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+    public static Block BLOODY_LIGHT_DREADSTONE_BRICKS_STAIRS = register("bloody_light_dreadstone_bricks_stairs", settings -> new StairsBlock(BLOODY_LIGHT_DREADSTONE_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(BLOODY_LIGHT_DREADSTONE_BRICKS), true);
+    public static Block BLOODY_LIGHT_DREADSTONE_BRICKS_SLAB = register("bloody_light_dreadstone_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(BLOODY_LIGHT_DREADSTONE_BRICKS), true);
+    public static Block BLOODY_LIGHT_DREADSTONE_BRICKS_WALL = register("bloody_light_dreadstone_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(BLOODY_LIGHT_DREADSTONE_BRICKS), true);
 
 
     public static Block DREADSTONE_BLOCK = register(
@@ -426,6 +445,10 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+    public static Block DREADSTONE_BLOCK_STAIRS = register("dreadstone_block_stairs", settings -> new StairsBlock(DREADSTONE_BLOCK.getDefaultState(), settings), AbstractBlock.Settings.copy(DREADSTONE_BLOCK), true);
+    public static Block DREADSTONE_BLOCK_SLAB = register("dreadstone_block_slab", SlabBlock::new, AbstractBlock.Settings.copy(DREADSTONE_BLOCK), true);
+    public static Block DREADSTONE_BLOCK_WALL = register("dreadstone_block_wall", WallBlock::new, AbstractBlock.Settings.copy(DREADSTONE_BLOCK), true);
+
     public static Block DREADSTONE_GLASS = register(
             "dreadstone_glass",
             TransparentBlock::new,
@@ -486,6 +509,10 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+    public static Block DREADSTONE_BRICKS_STAIRS = register("dreadstone_bricks_stairs", settings -> new StairsBlock(DREADSTONE_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(DREADSTONE_BRICKS), true);
+    public static Block DREADSTONE_BRICKS_SLAB = register("dreadstone_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(DREADSTONE_BRICKS), true);
+    public static Block DREADSTONE_BRICKS_WALL = register("dreadstone_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(DREADSTONE_BRICKS), true);
+
     public static Block GRATED_DREADSTONE = register(
             "grated_dreadstone",
             Block::new,
@@ -496,6 +523,10 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+    public static Block GRATED_DREADSTONE_STAIRS = register("grated_dreadstone_stairs", settings -> new StairsBlock(GRATED_DREADSTONE.getDefaultState(), settings), AbstractBlock.Settings.copy(GRATED_DREADSTONE), true);
+    public static Block GRATED_DREADSTONE_SLAB = register("grated_dreadstone_slab", SlabBlock::new, AbstractBlock.Settings.copy(GRATED_DREADSTONE), true);
+    public static Block GRATED_DREADSTONE_WALL = register("grated_dreadstone_wall", WallBlock::new, AbstractBlock.Settings.copy(GRATED_DREADSTONE), true);
+
     public static Block DREADSTONE_WINDOW = register(
             "dreadstone_window",
             Block::new,
@@ -516,6 +547,10 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+    public static Block POLISHED_CHISELED_DREADSTONE_STAIRS = register("polished_chiseled_dreadstone_stairs", settings -> new StairsBlock(POLISHED_CHISELED_DREADSTONE.getDefaultState(), settings), AbstractBlock.Settings.copy(POLISHED_CHISELED_DREADSTONE), true);
+    public static Block POLISHED_CHISELED_DREADSTONE_SLAB = register("polished_chiseled_dreadstone_slab", SlabBlock::new, AbstractBlock.Settings.copy(POLISHED_CHISELED_DREADSTONE), true);
+    public static Block POLISHED_CHISELED_DREADSTONE_WALL = register("polished_chiseled_dreadstone_wall", WallBlock::new, AbstractBlock.Settings.copy(POLISHED_CHISELED_DREADSTONE), true);
+
     public static Block POLISHED_DREADSTONE = register(
             "polished_dreadstone",
             Block::new,
@@ -536,6 +571,10 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+    public static Block COBBLED_DREADSTONE_STAIRS = register("cobbled_dreadstone_stairs", settings -> new StairsBlock(COBBLED_DREADSTONE.getDefaultState(), settings), AbstractBlock.Settings.copy(COBBLED_DREADSTONE), true);
+    public static Block COBBLED_DREADSTONE_SLAB = register("cobbled_dreadstone_slab", SlabBlock::new, AbstractBlock.Settings.copy(COBBLED_DREADSTONE), true);
+    public static Block COBBLED_DREADSTONE_WALL = register("cobbled_dreadstone_wall", WallBlock::new, AbstractBlock.Settings.copy(COBBLED_DREADSTONE), true);
+
     public static Block TILED_COBBLED_DREADSTONE = register(
             "tiled_cobbled_dreadstone",
             Block::new,
@@ -546,6 +585,10 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+    public static Block TILED_COBBLED_DREADSTONE_STAIRS = register("tiled_cobbled_dreadstone_stairs", settings -> new StairsBlock(TILED_COBBLED_DREADSTONE.getDefaultState(), settings), AbstractBlock.Settings.copy(TILED_COBBLED_DREADSTONE), true);
+    public static Block TILED_COBBLED_DREADSTONE_SLAB = register("tiled_cobbled_dreadstone_slab", SlabBlock::new, AbstractBlock.Settings.copy(TILED_COBBLED_DREADSTONE), true);
+    public static Block TILED_COBBLED_DREADSTONE_WALL = register("tiled_cobbled_dreadstone_wall", WallBlock::new, AbstractBlock.Settings.copy(TILED_COBBLED_DREADSTONE), true);
+
     public static Block CHISELED_DREADSTONE = register(
             "chiseled_dreadstone",
             Block::new,
@@ -556,6 +599,11 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+    public static Block CHISELED_DREADSTONE_STAIRS = register("chiseled_dreadstone_stairs", settings -> new StairsBlock(CHISELED_DREADSTONE.getDefaultState(), settings), AbstractBlock.Settings.copy(CHISELED_DREADSTONE), true);
+    public static Block CHISELED_DREADSTONE_SLAB = register("chiseled_dreadstone_slab", SlabBlock::new, AbstractBlock.Settings.copy(CHISELED_DREADSTONE), true);
+    public static Block CHISELED_DREADSTONE_WALL = register("chiseled_dreadstone_wall", WallBlock::new, AbstractBlock.Settings.copy(CHISELED_DREADSTONE), true);
+
+
     public static Block DREADSTONE_PILLAR = register(
             "dreadstone_pillar",
             PillarBlock::new,
@@ -648,6 +696,20 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.FROGLIGHT),
             true
     );
+    public static Block MARBLED_FLESH_CARPET = register(
+            "marbled_flesh_carpet",
+            CarpetBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.RED)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true
+    );
+    public static Block MARBLED_FLESH_STAIRS = register("marbled_flesh_stairs", settings -> new StairsBlock(MARBLED_FLESH.getDefaultState(), settings), AbstractBlock.Settings.copy(MARBLED_FLESH), true);
+    public static Block MARBLED_FLESH_SLAB = register("marbled_flesh_slab", SlabBlock::new, AbstractBlock.Settings.copy(MARBLED_FLESH), true);
+    public static Block MARBLED_FLESH_FENCE = register("marbled_flesh_fence", WallBlock::new, AbstractBlock.Settings.copy(MARBLED_FLESH), true);
+
     public static Block SCALED_FLESH = register(
             "scaled_flesh",
             Block::new,
@@ -657,6 +719,11 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.NYLIUM),
             true
     );
+    public static Block SCALED_FLESH_STAIRS = register("scaled_flesh_stairs", settings -> new StairsBlock(SCALED_FLESH.getDefaultState(), settings), AbstractBlock.Settings.copy(SCALED_FLESH), true);
+    public static Block SCALED_FLESH_SLAB = register("scaled_flesh_slab", SlabBlock::new, AbstractBlock.Settings.copy(SCALED_FLESH), true);
+    public static Block SCALED_FLESH_WALL = register("scaled_flesh_wall", WallBlock::new, AbstractBlock.Settings.copy(SCALED_FLESH), true);
+
+
     public static Block CRIMSON_WOOL = register(
             "crimson_wool",
             Block::new,
@@ -1288,6 +1355,11 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+
+    public static Block BLACK_TERRACOTTA_BRICK_STAIRS = register("black_terracotta_brick_stairs", settings -> new StairsBlock(BLACK_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(BLACK_TERRACOTTA_BRICK), true);
+    public static Block BLACK_TERRACOTTA_BRICK_SLAB = register("black_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(BLACK_TERRACOTTA_BRICK), true);
+    public static Block BLACK_TERRACOTTA_BRICK_WALL = register("black_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(BLACK_TERRACOTTA_BRICK), true);
+
     public static Block BLUE_TERRACOTTA_BRICK = register(
             "blue_terracotta_brick",
             Block::new,
@@ -1298,6 +1370,11 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+
+    public static Block BLUE_TERRACOTTA_BRICK_STAIRS = register("blue_terracotta_brick_stairs", settings -> new StairsBlock(BLUE_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(BLUE_TERRACOTTA_BRICK), true);
+    public static Block BLUE_TERRACOTTA_BRICK_SLAB = register("blue_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(BLUE_TERRACOTTA_BRICK), true);
+    public static Block BLUE_TERRACOTTA_BRICK_WALL = register("blue_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(BLUE_TERRACOTTA_BRICK), true);
+
     public static Block BROWN_TERRACOTTA_BRICK = register(
             "brown_terracotta_brick",
             Block::new,
@@ -1308,6 +1385,11 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+    public static Block BROWN_TERRACOTTA_BRICK_STAIRS = register("brown_terracotta_brick_stairs", settings -> new StairsBlock(BROWN_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(BROWN_TERRACOTTA_BRICK), true);
+    public static Block BROWN_TERRACOTTA_BRICK_SLAB = register("brown_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(BROWN_TERRACOTTA_BRICK), true);
+    public static Block BROWN_TERRACOTTA_BRICK_WALL = register("brown_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(BROWN_TERRACOTTA_BRICK), true);
+
+
     public static Block CYAN_TERRACOTTA_BRICK = register(
             "cyan_terracotta_brick",
             Block::new,
@@ -1318,6 +1400,11 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+
+    public static Block CYAN_TERRACOTTA_BRICK_STAIRS = register("cyan_terracotta_brick_stairs", settings -> new StairsBlock(CYAN_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(CYAN_TERRACOTTA_BRICK), true);
+    public static Block CYAN_TERRACOTTA_BRICK_SLAB = register("cyan_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(CYAN_TERRACOTTA_BRICK), true);
+    public static Block CYAN_TERRACOTTA_BRICK_WALL = register("cyan_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(CYAN_TERRACOTTA_BRICK), true);
+
     public static Block GRAY_TERRACOTTA_BRICK = register(
             "gray_terracotta_brick",
             Block::new,
@@ -1328,6 +1415,11 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+    public static Block GRAY_TERRACOTTA_BRICK_STAIRS = register("gray_terracotta_brick_stairs", settings -> new StairsBlock(GRAY_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(GRAY_TERRACOTTA_BRICK), true);
+    public static Block GRAY_TERRACOTTA_BRICK_SLAB = register("gray_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(GRAY_TERRACOTTA_BRICK), true);
+    public static Block GRAY_TERRACOTTA_BRICK_WALL = register("gray_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(GRAY_TERRACOTTA_BRICK), true);
+
+
     public static Block GREEN_TERRACOTTA_BRICK = register(
             "green_terracotta_brick",
             Block::new,
@@ -1338,6 +1430,12 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+
+    public static Block GREEN_TERRACOTTA_BRICK_STAIRS = register("green_terracotta_brick_stairs", settings -> new StairsBlock(GREEN_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(GREEN_TERRACOTTA_BRICK), true);
+    public static Block GREEN_TERRACOTTA_BRICK_SLAB = register("green_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(GREEN_TERRACOTTA_BRICK), true);
+    public static Block GREEN_TERRACOTTA_BRICK_WALL = register("green_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(GREEN_TERRACOTTA_BRICK), true);
+
+
     public static Block LIGHT_BLUE_TERRACOTTA_BRICK = register(
             "light_blue_terracotta_brick",
             Block::new,
@@ -1348,6 +1446,11 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+    public static Block LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS = register("light_blue_terracotta_brick_stairs", settings -> new StairsBlock(LIGHT_BLUE_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(LIGHT_BLUE_TERRACOTTA_BRICK), true);
+    public static Block LIGHT_BLUE_TERRACOTTA_BRICK_SLAB = register("light_blue_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(LIGHT_BLUE_TERRACOTTA_BRICK), true);
+    public static Block LIGHT_BLUE_TERRACOTTA_BRICK_WALL = register("light_blue_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(LIGHT_BLUE_TERRACOTTA_BRICK), true);
+
+
     public static Block LIGHT_GRAY_TERRACOTTA_BRICK = register(
             "light_gray_terracotta_brick",
             Block::new,
@@ -1358,6 +1461,12 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+
+    public static Block LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS = register("light_gray_terracotta_brick_stairs", settings -> new StairsBlock(LIGHT_GRAY_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(LIGHT_GRAY_TERRACOTTA_BRICK), true);
+    public static Block LIGHT_GRAY_TERRACOTTA_BRICK_SLAB = register("light_gray_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(LIGHT_GRAY_TERRACOTTA_BRICK), true);
+    public static Block LIGHT_GRAY_TERRACOTTA_BRICK_WALL = register("light_gray_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(LIGHT_GRAY_TERRACOTTA_BRICK), true);
+
+
     public static Block LIME_TERRACOTTA_BRICK = register(
             "lime_terracotta_brick",
             Block::new,
@@ -1368,6 +1477,12 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+
+    public static Block LIME_TERRACOTTA_BRICK_STAIRS = register("lime_terracotta_brick_stairs", settings -> new StairsBlock(LIME_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(LIME_TERRACOTTA_BRICK), true);
+    public static Block LIME_TERRACOTTA_BRICK_SLAB = register("lime_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(LIME_TERRACOTTA_BRICK), true);
+    public static Block LIME_TERRACOTTA_BRICK_WALL = register("lime_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(LIME_TERRACOTTA_BRICK), true);
+
+
     public static Block MAGENTA_TERRACOTTA_BRICK = register(
             "magenta_terracotta_brick",
             Block::new,
@@ -1378,6 +1493,11 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+    public static Block MAGENTA_TERRACOTTA_BRICK_STAIRS = register("magenta_terracotta_brick_stairs", settings -> new StairsBlock(MAGENTA_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(MAGENTA_TERRACOTTA_BRICK), true);
+    public static Block MAGENTA_TERRACOTTA_BRICK_SLAB = register("magenta_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(MAGENTA_TERRACOTTA_BRICK), true);
+    public static Block MAGENTA_TERRACOTTA_BRICK_WALL = register("magenta_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(MAGENTA_TERRACOTTA_BRICK), true);
+
+
     public static Block ORANGE_TERRACOTTA_BRICK = register(
             "orange_terracotta_brick",
             Block::new,
@@ -1388,6 +1508,12 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+
+    public static Block ORANGE_TERRACOTTA_BRICK_STAIRS = register("orange_terracotta_brick_stairs", settings -> new StairsBlock(ORANGE_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(ORANGE_TERRACOTTA_BRICK), true);
+    public static Block ORANGE_TERRACOTTA_BRICK_SLAB = register("orange_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(ORANGE_TERRACOTTA_BRICK), true);
+    public static Block ORANGE_TERRACOTTA_BRICK_WALL = register("orange_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(ORANGE_TERRACOTTA_BRICK), true);
+
+
     public static Block PINK_TERRACOTTA_BRICK = register(
             "pink_terracotta_brick",
             Block::new,
@@ -1398,6 +1524,12 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+
+    public static Block PINK_TERRACOTTA_BRICK_STAIRS = register("pink_terracotta_brick_stairs", settings -> new StairsBlock(PINK_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(PINK_TERRACOTTA_BRICK), true);
+    public static Block PINK_TERRACOTTA_BRICK_SLAB = register("pink_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(PINK_TERRACOTTA_BRICK), true);
+    public static Block PINK_TERRACOTTA_BRICK_WALL = register("pink_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(PINK_TERRACOTTA_BRICK), true);
+
+
     public static Block PURPLE_TERRACOTTA_BRICK = register(
             "purple_terracotta_brick",
             Block::new,
@@ -1408,6 +1540,10 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+    public static Block PURPLE_TERRACOTTA_BRICK_STAIRS = register("purple_terracotta_brick_stairs", settings -> new StairsBlock(PURPLE_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(PURPLE_TERRACOTTA_BRICK), true);
+    public static Block PURPLE_TERRACOTTA_BRICK_SLAB = register("purple_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(PURPLE_TERRACOTTA_BRICK), true);
+    public static Block PURPLE_TERRACOTTA_BRICK_WALL = register("purple_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(PURPLE_TERRACOTTA_BRICK), true);
+
     public static Block RED_TERRACOTTA_BRICK = register(
             "red_terracotta_brick",
             Block::new,
@@ -1418,6 +1554,12 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+
+    public static Block RED_TERRACOTTA_BRICK_STAIRS = register("red_terracotta_brick_stairs", settings -> new StairsBlock(RED_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(RED_TERRACOTTA_BRICK), true);
+    public static Block RED_TERRACOTTA_BRICK_SLAB = register("red_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(RED_TERRACOTTA_BRICK), true);
+    public static Block RED_TERRACOTTA_BRICK_WALL = register("red_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(RED_TERRACOTTA_BRICK), true);
+
+
     public static Block TERRACOTTA_BRICK = register(
             "terracotta_brick",
             Block::new,
@@ -1428,6 +1570,12 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+
+    public static Block TERRACOTTA_BRICK_STAIRS = register("terracotta_brick_stairs", settings -> new StairsBlock(TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(TERRACOTTA_BRICK), true);
+    public static Block TERRACOTTA_BRICK_SLAB = register("terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(TERRACOTTA_BRICK), true);
+    public static Block TERRACOTTA_BRICK_WALL = register("terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(TERRACOTTA_BRICK), true);
+
+
     public static Block WHITE_TERRACOTTA_BRICK = register(
             "white_terracotta_brick",
             Block::new,
@@ -1438,6 +1586,12 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+
+    public static Block WHITE_TERRACOTTA_BRICK_STAIRS = register("white_terracotta_brick_stairs", settings -> new StairsBlock(WHITE_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(WHITE_TERRACOTTA_BRICK), true);
+    public static Block WHITE_TERRACOTTA_BRICK_SLAB = register("white_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(WHITE_TERRACOTTA_BRICK), true);
+    public static Block WHITE_TERRACOTTA_BRICK_WALL = register("white_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(WHITE_TERRACOTTA_BRICK), true);
+
+
     public static Block YELLOW_TERRACOTTA_BRICK = register(
             "yellow_terracotta_brick",
             Block::new,
@@ -1448,6 +1602,11 @@ public class GCBlocks {
                     .strength(1.25F, 4.2F),
             true
     );
+
+    public static Block YELLOW_TERRACOTTA_BRICK_STAIRS = register("yellow_terracotta_brick_stairs", settings -> new StairsBlock(YELLOW_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(YELLOW_TERRACOTTA_BRICK), true);
+    public static Block YELLOW_TERRACOTTA_BRICK_SLAB = register("yellow_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(YELLOW_TERRACOTTA_BRICK), true);
+    public static Block YELLOW_TERRACOTTA_BRICK_WALL = register("yellow_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(YELLOW_TERRACOTTA_BRICK), true);
+
 
     public static Block CHISELED_SCULK_STONE = register(
             "chiseled_sculk_stone",
