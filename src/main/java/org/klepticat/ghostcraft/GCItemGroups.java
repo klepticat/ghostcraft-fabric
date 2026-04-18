@@ -41,39 +41,94 @@ public class GCItemGroups {
 
                 entries.add(CHECK_MARK);
                 entries.add(X_MARK);
-                entries.add(GRATED_IRON_TRAPDOOR);
-                entries.add(GRATED_SPRUCE_TRAPDOOR);
-                entries.add(DREADWOOD_TRAPDOOR);
 
-                entries.add(COBBLED_LIGHT_DREADSTONE);
-                entries.add(TILED_LIGHT_DREADSTONE);
+                entries.add(LIGHT_COBBLED_DREADSTONE);
+                entries.add(LIGHT_COBBLED_DREADSTONE_STAIRS);
+                entries.add(LIGHT_COBBLED_DREADSTONE_SLAB);
+                entries.add(LIGHT_COBBLED_DREADSTONE_WALL);
+
                 entries.add(POLISHED_LIGHT_DREADSTONE);
+                entries.add(POLISHED_LIGHT_DREADSTONE_STAIRS);
+                entries.add(POLISHED_LIGHT_DREADSTONE_SLAB);
+                entries.add(POLISHED_LIGHT_DREADSTONE_WALL);
+
                 entries.add(RIVETED_LIGHT_DREADSTONE);
+                entries.add(RIVETED_LIGHT_DREADSTONE_STAIRS);
+                entries.add(RIVETED_LIGHT_DREADSTONE_SLAB);
+                entries.add(RIVETED_LIGHT_DREADSTONE_WALL);
+
                 entries.add(BLOODY_LIGHT_DREADSTONE);
+                entries.add(BLOODY_LIGHT_DREADSTONE_STAIRS);
+                entries.add(BLOODY_LIGHT_DREADSTONE_SLAB);
+                entries.add(BLOODY_LIGHT_DREADSTONE_WALL);
+
                 entries.add(BLOODY_LIGHT_DREADSTONE_BRICKS);
+                entries.add(BLOODY_LIGHT_DREADSTONE_BRICKS_STAIRS);
+                entries.add(BLOODY_LIGHT_DREADSTONE_BRICKS_SLAB);
+                entries.add(BLOODY_LIGHT_DREADSTONE_BRICKS_WALL);
+                entries.add(TILED_LIGHT_DREADSTONE);
                 entries.add(LIGHT_DREADSTONE_DOOR);
                 entries.add(LIGHT_DREADSTONE_TRAPDOOR);
 
                 entries.add(DREADSTONE_BLOCK);
-                entries.add(DREADSTONE_BRICKS);
+                entries.add(DREADSTONE_BLOCK_STAIRS);
+                entries.add(DREADSTONE_BLOCK_SLAB);
+                entries.add(DREADSTONE_BLOCK_WALL);
+
+
                 entries.add(GRATED_DREADSTONE);
-                entries.add(DREADSTONE_GRATE);
+                entries.add(GRATED_DREADSTONE_STAIRS);
+                entries.add(GRATED_DREADSTONE_SLAB);
+                entries.add(GRATED_DREADSTONE_WALL);
+
+                entries.add(POLISHED_DREADSTONE);
+
+                entries.add(POLISHED_CHISELED_DREADSTONE);
+                entries.add(POLISHED_CHISELED_DREADSTONE_STAIRS);
+                entries.add(POLISHED_CHISELED_DREADSTONE_SLAB);
+                entries.add(POLISHED_CHISELED_DREADSTONE_WALL);
+
+                entries.add(CHISELED_DREADSTONE);
+
+                entries.add(COBBLED_DREADSTONE);
+                entries.add(COBBLED_DREADSTONE_STAIRS);
+                entries.add(COBBLED_DREADSTONE_SLAB);
+                entries.add(COBBLED_DREADSTONE_WALL);
+
+                entries.add(TILED_COBBLED_DREADSTONE);
+                entries.add(TILED_COBBLED_DREADSTONE_STAIRS);
+                entries.add(TILED_COBBLED_DREADSTONE_SLAB);
+                entries.add(TILED_COBBLED_DREADSTONE_WALL);
+
+
+                entries.add(DREADSTONE_BRICKS);
+                entries.add(DREADSTONE_BRICKS_STAIRS);
+                entries.add(DREADSTONE_BRICKS_SLAB);
+
+                entries.add(DREADSTONE_PILLAR);
                 entries.add(DREADSTONE_GLASS);
                 entries.add(DREADSTONE_BARS);
                 entries.add(DREADSTONE_LAMP);
                 entries.add(DREADSTONE_WINDOW);
-                entries.add(POLISHED_CHISELED_DREADSTONE);
-                entries.add(POLISHED_DREADSTONE);
-                entries.add(COBBLED_DREADSTONE);
-                entries.add(TILED_COBBLED_DREADSTONE);
-                entries.add(DREADSTONE_PILLAR);
-                entries.add(CHISELED_DREADSTONE);
+                entries.add(DREADSTONE_GRATE);
+
                 entries.add(DREADSTONE_DOOR);
                 entries.add(DREADSTONE_TRAPDOOR);
                 entries.add(LOCKED_DREADSTONE_DOOR);
 
+                entries.add(GRATED_IRON_TRAPDOOR);
+                entries.add(GRATED_SPRUCE_TRAPDOOR);
+                entries.add(DREADWOOD_TRAPDOOR);
+
                 entries.add(MARBLED_FLESH);
+                entries.add(MARBLED_FLESH_STAIRS);
+                entries.add(MARBLED_FLESH_SLAB);
+                entries.add(MARBLED_FLESH_FENCE);
+
                 entries.add(SCALED_FLESH);
+                entries.add(SCALED_FLESH_STAIRS);
+                entries.add(SCALED_FLESH_SLAB);
+                entries.add(SCALED_FLESH_WALL);
 
                 entries.add(CRIMSON_WOOL);
                 entries.add(CRIMSON_CARPET);
@@ -204,21 +259,84 @@ public class GCItemGroups {
                 entries.add(YELLOW_CORUNDUM_CLUSTER);
 
                 entries.add(BLACK_TERRACOTTA_BRICK);
+                entries.add(BLACK_TERRACOTTA_BRICK_STAIRS);
+                entries.add(BLACK_TERRACOTTA_BRICK_SLAB);
+                entries.add(BLACK_TERRACOTTA_BRICK_WALL);
+
                 entries.add(BLUE_TERRACOTTA_BRICK);
+                entries.add(BLUE_TERRACOTTA_BRICK_STAIRS);
+                entries.add(BLUE_TERRACOTTA_BRICK_SLAB);
+                entries.add(BLUE_TERRACOTTA_BRICK_WALL);
+
                 entries.add(BROWN_TERRACOTTA_BRICK);
+                entries.add(BROWN_TERRACOTTA_BRICK_STAIRS);
+                entries.add(BROWN_TERRACOTTA_BRICK_SLAB);
+                entries.add(BROWN_TERRACOTTA_BRICK_WALL);
+
                 entries.add(CYAN_TERRACOTTA_BRICK);
+                entries.add(CYAN_TERRACOTTA_BRICK_STAIRS);
+                entries.add(CYAN_TERRACOTTA_BRICK_SLAB);
+                entries.add(CYAN_TERRACOTTA_BRICK_WALL);
+
                 entries.add(GRAY_TERRACOTTA_BRICK);
+                entries.add(GRAY_TERRACOTTA_BRICK_STAIRS);
+                entries.add(GRAY_TERRACOTTA_BRICK_SLAB);
+                entries.add(GRAY_TERRACOTTA_BRICK_WALL);
+
                 entries.add(GREEN_TERRACOTTA_BRICK);
+                entries.add(GREEN_TERRACOTTA_BRICK_STAIRS);
+                entries.add(GREEN_TERRACOTTA_BRICK_SLAB);
+                entries.add(GREEN_TERRACOTTA_BRICK_WALL);
+
                 entries.add(LIGHT_BLUE_TERRACOTTA_BRICK);
+                entries.add(LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS);
+                entries.add(LIGHT_BLUE_TERRACOTTA_BRICK_SLAB);
+                entries.add(LIGHT_BLUE_TERRACOTTA_BRICK_WALL);
+
                 entries.add(LIGHT_GRAY_TERRACOTTA_BRICK);
+                entries.add(LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS);
+                entries.add(LIGHT_GRAY_TERRACOTTA_BRICK_SLAB);
+                entries.add(LIGHT_GRAY_TERRACOTTA_BRICK_WALL);
+
                 entries.add(LIME_TERRACOTTA_BRICK);
+                entries.add(LIME_TERRACOTTA_BRICK_STAIRS);
+                entries.add(LIME_TERRACOTTA_BRICK_SLAB);
+                entries.add(LIME_TERRACOTTA_BRICK_WALL);
+
                 entries.add(MAGENTA_TERRACOTTA_BRICK);
+                entries.add(MAGENTA_TERRACOTTA_BRICK_STAIRS);
+                entries.add(MAGENTA_TERRACOTTA_BRICK_SLAB);
+                entries.add(MAGENTA_TERRACOTTA_BRICK_WALL);
+
                 entries.add(ORANGE_TERRACOTTA_BRICK);
+                entries.add(ORANGE_TERRACOTTA_BRICK_STAIRS);
+                entries.add(ORANGE_TERRACOTTA_BRICK_SLAB);
+                entries.add(ORANGE_TERRACOTTA_BRICK_WALL);
+
                 entries.add(PINK_TERRACOTTA_BRICK);
+                entries.add(PINK_TERRACOTTA_BRICK_STAIRS);
+                entries.add(PINK_TERRACOTTA_BRICK_SLAB);
+                entries.add(PINK_TERRACOTTA_BRICK_WALL);
+
                 entries.add(RED_TERRACOTTA_BRICK);
+                entries.add(RED_TERRACOTTA_BRICK_STAIRS);
+                entries.add(RED_TERRACOTTA_BRICK_SLAB);
+                entries.add(RED_TERRACOTTA_BRICK_WALL);
+
                 entries.add(TERRACOTTA_BRICK);
+                entries.add(TERRACOTTA_BRICK_STAIRS);
+                entries.add(TERRACOTTA_BRICK_SLAB);
+                entries.add(TERRACOTTA_BRICK_WALL);
+
                 entries.add(WHITE_TERRACOTTA_BRICK);
+                entries.add(WHITE_TERRACOTTA_BRICK_STAIRS);
+                entries.add(WHITE_TERRACOTTA_BRICK_SLAB);
+                entries.add(WHITE_TERRACOTTA_BRICK_WALL);
+
                 entries.add(YELLOW_TERRACOTTA_BRICK);
+                entries.add(YELLOW_TERRACOTTA_BRICK_STAIRS);
+                entries.add(YELLOW_TERRACOTTA_BRICK_SLAB);
+                entries.add(YELLOW_TERRACOTTA_BRICK_WALL);
 
                 entries.add(CHISELED_SCULK_STONE);
 
@@ -271,6 +389,7 @@ public class GCItemGroups {
                 entries.add(CYAN_MACAW_FEATHER);
                 entries.add(CLOSED_ORB);
                 entries.add(SICKLE);
+                entries.addAll(toList(WOODCARVE_SET));
                 entries.add(COPPER_COIN);
                 entries.add(SILVER_COIN);
                 entries.add(GOLD_COIN);
@@ -304,12 +423,12 @@ public class GCItemGroups {
                 entries.add(HAMMER);
                 entries.add(CROWBAR);
                 entries.add(SPELL_SCROLL);
-                entries.addAll(toList(ROD_SET));
                 entries.addAll(toList(POUCH_SET));
                 entries.addAll(toList(GEMSTONE_SET));
                 entries.addAll(toList(EVO_SET));
                 entries.addAll(toList(BAR_SET));
                 entries.addAll(toList(SPOOL_SET));
+                entries.addAll(toList(MISC_SET));
             })
     );
 
@@ -397,17 +516,37 @@ public class GCItemGroups {
             })
     );
 
+
     private static final ItemGroup GC_FOODS = register("foods", FabricItemGroup.builder()
             .icon(ICECREAM_SPRUG::getDefaultStack)
             .entries((displayContext, entries) -> {
                 entries.addAll(toList(GENERIC_FOODS_SET));
                 entries.addAll(toList(BREAD_SET));
+                entries.addAll(toList(COOKED_SET));
+                entries.addAll(toList(FRUIT_SET));
                 entries.addAll(toList(STRANGE_FOODS_SET));
-                entries.addAll(toList(FISH_SET));
                 entries.addAll(toList(GUMMY_SET));
+                entries.addAll(toList(CANDY_SET));
+                entries.addAll(toList(COOKIE_SET));
+                entries.addAll(toList(PIE_SET));
                 entries.addAll(toList(ICE_CREAM_SET));
                 entries.add(ICECREAM_SPRUG);
                 entries.add(ICECREAM_SPURNGE);
+            })
+    );
+    private static final ItemGroup GC_DRINKS = register("drinks", FabricItemGroup.builder()
+            .icon(JUICE_APPLE::getDefaultStack)
+            .entries((displayContext, entries) -> {
+                entries.addAll(toList(DRINK_SET));
+            })
+    );
+
+    private static final ItemGroup GC_FISHING = register("fishing", FabricItemGroup.builder()
+            .icon(ANGLER::getDefaultStack)
+            .entries((displayContext, entries) -> {
+                entries.addAll(toList(FISH_SET));
+                entries.addAll(toList(ROD_SET));
+                entries.addAll(toList(FISHING_SET));
             })
     );
 

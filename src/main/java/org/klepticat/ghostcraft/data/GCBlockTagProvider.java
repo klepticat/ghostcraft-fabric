@@ -32,6 +32,8 @@ public class GCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(fences.toArray(new Block[0]))
                 .add(NETHERRACK_FENCE);
 
+
+
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
                 .add(fences.toArray(new Block[0]));
 
@@ -72,8 +74,40 @@ public class GCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         GCBlocks.BLUE_NETHERRACK_WALL,
                         GCBlocks.DRIPSTONE_WALL,
                         GCBlocks.TEMPLE_BRICKS_WALL,
+                        GCBlocks.LIGHT_COBBLED_DREADSTONE_WALL,
+                        GCBlocks.BLOODY_LIGHT_DREADSTONE_BRICKS_WALL,
+                        GCBlocks.BLOODY_LIGHT_DREADSTONE_WALL,
+                        GCBlocks.RIVETED_LIGHT_DREADSTONE_WALL,
+                        GCBlocks.COBBLED_DREADSTONE_WALL,
+                        GCBlocks.DREADSTONE_BLOCK_WALL,
+                        GCBlocks.GRATED_DREADSTONE_WALL,
+                        GCBlocks.POLISHED_CHISELED_DREADSTONE_WALL,
+                        GCBlocks.POLISHED_LIGHT_DREADSTONE_WALL,
+                        GCBlocks.CHISELED_DREADSTONE_WALL,
+                        GCBlocks.SCALED_FLESH_WALL,
+                        GCBlocks.MARBLED_FLESH_FENCE,
+                        GCBlocks.TILED_COBBLED_DREADSTONE_WALL,
                         GCBlocks.NETHERRACK_WALL,
                         GCBlocks.SMOOTH_BASALT_WALL,
+                        GCBlocks.AMETHYST_WALL,
+                        GCBlocks.BLACK_TERRACOTTA_BRICK_WALL,
+                        GCBlocks.BLUE_TERRACOTTA_BRICK_WALL,
+                        GCBlocks.BROWN_TERRACOTTA_BRICK_WALL,
+                        GCBlocks.CYAN_TERRACOTTA_BRICK_WALL,
+                        GCBlocks.GRAY_TERRACOTTA_BRICK_WALL,
+                        GCBlocks.GREEN_TERRACOTTA_BRICK_WALL,
+                        GCBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_WALL,
+                        GCBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_WALL,
+                        GCBlocks.LIME_TERRACOTTA_BRICK_WALL,
+                        GCBlocks.MAGENTA_TERRACOTTA_BRICK_WALL,
+                        GCBlocks.ORANGE_TERRACOTTA_BRICK_WALL,
+                        GCBlocks.PINK_TERRACOTTA_BRICK_WALL,
+                        GCBlocks.RED_TERRACOTTA_BRICK_WALL,
+                        GCBlocks.TERRACOTTA_BRICK_WALL,
+                        GCBlocks.WHITE_TERRACOTTA_BRICK_WALL,
+                        GCBlocks.PURPLE_TERRACOTTA_BRICK_WALL,
+
+
                         TANGLEWOOD_SET.get(BlockType.WALL)
                 );
     }

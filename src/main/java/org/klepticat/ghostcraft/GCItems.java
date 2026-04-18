@@ -2,7 +2,6 @@ package org.klepticat.ghostcraft;
 
 import dev.emi.trinkets.api.TrinketItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.component.type.FoodComponents;
 import net.minecraft.entity.effect.StatusEffects;
@@ -2508,13 +2507,27 @@ public class GCItems {
     private static final FoodComponent junkFood = new FoodComponent.Builder().nutrition(2).saturationModifier(0.5f).alwaysEdible().build();
     private static final FoodComponent betterJunkFood = new FoodComponent.Builder().nutrition(4).saturationModifier(1.0f).alwaysEdible().build();
     private static final FoodComponent normalFood = new FoodComponent.Builder().nutrition(5).saturationModifier(2.0f).alwaysEdible().build();
+    private static final FoodComponent goodFood = new FoodComponent.Builder().nutrition(7).saturationModifier(3.0f).alwaysEdible().build();
+
+    private static final FoodComponent Drink = new FoodComponent.Builder().alwaysEdible().build();
+
 
     public static HashSet<Item> GENERIC_FOODS_SET = new HashSet<>();
 
     public static final Item CHOCOLATE = registerWithSet("chocolate", new Item(new Item.Settings().food(ModFoodComponents.CHOCOLATE)), GENERIC_FOODS_SET);
 
     public static final Item SPICY_NACHOS = registerWithSet("spicy_nachos", new Item(new Item.Settings().food(betterJunkFood)), GENERIC_FOODS_SET);
+    public static final Item CHEESE_NACHOS = registerWithSet("nachos_cheese", new Item(new Item.Settings().food(betterJunkFood)), GENERIC_FOODS_SET);
+    public static final Item GUACAMOLE_NACHOS = registerWithSet("nachos_guacamole", new Item(new Item.Settings().food(betterJunkFood)), GENERIC_FOODS_SET);
+    public static final Item NACHOS = registerWithSet("nachos_plain", new Item(new Item.Settings().food(betterJunkFood)), GENERIC_FOODS_SET);
+    public static final Item PURPLE_NACHOS = registerWithSet("nachos_purple", new Item(new Item.Settings().food(betterJunkFood)), GENERIC_FOODS_SET);
     public static final Item SPICY_FRIES = registerWithSet("spicy_fries", new Item(new Item.Settings().food(betterJunkFood)), GENERIC_FOODS_SET);
+    public static final Item FRIES = registerWithSet("fries_plain", new Item(new Item.Settings().food(betterJunkFood)), GENERIC_FOODS_SET);
+
+    public static final Item CHIPS_BBQ = registerWithSet("chips_bbq", new Item(new Item.Settings().food(betterJunkFood)), GENERIC_FOODS_SET);
+    public static final Item CHIPS_PICKLE = registerWithSet("chips_pickle", new Item(new Item.Settings().food(betterJunkFood)), GENERIC_FOODS_SET);
+    public static final Item CHIPS = registerWithSet("chips_plain", new Item(new Item.Settings().food(betterJunkFood)), GENERIC_FOODS_SET);
+
 
     public static final Item MONSTER_HEART = registerWithSet("monster_heart", new Item(new Item.Settings().food(FoodComponents.GOLDEN_APPLE)), GENERIC_FOODS_SET);
 
@@ -2641,6 +2654,44 @@ public class GCItems {
     public static final Item STINGRAY = registerWithSet("stingray", new Item(new Item.Settings().food(normalFood)), FISH_SET);
     public static final Item URCHIN = registerWithSet("urchin", new Item(new Item.Settings().food(normalFood)), FISH_SET);
     public static final Item ZEBRAFISH = registerWithSet("zebrafish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item KOI = registerWithSet("koi", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item PICKLE = registerWithSet("pickle", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item PARROT_FISH = registerWithSet("parrotfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item REEF = registerWithSet("reef", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item SAMIN = registerWithSet("samin", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item STARFISH = registerWithSet("starfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item MOLTEN_EEL = registerWithSet("molten_eel", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item ANOMALOCARIS = registerWithSet("cuttlefish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item CATFISH = registerWithSet("catfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item BARBOACH = registerWithSet("barboach", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item GHOST_SHRIMP = registerWithSet("ghost_shrimp", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item HECTEYE_FISH = registerWithSet("hecteye_fish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item CANDY_CARP = registerWithSet("candy_carp", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item MINITHULHU = registerWithSet("minithulhu", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item ZOMBIE_FISH = registerWithSet("zombie_fish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item ANGLER_BLUE = registerWithSet("angler_blue", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item ANGY_TIM = registerWithSet("angy_tim", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item BLOBFISH = registerWithSet("blobfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item CLAM = registerWithSet("clam", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item COCKLE = registerWithSet("cockle", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item CRAB = registerWithSet("crab", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item EEL_B = registerWithSet("eel_b", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item EEL_ELE = registerWithSet("eel_ele", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item FLYING_FISH = registerWithSet("flying_fish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item GLACIERFISH = registerWithSet("glacierfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item HAPPY_TIM = registerWithSet("happy_tim", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item MUTANTCARP = registerWithSet("mutantcarp", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item OCTOPUS = registerWithSet("octopus", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item PERIWINKLE = registerWithSet("periwinkle", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item SEA_BUN = registerWithSet("sea_bun", new Item(new Item.Settings()), FISH_SET);
+    public static final Item SHRIMP = registerWithSet("shrimp", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item POCKET_SNIBLING = registerWithSet("snail", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item SPOOKFISH = registerWithSet("spookfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item SQUID = registerWithSet("squid", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item SQUID_G = registerWithSet("squid_g", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+    public static final Item SQUID_R = registerWithSet("squid_r", new Item(new Item.Settings().food(normalFood)), FISH_SET);
+
+
 
     // ACCESSORIES
     public static final Item ARACHNOPHOBIA_HAT = register("arachnophobia", new TrinketItem(new Item.Settings()));
@@ -3125,49 +3176,410 @@ public class GCItems {
     // UNSORTED FROM KATS STUFF ( CHILLI ZONE ) - please sort into your stuff how you see fit
 
 
+    //food
+    public static final HashSet<Item> COOKED_SET = new HashSet<>();
+    public static final Item BURGER_BEAN = registerWithSet("burger_bean", new Item(new Item.Settings().food(normalFood)), COOKED_SET);
+    public static final Item BURGER_BEEF = registerWithSet("burger_beef", new Item(new Item.Settings().food(goodFood)), COOKED_SET);
+    public static final Item BURGER_CHICKEN = registerWithSet("burger_chicken", new Item(new Item.Settings().food(normalFood)), COOKED_SET);
+    public static final Item BURGER_POTATO = registerWithSet("burger_potato", new Item(new Item.Settings().food(betterJunkFood)), COOKED_SET);
+    public static final Item BURRITO_BEEF = registerWithSet("burrito_beef", new Item(new Item.Settings().food(normalFood)), COOKED_SET);
+    public static final Item BURRITO_FISH = registerWithSet("burrito_fish", new Item(new Item.Settings().food(betterJunkFood)), COOKED_SET);
+    public static final Item BURRITO_VEGGIE = registerWithSet("burrito_veggie", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item CARROT_SOUP = registerWithSet("carrot_soup", new Item(new Item.Settings().food(betterJunkFood)), COOKED_SET);
+    public static final Item COD_DINNER = registerWithSet("cod_dinner", new Item(new Item.Settings().food(goodFood)), COOKED_SET);
+    public static final Item LEMON_SALMON = registerWithSet("lemon_salmon", new Item(new Item.Settings().food(goodFood)), COOKED_SET);
+    public static final Item MAC_AND_CHEESI = registerWithSet("mac_and_cheesi", new Item(new Item.Settings().food(betterJunkFood)), COOKED_SET);
+    public static final Item MASHED_POTATOES = registerWithSet("mashed_potatoes", new Item(new Item.Settings().food(betterJunkFood)), COOKED_SET);
+    public static final Item ROAST_HAM = registerWithSet("roast_ham", new Item(new Item.Settings().food(normalFood)), COOKED_SET);
+    public static final Item ROAST_TURKEY = registerWithSet("roast_turkey", new Item(new Item.Settings().food(normalFood)), COOKED_SET);
+    public static final Item salad = registerWithSet("salad", new Item(new Item.Settings().food(betterJunkFood)), COOKED_SET);
+    public static final Item SPICY_CHIGGIN = registerWithSet("spicy_chiggin", new Item(new Item.Settings().food(normalFood)), COOKED_SET);
+    public static final Item TACO_BEEF = registerWithSet("taco_beef", new Item(new Item.Settings().food(betterJunkFood)), COOKED_SET);
+    public static final Item TACO_FISH = registerWithSet("taco_fish", new Item(new Item.Settings().food(betterJunkFood)), COOKED_SET);
+    public static final Item TACO_VEGGIE = registerWithSet("taco_veggie", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+
+    public static final Item NIGIRI_EEL = registerWithSet("nigiri_eel", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item NIGIRI_SALMON = registerWithSet("nigiri_salmon", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item NIGIRI_MAKI = registerWithSet("nigiri_maki", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item NIGIRI_SQUID = registerWithSet("nigiri_squid", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item NIGIRI_TUNA = registerWithSet("nigiri_tuna", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+
+    public static final Item ROE_SALMON = registerWithSet("roe_salmon", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item ROE_URCHIN = registerWithSet("roe_urchin", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+
+    public static final Item ROLL_SALMON = registerWithSet("roll_salmon", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item ROLL_TUNA = registerWithSet("roll_tuna", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item ROLL_AVOCADO = registerWithSet("roll_avocado", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item ROLL_KIMBAP = registerWithSet("roll_kimbap", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+
+    public static final Item SASHIMI_SALMON = registerWithSet("sashimi_salmon", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item SASHIMI_SURF_CLAM = registerWithSet("sashimi_surf_clam", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item SASHIMI_TUNA = registerWithSet("sashimi_tuna", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item SASHIMI_WHITE_TUNA = registerWithSet("sashimi_white_tuna", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item CALAMARI = registerWithSet("calamari", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+
+    public static final Item CHICKEN_NUGGET = registerWithSet("chickennuggetitem", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item BEEF_JERKY = registerWithSet("beefjerkyitem", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item UNCOOKED_NOODLES = registerWithSet("noodlesitem", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item HOT_COFFEE = registerWithSet("hotcoffeeitem", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+    public static final Item CHOCOLATE_STRAWBERRY = registerWithSet("chocolatestrawberryitem", new Item(new Item.Settings().food(junkFood)), COOKED_SET);
+
+    public static final HashSet<Item> FRUIT_SET = new HashSet<>();
+
+    public static final Item APPLE_GREEN = registerWithSet("apple_green", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item AVACADO = registerWithSet("avacado", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item BLACKBERRY = registerWithSet("blackberry", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item BLUEBERRY = registerWithSet("blueberry", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item CACTUS_PEAR = registerWithSet("cactus_pear", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item CHERRIES = registerWithSet("cherries", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item COCONUT = registerWithSet("coconut", new Item(new Item.Settings().food(junkFood)), FRUIT_SET);
+    public static final Item CRANBERRY_SAUCE = registerWithSet("cranberry_sauce", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item FIG = registerWithSet("fig", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item GRAPES_CONCORD = registerWithSet("grapes_concord", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item GRAPES_GREEN = registerWithSet("grapes_green", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item GRAPES_RED = registerWithSet("grapes_red", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item LYCHEE = registerWithSet("lychee", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item MANGO = registerWithSet("mango", new Item(new Item.Settings().food(junkFood)), FRUIT_SET);
+    public static final Item MANGOSTEEN = registerWithSet("mangosteen", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item PASSIONFRUIT = registerWithSet("passionfruit", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item PEACH = registerWithSet("peach", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item PEAR = registerWithSet("pear", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item PINEAPPLE = registerWithSet("pineapple", new Item(new Item.Settings().food(junkFood)), FRUIT_SET);
+    public static final Item RAMBUTAN = registerWithSet("rambutan", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item RASPBERRY_BLUE = registerWithSet("raspberry_blue", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item RASPBERRY_RED = registerWithSet("raspberry_red", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item SOURSOP = registerWithSet("soursop", new Item(new Item.Settings().food(junkFood)), FRUIT_SET);
+    public static final Item STARFRUIT = registerWithSet("starfruit", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item TODDY_PALM = registerWithSet("toddy_palm", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item TOMATO = registerWithSet("tomato", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item STRAWBERRY = registerWithSet("strawberryitem", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+
+    public static final Item MELON_CANARY = registerWithSet("canary_melon", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item MELON_CANTALOUPE= registerWithSet("cantaloupe", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item MELON_HONEYDEW = registerWithSet("honeydew", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item MELON_HORNED = registerWithSet("horned_melon", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item MELON_SKEWER = registerWithSet("melon_skewer", new Item(new Item.Settings().food(betterJunkFood)), FRUIT_SET);
+
+    public static final Item DRAGONFRUIT_PINK = registerWithSet("dragonfruit_pink", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item DRAGONFRUIT_RED = registerWithSet("dragonfruit_red", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item DRAGONFRUIT_YELLOW = registerWithSet("dragonfruit_yellow", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item GRAPEFRUIT = registerWithSet("grapefruit", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item ORANGE = registerWithSet("orange", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item JACKFRUIT = registerWithSet("jackfruit", new Item(new Item.Settings().food(junkFood)), FRUIT_SET);
+    public static final Item PAPAYA = registerWithSet("papaya", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item CORN = registerWithSet("cornitem", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item KIWI = registerWithSet("kiwiitem", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item ONION = registerWithSet("onionitem", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item PLUM = registerWithSet("plum", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+
+    public static final Item PEPPER_CHILLI = registerWithSet("pepper_chilli", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item PEPPER_GHOST = registerWithSet("pepper_ghost", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item PEPPER_HABANERO = registerWithSet("pepper_habanero", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item PEPPER_JALAPENO = registerWithSet("pepper_jalapeno", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item PEPPER_CHILI = registerWithSet("chilipepperitem", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+
+    public static final Item PEPPER_CHWI = registerWithSet("chwi", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item PEPPER_CHWIWI = registerWithSet("chwiwi", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item PEPPER_CHWIWIWI = registerWithSet("chwiwiwi", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
 
 
+
+
+
+
+
+    public static final Item AUTOMATO = registerWithSet("automato", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item AVESMINGO = registerWithSet("avesmingo", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item BEAKSEED = registerWithSet("beakseed", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item BOLTBULB = registerWithSet("boltbulb", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item BONEBOO = registerWithSet("boneboo", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item CORALCREEP = registerWithSet("coralcreep", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item CURRENTCORN = registerWithSet("currentcorn", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item DIODIA = registerWithSet("diodia", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item DIRTURCHIN = registerWithSet("dirturchin", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item EGGSHOOT = registerWithSet("eggshoot", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item FEATHERCROWN = registerWithSet("feathercrown", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item NEONMELON = registerWithSet("neonmelon", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item OCUMELON = registerWithSet("ocumelon", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item PEARLPEAS = registerWithSet("pearlpeas", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item PUSSPLUM = registerWithSet("pussplum", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item REEFPOD = registerWithSet("reefpod", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item TOXICTOP = registerWithSet("toxictop", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+    public static final Item WARTWEED = registerWithSet("wartweed", new Item(new Item.Settings().food(trashFood)), FRUIT_SET);
+
+
+
+
+    //desert
+
+    public static final HashSet<Item> CANDY_SET = new HashSet<>();
+
+
+    public static final Item AGAR_CHOCOLATE = registerWithSet("agar_chocolate", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item AGAR_COCONUT = registerWithSet("agar_coconut", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item AGAR_GRAPE= registerWithSet("agar_grape", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item AGAR_LEMON = registerWithSet("agar_lemon", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item AGAR_LIME = registerWithSet("agar_lime", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item AGAR_MANGO = registerWithSet("agar_mango", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item AGAR_ORANGE = registerWithSet("agar_orange", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item AGAR_PANDAN = registerWithSet("agar_pandan", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item AGAR_ROSE = registerWithSet("agar_rose", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item AGAR_WATERMELON = registerWithSet("agar_watermelon", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+
+    public static final Item CANDYCANE_BUTTERSCOTCH = registerWithSet("candycane_butterscotch", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item CANDYCANE_PEPPERMINT = registerWithSet("candycane_peppermint", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item CANDYCANE_SPEARMINT = registerWithSet("candycane_spearmint", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+
+    public static final Item EYEBALL_CHERRY = registerWithSet("eyeball_cherry", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item EYEBALL_LIME = registerWithSet("eyeball_lime", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item EYEBALL_VANILLA = registerWithSet("eyeball_vanilla", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+
+    public static final Item JELLY_BLUE = registerWithSet("jelly_blue", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item JELLY_GRAPE = registerWithSet("jelly_grape", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item JELLY_LEMON = registerWithSet("jelly_lemon", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item JELLY_LIME = registerWithSet("jelly_lime", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item JELLY_ORANGE = registerWithSet("jelly_orange", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item JELLY_STRAWBERRY = registerWithSet("jelly_strawberry", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+
+    public static final Item DONUT_BOSTON_CREAM = registerWithSet("donut_boston_cream", new Item(new Item.Settings().food(junkFood)), CANDY_SET);
+    public static final Item DONUT_CHOCOLATE = registerWithSet("donut_chocolate", new Item(new Item.Settings().food(junkFood)), CANDY_SET);
+    public static final Item DONUT_JELLY = registerWithSet("donut_jelly", new Item(new Item.Settings().food(junkFood)), CANDY_SET);
+    public static final Item DONUT_MAPLE_CREAM= registerWithSet("donut_maple_cream", new Item(new Item.Settings().food(junkFood)), CANDY_SET);
+    public static final Item DONUT_MAPLE_GLAZE = registerWithSet("donut_maple_glaze", new Item(new Item.Settings().food(junkFood)), CANDY_SET);
+    public static final Item DONUT_POWDERED = registerWithSet("donut_powdered", new Item(new Item.Settings().food(junkFood)), CANDY_SET);
+    public static final Item DONUT_SPRINKLES = registerWithSet("donut_sprinkles", new Item(new Item.Settings().food(junkFood)), CANDY_SET);
+    public static final Item DONUT_VANILLA = registerWithSet("donut_vanilla", new Item(new Item.Settings().food(junkFood)), CANDY_SET);
+
+    public static final Item PUDDING_BUTTERSCOTCH = registerWithSet("pudding_butterscotch", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item PUDDING_CHOCOLATE = registerWithSet("pudding_chocolate", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item PUDDING_VANILLA = registerWithSet("pudding_vanilla", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item YOGURT = registerWithSet("yogurt", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+
+
+    public static final Item TAFFY_APPLE = registerWithSet("taffy_apple", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item TAFFY_CHOCOLATE = registerWithSet("taffy_chocolate", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item TAFFY_GRAPE = registerWithSet("taffy_grape", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+    public static final Item TAFFY_ORANGE = registerWithSet("taffy_orange", new Item(new Item.Settings().food(trashFood)), CANDY_SET);
+
+
+    public static final HashSet<Item> COOKIE_SET = new HashSet<>();
+
+    public static final Item MACARON_BLUEBERRY = registerWithSet("macaron_blueberry", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item MACARON_CHOCOLATE = registerWithSet("macaron_chocolate", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item MACARON_COFFEE = registerWithSet("macaron_coffee", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item MACARON_LAVENDER = registerWithSet("macaron_lavender", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item MACARON_LEMON = registerWithSet("macaron_lemon", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item MACARON_PISTACHIO = registerWithSet("macaron_pistachio", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item MACARON_STRAWBERRY = registerWithSet("macaron_strawberry", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item MACARON_VANILLA = registerWithSet("macaron_vanilla", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+
+    public static final Item QUESTIONABLE_COOKIE = registerWithSet("questionable_cookie", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item BROWNIE = registerWithSet("brownie", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item CHOCOLATE_BAT = registerWithSet("chocolate_bat", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item CHOCOLATE_BAT_WHITE = registerWithSet("chocolate_bat_white", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item CHOCOLATE_CRAB = registerWithSet("chocolate_crab", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item CHOCOLATE_CRINKLE = registerWithSet("chocolate_crinkle", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item CHOGGY_COG = registerWithSet("choggy_cog", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item COOKIE_CAT = registerWithSet("cookie_cat", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item COOKIE_CHOCOLATE = registerWithSet("cookie_chocolate", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item COOKIE_DOUBLE_CHOCOLATE = registerWithSet("cookie_double_chocolate", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item COOKIE_OATMEAL = registerWithSet("cookie_oatmeal", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item COOKIE_PEANUT = registerWithSet("cookie_peanut", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item COOKIE_REDVELVET = registerWithSet("cookie_redvelvet", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item CREAM_COOKIE_APRICOT = registerWithSet("cream_cookie_apricot", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item CREAM_COOKIE_BLUEBERRY = registerWithSet("cream_cookie_blueberry", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item CREAM_COOKIE_CHOCOLATE = registerWithSet("cream_cookie_chocolate", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item CREAM_COOKIE_FUDGE = registerWithSet("cream_cookie_fudge", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item CREAM_COOKIE_RASPBERRY = registerWithSet("cream_cookie_raspberry", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item CREAM_COOKIE_VANILLA = registerWithSet("cream_cookie_vanilla", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item CREEPER_COOKIE = registerWithSet("creeper_cookie", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item GHOST_CHOCOLATE = registerWithSet("ghost_chocolate", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item GHOST_MARSHMALLOW = registerWithSet("ghost_marshmallow", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item GINGER_ALEX = registerWithSet("ginger_alex", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item GINGER_CREEPER = registerWithSet("ginger_creeper", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item GINGER_ENDERMAN = registerWithSet("ginger_enderman", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item GINGER_STEVE = registerWithSet("ginger_steve", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item LION_LICKER = registerWithSet("lion_licker", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item MERINGUE = registerWithSet("meringue", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item WAFER_CHOCOLATE = registerWithSet("wafer_chocolate", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item WAFER_VANILLA = registerWithSet("wafer_vanilla", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+
+    public static final HashSet<Item> PIE_SET = new HashSet<>();
+
+    public static final Item PIE_PECAN = registerWithSet("pecan_pie", new Item(new Item.Settings().food(betterJunkFood)), PIE_SET);
+    public static final Item PIE_APPLE = registerWithSet("pie_apple", new Item(new Item.Settings().food(betterJunkFood)), PIE_SET);
+    public static final Item PIE_BANANA = registerWithSet("pie_banana", new Item(new Item.Settings().food(betterJunkFood)), PIE_SET);
+    public static final Item PIE_BLUEBERRY = registerWithSet("pie_blueberry", new Item(new Item.Settings().food(betterJunkFood)), PIE_SET);
+    public static final Item PIE_BUTTERSCOTCH = registerWithSet("pie_butterscotch", new Item(new Item.Settings().food(betterJunkFood)), PIE_SET);
+    public static final Item PIE_CHOCOLATE = registerWithSet("pie_chocolate", new Item(new Item.Settings().food(betterJunkFood)), PIE_SET);
+    public static final Item PIE_ECTO = registerWithSet("pie_ecto", new Item(new Item.Settings().food(betterJunkFood)), PIE_SET);
+    public static final Item PIE_LEMON = registerWithSet("pie_lemon", new Item(new Item.Settings().food(betterJunkFood)), PIE_SET);
+    public static final Item PIE_LIME = registerWithSet("pie_lime", new Item(new Item.Settings().food(betterJunkFood)), PIE_SET);
+    public static final Item PIE_RASPBERRY = registerWithSet("pie_raspberry", new Item(new Item.Settings().food(betterJunkFood)), PIE_SET);
+    public static final Item PIE_RHUBARB = registerWithSet("pie_rhubarb", new Item(new Item.Settings().food(betterJunkFood)), PIE_SET);
+    public static final Item PIE_SWEET_POTATO = registerWithSet("pie_sweet_potato", new Item(new Item.Settings().food(betterJunkFood)), PIE_SET);
+    public static final Item TRIFLE = registerWithSet("trifle", new Item(new Item.Settings().food(betterJunkFood)), PIE_SET);
+
+
+    public static final Item SHADOW_CLUMP = registerWithSet("shadow_clump", new Item(new Item.Settings().food(trashFood)), STRANGE_FOODS_SET);
+    public static final Item JELLY_BEANS = registerWithSet("jelly_beans", new Item(new Item.Settings().food(trashFood)), GENERIC_FOODS_SET);
+    public static final Item CHEESI_BITE = registerWithSet("cheesi_bite", new Item(new Item.Settings().food(trashFood)), GENERIC_FOODS_SET);
+    public static final Item SUGAR_CUBE = registerWithSet("sugar_cube", new Item(new Item.Settings().food(trashFood)), GENERIC_FOODS_SET);
+    public static final Item BUTTER = registerWithSet("butter", new Item(new Item.Settings().food(trashFood)), GENERIC_FOODS_SET);
+    public static final Item HEART_CONTAINER = registerWithSet("heart_container", new Item(new Item.Settings().food(trashFood)), GENERIC_FOODS_SET);
+    public static final Item SUPER_STAR = registerWithSet("super_star", new Item(new Item.Settings().food(trashFood)), GENERIC_FOODS_SET);
+    public static final Item RED_SUGAR = registerWithSet("red_sugar", new Item(new Item.Settings().food(trashFood)), GENERIC_FOODS_SET);
+
+    public static final Item RUSTY_COG = registerWithSet("cog", new Item(new Item.Settings().food(trashFood)), GENERIC_FOODS_SET);
+    public static final Item OLD_BOOT = registerWithSet("old_boot", new Item(new Item.Settings().food(trashFood)), GENERIC_FOODS_SET);
+    public static final Item STRAW = registerWithSet("straw", new Item(new Item.Settings().food(trashFood)), GENERIC_FOODS_SET);
+    public static final Item SNAND = registerWithSet("snand", new Item(new Item.Settings().food(trashFood)), GENERIC_FOODS_SET);
+    public static final Item LEAF_ROTTEN = registerWithSet("rotten_leaf", new Item(new Item.Settings().food(trashFood)), GENERIC_FOODS_SET);
+    public static final Item LEAF = registerWithSet("leaf", new Item(new Item.Settings().food(trashFood)), GENERIC_FOODS_SET);
+    public static final Item LEAF_CRUNCHY = registerWithSet("crunchy_leaf", new Item(new Item.Settings().food(trashFood)), GENERIC_FOODS_SET);
+
+    // ICE_CREAM_SET GENERIC_FOODS_SET FISH_SET GUMMY_SET BREAD_SET STRANGE_FOODS_SET
+
+    //drinks
+
+    public static final HashSet<Item> DRINK_SET = new HashSet<>();
+
+    public static final Item BOBA_BLACK = registerWithSet("boba_black", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item BOBA_COCONUT = registerWithSet("boba_coconut", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item BOBA_MANGO = registerWithSet("boba_mango", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item BOBA_MATCHA = registerWithSet("boba_matcha", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item BOBA_MELON = registerWithSet("boba_melon", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item BOBA_STRAWBERRY = registerWithSet("boba_strawberry", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item BOBA_SWEET = registerWithSet("boba_sweet", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item BOBA_TARO = registerWithSet("boba_taro", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+
+    public static final Item DAIQUIRI_AVOCADO = registerWithSet("daiquiri_avocado", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item DAIQUIRI_BANANA = registerWithSet("daiquiri_banana", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item DAIQUIRI_MANGO = registerWithSet("daiquiri_mango", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item DAIQUIRI_PEACH = registerWithSet("daiquiri_peach", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item DAIQUIRI_PINACOLADA = registerWithSet("daiquiri_pinacolada", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item DAIQUIRI_STRAWBERRY = registerWithSet("daiquiri_strawberry", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+
+    public static final Item EDRINK_BLACKBERRY = registerWithSet("edrink_blackberry", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item EDRINK_BLUE = registerWithSet("edrink_blue", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item EDRINK_GRAPE = registerWithSet("edrink_grape", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item EDRINK_LIME = registerWithSet("edrink_lime", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item EDRINK_ORANGE = registerWithSet("edrink_orange", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item EDRINK_WATERMELON = registerWithSet("edrink_watermelon", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+
+    public static final Item EGGNOG = registerWithSet("eggnog_plain", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item EGGNOG_SPICED = registerWithSet("eggnog_spiced", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+
+    public static final Item HOLY_WATER = registerWithSet("holy_water", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item HOT_CHOCOLATE= registerWithSet("hot_chocolate", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+
+    public static final Item JUICE_APPLE = registerWithSet("juice_apple", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item JUICE_BLUEBERRY = registerWithSet("juice_blueberry", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item JUICE_CANE = registerWithSet("juice_cane", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item JUICE_CARROT = registerWithSet("juice_carrot", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item JUICE_COCONUT = registerWithSet("juice_coconut", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item JUICE_CRANBERRY = registerWithSet("juice_cranberry", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item JUICE_GRAPE = registerWithSet("juice_grape", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item JUICE_GRAPEFRUIT = registerWithSet("juice_grapefruit", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item JUICE_GREEN = registerWithSet("juice_green", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item JUICE_KIWI = registerWithSet("juice_kiwi", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item JUICE_LEMON = registerWithSet("juice_lemon", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item JUICE_LIME = registerWithSet("juice_lime", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item JUICE_MANGO = registerWithSet("juice_mango", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item JUICE_ORANGE = registerWithSet("juice_orange", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item JUICE_TOMATO = registerWithSet("juice_tomato", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+
+    public static final Item KOMBUCHA_BERRY = registerWithSet("kombucha_berry", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item KOMBUCHA_GINGER = registerWithSet("kombucha_ginger", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item KOMBUCHA_GRAPE = registerWithSet("kombucha_grape", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item KOMBUCHA_KIWI = registerWithSet("kombucha_kiwi", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item KOMBUCHA_MANGO = registerWithSet("kombucha_mango", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item KOMBUCHA = registerWithSet("kombucha_plain", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+
+    public static final Item MARGARITA_LIME = registerWithSet("margarita_lime", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item MARGARITA_MANGO = registerWithSet("margarita_mango", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item MARGARITA_PEACH = registerWithSet("margarita_peach", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item MARGARITA_RASPBERRY = registerWithSet("margarita_raspberry", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+
+    public static final Item MARTINI_APPLE = registerWithSet("martini_apple", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item MARTINI_BLUE = registerWithSet("martini_blue", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item MARTINI_CHOCOLATE = registerWithSet("martini_chocolate", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item MARTINI_COSMOPOLITAN = registerWithSet("martini_cosmopolitan", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item MARTINI_DIRTY = registerWithSet("martini_dirty", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item MARTINI_DRY = registerWithSet("martini_dry", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item MARTINI_GIN = registerWithSet("martini_gin", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+
+    public static final Item MILK_ALMOND = registerWithSet("milk_almond", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item MILK_CHOCOLATE = registerWithSet("milk_chocolate", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item MILK_COCONUT = registerWithSet("milk_coconut", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item MILK_PUMPKIN = registerWithSet("milk_pumpkin", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item MILK_SOY = registerWithSet("milk_soy", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+
+    public static final Item MILKSHAKE_CHOCOLATE = registerWithSet("milkshake_chocolate", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item MILKSHAKE_STRAWBERRY = registerWithSet("milkshake_strawberry", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item MILKSHAKE_VANILLA = registerWithSet("milkshake_vanilla", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+
+    public static final Item SHOT_BLUE = registerWithSet("shot_blue", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SHOT_GREEN = registerWithSet("shot_green", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SHOT_RED = registerWithSet("shot_red", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SHOT_SPICED_RUM = registerWithSet("shot_spiced_rum", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SHOT_TEQUILA = registerWithSet("shot_tequila", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SHOT_VODKA = registerWithSet("shot_vodka", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SHOT_WHISKEY = registerWithSet("shot_whiskey", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+
+    public static final Item SLUSHY_BLUE = registerWithSet("slushy_blue", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SLUSHY_CHERRY = registerWithSet("slushy_cherry", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SLUSHY_GRAPE = registerWithSet("slushy_grape", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SLUSHY_LEMON = registerWithSet("slushy_lemon", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SLUSHY_LIME = registerWithSet("slushy_lime", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SLUSHY_ORANGE = registerWithSet("slushy_orange", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+
+    public static final Item SODA_CITRUS = registerWithSet("soda_citrus", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SODA_CLUB = registerWithSet("soda_club", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SODA_COLA = registerWithSet("soda_cola", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SODA_CREAM = registerWithSet("soda_cream", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SODA_DEW = registerWithSet("soda_dew", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SODA_GINGERALE = registerWithSet("soda_gingerale", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SODA_GRAPE = registerWithSet("soda_grape", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SODA_ORANGE = registerWithSet("soda_orange", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SODA_PEPPER = registerWithSet("soda_pepper", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item SODA_ROOTBEER = registerWithSet("soda_rootbeer", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item WINE_CHAMPAGNE = registerWithSet("wine_champagne", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item WINE_DARK = registerWithSet("wine_dark", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item WINE_RED = registerWithSet("wine_red", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item WINE_ROSE = registerWithSet("wine_rose", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+    public static final Item WINE_WHITE = registerWithSet("wine_white", new Item(new Item.Settings().food(Drink)), DRINK_SET);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Crops
+
+    //Baked
+
+
+
+    // WOODCARVE
+    public static final HashSet<Item> WOODCARVE_SET = new HashSet<>();
+    public static final Item YOU_TRIED_PEEP = registerWithSet("you_tried_peep", new Item(new Item.Settings()), WOODCARVE_SET);
+    public static final Item CHISEL_IRON = registerWithSet("chisel_iron", new Item(new Item.Settings()), WOODCARVE_SET);
     //fish
-    public static final Item KOI = registerWithSet("koi", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item PICKLE = registerWithSet("pickle", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item PARROT_FISH = registerWithSet("parrotfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item REEF = registerWithSet("reef", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item SAMIN = registerWithSet("samin", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item STARFISH = registerWithSet("starfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item MOLTEN_EEL = registerWithSet("molten_eel", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item ANOMALOCARIS = registerWithSet("cuttlefish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item CATFISH = registerWithSet("catfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item BARBOACH = registerWithSet("barboach", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item GHOST_SHRIMP = registerWithSet("ghost_shrimp", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item HECTEYE_FISH = registerWithSet("hecteye_fish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item CANDY_CARP = registerWithSet("candy_carp", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item MINITHULHU = registerWithSet("minithulhu", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item ZOMBIE_FISH = registerWithSet("zombie_fish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item ANGLER_BLUE = registerWithSet("angler_blue", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item ANGY_TIM = registerWithSet("angy_tim", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item BLOBFISH = registerWithSet("blobfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item CLAM = registerWithSet("clam", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item COCKLE = registerWithSet("cockle", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item CRAB = registerWithSet("crab", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item EEL_B = registerWithSet("eel_b", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item EEL_ELE = registerWithSet("eel_ele", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item FLYING_FISH = registerWithSet("flying_fish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item GLACIERFISH = registerWithSet("glacierfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item HAPPY_TIM = registerWithSet("happy_tim", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item MUTANTCARP = registerWithSet("mutantcarp", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item OCTOPUS = registerWithSet("octopus", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item PERIWINKLE = registerWithSet("periwinkle", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item SEA_BUN = registerWithSet("sea_bun", new Item(new Item.Settings()), FISH_SET);
-    public static final Item SHRIMP = registerWithSet("shrimp", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item POCKET_SNIBLING = registerWithSet("snail", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item SPOOKFISH = registerWithSet("spookfish", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item SQUID = registerWithSet("squid", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item SQUID_G = registerWithSet("squid_g", new Item(new Item.Settings().food(normalFood)), FISH_SET);
-    public static final Item SQUID_R = registerWithSet("squid_r", new Item(new Item.Settings().food(normalFood)), FISH_SET);
 
-
-//bobbers, bait
-public static final HashSet<Item> FISHING_SET = new HashSet<>();
+    //bobbers, bait
+    public static final HashSet<Item> FISHING_SET = new HashSet<>();
     public static final Item LURE_BOBBER = registerWithSet("lure_bobber", new Item(new Item.Settings()), FISHING_SET);
     public static final Item LURE_CURIO = registerWithSet("lure_curio", new Item(new Item.Settings()), FISHING_SET);
     public static final Item LURE_DRESS = registerWithSet("lure_dress", new Item(new Item.Settings()), FISHING_SET);
