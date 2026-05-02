@@ -12,12 +12,14 @@ import java.util.function.IntFunction;
 import java.util.function.ToIntFunction;
 
 public enum ExtendedRarity implements StringIdentifiable {
-    COMMON(0, "common", Formatting.WHITE),
-    UNCOMMON(1, "uncommon", Formatting.GRAY),
-    RARE(2, "rare", Formatting.AQUA),
-    EPIC(3, "epic", Formatting.DARK_PURPLE),
-    UNIQUE(4, "unique", Formatting.GOLD),
-    LEGENDARY(5, "legendary", Formatting.DARK_RED);
+    TRASH(0, "trash", Formatting.GRAY),
+    COMMON(1, "common", Formatting.WHITE),
+    UNCOMMON(2, "uncommon", Formatting.GREEN),
+    RARE(3, "rare", Formatting.AQUA),
+    EPIC(4, "epic", Formatting.DARK_PURPLE),
+    UNIQUE(5, "unique", Formatting.GOLD),
+    LEGENDARY(6, "legendary", Formatting.DARK_RED);
+
 
     public static final Codec<ExtendedRarity> CODEC = StringIdentifiable.createBasicCodec(ExtendedRarity::values);
     public static final IntFunction<ExtendedRarity> ID_TO_VALUE = ValueLists.createIdToValueFunction((ToIntFunction<ExtendedRarity>) value -> value.index, values(), ValueLists.OutOfBoundsHandling.ZERO);

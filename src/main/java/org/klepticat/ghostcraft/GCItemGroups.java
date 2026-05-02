@@ -371,6 +371,27 @@ public class GCItemGroups {
                 entries.add(SMOOTH_SCULK_STONE_STAIRS);
                 entries.add(SMOOTH_SCULK_STONE_SLAB);
                 entries.add(SMOOTH_SCULK_STONE_WALL);
+
+                entries.add(MAGIC_ASSIST);
+
+                entries.add(CONFETTI);
+                entries.add(CONFETTI_CARPET);
+
+                entries.add(CONFETTI_CHRISTMAS);
+                entries.add(CONFETTI_CHRISTMAS_CARPET);
+
+                entries.add(CONFETTI_EASTER);
+                entries.add(CONFETTI_EASTER_CARPET);
+
+                entries.add(CONFETTI_HALLOWEEN);
+                entries.add(CONFETTI_HALLOWEEN_CARPET);
+
+                entries.add(CONFETTI_VALENTINES);
+                entries.add(CONFETTI_VALENTINES_CARPET);
+
+
+
+
             })
     );
 
@@ -389,6 +410,8 @@ public class GCItemGroups {
                 entries.add(CYAN_MACAW_FEATHER);
                 entries.add(CLOSED_ORB);
                 entries.add(SICKLE);
+                entries.add(GRAPPLING_HOOK);
+                entries.addAll(toList(BOW_SET));
                 entries.addAll(toList(WOODCARVE_SET));
                 entries.add(COPPER_COIN);
                 entries.add(SILVER_COIN);
@@ -417,18 +440,22 @@ public class GCItemGroups {
                 entries.add(PURPLE_KEY);
                 entries.add(MAGENTA_KEY);
                 entries.add(PINK_KEY);
-                entries.add(PERFUME);
-                entries.add(ARCANE_POWDER);
-                entries.add(TREE_RESIN);
                 entries.add(HAMMER);
                 entries.add(CROWBAR);
                 entries.add(SPELL_SCROLL);
                 entries.addAll(toList(POUCH_SET));
-                entries.addAll(toList(GEMSTONE_SET));
-                entries.addAll(toList(EVO_SET));
-                entries.addAll(toList(BAR_SET));
                 entries.addAll(toList(SPOOL_SET));
                 entries.addAll(toList(MISC_SET));
+                entries.addAll(toList(GATHERING_SET));
+                entries.addAll(toList(MUSHROOM_SET));
+                entries.addAll(toList(ALCHEMY_SET));
+                entries.addAll(toList(SPELLCRAFT_SET));
+                entries.add(DIRE_CHARGE);
+                entries.add(ETHEREAL_CHARGE);
+                entries.add(MAGIC_CHARGE);
+                entries.add(POTENT_CHARGE);
+                entries.addAll(toList(MARBLES_SET));
+                entries.addAll(toList(CRITTER_SET));
             })
     );
 
@@ -503,6 +530,8 @@ public class GCItemGroups {
                 entries.add(SMILER);
                 entries.add(OMINOUS_EYES);
                 entries.add(FOLLY);
+                entries.add(MINK_SWORD);
+                entries.addAll(toList(NPC_SET));
                 entries.add(NOTES);
                 entries.add(NOTICE_BOARD);
                 entries.add(GoatHornItem.getStackForInstrument(MARIAH, Registries.INSTRUMENT.entryOf(GCInstruments.MARIAH_ITS_TIME)));
@@ -568,7 +597,7 @@ public class GCItemGroups {
                 entries.add(CARD);
                 entries.add(CERAMIC_FUSE);
                 entries.add(CIRCUIT_BOARD);
-                entries.add(COPPER_COIL);
+                entries.addAll(toList(GIZMOS_SET));
                 entries.add(COMPOSITE_PLATING);
                 entries.add(DIODE);
                 entries.add(ELECTRIC_MOTOR);
@@ -625,12 +654,36 @@ public class GCItemGroups {
             })
     );
 
+    private static final ItemGroup ROCKS = register("rocks", FabricItemGroup.builder()
+            .icon(FIRE_OPAL::getDefaultStack)
+            .entries((displayContext, entries) -> {
+                entries.addAll(toList(GEMSTONE_SET));
+                entries.addAll(toList(EVO_SET));
+                entries.addAll(toList(BAR_SET));
+            })
+    );
+
     private static final ItemGroup GC_MOTH = register("moth", FabricItemGroup.builder()
             .icon(DEATH_MOTH::getDefaultStack)
             .entries((displayContext, entries) -> {
                 entries.add(DEATH_MOTH);
             })
     );
+
+    private static final ItemGroup GC_OVERSIZE = register("oversize", FabricItemGroup.builder()
+            .icon(MINK_POCKET::getDefaultStack)
+            .entries((displayContext, entries) -> {
+                entries.add(COELACANTH);
+                entries.add(GIANT_RED_JELLY);
+                entries.add(MANTA_RAY);
+                entries.add(MINITHULHU);
+                entries.add(MOLAMOLA);
+                entries.add(MORAY_EEL);
+                entries.add(CANDY_CARP);
+                entries.add(MINK_POCKET);
+            })
+    );
+
 
     public static void initialize() {
     }

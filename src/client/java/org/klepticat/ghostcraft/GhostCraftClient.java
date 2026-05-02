@@ -161,6 +161,20 @@ public class GhostCraftClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_BARS, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(MAGIC_ASSIST, RenderLayer.getTranslucent());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(CONFETTI, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(CONFETTI_CARPET, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(CONFETTI_HALLOWEEN, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(CONFETTI_HALLOWEEN_CARPET, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(CONFETTI_CHRISTMAS, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(CONFETTI_CHRISTMAS_CARPET, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(CONFETTI_EASTER, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(CONFETTI_EASTER_CARPET, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(CONFETTI_VALENTINES, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(CONFETTI_VALENTINES_CARPET, RenderLayer.getTranslucent());
+
+
         BlockRenderLayerMap.INSTANCE.putBlock(GRATED_IRON_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GRATED_SPRUCE_TRAPDOOR, RenderLayer.getCutout());
 

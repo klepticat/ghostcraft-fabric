@@ -51,6 +51,8 @@ public class GCStickers {
     public static final Sticker VIC_THIS_IS_FINE = register("vic_this_is_fine", new Sticker(Identifier.of(MOD_ID, "textures/stickers/vic_this_is_fine.png"), true));
     public static final Sticker WEHGOD_KNOWS = register("wehgod_knows", new Sticker(Identifier.of(MOD_ID, "textures/stickers/wehgod_knows.png"), true));
     public static final Sticker VIC_INTERNAL_PANIC = register("vic_internal_panic", new Sticker(Identifier.of(MOD_ID, "textures/stickers/vic_internal_panic.png"), true));
+    public static final Sticker WANDERING_STARS = register("wandering_stars", new Sticker(Identifier.of(MOD_ID, "textures/stickers/wandering_stars.png"), true));
+
 
     public static void initialize() {
     }

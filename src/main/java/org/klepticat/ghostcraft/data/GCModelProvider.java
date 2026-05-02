@@ -293,8 +293,17 @@ public class GCModelProvider extends FabricModelProvider {
         scaledfPool.slab(SCALED_FLESH_SLAB);
         scaledfPool.wall(SCALED_FLESH_WALL);
 
+        blockStateModelGenerator.registerSimpleCubeAll(MAGIC_ASSIST);
+
 
         blockStateModelGenerator.registerWoolAndCarpet(CRIMSON_WOOL, CRIMSON_CARPET);
+
+        blockStateModelGenerator.registerWoolAndCarpet(CONFETTI, CONFETTI_CARPET);
+        blockStateModelGenerator.registerWoolAndCarpet(CONFETTI_CHRISTMAS, CONFETTI_CHRISTMAS_CARPET);
+        blockStateModelGenerator.registerWoolAndCarpet(CONFETTI_EASTER, CONFETTI_EASTER_CARPET);
+        blockStateModelGenerator.registerWoolAndCarpet(CONFETTI_HALLOWEEN, CONFETTI_HALLOWEEN_CARPET);
+        blockStateModelGenerator.registerWoolAndCarpet(CONFETTI_VALENTINES, CONFETTI_VALENTINES_CARPET);
+
 
         createLogWithVariants(GLOWSHROOM_LOG, 4, blockStateModelGenerator);
         createWoodWithVariants(GLOWSHROOM_WOOD, GLOWSHROOM_LOG, 4, blockStateModelGenerator);
@@ -449,8 +458,6 @@ public class GCModelProvider extends FabricModelProvider {
         registerGeneratedItem(GCItems.SHADOW_TENDRIL, "loot/mob_drops/shadow/", itemModelGenerator);
         registerGeneratedItem(GCItems.SHADOW_EYE, "loot/mob_drops/shadow/", itemModelGenerator);
         registerGeneratedItem(GCItems.SHADOW_TOOTH, "loot/mob_drops/shadow/", itemModelGenerator);
-        registerGeneratedItem(GCItems.ARCANE_POWDER, "loot/", itemModelGenerator);
-        registerGeneratedItem(GCItems.TREE_RESIN, "loot/", itemModelGenerator);
         registerHandheldItem(GCItems.HAMMER, "util/", itemModelGenerator);
         registerHandheldItem(GCItems.CROWBAR, "util/", itemModelGenerator);
         registerHandheldItem(GCItems.SPELL_SCROLL, "util/", itemModelGenerator);
@@ -463,12 +470,18 @@ public class GCModelProvider extends FabricModelProvider {
             registerGeneratedItem(item, "foods/", itemModelGenerator);
         });
 
+
+
         GCItems.BREAD_SET.forEach(item -> {
             registerGeneratedItem(item, "foods/", itemModelGenerator);
         });
 
         GCItems.GUMMY_SET.forEach(item -> {
             registerGeneratedItem(item, "foods/gummies/", itemModelGenerator);
+        });
+
+        GCItems.BOW_SET.forEach(item -> {
+            registerGeneratedItem(item, "weapons/archer/", itemModelGenerator);
         });
 
         GCItems.FISH_SET.forEach(item -> {
@@ -511,6 +524,10 @@ public class GCModelProvider extends FabricModelProvider {
             registerGeneratedItem(item, "tradeskill/spools/", itemModelGenerator);
         });
 
+        GCItems.MARBLES_SET.forEach(item -> {
+            registerGeneratedItem(item, "loot/marbles/", itemModelGenerator);
+        });
+
         GCItems.BAR_SET.forEach(item -> {
             registerGeneratedItem(item, "tradeskill/ores-bars/", itemModelGenerator);
         });
@@ -519,6 +536,15 @@ public class GCModelProvider extends FabricModelProvider {
             registerGeneratedItem(item, "tradeskill/fishing/", itemModelGenerator);
         });
 
+        GCItems.MUSHROOM_SET.forEach(item -> {
+            registerGeneratedItem(item, "tradeskill/gathering/mushroom/", itemModelGenerator);
+        });
+
+        GCItems.GATHERING_SET.forEach(item -> {
+            registerGeneratedItem(item, "tradeskill/gathering/", itemModelGenerator);
+        });
+
+
         GCItems.WOODCARVE_SET.forEach(item -> {
             registerGeneratedItem(item, "tradeskill/woodcarve/", itemModelGenerator);
         });
@@ -526,6 +552,25 @@ public class GCModelProvider extends FabricModelProvider {
         GCItems.MISC_SET.forEach(item -> {
             registerGeneratedItem(item, "unsorted/", itemModelGenerator);
         });
+
+
+        GCItems.NPC_SET.forEach(item -> {
+            registerGeneratedItem(item, "placeables/npc/", itemModelGenerator);
+        });
+
+
+        GCItems.CRITTER_SET.forEach(item -> {
+            registerGeneratedItem(item, "placeables/critters/", itemModelGenerator);
+        });
+
+        GCItems.ALCHEMY_SET.forEach(item -> {
+            registerGeneratedItem(item, "tradeskill/alchemy/", itemModelGenerator);
+        });
+
+        GCItems.SPELLCRAFT_SET.forEach(item -> {
+            registerGeneratedItem(item, "tradeskill/spellcraft/", itemModelGenerator);
+        });
+
 
         GCItems.FLAG_SET.forEach(item -> {
             registerPlaceableItem(item, "placeables/flags/", itemModelGenerator);
@@ -538,6 +583,11 @@ public class GCModelProvider extends FabricModelProvider {
         GCItems.GEMSTONE_SET.forEach(item -> {
             registerTileItem(item, "loot/gemstones/", itemModelGenerator);
         });
+
+        GCItems.GIZMOS_SET.forEach(item -> {
+            registerTileItem(item, "gizmos/", itemModelGenerator);
+        });
+
 
         GCItems.ElytraItems.ELYTRA_SET.forEach(item -> {
             registerGeneratedItem(item, "elytra/", itemModelGenerator);
