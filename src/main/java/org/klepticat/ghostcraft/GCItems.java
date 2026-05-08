@@ -2814,8 +2814,16 @@ public class GCItems {
     public static final Item KAT_BALL = register("kat_ball", new GoatHornItem(new Item.Settings().maxCount(1), InstrumentTags.GOAT_HORNS));
 
     //OVERSIZE
+
+    public static final Item POCKET_RAVNA = register("pocket_ravna", new Item(new Item.Settings()));
+    public static final Item POCKET_LIMBY = register("pocket_limby", new Item(new Item.Settings()));
+    public static final Item POCKET_GRIM = register("pocket_grim", new Item(new Item.Settings()));
+    public static final Item POCKET_SILVER = register("pocket_silver", new Item(new Item.Settings()));
+    public static final Item POCKET_VIC = register("pocket_vic", new Item(new Item.Settings()));
+
+
     public static final Item CANDY_CARP = register("candy_carp", new Item(new Item.Settings().food(normalFood)));
-    public static final Item MINK_POCKET = register("mink_pocket", new Item(new Item.Settings()));
+    public static final Item POCKET_MINK = register("pocket_mink", new Item(new Item.Settings()));
     public static final Item COELACANTH = register("coelacanth", new Item(new Item.Settings().food(normalFood)));
     public static final Item GIANT_RED_JELLY = register("giant_red_jelly", new Item(new Item.Settings().food(normalFood)));
     public static final Item MANTA_RAY = register("manta_ray", new Item(new Item.Settings().food(normalFood)));
