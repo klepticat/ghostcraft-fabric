@@ -17,6 +17,7 @@ import java.util.List;
 
 import static org.klepticat.ghostcraft.GCBlocks.*;
 import static org.klepticat.ghostcraft.GCItems.*;
+import static org.klepticat.ghostcraft.GCItems.WarriorItems.SICKLE;
 import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
 
 public class GCItemGroups {
@@ -671,7 +672,7 @@ public class GCItemGroups {
     );
 
     private static final ItemGroup GC_OVERSIZE = register("oversize", FabricItemGroup.builder()
-            .icon(MINK_POCKET::getDefaultStack)
+            .icon(POCKET_MINK::getDefaultStack)
             .entries((displayContext, entries) -> {
                 entries.add(COELACANTH);
                 entries.add(GIANT_RED_JELLY);
@@ -680,7 +681,14 @@ public class GCItemGroups {
                 entries.add(MOLAMOLA);
                 entries.add(MORAY_EEL);
                 entries.add(CANDY_CARP);
-                entries.add(MINK_POCKET);
+                entries.add(POCKET_MINK);
+                entries.add(POCKET_GRIM);
+                entries.add(POCKET_LIMBY);
+                entries.add(POCKET_RAVNA);
+                entries.add(POCKET_SILVER);
+                entries.add(POCKET_VIC);
+
+
             })
     );
 

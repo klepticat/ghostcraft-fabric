@@ -1,0 +1,29 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "ghostcraft:item/weapons/archer/jay_bow"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, -90, 20],
+			"translation": [0, -2.25, 4]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 90, -20],
+			"translation": [0, -2.25, 4]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -77, 33.5],
+			"translation": [-0.25, -0.5, 1.75]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 77, -33.5],
+			"translation": [-0.25, -0.5, 1.75]
+		},
+		"ground": {
+			"translation": [0, 2.25, 0]
+		}
+	}
+}

@@ -264,8 +264,8 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        5,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item FOSSILIZED_KNIFE = register("fossilized_knife", new MeleeWeaponItem(
@@ -552,8 +552,8 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        3,
+                        -1.8f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item TIORVAS_EMPATHY = register("tiorvas_empathy", new MeleeWeaponItem(
@@ -576,8 +576,8 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        5,
+                        -1.5f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item VENOM_FANG = register("venom_fang", new MeleeWeaponItem(
@@ -592,8 +592,8 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -1.8f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item WOLVERINE_GRIPPERS = register("wolverine_grippers", new MeleeWeaponItem(
@@ -740,8 +740,8 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -3.5f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item CAPTAINS_STAFF = register("captains_staff", new MagicWeaponItem(
@@ -996,8 +996,8 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -3.5f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item PERMAFROST_STAFF = register("permafrost_staff", new MagicWeaponItem(
@@ -1173,7 +1173,7 @@ public class GCItems {
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
                         1,
-                        -1.6f
+                        -3.5f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
     }
@@ -2097,10 +2097,21 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        3,
+                        6,
+                        -3.1f
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+
+        public static final Item SICKLE = register("sickle", new MeleeWeaponItem(
+                ToolMaterials.WOOD,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        4,
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
+
+
         public static final Item EMERALD_SPEAR = register("emerald_spear", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
@@ -2321,7 +2332,7 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        3,
+                        2,
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
@@ -2409,16 +2420,16 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        3,
-                        -2.4f
+                        6,
+                        -2.7f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item SOULDIERS_HALBERD = register("souldiers_halberd", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        3,
-                        -2.4f
+                        4,
+                        -3.2f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item TEMPEST_GLAIVE = register("tempest_glaive", new MeleeWeaponItem(
@@ -2806,7 +2817,6 @@ public class GCItems {
     public static final Item SENTIENT_SPELLBOOK = register("sentient_spellbook", new Item(new Item.Settings()));
     public static final Item CYAN_MACAW_FEATHER = register("cyan_macaw_feather", new Item(new Item.Settings()));
 
-    public static final Item SICKLE = register("sickle", new Item(new Item.Settings()));
 
     public static final Item LIMBY_FLUTE = register("limby_flute", new GoatHornItem(new Item.Settings().maxCount(1), InstrumentTags.GOAT_HORNS));
     public static final Item VIC_FLUTE = register("vic_flute", new GoatHornItem(new Item.Settings().maxCount(1), InstrumentTags.GOAT_HORNS));
