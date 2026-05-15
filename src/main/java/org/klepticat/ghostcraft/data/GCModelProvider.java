@@ -470,7 +470,17 @@ public class GCModelProvider extends FabricModelProvider {
             registerGeneratedItem(item, "foods/", itemModelGenerator);
         });
 
+        GCItems.TWOD_WARRIOR_ITEMS.forEach(item -> {
+            registerHandheldItem(item, "weapons/twodwarrior/", itemModelGenerator);
+        });
 
+        GCItems.TWOD_OVERSIZE_WARRIOR_ITEMS.forEach(item -> {
+            registerLargeHandheldItem(item, "weapons/twodwarrior/", itemModelGenerator);
+        });
+
+        GCItems.TWOD_OVERSIZE_WARRIOR_SPEAR.forEach(item -> {
+            registerLargeHandheldSpearItem(item, "weapons/twodwarrior/", itemModelGenerator);
+        });
 
         GCItems.BREAD_SET.forEach(item -> {
             registerGeneratedItem(item, "foods/", itemModelGenerator);
@@ -558,7 +568,6 @@ public class GCModelProvider extends FabricModelProvider {
             registerGeneratedItem(item, "placeables/npc/", itemModelGenerator);
         });
 
-
         GCItems.CRITTER_SET.forEach(item -> {
             registerGeneratedItem(item, "placeables/critters/", itemModelGenerator);
         });
@@ -570,7 +579,6 @@ public class GCModelProvider extends FabricModelProvider {
         GCItems.SPELLCRAFT_SET.forEach(item -> {
             registerGeneratedItem(item, "tradeskill/spellcraft/", itemModelGenerator);
         });
-
 
         GCItems.FLAG_SET.forEach(item -> {
             registerPlaceableItem(item, "placeables/flags/", itemModelGenerator);
@@ -826,6 +834,20 @@ public class GCModelProvider extends FabricModelProvider {
     public static void registerPlaceableItem(Item item, String prefix, ItemModelGenerator generator) {
         Identifier itemId = Registries.ITEM.getId(item);
         Model model = new Model(Optional.of(Identifier.of(MOD_ID, "sources/4x_placeable")), Optional.empty(), TextureKey.LAYER0);
+
+        model.upload(ModelIds.getItemModelId(item), TextureMap.layer0(itemId.withPrefixedPath(prefix).withPrefixedPath("item/")), generator.writer);
+    }
+
+    public static void registerLargeHandheldItem(Item item, String prefix, ItemModelGenerator generator) {
+        Identifier itemId = Registries.ITEM.getId(item);
+        Model model = new Model(Optional.of(Identifier.of(MOD_ID, "sources/32xhandheld")), Optional.empty(), TextureKey.LAYER0);
+
+        model.upload(ModelIds.getItemModelId(item), TextureMap.layer0(itemId.withPrefixedPath(prefix).withPrefixedPath("item/")), generator.writer);
+    }
+
+    public static void registerLargeHandheldSpearItem(Item item, String prefix, ItemModelGenerator generator) {
+        Identifier itemId = Registries.ITEM.getId(item);
+        Model model = new Model(Optional.of(Identifier.of(MOD_ID, "sources/32x_handheld_middle")), Optional.empty(), TextureKey.LAYER0);
 
         model.upload(ModelIds.getItemModelId(item), TextureMap.layer0(itemId.withPrefixedPath(prefix).withPrefixedPath("item/")), generator.writer);
     }

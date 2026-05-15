@@ -546,6 +546,13 @@ public class GCItemGroups {
             })
     );
 
+    private static final ItemGroup TWODIMENSION_WEAPONS = register("2d_weapons", FabricItemGroup.builder()
+            .icon(INFERNAL_BLADE::getDefaultStack)
+            .entries((displayContext, entries) -> {
+                entries.addAll(toList(TWOD_WARRIOR_ITEMS));
+
+            })
+    );
 
     private static final ItemGroup GC_FOODS = register("foods", FabricItemGroup.builder()
             .icon(ICECREAM_SPRUG::getDefaultStack)
@@ -688,6 +695,7 @@ public class GCItemGroups {
                 entries.add(POCKET_SILVER);
                 entries.add(POCKET_VIC);
 
+                entries.addAll(toList(TWOD_OVERSIZE_WARRIOR_ITEMS));
 
             })
     );

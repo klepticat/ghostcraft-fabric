@@ -52,6 +52,16 @@ public class GCStickers {
     public static final Sticker WEHGOD_KNOWS = register("wehgod_knows", new Sticker(Identifier.of(MOD_ID, "textures/stickers/wehgod_knows.png"), true));
     public static final Sticker VIC_INTERNAL_PANIC = register("vic_internal_panic", new Sticker(Identifier.of(MOD_ID, "textures/stickers/vic_internal_panic.png"), true));
     public static final Sticker WANDERING_STARS = register("wandering_stars", new Sticker(Identifier.of(MOD_ID, "textures/stickers/wandering_stars.png"), true));
+    public static final Sticker PPT = register("ppt", new Sticker(Identifier.of(MOD_ID, "textures/stickers/ppt.png"), true));
+    public static final Sticker RAVNA_POINT = register("ravna_point", new Sticker(Identifier.of(MOD_ID, "textures/stickers/ravna_point.png"), true));
+    public static final Sticker SILVER_DISTRESS = register("silver_distress", new Sticker(Identifier.of(MOD_ID, "textures/stickers/silver_distress.png"), true));
+    public static final Sticker SLAYYYYY = register("slayyyyy", new Sticker(Identifier.of(MOD_ID, "textures/stickers/slayyyyy.png"), true));
+    public static final Sticker STACHE_MAN_GARUNTEE = register("stache_man_garuntee", new Sticker(Identifier.of(MOD_ID, "textures/stickers/stache_man_garuntee.png"), true));
+    public static final Sticker VIC_GREMLIN_ENERGY = register("vic_gremlin_energy", new Sticker(Identifier.of(MOD_ID, "textures/stickers/vic_gremlin_energy.png"), true));
+    public static final Sticker YORG_DID_IT = register("yorg_did_it", new Sticker(Identifier.of(MOD_ID, "textures/stickers/yorg_did_it.png"), true));
+    public static final Sticker LIMBY_AAAA = register("limby_aaaa", new Sticker(Identifier.of(MOD_ID, "textures/stickers/limby_aaaa.png"), true));
+
+
 
 
     public static void initialize() {

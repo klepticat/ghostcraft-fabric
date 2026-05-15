@@ -741,7 +741,7 @@ public class GCItems {
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
                         4,
-                        -3.5f
+                        -3f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item CAPTAINS_STAFF = register("captains_staff", new MagicWeaponItem(
@@ -997,7 +997,7 @@ public class GCItems {
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
                         4,
-                        -3.5f
+                        -2.8f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item PERMAFROST_STAFF = register("permafrost_staff", new MagicWeaponItem(
@@ -1173,7 +1173,7 @@ public class GCItems {
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
                         1,
-                        -3.5f
+                        -2.8f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
     }
@@ -2073,8 +2073,8 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        4,
-                        -2.0f
+                        9,
+                        -3.2f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
         ));
         public static final Item DEVILS_CONQUEST = register("devils_conquest", new MeleeWeaponItem(
@@ -2429,7 +2429,7 @@ public class GCItems {
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
                         4,
-                        -3.2f
+                        -2.9f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item TEMPEST_GLAIVE = register("tempest_glaive", new MeleeWeaponItem(
@@ -2481,6 +2481,500 @@ public class GCItems {
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
     }
+    //</editor-fold>
+
+    //<editor-fold desc="2D-WarriorItems">
+    /**
+     * @noinspection unused
+     */
+
+        public static HashSet<Item> TWOD_WARRIOR_ITEMS = new HashSet<>();
+        public static HashSet<Item> TWOD_OVERSIZE_WARRIOR_ITEMS = new HashSet<>();
+        public static HashSet<Item> TWOD_OVERSIZE_WARRIOR_SPEAR = new HashSet<>();
+
+        public static final Item INFERNAL_BLADE = registerWithSet("infernal_blade", new MeleeWeaponItem(
+                ToolMaterials.IRON,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.IRON,
+                        5,
+                        -2.4f
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+        ), TWOD_WARRIOR_ITEMS);
+
+        public static final Item SUNRAY = registerWithSet("sunray", new MeleeWeaponItem(
+                ToolMaterials.IRON,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.IRON,
+                        5,
+                        -2.4f
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+        ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item KNIFE = registerWithSet("knife", new MeleeWeaponItem(
+            ToolMaterials.IRON,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.IRON,
+                    5,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item FLORAL_BLADE = registerWithSet("floral_blade", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.STONE,
+                    4,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item SWORD_AMETHYST = registerWithSet("sword_amethyst", new MeleeWeaponItem(
+            ToolMaterials.IRON,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.IRON,
+                    5,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item SWORD_EMERALD = registerWithSet("sword_emerald", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.STONE,
+                    4,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item SWORD_QUARTZ = registerWithSet("sword_quartz", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.STONE,
+                    4,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item SWORD_RAINBOW = registerWithSet("sword_rainbow", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.STONE,
+                    4,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item SWORD_STEEL = registerWithSet("sword_steel", new MeleeWeaponItem(
+            ToolMaterials.IRON,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.IRON,
+                    5,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item SWORD_SILVER = registerWithSet("sword_silver", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.STONE,
+                    5,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+
+
+    // GLASS - BRITTLE
+
+
+    public static final Item GLASS_BLACK_SWORD = registerWithSet("glass_black_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    3,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item GLASS_BLUE_SWORD = registerWithSet("glass_blue_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    3,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item GLASS_BROWN_SWORD = registerWithSet("glass_brown_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    3,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item GLASS_CYAN_SWORD = registerWithSet("glass_cyan_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    3,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item GLASS_GRAY_SWORD = registerWithSet("glass_gray_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    3,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item GLASS_GREEN_SWORD = registerWithSet("glass_green_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    3,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item GLASS_LBLUE_SWORD = registerWithSet("glass_lblue_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    3,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item GLASS_LGRAY_SWORD = registerWithSet("glass_lgray_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    3,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item GLASS_LIME_SWORD = registerWithSet("glass_lime_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    3,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item GLASS_MAGENTA_SWORD = registerWithSet("glass_magenta_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    3,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item GLASS_ORANGE_SWORD = registerWithSet("glass_orange_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    3,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item GLASS_PINK_SWORD = registerWithSet("glass_pink_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    3,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item GLASS_PURPLE_SWORD = registerWithSet("glass_purple_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    3,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item GLASS_RED_SWORD = registerWithSet("glass_red_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    3,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item GLASS_WHITE_SWORD = registerWithSet("glass_white_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    3,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item GLASS_YELLOW_SWORD = registerWithSet("glass_yellow_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    3,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+
+
+    //METAL BASED
+
+    public static final Item SILVER_SWORD = registerWithSet("silver_sword", new MeleeWeaponItem(
+            ToolMaterials.GOLD,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.GOLD,
+                    5,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item STEEL_SWORD = registerWithSet("steel_sword", new MeleeWeaponItem(
+            ToolMaterials.IRON,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.IRON,
+                    5,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item COPPER_SWORD = registerWithSet("copper_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.STONE,
+                    5,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item COPPER_EXPOSED_SWORD = registerWithSet("copper_exposed_sword", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.STONE,
+                    4,
+                    -2.3f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item COPPER_WEATHERED_SWORD = registerWithSet("copper_weathered_sword", new MeleeWeaponItem(
+            ToolMaterials.WOOD,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    2,
+                    -2.2f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item COPPER_OXIDIZED_SWORD = registerWithSet("copper_oxidized_sword", new MeleeWeaponItem(
+            ToolMaterials.WOOD,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    1,
+                    -2.0f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.TRASH)
+    ), TWOD_WARRIOR_ITEMS);
+
+
+    //RANDOM
+    public static final Item TWIG = registerWithSet("twig", new MeleeWeaponItem(
+            ToolMaterials.WOOD,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    1,
+                    -2.0f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.TRASH)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item BUTTER_KNIFE = registerWithSet("butter_knife", new MeleeWeaponItem(
+            ToolMaterials.WOOD,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    1,
+                    -2.0f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.TRASH)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item MICROPHONE = registerWithSet("microphone", new MeleeWeaponItem(
+            ToolMaterials.WOOD,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.WOOD,
+                    1,
+                    -2.0f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.TRASH)
+    ), TWOD_WARRIOR_ITEMS);
+
+
+
+
+
+    //SPECIAL
+
+    public static final Item ECLIPSE_BLADE_BLUE = registerWithSet("eclipse_blade_blue", new MeleeWeaponItem(
+            ToolMaterials.DIAMOND,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.DIAMOND,
+                    6,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+    ), TWOD_OVERSIZE_WARRIOR_ITEMS);
+
+    public static final Item ECLIPSE_BLADE_TAN = registerWithSet("eclipse_blade_tan", new MeleeWeaponItem(
+            ToolMaterials.DIAMOND,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.DIAMOND,
+                    6,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+    ), TWOD_OVERSIZE_WARRIOR_ITEMS);
+
+    public static final Item SWORD_ROSE = registerWithSet("sword_rose", new MeleeWeaponItem(
+            ToolMaterials.DIAMOND,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.DIAMOND,
+                    6,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+    ), TWOD_OVERSIZE_WARRIOR_ITEMS);
+
+    public static final Item BUSTER_SWORD = registerWithSet("buster_sword", new MeleeWeaponItem(
+            ToolMaterials.DIAMOND,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.DIAMOND,
+                    6,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+    ), TWOD_OVERSIZE_WARRIOR_ITEMS);
+
+    public static final Item EXCALIBUR = registerWithSet("excalibur", new MeleeWeaponItem(
+            ToolMaterials.DIAMOND,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.DIAMOND,
+                    6,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+    ), TWOD_OVERSIZE_WARRIOR_ITEMS);
+
+    public static final Item MASTER_SWORD = registerWithSet("master_sword", new MeleeWeaponItem(
+            ToolMaterials.DIAMOND,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.DIAMOND,
+                    6,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+    ), TWOD_OVERSIZE_WARRIOR_ITEMS);
+
+    public static final Item PEARL_TRIDENT = registerWithSet("pearl_trident", new MeleeWeaponItem(
+            ToolMaterials.DIAMOND,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.DIAMOND,
+                    6,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+    ), TWOD_OVERSIZE_WARRIOR_ITEMS);
+
+    public static final Item SIGN_BUS = registerWithSet("sign_bus", new MeleeWeaponItem(
+            ToolMaterials.IRON,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.IRON,
+                    6,
+                    -2.7f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+    ), TWOD_OVERSIZE_WARRIOR_SPEAR);
+    public static final Item SIGN_STOP = registerWithSet("sign_stop", new MeleeWeaponItem(
+            ToolMaterials.IRON,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.IRON,
+                    6,
+                    -2.7f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+    ), TWOD_OVERSIZE_WARRIOR_ITEMS);
+    public static final Item SIGN_WORK = registerWithSet("sign_work", new MeleeWeaponItem(
+            ToolMaterials.IRON,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.IRON,
+                    6,
+                    -2.7f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
+    ), TWOD_OVERSIZE_WARRIOR_ITEMS);
+
+    public static final Item HOT_KNIFE = registerWithSet("hot_knife", new MeleeWeaponItem(
+            ToolMaterials.IRON,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.IRON,
+                    6,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_OVERSIZE_WARRIOR_ITEMS);
+
+    public static final Item JASON_MACHETE = registerWithSet("jason_machete", new MeleeWeaponItem(
+            ToolMaterials.IRON,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.IRON,
+                    6,
+                    -2.8f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
+    ), TWOD_OVERSIZE_WARRIOR_ITEMS);
+
+    public static final Item MYERS_KNIFE = registerWithSet("myers_knife", new MeleeWeaponItem(
+            ToolMaterials.IRON,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.IRON,
+                    6,
+                    -2.8f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item SCREAM_KNIFE = registerWithSet("scream_knife", new MeleeWeaponItem(
+            ToolMaterials.IRON,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.IRON,
+                    3,
+                    -1.8f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
+    ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item CINEMONSTER_SLAYER = registerWithSet("cinemonster_slayer", new MeleeWeaponItem(
+            ToolMaterials.IRON,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.IRON,
+                    4,
+                    -2.8f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
+    ), TWOD_OVERSIZE_WARRIOR_ITEMS);
+
+    public static final Item GIANT_ROCKET_CANDY = registerWithSet("giant_rocket_candy", new MeleeWeaponItem(
+            ToolMaterials.IRON,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.IRON,
+                    4,
+                    -3f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
+    ), TWOD_OVERSIZE_WARRIOR_SPEAR);
+
+    public static final Item HOLY_STAKE = registerWithSet("holy_stake", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.STONE,
+                    3,
+                    -2f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+    ), TWOD_OVERSIZE_WARRIOR_ITEMS);
+
     //</editor-fold>
 
     //<editor-fold desc="ElytraItems">
@@ -3946,8 +4440,8 @@ public static final HashSet<Item> BAR_SET = new HashSet<>();
 
     // 2d Bows
     public static final HashSet<Item> BOW_SET = new HashSet<>();
-    public static final Item JAY_BOW = registerWithSet("jay_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)), BOW_SET);
-    public static final Item CARDINAL_BOW = registerWithSet("cardinal_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)), BOW_SET);
+    public static final Item JAY_BOW = register("jay_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
+    public static final Item CARDINAL_BOW = register("cardinal_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
 
 
 
