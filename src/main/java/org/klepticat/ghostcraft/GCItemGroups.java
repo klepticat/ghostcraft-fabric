@@ -108,6 +108,21 @@ public class GCItemGroups {
 
                 entries.add(DREADSTONE_PILLAR);
                 entries.add(DREADSTONE_GLASS);
+                entries.add(DREADSTONE_GLASS_BLACK);
+                entries.add(DREADSTONE_GLASS_BLUE);
+                entries.add(DREADSTONE_GLASS_BROWN);
+                entries.add(DREADSTONE_GLASS_CYAN);
+                entries.add(DREADSTONE_GLASS_GREEN);
+                entries.add(DREADSTONE_GLASS_LIGHT);
+                entries.add(DREADSTONE_GLASS_LIGHT_BLUE);
+                entries.add(DREADSTONE_GLASS_LIME);
+                entries.add(DREADSTONE_GLASS_ORANGE);
+                entries.add(DREADSTONE_GLASS_PINK);
+                entries.add(DREADSTONE_GLASS_PURPLE);
+                entries.add(DREADSTONE_GLASS_RED);
+                entries.add(DREADSTONE_GLASS_SOUL);
+                entries.add(DREADSTONE_GLASS_WHITE);
+                entries.add(DREADSTONE_GLASS_YELLOW);
                 entries.add(DREADSTONE_BARS);
                 entries.add(DREADSTONE_LAMP);
                 entries.add(DREADSTONE_WINDOW);
@@ -412,6 +427,8 @@ public class GCItemGroups {
                 entries.add(CLOSED_ORB);
                 entries.add(SICKLE);
                 entries.add(GRAPPLING_HOOK);
+                entries.addAll(toList(TOOL_SET));
+                entries.addAll(toList(HANDHELD_TOOL_SET));
                 entries.addAll(toList(BOW_SET));
                 entries.addAll(toList(WOODCARVE_SET));
                 entries.add(COPPER_COIN);
@@ -441,9 +458,6 @@ public class GCItemGroups {
                 entries.add(PURPLE_KEY);
                 entries.add(MAGENTA_KEY);
                 entries.add(PINK_KEY);
-                entries.add(HAMMER);
-                entries.add(CROWBAR);
-                entries.add(SPELL_SCROLL);
                 entries.addAll(toList(POUCH_SET));
                 entries.addAll(toList(SPOOL_SET));
                 entries.addAll(toList(MISC_SET));

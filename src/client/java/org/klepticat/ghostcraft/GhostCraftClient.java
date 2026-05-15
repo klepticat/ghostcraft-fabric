@@ -159,6 +159,21 @@ public class GhostCraftClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(LOCKED_DREADSTONE_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GRATE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_BLACK, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_BLUE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_BROWN, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_CYAN, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_GREEN, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_LIGHT, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_LIGHT_BLUE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_LIME, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_ORANGE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PINK, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PURPLE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_RED, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_SOUL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_WHITE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_YELLOW, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_BARS, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(MAGIC_ASSIST, RenderLayer.getTranslucent());

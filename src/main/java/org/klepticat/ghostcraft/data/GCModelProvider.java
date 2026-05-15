@@ -248,6 +248,21 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GRATE);
         registerBars(DREADSTONE_BARS, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_BLACK);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_BLUE);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_BROWN);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_CYAN);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_GREEN);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_LIGHT);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_LIGHT_BLUE);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_LIME);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_ORANGE);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PINK);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PURPLE);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_RED);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_SOUL);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_WHITE);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_YELLOW);
 
         BlockStateModelGenerator.BlockTexturePool dreadBrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(DREADSTONE_BRICKS);
 
@@ -458,9 +473,6 @@ public class GCModelProvider extends FabricModelProvider {
         registerGeneratedItem(GCItems.SHADOW_TENDRIL, "loot/mob_drops/shadow/", itemModelGenerator);
         registerGeneratedItem(GCItems.SHADOW_EYE, "loot/mob_drops/shadow/", itemModelGenerator);
         registerGeneratedItem(GCItems.SHADOW_TOOTH, "loot/mob_drops/shadow/", itemModelGenerator);
-        registerHandheldItem(GCItems.HAMMER, "util/", itemModelGenerator);
-        registerHandheldItem(GCItems.CROWBAR, "util/", itemModelGenerator);
-        registerHandheldItem(GCItems.SPELL_SCROLL, "util/", itemModelGenerator);
         registerPlaceableItem(GCItems.MARIAH, "placeables/", itemModelGenerator);
 
         registerGeneratedItem(DARK_CHERRY_SIGN.asItem(), "", itemModelGenerator);
@@ -468,6 +480,13 @@ public class GCModelProvider extends FabricModelProvider {
 
         GCItems.GENERIC_FOODS_SET.forEach(item -> {
             registerGeneratedItem(item, "foods/", itemModelGenerator);
+        });
+
+        GCItems.TOOL_SET.forEach(item -> {
+            registerGeneratedItem(item, "util/tools/", itemModelGenerator);
+        });
+        GCItems.HANDHELD_TOOL_SET.forEach(item -> {
+            registerHandheldItem(item, "util/tools/", itemModelGenerator);
         });
 
         GCItems.TWOD_WARRIOR_ITEMS.forEach(item -> {

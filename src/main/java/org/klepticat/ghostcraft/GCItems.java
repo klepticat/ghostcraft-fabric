@@ -3292,10 +3292,66 @@ public class GCItems {
 
 
 
+    public static HashSet<Item> TOOL_SET = new HashSet<>();
+    public static HashSet<Item> HANDHELD_TOOL_SET = new HashSet<>();
+
+
     public static final Item GRAPPLING_HOOK = register("grappling_hook", new GrapplingHookItem(new Item.Settings()));
-    public static final Item CROWBAR = register("crowbar", new Item(new Item.Settings()));
-    public static final Item HAMMER = register("hammer", new Item(new Item.Settings()));
-    public static final Item SPELL_SCROLL = register("spell_scroll", new Item(new Item.Settings()));
+    public static final Item CROWBAR = registerWithSet("crowbar", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item HAMMER = registerWithSet("hammer", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item SPELL_SCROLL = registerWithSet("spell_scroll", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item WATERSKIN = registerWithSet("waterskin", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item LENSEOFTRUTH = registerWithSet("lenseoftruth", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item PYRO_AMULET = registerWithSet("pyro_amulet", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item AQUA_WALKER = registerWithSet("aqua_walker", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item ARROW_QUIVER_ALT = registerWithSet("arrow_quiver_alt", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item BLAZING_FLASK_ALT = registerWithSet("blazing_flask_alt", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item BLAZING_FLASK = registerWithSet("blazing_flask", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item CHARGED_ELYTRA_BOOSTER = registerWithSet("charged_elytra_booster", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item DIRE_MIRROR = registerWithSet("die_mirror", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item DROWNED_BELT = registerWithSet("drowned_belt", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item ELYTRA_BOOSTER = registerWithSet("elytra_booster", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item ENDERS_HAND = registerWithSet("enders_hand", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item ETHEREAL_MIRROR = registerWithSet("ethereal_mirror", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item FEATHER_BOOT = registerWithSet("feather_boot", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item FRAGRANT_FLOWER = registerWithSet("freagrant_flower", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item GHOST_SKIN_TALISMAN = registerWithSet("ghost_skin_talisman", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item HOLY_LOCKET = registerWithSet("holy_locket", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item HORSE_FLUTE = registerWithSet("horse_flute", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item HUNTER_BELT = registerWithSet("hunter_belt", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item ICE_SKATES = registerWithSet("ice_skates", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item INFINITY_HAM = registerWithSet("infinity_ham", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item JELLYFISH_NECKLACE = registerWithSet("jellyfish_necklace", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item LEAFY_RING = registerWithSet("leafy_ring", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item LEATHER_BELT = registerWithSet("leather_belt", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item LUCKY_HORSESHOE = registerWithSet("lucky_horseshoe", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item MAGIC_MIRROR = registerWithSet("magic_mirror", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item MAGMA_WALKER = registerWithSet("magma_walker", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item MIDNIGHT_ROBE = registerWithSet("midnight_robe", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item NIGHTMARE_RING = registerWithSet("nightmare_ring", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item DIRTY_BOOT = registerWithSet("dirty_boot", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item OUT_RUNNER = registerWithSet("out_runner", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item PHANTOM_BOOT = registerWithSet("phantom_boot", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item POTENT_MIRROR = registerWithSet("potent_mirror", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item RAGE_GLOVE = registerWithSet("rage_glove", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item REFLECTION_NECKLACE = registerWithSet("reflecton_necklace", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item RELIC_EXPERIENCE_BOTTLE = registerWithSet("relic_experience_bottle", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item ROLLER_SKATES = registerWithSet("roller_skates", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item SCARAB_TALISMAN = registerWithSet("scarab_talisman", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item SHADOW_GLAIVE = registerWithSet("shadow_glaive", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item SIZE_STEAL = registerWithSet("size_steal", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item SLIME_HEART = registerWithSet("slime_heart", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item SPACE_DISSECTOR = registerWithSet("space_dissector", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item SPATIAL_SIGN = registerWithSet("spatial_sign", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item SPIDER_NECKLACE = registerWithSet("spider_necklace", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item SPORE_SACK = registerWithSet("spore_sack", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item SPRINGY_BOOT = registerWithSet("springy_boot", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item STELLAR_CATALYST = registerWithSet("stellar_catalyst", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item SUN_RING = registerWithSet("sun_ring", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item WOOL_MITTEN = registerWithSet("wool_mitten", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item ZARO_LUNG = registerWithSet("zaro_lung", new Item(new Item.Settings()), TOOL_SET);
+
+
 
     // CHARGES
     public static final Item DIRE_CHARGE = register("dire_charge", new Item(new Item.Settings()));
