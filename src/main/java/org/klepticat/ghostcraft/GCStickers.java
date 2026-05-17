@@ -60,6 +60,8 @@ public class GCStickers {
     public static final Sticker VIC_GREMLIN_ENERGY = register("vic_gremlin_energy", new Sticker(Identifier.of(MOD_ID, "textures/stickers/vic_gremlin_energy.png"), true));
     public static final Sticker YORG_DID_IT = register("yorg_did_it", new Sticker(Identifier.of(MOD_ID, "textures/stickers/yorg_did_it.png"), true));
     public static final Sticker LIMBY_AAAA = register("limby_aaaa", new Sticker(Identifier.of(MOD_ID, "textures/stickers/limby_aaaa.png"), true));
+    public static final Sticker GODDAMNITNOTAGAIN = register("goddamnitnotagain", new Sticker(Identifier.of(MOD_ID, "textures/stickers/goddamnitnotagain.png"), true));
+    public static final Sticker VIC_GRAPHITI = register("vic_graphiti", new Sticker(Identifier.of(MOD_ID, "textures/stickers/vic_graphiti.png"), true));
 
 
 

@@ -35,7 +35,6 @@ public class GCItems {
         }
 
         public static final Item ASSASSINS_CROSSBOW = register("assassins_crossbow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)));
-        public static final Item ATLLANTRIUS_POST = register("atllantrius_post", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)));
         public static final Item AZALEAS_FURY = register("azaleas_fury", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)));
         public static final Item BANANA_BOW = register("banana_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)));
         public static final Item BLIZZARD_SHOOTER = register("blizzard_shooter", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)));
@@ -1235,6 +1234,7 @@ public class GCItems {
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
                 )
         );
+
         public static final Item ATLLA = register(
                 "atlla",
                 new RelikItem(
@@ -1269,6 +1269,19 @@ public class GCItems {
                         StatusEffects.SPEED,
                         (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
+                )
+        );
+
+        public static final Item ATLLANTRIUS_POST = register(
+                "atllantrius_post",
+                new RelikItem(
+                        30.0f,
+                        ((short) 600),
+                        20,
+                        TotemData.TotemParticle.makeDustParticle(0, 1, 0, 1),
+                        StatusEffects.SPEED,
+                        (byte) 5,
+                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
                 )
         );
         public static final Item BLAZING_TOTEM = register(
@@ -2564,23 +2577,6 @@ public class GCItems {
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
 
-    public static final Item SWORD_STEEL = registerWithSet("sword_steel", new MeleeWeaponItem(
-            ToolMaterials.IRON,
-            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
-                    ToolMaterials.IRON,
-                    5,
-                    -2.4f
-            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
-    ), TWOD_WARRIOR_ITEMS);
-
-    public static final Item SWORD_SILVER = registerWithSet("sword_silver", new MeleeWeaponItem(
-            ToolMaterials.STONE,
-            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
-                    ToolMaterials.STONE,
-                    5,
-                    -2.4f
-            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
-    ), TWOD_WARRIOR_ITEMS);
 
 
 
@@ -2735,16 +2731,7 @@ public class GCItems {
 
     //METAL BASED
 
-    public static final Item SILVER_SWORD = registerWithSet("silver_sword", new MeleeWeaponItem(
-            ToolMaterials.GOLD,
-            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
-                    ToolMaterials.GOLD,
-                    5,
-                    -2.4f
-            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
-    ), TWOD_WARRIOR_ITEMS);
-
-    public static final Item STEEL_SWORD = registerWithSet("steel_sword", new MeleeWeaponItem(
+    public static final Item SWORD_STEEL = registerWithSet("sword_steel", new MeleeWeaponItem(
             ToolMaterials.IRON,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.IRON,
@@ -2752,6 +2739,16 @@ public class GCItems {
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
+
+    public static final Item SWORD_SILVER = registerWithSet("sword_silver", new MeleeWeaponItem(
+            ToolMaterials.STONE,
+            new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                    ToolMaterials.STONE,
+                    5,
+                    -2.4f
+            )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
+    ), TWOD_WARRIOR_ITEMS);
+
 
     public static final Item COPPER_SWORD = registerWithSet("copper_sword", new MeleeWeaponItem(
             ToolMaterials.STONE,
@@ -2892,23 +2889,25 @@ public class GCItems {
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.IRON,
                     6,
-                    -2.7f
+                    -2.8f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
-    ), TWOD_OVERSIZE_WARRIOR_SPEAR);
+    ), TWOD_OVERSIZE_WARRIOR_ITEMS);
+
     public static final Item SIGN_STOP = registerWithSet("sign_stop", new MeleeWeaponItem(
             ToolMaterials.IRON,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.IRON,
                     6,
-                    -2.7f
+                    -2.8f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
     ), TWOD_OVERSIZE_WARRIOR_ITEMS);
+
     public static final Item SIGN_WORK = registerWithSet("sign_work", new MeleeWeaponItem(
             ToolMaterials.IRON,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.IRON,
                     6,
-                    -2.7f
+                    -2.8f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
     ), TWOD_OVERSIZE_WARRIOR_ITEMS);
 
@@ -3308,13 +3307,13 @@ public class GCItems {
     public static final Item BLAZING_FLASK_ALT = registerWithSet("blazing_flask_alt", new Item(new Item.Settings()), TOOL_SET);
     public static final Item BLAZING_FLASK = registerWithSet("blazing_flask", new Item(new Item.Settings()), TOOL_SET);
     public static final Item CHARGED_ELYTRA_BOOSTER = registerWithSet("charged_elytra_booster", new Item(new Item.Settings()), TOOL_SET);
-    public static final Item DIRE_MIRROR = registerWithSet("die_mirror", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item DIRE_MIRROR = registerWithSet("dire_mirror", new Item(new Item.Settings()), TOOL_SET);
     public static final Item DROWNED_BELT = registerWithSet("drowned_belt", new Item(new Item.Settings()), TOOL_SET);
     public static final Item ELYTRA_BOOSTER = registerWithSet("elytra_booster", new Item(new Item.Settings()), TOOL_SET);
     public static final Item ENDERS_HAND = registerWithSet("enders_hand", new Item(new Item.Settings()), TOOL_SET);
     public static final Item ETHEREAL_MIRROR = registerWithSet("ethereal_mirror", new Item(new Item.Settings()), TOOL_SET);
     public static final Item FEATHER_BOOT = registerWithSet("feather_boot", new Item(new Item.Settings()), TOOL_SET);
-    public static final Item FRAGRANT_FLOWER = registerWithSet("freagrant_flower", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item FRAGRANT_FLOWER = registerWithSet("fragrant_flower", new Item(new Item.Settings()), TOOL_SET);
     public static final Item GHOST_SKIN_TALISMAN = registerWithSet("ghost_skin_talisman", new Item(new Item.Settings()), TOOL_SET);
     public static final Item HOLY_LOCKET = registerWithSet("holy_locket", new Item(new Item.Settings()), TOOL_SET);
     public static final Item HORSE_FLUTE = registerWithSet("horse_flute", new Item(new Item.Settings()), TOOL_SET);
@@ -3334,7 +3333,7 @@ public class GCItems {
     public static final Item PHANTOM_BOOT = registerWithSet("phantom_boot", new Item(new Item.Settings()), TOOL_SET);
     public static final Item POTENT_MIRROR = registerWithSet("potent_mirror", new Item(new Item.Settings()), TOOL_SET);
     public static final Item RAGE_GLOVE = registerWithSet("rage_glove", new Item(new Item.Settings()), TOOL_SET);
-    public static final Item REFLECTION_NECKLACE = registerWithSet("reflecton_necklace", new Item(new Item.Settings()), TOOL_SET);
+    public static final Item REFLECTION_NECKLACE = registerWithSet("reflection_necklace", new Item(new Item.Settings()), TOOL_SET);
     public static final Item RELIC_EXPERIENCE_BOTTLE = registerWithSet("relic_experience_bottle", new Item(new Item.Settings()), TOOL_SET);
     public static final Item ROLLER_SKATES = registerWithSet("roller_skates", new Item(new Item.Settings()), TOOL_SET);
     public static final Item SCARAB_TALISMAN = registerWithSet("scarab_talisman", new Item(new Item.Settings()), TOOL_SET);
@@ -3423,7 +3422,64 @@ public class GCItems {
     public static final Item FAIRY_YELLOW = registerWithSet("fairy_yellow", new Item(new Item.Settings()), CRITTER_SET);
     public static final Item FAIRY_PURPLE = registerWithSet("fairy_purple", new Item(new Item.Settings()), CRITTER_SET);
 
+    //INVMON
+    public static final Item BUDORA = registerWithSet("budora", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item ROSAROMA = registerWithSet("rosaroma", new Item(new Item.Settings()), CRITTER_SET);
 
+
+    public static final Item FLORANT = registerWithSet("florant", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item DROOLIT = registerWithSet("droolit", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item EELEPENO = registerWithSet("eelepeno", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item PEELEPER = registerWithSet("peeleper", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item ELIMINALATE = registerWithSet("eliminalate", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item GLUBIN = registerWithSet("glubin", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item GLAUBER = registerWithSet("glauber", new Item(new Item.Settings()), CRITTER_SET);
+
+
+    public static final Item EKHOLO = registerWithSet("ekholo", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item EKHOLIM = registerWithSet("ekholim", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item ELVLING = registerWithSet("elvling", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item ELVIIR = registerWithSet("elviir", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item FUNGAMENTAL = registerWithSet("fungamental", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item FUNPSY = registerWithSet("funpsy", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item GLIMP = registerWithSet("glimp", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item GLOMPAH = registerWithSet("glompah", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item GUSLING = registerWithSet("gusling", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item GUSWING = registerWithSet("guswing", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item HELMLET = registerWithSet("helmlet", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item IMPADIN = registerWithSet("impadin", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item KATRAT = registerWithSet("katrat", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item KLEPTIRAT = registerWithSet("kleptirat", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item KINADOW = registerWithSet("kinadow", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item KINDRAX = registerWithSet("kindrax", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item MITTLET = registerWithSet("mittlet", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item MITTMAN = registerWithSet("mittman", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item MORABEAK = registerWithSet("morabeak", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item NOOKAT = registerWithSet("nookat", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item TANUKELINE = registerWithSet("tanukeline", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item PESUTO = registerWithSet("pesuto", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item PLAGA = registerWithSet("plaga", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item SNIF = registerWithSet("snif", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item SNIFFON = registerWithSet("sniffon", new Item(new Item.Settings()), CRITTER_SET);
+
+    public static final Item SOLIZARD = registerWithSet("solizard", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item SOLASAUR = registerWithSet("solasaur", new Item(new Item.Settings()), CRITTER_SET);
 
 
 
