@@ -17,6 +17,7 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.Rarity;
 import org.jetbrains.annotations.Nullable;
 import org.klepticat.ghostcraft.GCDataComponents;
+import org.klepticat.ghostcraft.GCLongReach;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;

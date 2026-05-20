@@ -34,6 +34,7 @@ public class GhostCraft implements ModInitializer {
 		GCSounds.initialize();
 		GCEntityTypes.initialize();
 		GCDataComponents.initialize();
+		GCLongReach.initialize();
 		GCStickers.initialize();
 		GCAttachmentTypes.initialize();
 		GCBlocks.initialize();

@@ -83,7 +83,6 @@ public class GCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         GCBlocks.GRATED_DREADSTONE_WALL,
                         GCBlocks.POLISHED_CHISELED_DREADSTONE_WALL,
                         GCBlocks.POLISHED_LIGHT_DREADSTONE_WALL,
-                        GCBlocks.CHISELED_DREADSTONE_WALL,
                         GCBlocks.SCALED_FLESH_WALL,
                         GCBlocks.MARBLED_FLESH_FENCE,
                         GCBlocks.TILED_COBBLED_DREADSTONE_WALL,

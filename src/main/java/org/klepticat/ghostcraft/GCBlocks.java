@@ -839,10 +839,6 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
-    public static Block CHISELED_DREADSTONE_STAIRS = register("chiseled_dreadstone_stairs", settings -> new StairsBlock(CHISELED_DREADSTONE.getDefaultState(), settings), AbstractBlock.Settings.copy(CHISELED_DREADSTONE), true);
-    public static Block CHISELED_DREADSTONE_SLAB = register("chiseled_dreadstone_slab", SlabBlock::new, AbstractBlock.Settings.copy(CHISELED_DREADSTONE), true);
-    public static Block CHISELED_DREADSTONE_WALL = register("chiseled_dreadstone_wall", WallBlock::new, AbstractBlock.Settings.copy(CHISELED_DREADSTONE), true);
-
 
     public static Block DREADSTONE_PILLAR = register(
             "dreadstone_pillar",

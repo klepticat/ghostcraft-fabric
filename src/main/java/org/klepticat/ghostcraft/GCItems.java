@@ -1,6 +1,7 @@
 package org.klepticat.ghostcraft;
 
 import dev.emi.trinkets.api.TrinketItem;
+import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.component.type.FoodComponents;
@@ -159,16 +160,16 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        3,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item CLAW_GRIPPERS = register("claw_grippers", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item COGWORK_BONESAW = register("cogwork_bonesaw", new MeleeWeaponItem(
@@ -231,8 +232,8 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        3,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item ELTORVURIA_BLADE = register("eltorvuria_blade", new MeleeWeaponItem(
@@ -287,8 +288,8 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        3,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item GEOMANCERS_ARCHAEOLOGY_MITT = register("geomancers_archaeology_mitt", new MeleeWeaponItem(
@@ -319,8 +320,8 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item ICE_PICK = register("ice_pick", new MeleeWeaponItem(
@@ -375,16 +376,16 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        3,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item MONTY = register("monty", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item PERCOLATION = register("percolation", new MeleeWeaponItem(
@@ -447,8 +448,8 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item RUBY_CRESTED_SHORTSWORD = register("ruby_crested_shortsword", new MeleeWeaponItem(
@@ -471,8 +472,8 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item SENTRY_GRASP = register("sentry_grasp", new MeleeWeaponItem(
@@ -552,7 +553,7 @@ public class GCItems {
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
                         3,
-                        -1.8f
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item TIORVAS_EMPATHY = register("tiorvas_empathy", new MeleeWeaponItem(
@@ -599,16 +600,16 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item WOODEN_GAUNTLET = register("wooden_gauntlet", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
     }
@@ -650,8 +651,8 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item ASSASSINS_QUARTERSTAFF = register("assassins_quarterstaff", new MagicWeaponItem(
@@ -666,16 +667,16 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
         ));
         public static final Item BOISTEROUS_BOLSTER = register("boisterous_bolster", new MagicWeaponItem(
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item BONE_CHILL_STAFF = register("bone_chill_staff", new MagicWeaponItem(
@@ -690,8 +691,8 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        5,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item BUTTON_MASHER = register(
@@ -700,8 +701,8 @@ public class GCItems {
                         MagicType.MAGIC,
                         new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                                 ToolMaterials.WOOD,
-                                1,
-                                -1.6f
+                                4,
+                                -2.4f
                         )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
                 )
         );
@@ -731,8 +732,8 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
         public static final Item CANDLE_KEEPER_STAFF = register("candle_keeper_staff", new MagicWeaponItem(
@@ -755,8 +756,8 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item DARK_MOON = register("dark_moon", new MagicWeaponItem(
@@ -803,8 +804,8 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        5,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item ELTORVURIA_STAFF = register("eltorvuria_staff", new MagicWeaponItem(
@@ -827,8 +828,8 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        3,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item FLORAL_CONQUEST = register("floral_conquest", new MagicWeaponItem(
@@ -843,8 +844,8 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
         ));
         public static final Item FROSTMOURN_STAFF = register("frostmourn_staff", new MagicWeaponItem(
@@ -859,16 +860,16 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item FUNKY_STICK = register("funky_stick", new MagicWeaponItem(
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        3,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item FYNYKS_SCEPTER = register("fynyks_scepter", new MagicWeaponItem(
@@ -899,8 +900,8 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item GOLDEN_POKER = register("golden_poker", new MagicWeaponItem(
@@ -939,8 +940,8 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
         ));
         public static final Item KNIGHTS_STAFF = register("knights_staff", new MagicWeaponItem(
@@ -987,8 +988,8 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        3,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item NATURES_BOON = register("natures_boon", new MagicWeaponItem(
@@ -996,7 +997,7 @@ public class GCItems {
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
                         4,
-                        -2.8f
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item PERMAFROST_STAFF = register("permafrost_staff", new MagicWeaponItem(
@@ -1011,16 +1012,16 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        3,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item POINTY_THING = register("pointy_thing", new MagicWeaponItem(
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item RAKKU_GLAIVE = register("rakku_glaive", new MagicWeaponItem(
@@ -1035,8 +1036,8 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item SANGUINE = register("sanguine", new MagicWeaponItem(
@@ -1059,8 +1060,8 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
         ));
         public static final Item SHADEKIN_HORIZON = register("shadekin_horizon", new MagicWeaponItem(
@@ -1091,8 +1092,8 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        3,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
         public static final Item TIORVAS_GIFT = register("tiorvas_gift", new MagicWeaponItem(
@@ -1107,16 +1108,16 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNIQUE)
         ));
         public static final Item TRIBAL_WAND = register("tribal_wand", new MagicWeaponItem(
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        5,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
         public static final Item TRICKSTERS_FRIENDS = register("tricksters_friends", new MagicWeaponItem(
@@ -1163,16 +1164,16 @@ public class GCItems {
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -1.6f
+                        4,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
         public static final Item YOUNG_STAFF = register("young_staff", new MagicWeaponItem(
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        1,
-                        -2.8f
+                        3,
+                        -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
     }
@@ -2006,7 +2007,7 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        3,
+                        4,
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.EPIC)
         ));
@@ -2014,7 +2015,7 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        3,
+                        4,
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
@@ -2233,7 +2234,7 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        3,
+                        4,
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
@@ -2313,7 +2314,7 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        3,
+                        4,
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNCOMMON)
         ));
@@ -2417,7 +2418,7 @@ public class GCItems {
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
-                        3,
+                        4,
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
         ));
@@ -2587,7 +2588,7 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    3,
+                    4,
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
@@ -2596,7 +2597,7 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    3,
+                    4,
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
@@ -2605,7 +2606,7 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    3,
+                    4,
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
@@ -2614,7 +2615,7 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    3,
+                    4,
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
@@ -2623,7 +2624,7 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    3,
+                    4,
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
@@ -2632,7 +2633,7 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    3,
+                    4,
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
@@ -2641,7 +2642,7 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    3,
+                    4,
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
@@ -2650,7 +2651,7 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    3,
+                    4,
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
@@ -2659,7 +2660,7 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    3,
+                    4,
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
@@ -2668,7 +2669,7 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    3,
+                    4,
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
@@ -2677,7 +2678,7 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    3,
+                    4,
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
@@ -2686,7 +2687,7 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    3,
+                    4,
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
@@ -2695,7 +2696,7 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    3,
+                    4,
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
@@ -2704,7 +2705,7 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    3,
+                    4,
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
@@ -2713,7 +2714,7 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    3,
+                    4,
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
@@ -2722,7 +2723,7 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    3,
+                    4,
                     -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
@@ -2763,8 +2764,8 @@ public class GCItems {
             ToolMaterials.STONE,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.STONE,
-                    4,
-                    -2.3f
+                    2,
+                    -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
 
@@ -2772,8 +2773,8 @@ public class GCItems {
             ToolMaterials.WOOD,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    2,
-                    -2.2f
+                    4,
+                    -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.COMMON)
     ), TWOD_WARRIOR_ITEMS);
 
@@ -2781,8 +2782,8 @@ public class GCItems {
             ToolMaterials.WOOD,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    1,
-                    -2.0f
+                    3,
+                    -2.3f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.TRASH)
     ), TWOD_WARRIOR_ITEMS);
 
@@ -2792,8 +2793,8 @@ public class GCItems {
             ToolMaterials.WOOD,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    1,
-                    -2.0f
+                    3,
+                    -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.TRASH)
     ), TWOD_WARRIOR_ITEMS);
 
@@ -2801,8 +2802,8 @@ public class GCItems {
             ToolMaterials.WOOD,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    1,
-                    -2.0f
+                    3,
+                    -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.TRASH)
     ), TWOD_WARRIOR_ITEMS);
 
@@ -2810,8 +2811,8 @@ public class GCItems {
             ToolMaterials.WOOD,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.WOOD,
-                    1,
-                    -2.0f
+                    3,
+                    -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.TRASH)
     ), TWOD_WARRIOR_ITEMS);
 
@@ -2933,8 +2934,8 @@ public class GCItems {
             ToolMaterials.IRON,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.IRON,
-                    6,
-                    -2.8f
+                    3,
+                    -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
     ), TWOD_WARRIOR_ITEMS);
 
@@ -2943,7 +2944,7 @@ public class GCItems {
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.IRON,
                     3,
-                    -1.8f
+                    -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
     ), TWOD_WARRIOR_ITEMS);
 
@@ -2960,8 +2961,8 @@ public class GCItems {
             ToolMaterials.IRON,
             new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                     ToolMaterials.IRON,
-                    4,
-                    -3f
+                    1,
+                    -2.4f
             )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
     ), TWOD_OVERSIZE_WARRIOR_SPEAR);
 
@@ -2990,7 +2991,7 @@ public class GCItems {
         public static final Item BED = registerWithSet("bed_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bed.png")), ELYTRA_SET);
         public static final Item BEE = registerWithSet("bee_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bee.png")), ELYTRA_SET);
         public static final Item BROOM = registerWithSet("broom", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/broom.png")), ELYTRA_SET);
-        public static final Item CARDBOARD = registerWithSet("cardboard_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/cardboard.png")), ELYTRA_SET);
+        public static final Item CARDBOARD_WINGS = registerWithSet("cardboard_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/cardboard.png")), ELYTRA_SET);
         public static final Item CEDRIC_WINGS = registerWithSet("cedric_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/cedric.png")), ELYTRA_SET);
         public static final Item COBWEB_WINGS = registerWithSet("cobweb_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/cobweb.png")), ELYTRA_SET);
         public static final Item DATA_WINGS = registerWithSet("data_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/data.png")), ELYTRA_SET);
@@ -3024,6 +3025,9 @@ public class GCItems {
 
     }
     //</editor-fold>
+
+
+
 
     public static final Item DARK_CHERRY_SIGN = register("dark_cherry_sign", new SignItem(new Item.Settings(), GCBlocks.DARK_CHERRY_SIGN, GCBlocks.DARK_CHERRY_WALL_SIGN));
     public static final Item DARK_CHERRY_HANGING_SIGN = register("dark_cherry_hanging_sign", new HangingSignItem(GCBlocks.DARK_CHERRY_HANGING_SIGN, GCBlocks.DARK_CHERRY_WALL_HANGING_SIGN, new Item.Settings()));
@@ -4079,7 +4083,7 @@ public class GCItems {
     public static final Item BROWNIE = registerWithSet("brownie", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
     public static final Item CHOCOLATE_BAT = registerWithSet("chocolate_bat", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
     public static final Item CHOCOLATE_BAT_WHITE = registerWithSet("chocolate_bat_white", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
-    public static final Item CHOCOLATE_CRAB = registerWithSet("chocolate_crab", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
+    public static final Item CHOCOLATE_CRAB = register("chocolate_crab", new Item(new Item.Settings().food(junkFood)));
     public static final Item CHOCOLATE_CRINKLE = registerWithSet("chocolate_crinkle", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
     public static final Item CHOGGY_COG = registerWithSet("choggy_cog", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);
     public static final Item COOKIE_CAT = registerWithSet("cookie_cat", new Item(new Item.Settings().food(junkFood)), COOKIE_SET);

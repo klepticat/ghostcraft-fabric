@@ -14,6 +14,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.ColorHelper;
 import org.klepticat.ghostcraft.GCCardinalComponents;
 import org.klepticat.ghostcraft.GCDataComponents;
+import org.klepticat.ghostcraft.GCLongReach;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 import org.spongepowered.asm.mixin.injection.At;
