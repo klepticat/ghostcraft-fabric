@@ -1,10 +1,11 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"textures": {
-		"0": "skins/character/tasim_glaive",
-		"1": "skins/character/tasim_glaive_wynnic",
-		"2": "skins/character/tasim_glaive_beam"
+		"0": "ghostcraft:item/generic/character/tasim_glaive",
+		"1": "ghostcraft:item/generic/character/tasim_glaive_wynnic",
+		"2": "ghostcraft:item/generic/character/tasim_glaive_beam"
 	},
 	"elements": [
 		{

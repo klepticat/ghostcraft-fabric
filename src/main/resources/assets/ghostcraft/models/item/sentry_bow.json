@@ -1,13 +1,14 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"textures": {
-		"0": "skins/ancient/ancient_common",
-		"1": "skins/ancient/ancient_halberd",
-		"2": "skins/ancient/ancient_orbiter",
-		"3": "skins/ancient/ancient_pulse",
-		"4": "skins/ancient/ancient_beam",
-		"particle": "skins/ancient/ancient_common"
+		"0": "ghostcraft:item/generic/ancient/ancient_common",
+		"1": "ghostcraft:item/generic/ancient/ancient_halberd",
+		"2": "ghostcraft:item/generic/ancient/ancient_orbiter",
+		"3": "ghostcraft:item/generic/ancient/ancient_pulse",
+		"4": "ghostcraft:item/generic/ancient/ancient_beam",
+		"particle": "ghostcraft:item/generic/ancient/ancient_common"
 	},
 	"elements": [
 		{

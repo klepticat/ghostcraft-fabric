@@ -1,9 +1,10 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "skins/azure/azure_ranseur"
+		"0": "ghostcraft:item/generic/azure/azure_ranseur"
 	},
 	"elements": [
 		{

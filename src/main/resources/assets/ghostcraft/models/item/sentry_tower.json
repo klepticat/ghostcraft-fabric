@@ -1,12 +1,13 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"textures": {
-		"0": "skins/ancient/ancient_common",
-		"1": "skins/ancient/ancient_halberd",
-		"2": "skins/ancient/ancient_pulse",
-		"3": "skins/ancient/ancient_relik",
-		"particle": "skins/ancient/ancient_common"
+		"0": "ghostcraft:item/generic/ancient/ancient_common",
+		"1": "ghostcraft:item/generic/ancient/ancient_halberd",
+		"2": "ghostcraft:item/generic/ancient/ancient_pulse",
+		"3": "ghostcraft:item/generic/ancient/ancient_relik",
+		"particle": "ghostcraft:item/generic/ancient/ancient_common"
 	},
 	"elements": [
 		{
@@ -223,5 +224,12 @@
 				"up": {"uv": [0, 6, 7, 13], "rotation": 90, "texture": "#3"}
 			}
 		}
-	]
+	],
+	"display": {
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 0, -39.75],
+			"scale": [1.6, 1.6, 1.6]
+		}
+	}
 }

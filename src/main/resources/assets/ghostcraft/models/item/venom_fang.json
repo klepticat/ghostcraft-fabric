@@ -1,10 +1,11 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"textures": {
-		"0": "skins/character/aledar_dagger",
-		"1": "skins/character/aledar_dagger_beam",
-		"2": "skins/character/aledar_dagger_wynnic"
+		"0": "ghostcraft:item/generic/character/aledar_dagger",
+		"1": "ghostcraft:item/generic/character/aledar_dagger_beam",
+		"2": "ghostcraft:item/generic/character/aledar_dagger_wynnic"
 	},
 	"elements": [
 		{

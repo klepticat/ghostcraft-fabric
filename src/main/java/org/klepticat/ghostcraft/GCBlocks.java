@@ -923,6 +923,20 @@ public class GCBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY),
             true
     );
+
+    public static Block ITERATOR_PROCESSING_SCREEN = register(
+            "iterator_processing_screen",
+            RedstoneLampBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .luminance(Blocks.createLightLevelFromLitBlockState(15)),
+            true
+    );
+
+
     public static Block MARBLED_FLESH = register(
             "marbled_flesh",
             Block::new,

@@ -1,9 +1,10 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "skins/disciple/disciple_relik"
+		"0": "ghostcraft:item/generic/disciple/disciple_relik"
 	},
 	"elements": [
 		{
@@ -229,6 +230,11 @@
 			"rotation": [15, 60, -30],
 			"translation": [-0.5, -1, 0],
 			"scale": [0.53, 0.53, 0.53]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 0, -19.5],
+			"scale": [1.81, 1.81, 1.81]
 		}
 	}
 }

@@ -1,9 +1,10 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "skins/azure/azure_bow"
+		"0": "ghostcraft:item/generic/azure/azure_bow"
 	},
 	"elements": [
 		{
@@ -241,7 +242,7 @@
 			"translation": [-1, 8, 1]
 		},
 		"gui": {
-			"rotation": [-140, 40, 180],
+			"rotation": [-140, 40, -180],
 			"translation": [1.5, 5, 0],
 			"scale": [0.8, 0.8, 0.8]
 		}

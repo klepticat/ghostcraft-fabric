@@ -1,10 +1,11 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "skins/corrupted/corrupted_pulse",
-		"1": "skins/corrupted/corrupted_wand"
+		"0": "ghostcraft:item/generic/corrupted/corrupted_pulse",
+		"1": "ghostcraft:item/generic/corrupted/corrupted_wand"
 	},
 	"elements": [
 		{

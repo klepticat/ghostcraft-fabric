@@ -1,12 +1,13 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "skins/dwarven/dwarven_relik",
-		"1": "skins/dwarven/dwarven_relik_anim_1",
-		"2": "skins/dwarven/dwarven_relik_anim_0",
-		"particle": "skins/dwarven/dwarven_relik"
+		"0": "ghostcraft:item/generic/dwarven/dwarven_relik",
+		"1": "ghostcraft:item/generic/dwarven/dwarven_relik_anim_1",
+		"2": "ghostcraft:item/generic/dwarven/dwarven_relik_anim_0",
+		"particle": "ghostcraft:item/generic/dwarven/dwarven_relik"
 	},
 	"elements": [
 		{
@@ -618,6 +619,11 @@
 			"rotation": [-20, 160, 30],
 			"translation": [0, 1.5, 0],
 			"scale": [0.53, 0.53, 0.53]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 0, -33.25],
+			"scale": [1.96, 1.96, 1.96]
 		}
 	}
 }

@@ -1,9 +1,10 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"textures": {
-		"0": "skins/azure/azure_staff",
-		"1": "skins/azure/azure_insence_3"
+		"0": "ghostcraft:item/generic/azure/azure_staff",
+		"1": "ghostcraft:item/generic/azure/azure_insence_3"
 	},
 	"elements": [
 		{

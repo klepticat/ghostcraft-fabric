@@ -1,8 +1,9 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"textures": {
-		"0": "skins/disciple/disciple_dagger"
+		"0": "ghostcraft:item/generic/disciple/disciple_dagger"
 	},
 	"elements": [
 		{

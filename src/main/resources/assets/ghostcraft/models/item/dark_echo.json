@@ -1,9 +1,10 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"textures": {
-		"0": "skins/character/mael_longbow",
-		"1": "skins/character/mael_longbow_spirit"
+		"0": "ghostcraft:item/generic/character/mael_longbow",
+		"1": "ghostcraft:item/generic/character/mael_longbow_spirit"
 	},
 	"elements": [
 		{

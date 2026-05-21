@@ -1,11 +1,12 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "skins/dernic/dernic_relik",
-		"1": "skins/dernic/dernic_flame",
-		"particle": "skins/dernic/dernic_relik"
+		"0": "ghostcraft:item/generic/dernic/dernic_relik",
+		"1": "ghostcraft:item/generic/dernic/dernic_flame",
+		"particle": "ghostcraft:item/generic/dernic/dernic_relik"
 	},
 	"elements": [
 		{

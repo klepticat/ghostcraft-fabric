@@ -1,10 +1,11 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "skins/character/legendary_arm_cannon",
-		"1": "skins/character/legendary_arm_cannon_flame"
+		"0": "ghostcraft:item/generic/character/legendary_arm_cannon",
+		"1": "ghostcraft:item/generic/character/legendary_arm_cannon_flame"
 	},
 	"elements": [
 		{
@@ -758,7 +759,7 @@
 			"scale": [0.9, 0.9, 0.9]
 		},
 		"gui": {
-			"rotation": [-150, 40, 180],
+			"rotation": [-150, 40, -180],
 			"translation": [1, 3, 0],
 			"scale": [0.65, 0.65, 0.65]
 		}

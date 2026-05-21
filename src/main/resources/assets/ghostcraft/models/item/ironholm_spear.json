@@ -1,10 +1,11 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "skins/dwarven/dwarven_spear",
-		"particle": "skins/dwarven/dwarven_spear"
+		"0": "ghostcraft:item/generic/dwarven/dwarven_spear",
+		"particle": "ghostcraft:item/generic/dwarven/dwarven_spear"
 	},
 	"elements": [
 		{

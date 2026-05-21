@@ -1,10 +1,11 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "skins/character/maxie_remote",
-		"1": "skins/tesla_ladder"
+		"0": "ghostcraft:item/generic/character/maxie_remote",
+		"1": "ghostcraft:item/generic/tesla_ladder"
 	},
 	"elements": [
 		{

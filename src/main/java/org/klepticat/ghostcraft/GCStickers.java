@@ -62,6 +62,7 @@ public class GCStickers {
     public static final Sticker LIMBY_AAAA = register("limby_aaaa", new Sticker(Identifier.of(MOD_ID, "textures/stickers/limby_aaaa.png"), true));
     public static final Sticker GODDAMNITNOTAGAIN = register("goddamnitnotagain", new Sticker(Identifier.of(MOD_ID, "textures/stickers/goddamnitnotagain.png"), true));
     public static final Sticker VIC_GRAPHITI = register("vic_graphiti", new Sticker(Identifier.of(MOD_ID, "textures/stickers/vic_graphiti.png"), true));
+    public static final Sticker THISISFINE = register("thisisfine", new Sticker(Identifier.of(MOD_ID, "textures/stickers/thisisfine.png"), true));
 
 
 
