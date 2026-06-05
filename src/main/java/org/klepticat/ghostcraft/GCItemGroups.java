@@ -227,6 +227,12 @@ public class GCItemGroups {
                 entries.add(GCItems.EBONY_SIGN);
                 entries.add(GCItems.EBONY_HANGING_SIGN);
 
+                entries.add(BLUE_ENCHANTED_LOG);
+                entries.add(BLUE_ENCHANTED);
+                entries.add(STRIPPED_BLUE_ENCHANTED_LOG);
+                entries.add(STRIPPED_BLUE_ENCHANTED);
+                entries.add(BLUE_ENCHANTED_PLANKS);
+
                 entries.add(TANGLEWOOD_LOG);
                 entries.add(TANGLEWOOD);
                 entries.add(TANGLEWOOD_SET.get(BlockType.CUBE));
@@ -387,6 +393,15 @@ public class GCItemGroups {
                 entries.add(YELLOW_TERRACOTTA_BRICK_SLAB);
                 entries.add(YELLOW_TERRACOTTA_BRICK_WALL);
 
+                entries.add(SMARAGDANT_CRYSTAL_SHARD);
+                entries.add(SMARAGDANT_CRYSTAL);
+                entries.add(SMARAGDANT_CRYSTAL_BRICKS);
+                entries.add(SMARAGDANT_CRYSTAL_PILLAR);
+                entries.add(SMARAGDANT_CRYSTAL_TILES);
+                entries.add(BUDDING_SMARAGDANT_CRYSTAL);
+                entries.add(POLISHED_SMARAGDANT_CRYSTAL);
+
+                entries.add(ECHO_SOIL);
                 entries.add(CHISELED_SCULK_STONE);
 
                 entries.add(COBBLED_SCULK_STONE);

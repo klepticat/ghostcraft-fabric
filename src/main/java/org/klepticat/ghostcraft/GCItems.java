@@ -4400,7 +4400,15 @@ public static final HashSet<Item> ALCHEMY_SET = new HashSet<>();
     public static final Item TREE_RESIN = registerWithSet("tree_resin", new Item(new Item.Settings()), ALCHEMY_SET);
     public static final Item PERFUME = registerWithSet("perfume", new Item(new Item.Settings()), ALCHEMY_SET);
 
-
+    public static final Item AMETHYST_POWDER = registerWithSet("amethyst_powder", new Item(new Item.Settings()), ALCHEMY_SET);
+    public static final Item AQUAMARINE_POWDER = registerWithSet("aquamarine_powder", new Item(new Item.Settings()), ALCHEMY_SET);
+    public static final Item CITRINE_POWDER = registerWithSet("citrine_powder", new Item(new Item.Settings()), ALCHEMY_SET);
+    public static final Item EMERALD_POWDER = registerWithSet("emerald_powder", new Item(new Item.Settings()), ALCHEMY_SET);
+    public static final Item JET_POWDER = registerWithSet("jet_powder", new Item(new Item.Settings()), ALCHEMY_SET);
+    public static final Item ONYX_POWDER = registerWithSet("onyx_powder", new Item(new Item.Settings()), ALCHEMY_SET);
+    public static final Item QUARTZ_POWDER = registerWithSet("quartz_powder", new Item(new Item.Settings()), ALCHEMY_SET);
+    public static final Item SAPPHIRE_POWDER = registerWithSet("sapphire_powder", new Item(new Item.Settings()), ALCHEMY_SET);
+    public static final Item SILVER_POWDER = registerWithSet("silver_powder", new Item(new Item.Settings()), ALCHEMY_SET);
 
 // SPELLCRAFT
 public static final HashSet<Item> SPELLCRAFT_SET = new HashSet<>();
@@ -4507,6 +4515,25 @@ public static final HashSet<Item> BAR_SET = new HashSet<>();
     public static final Item UNSTABLE_WAND = registerWithSet("unstable_wand", new Item(new Item.Settings()), BAR_SET);
     public static final Item URANIUM_CHUNK = registerWithSet("uranium_chunk", new Item(new Item.Settings()), BAR_SET);
     public static final Item WARP_CORE = registerWithSet("warp", new Item(new Item.Settings()), BAR_SET);
+    public static final Item CURSED_GOLD = registerWithSet("cursed_gold", new Item(new Item.Settings()), BAR_SET);
+    public static final Item AMETHYST_INGOT = registerWithSet("amethyst_ingot", new Item(new Item.Settings()), BAR_SET);
+    public static final Item AQUAMARINE_INGOT = registerWithSet("aquamarine_ingot", new Item(new Item.Settings()), BAR_SET);
+    public static final Item CITRINE_INGOT = registerWithSet("citrine_ingot", new Item(new Item.Settings()), BAR_SET);
+    public static final Item EMERALD_INGOT = registerWithSet("emerald_ingot", new Item(new Item.Settings()), BAR_SET);
+    public static final Item JET_INGOT = registerWithSet("jet_ingot", new Item(new Item.Settings()), BAR_SET);
+    public static final Item QUARTZ_INGOT = registerWithSet("quartz_ingot", new Item(new Item.Settings()), BAR_SET);
+    public static final Item RUBY_INGOT = registerWithSet("ruby_ingot", new Item(new Item.Settings()), BAR_SET);
+    public static final Item SAPPHIRE_INGOT = registerWithSet("sapphire_ingot", new Item(new Item.Settings()), BAR_SET);
+    public static final Item SILVER_INGOT = registerWithSet("silver_ingot", new Item(new Item.Settings()), BAR_SET);
+    public static final Item AQUAMARINE_WAND = registerWithSet("aquamarine_wand", new Item(new Item.Settings()), BAR_SET);
+    public static final Item CITRINE_WAND = registerWithSet("citrine_wand", new Item(new Item.Settings()), BAR_SET);
+    public static final Item EMERALD_WAND = registerWithSet("emerald_wand", new Item(new Item.Settings()), BAR_SET);
+    public static final Item JET_WAND = registerWithSet("jet_wand", new Item(new Item.Settings()), BAR_SET);
+    public static final Item ONYX_WAND = registerWithSet("onyx_wand", new Item(new Item.Settings()), BAR_SET);
+    public static final Item QUARTZ_WAND = registerWithSet("quartz_wand", new Item(new Item.Settings()), BAR_SET);
+    public static final Item RUBY_WAND = registerWithSet("ruby_wand", new Item(new Item.Settings()), BAR_SET);
+    public static final Item SAPPHIRE_WAND = registerWithSet("sapphire_wand", new Item(new Item.Settings()), BAR_SET);
+    public static final Item SILVER_WAND = registerWithSet("silver_wand", new Item(new Item.Settings()), BAR_SET);
 
 
     public static final Item MANA_SHARD = registerWithSet("mana_shard", new Item(new Item.Settings()), GEMSTONE_SET);
@@ -4582,6 +4609,25 @@ public static final HashSet<Item> BAR_SET = new HashSet<>();
     public static final Item UNCUT_GEODE = registerWithSet("uncutgeode", new Item(new Item.Settings()), GEMSTONE_SET);
     public static final Item MANA_GEM = registerWithSet("mana_gem", new Item(new Item.Settings()), GEMSTONE_SET);
     public static final Item SILVER_RUPEE = registerWithSet("silver_rupee", new Item(new Item.Settings()), GEMSTONE_SET);
+
+
+    public static final Item AMETRINE_SHARDS = registerWithSet("ametrine_shards", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item CHRYSOBERYL_SHARD = registerWithSet("chrysoberyl_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item CORAL_CHUNK = registerWithSet("coral_chunk", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item CUT_AQUAMARINE = registerWithSet("cut_aquamarine", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item CUT_ORANGE_CALCITE = registerWithSet("cut_orange_calcite", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item CUT_SHADOW = registerWithSet("cut_shadow", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item CUT_SQUARE_RUBY = registerWithSet("cut_square_ruby", new Item(new Item.Settings()), GEMSTONE_SET);
+
+    public static final Item AMETHYST_CLUSTER = registerWithSet("amethyst_cluster", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item AQUAMARINE_CLUSTER = registerWithSet("aquamarine_cluster", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item CITRINE_CLUSTER = registerWithSet("citrine_cluster", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item EMERALD_CLUSTER = registerWithSet("emerald_cluster", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item JET_CLUSTER = registerWithSet("jet_cluster", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item ONYX_CLUSTER = registerWithSet("onyx_cluster", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item RUBY_CLUSTER = registerWithSet("ruby_cluster", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item SAPPHIRE_CLUSTER = registerWithSet("sapphire_cluster", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item SILVER_CLUSTER = registerWithSet("silver_cluster", new Item(new Item.Settings()), GEMSTONE_SET);
 
 
     // 2d Bows

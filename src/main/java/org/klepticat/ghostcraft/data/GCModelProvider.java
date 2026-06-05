@@ -367,6 +367,8 @@ public class GCModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerHangingSign(EBONY_LOG, EBONY_HANGING_SIGN, EBONY_WALL_HANGING_SIGN);
 
+        blockStateModelGenerator.registerLog(BLUE_ENCHANTED_LOG).log(BLUE_ENCHANTED_LOG).wood(BLUE_ENCHANTED);
+        blockStateModelGenerator.registerLog(STRIPPED_BLUE_ENCHANTED_LOG).log(STRIPPED_BLUE_ENCHANTED_LOG).wood(STRIPPED_BLUE_ENCHANTED);
         blockStateModelGenerator.registerLog(TANGLEWOOD_LOG).log(TANGLEWOOD_LOG).wood(TANGLEWOOD);
 
         blockStateModelGenerator.registerLog(DARK_CHERRY_LOG).log(DARK_CHERRY_LOG).wood(DARK_CHERRY_WOOD);
@@ -429,6 +431,7 @@ public class GCModelProvider extends FabricModelProvider {
         slatePool.slab(SLATE_SLAB);
         slatePool.wall(SLATE_WALL);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ECHO_SOIL);
         blockStateModelGenerator.registerSimpleCubeAll(CHISELED_SCULK_STONE);
 
         BlockStateModelGenerator.BlockTexturePool cobbledSculkPool = blockStateModelGenerator.registerCubeAllModelTexturePool(COBBLED_SCULK_STONE);
@@ -470,11 +473,16 @@ public class GCModelProvider extends FabricModelProvider {
         smoothSculkPool.slab(SMOOTH_SCULK_STONE_SLAB);
         smoothSculkPool.wall(SMOOTH_SCULK_STONE_WALL);
 
-
-        blockStateModelGenerator.registerSimpleCubeAll(SMARAGDANT_CRYSTAL);
+        blockStateModelGenerator.registerSingleton(SMARAGDANT_CRYSTAL, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
+        blockStateModelGenerator.registerSingleton(BUDDING_SMARAGDANT_CRYSTAL, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
         blockStateModelGenerator.blockStateCollector.accept(
                 crystalCluster(SMARAGDANT_CRYSTAL_SHARD, blockStateModelGenerator)
         );
+        blockStateModelGenerator.registerSimpleCubeAll(SMARAGDANT_CRYSTAL_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(SMARAGDANT_CRYSTAL_TILES);
+        blockStateModelGenerator.registerSimpleCubeAll(POLISHED_SMARAGDANT_CRYSTAL);
+        blockStateModelGenerator.registerSingleton(SMARAGDANT_CRYSTAL_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
+
 
         BLOCK_SETS.forEach(blockSet -> {
             blockStateModelGenerator.registerDoor(blockSet.get(BlockType.DOOR));

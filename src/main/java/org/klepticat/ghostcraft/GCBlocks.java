@@ -53,6 +53,7 @@ public class GCBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY),
             true
     );
+    //TODO  Skyris set here
     public static Block SKYRIS_BOOKSHELF = register(
             "skyris_bookshelf",
             Block::new,
@@ -1522,6 +1523,63 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+//TODO Blue Enchanted DOOR/TRAPDOOR
+    public static Block BLUE_ENCHANTED_LOG = register(
+            "blue_enchanted_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block BLUE_ENCHANTED = register(
+            "blue_enchanted",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_BLUE_ENCHANTED_LOG = register(
+            "stripped_blue_enchanted_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_BLUE_ENCHANTED = register(
+            "stripped_blue_enchanted",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block BLUE_ENCHANTED_PLANKS = register(
+            "blue_enchanted_planks",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+
     public static Block TANGLEWOOD_LOG = register(
             "tanglewood_log",
             PillarBlock::new,
@@ -2325,6 +2383,18 @@ public class GCBlocks {
     public static Block YELLOW_TERRACOTTA_BRICK_WALL = register("yellow_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(YELLOW_TERRACOTTA_BRICK), true);
 
 
+    public static Block ECHO_SOIL = register(
+            "echo_soil",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.MOSS_BLOCK),
+            true
+    );
+
     public static Block CHISELED_SCULK_STONE = register(
             "chiseled_sculk_stone",
             Block::new,
@@ -2618,7 +2688,6 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.DEEPSLATE),
             true
     );
-//TODO finish smaragdant set
     public static Block BUDDING_SMARAGDANT_CRYSTAL = register(
             "budding_smaragdant_crystal",
             PillarBlock::new,
