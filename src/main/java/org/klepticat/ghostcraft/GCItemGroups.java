@@ -34,7 +34,7 @@ public class GCItemGroups {
                 entries.add(AURORA_CRYSTAL);
                 entries.add(BLEEDING_COIL);
                 entries.add(CANDY_CANE);
-                entries.add(CABBAGE);
+                entries.add(CABBAGE_BLOCK);
                 entries.add(CHOGGY_BLOGGY);
                 entries.add(END_MOSS);
                 entries.add(NOISE);
@@ -135,6 +135,27 @@ public class GCItemGroups {
                 entries.add(GRATED_IRON_TRAPDOOR);
                 entries.add(GRATED_SPRUCE_TRAPDOOR);
                 entries.add(DREADWOOD_TRAPDOOR);
+
+                entries.add(SOUL_QUARTZ_BLOCK);
+                entries.add(SMOOTH_SOUL_QUARTZ);
+                entries.add(SOUL_QUARTZ_BRICKS);
+                entries.add(CRACKED_SOUL_QUARTZ_BRICKS);
+                entries.add(SOUL_QUARTZ_PILLAR);
+
+
+                entries.add(SMOOTH_LAPIS_BLOCK);
+                entries.add(LAPIS_BRICKS);
+                entries.add(LAPIS_TILES);
+                entries.add(CHISELED_LAPIS);
+                entries.add(LAPIS_PILLAR);
+
+                entries.add(GILDED_LAPIS_BLOCK);
+                entries.add(GILDED_LAPIS_BRICKS);
+                entries.add(GILDED_LAPIS_TILES);
+                entries.add(GILDED_FANCY_LAPIS);
+                entries.add(GILDED_LAPIS_PILLAR);
+
+                entries.add(ITERATOR_PROCESSING_SCREEN);
 
                 entries.add(MARBLED_FLESH);
                 entries.add(MARBLED_FLESH_STAIRS);
@@ -243,13 +264,25 @@ public class GCItemGroups {
                 entries.add(ANCHOR_SET.get(BlockType.PRESSURE_PLATE));
                 entries.add(ANCHOR_SET.get(BlockType.BUTTON));
 
+                entries.add(COOKING_POT);
+                entries.add(COOKING_POT_HANDLE);
+                entries.add(COOKING_POT_TRAY);
+
                 entries.add(APPLE_CRATE);
+                entries.add(CABBAGE_CRATE);
                 entries.add(BEETROOT_CRATE);
                 entries.add(GOLDEN_APPLE_CRATE);
                 entries.add(GOLDEN_CARROT_CRATE);
                 entries.add(CARROT_CRATE);
+                entries.add(CARROT_CRATE_SPRUCE);
                 entries.add(POTATO_CRATE);
+                entries.add(POTATO_CRATE_SPRUCE);
+                entries.add(TOMATO_CRATE);
+                entries.add(ONION_CRATE);
                 entries.add(BERRY_SACK);
+                entries.add(RICE_BAG);
+                entries.add(RICE_BALE);
+                entries.add(STRAW_BALE);
                 entries.add(COCOA_BEANS_SACK);
                 entries.add(GLOWBERRY_SACK);
                 entries.add(GUNPOWDER_SACK);
@@ -503,6 +536,8 @@ public class GCItemGroups {
                 entries.add(HIDE_PIG);
                 entries.add(HIDE_SNIFFER);
                 entries.add(HIDE_STRIDER);
+                entries.add(HIDE_HOGLIN);
+                entries.add(HIDE_RAVAGER);
                 entries.add(TENTACLE_PINK);
                 entries.add(TENTACLE_SEVERED);
                 entries.add(TENDRIL_DARK);

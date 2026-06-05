@@ -35,7 +35,7 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(AURORA_CRYSTAL);
         blockStateModelGenerator.registerSimpleCubeAll(BLEEDING_COIL);
         blockStateModelGenerator.registerSimpleCubeAll(CANDY_CANE);
-        blockStateModelGenerator.registerSimpleCubeAll(CABBAGE);
+        blockStateModelGenerator.registerSimpleCubeAll(CABBAGE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(CHOGGY_BLOGGY);
         blockStateModelGenerator.registerSimpleCubeAll(ENCHANTED_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(END_MOSS);
@@ -171,12 +171,20 @@ public class GCModelProvider extends FabricModelProvider {
 
 
         blockStateModelGenerator.registerSingleton(APPLE_CRATE, TexturedModel.SIDE_TOP_BOTTOM_WALL);
+        blockStateModelGenerator.registerSingleton(CABBAGE_CRATE, TexturedModel.SIDE_TOP_BOTTOM_WALL);
         blockStateModelGenerator.registerSingleton(GOLDEN_APPLE_CRATE, TexturedModel.SIDE_TOP_BOTTOM_WALL);
         blockStateModelGenerator.registerSingleton(GOLDEN_CARROT_CRATE, TexturedModel.SIDE_TOP_BOTTOM_WALL);
         blockStateModelGenerator.registerSingleton(BEETROOT_CRATE, TexturedModel.SIDE_TOP_BOTTOM_WALL);
         blockStateModelGenerator.registerSingleton(CARROT_CRATE, TexturedModel.SIDE_TOP_BOTTOM_WALL);
+        blockStateModelGenerator.registerSingleton(CARROT_CRATE_SPRUCE, TexturedModel.SIDE_TOP_BOTTOM_WALL);
         blockStateModelGenerator.registerSingleton(POTATO_CRATE, TexturedModel.SIDE_TOP_BOTTOM_WALL);
+        blockStateModelGenerator.registerSingleton(POTATO_CRATE_SPRUCE, TexturedModel.SIDE_TOP_BOTTOM_WALL);
+        blockStateModelGenerator.registerSingleton(ONION_CRATE, TexturedModel.SIDE_TOP_BOTTOM_WALL);
+        blockStateModelGenerator.registerSingleton(TOMATO_CRATE, TexturedModel.SIDE_TOP_BOTTOM_WALL);
         blockStateModelGenerator.registerSingleton(BERRY_SACK, TexturedModel.SIDE_TOP_BOTTOM_WALL);
+        blockStateModelGenerator.registerSingleton(RICE_BAG, TexturedModel.SIDE_TOP_BOTTOM_WALL);
+        blockStateModelGenerator.registerSingleton(RICE_BALE, TexturedModel.SIDE_TOP_BOTTOM_WALL);
+        blockStateModelGenerator.registerSingleton(STRAW_BALE, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
         blockStateModelGenerator.registerSingleton(GLOWBERRY_SACK, TexturedModel.SIDE_TOP_BOTTOM_WALL);
         blockStateModelGenerator.registerSingleton(COCOA_BEANS_SACK, TexturedModel.SIDE_TOP_BOTTOM_WALL);
         blockStateModelGenerator.registerSingleton(GUNPOWDER_SACK, TexturedModel.SIDE_TOP_BOTTOM_WALL);
@@ -294,6 +302,29 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTrapdoor(DREADSTONE_TRAPDOOR);
         blockStateModelGenerator.registerDoor(LOCKED_DREADSTONE_DOOR);
 
+        blockStateModelGenerator.registerSimpleCubeAll(SOUL_QUARTZ_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(SMOOTH_SOUL_QUARTZ);
+        blockStateModelGenerator.registerSimpleCubeAll(SOUL_QUARTZ_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(CRACKED_SOUL_QUARTZ_BRICKS);
+        blockStateModelGenerator.registerSingleton(SOUL_QUARTZ_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
+
+        blockStateModelGenerator.registerSimpleCubeAll(SMOOTH_LAPIS_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(CHISELED_LAPIS);
+        blockStateModelGenerator.registerSimpleCubeAll(LAPIS_TILES);
+        blockStateModelGenerator.registerSimpleCubeAll(LAPIS_BRICKS);
+        blockStateModelGenerator.registerSingleton(LAPIS_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
+
+        blockStateModelGenerator.registerSimpleCubeAll(GILDED_LAPIS_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(GILDED_LAPIS_TILES);
+        blockStateModelGenerator.registerSimpleCubeAll(GILDED_FANCY_LAPIS);
+        blockStateModelGenerator.registerSimpleCubeAll(GILDED_LAPIS_BRICKS);
+        blockStateModelGenerator.registerSingleton(GILDED_LAPIS_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
+
+        registerRedstoneActivatedLamp(ITERATOR_PROCESSING_SCREEN, blockStateModelGenerator);
+
+        blockStateModelGenerator.registerSimpleCubeAll(COOKING_POT);
+        blockStateModelGenerator.registerSimpleCubeAll(COOKING_POT_HANDLE);
+        blockStateModelGenerator.registerSimpleCubeAll(COOKING_POT_TRAY);
 
         BlockStateModelGenerator.BlockTexturePool marbledfPool = blockStateModelGenerator.registerCubeAllModelTexturePool(MARBLED_FLESH);
 
@@ -468,6 +499,9 @@ public class GCModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        registerGeneratedItem(GCItems.HIDE_HOGLIN, "loot/mob_drops/", itemModelGenerator);
+        registerGeneratedItem(GCItems.HIDE_RAVAGER, "loot/mob_drops/", itemModelGenerator);
+        registerGeneratedItem(GCItems.RAW_HOGLIN, "loot/mob_drops/", itemModelGenerator);
         registerGeneratedItem(GCItems.RAW_SHADOW, "loot/mob_drops/shadow/", itemModelGenerator);
         registerGeneratedItem(GCItems.SHADOW_CLUMP, "foods/inedibles/", itemModelGenerator);
         registerGeneratedItem(GCItems.SHADOW_TENDRIL, "loot/mob_drops/shadow/", itemModelGenerator);

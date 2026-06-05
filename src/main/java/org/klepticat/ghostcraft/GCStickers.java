@@ -62,8 +62,17 @@ public class GCStickers {
     public static final Sticker LIMBY_AAAA = register("limby_aaaa", new Sticker(Identifier.of(MOD_ID, "textures/stickers/limby_aaaa.png"), true));
     public static final Sticker GODDAMNITNOTAGAIN = register("goddamnitnotagain", new Sticker(Identifier.of(MOD_ID, "textures/stickers/goddamnitnotagain.png"), true));
     public static final Sticker VIC_GRAPHITI = register("vic_graphiti", new Sticker(Identifier.of(MOD_ID, "textures/stickers/vic_graphiti.png"), true));
+    public static final Sticker CEDRIC_GRAPFFITI = register("cedric_graffiti", new Sticker(Identifier.of(MOD_ID, "textures/stickers/cedric_graffiti.png"), true));
+    public static final Sticker GRIM_GRAPFFITI = register("grim_graffiti", new Sticker(Identifier.of(MOD_ID, "textures/stickers/grim_graffiti.png"), true));
+    public static final Sticker LIMBY_GRAPFFITI = register("limby_graffiti", new Sticker(Identifier.of(MOD_ID, "textures/stickers/limby_graffiti.png"), true));
+    public static final Sticker MEI_GRAPFFITI = register("mei_graffiti", new Sticker(Identifier.of(MOD_ID, "textures/stickers/mei_graffiti.png"), true));
+    public static final Sticker RAVNA_GRAPFFITI = register("ravna_graffiti", new Sticker(Identifier.of(MOD_ID, "textures/stickers/ravna_graffiti.png"), true));
+    public static final Sticker SILVER_GRAPFFITI = register("silver_graffiti", new Sticker(Identifier.of(MOD_ID, "textures/stickers/silver_graffiti.png"), true));
     public static final Sticker THISISFINE = register("thisisfine", new Sticker(Identifier.of(MOD_ID, "textures/stickers/thisisfine.png"), true));
-
+    public static final Sticker GRIMBOX = register("grimbox", new Sticker(Identifier.of(MOD_ID, "textures/stickers/grimbox.png"), true));
+    public static final Sticker IMPY_STICKY = register("impy_sticky", new Sticker(Identifier.of(MOD_ID, "textures/stickers/impy_sticky.png"), true));
+    public static final Sticker SILVER_HEAR_ME_OUT = register("silver_hear_me_out", new Sticker(Identifier.of(MOD_ID, "textures/stickers/silver_hear_me_out.png"), true));
+    public static final Sticker VIC_HONGY = register("vic_hongy", new Sticker(Identifier.of(MOD_ID, "textures/stickers/vic_hongy.png"), true));
 
 
 

@@ -183,8 +183,8 @@ public class GCBlocks {
     );
 
 
-    public static Block CABBAGE = register(
-            "cabbage",
+    public static Block CABBAGE_BLOCK = register(
+            "cabbage_block",
             Block::new,
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.LIME)
@@ -924,6 +924,166 @@ public class GCBlocks {
             true
     );
 
+
+
+    public static Block SOUL_QUARTZ_PILLAR = register(
+            "soul_quartz_pillar",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .burnable(),
+            true
+    );
+
+    public static Block SOUL_QUARTZ_BLOCK = register(
+            "soul_quartz_block",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+    public static Block SMOOTH_SOUL_QUARTZ = register(
+            "smooth_soul_quartz",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+    public static Block SOUL_QUARTZ_BRICKS = register(
+            "soul_quartz_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+    public static Block CRACKED_SOUL_QUARTZ_BRICKS = register(
+            "cracked_soul_quartz_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+
+    public static Block LAPIS_PILLAR = register(
+            "lapis_pillar",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.STONE)
+                    .burnable(),
+            true
+    );
+    public static Block SMOOTH_LAPIS_BLOCK = register(
+            "smooth_lapis_block",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block CHISELED_LAPIS = register(
+            "chiseled_lapis",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block LAPIS_TILES = register(
+            "lapis_tiles",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block LAPIS_BRICKS = register(
+            "lapis_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+
+    public static Block GILDED_LAPIS_PILLAR = register(
+            "gilded_lapis_pillar",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GOLD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.STONE)
+                    .burnable(),
+            true
+    );
+    public static Block GILDED_LAPIS_BLOCK = register(
+            "gilded_lapis_block",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GOLD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block GILDED_FANCY_LAPIS = register(
+            "gilded_fancy_lapis",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GOLD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block GILDED_LAPIS_TILES= register(
+            "gilded_lapis_tiles",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GOLD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block GILDED_LAPIS_BRICKS = register(
+            "gilded_lapis_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+
+
     public static Block ITERATOR_PROCESSING_SCREEN = register(
             "iterator_processing_screen",
             RedstoneLampBlock::new,
@@ -1478,6 +1638,49 @@ public class GCBlocks {
             true
     );
 
+    public static Block COOKING_POT = register(
+            "cooking_pot",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .nonOpaque()
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .sounds(BlockSoundGroup.METAL)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block COOKING_POT_HANDLE = register(
+            "cooking_pot_handle",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .nonOpaque()
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .sounds(BlockSoundGroup.METAL)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block COOKING_POT_TRAY = register(
+            "cooking_pot_tray",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .nonOpaque()
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .sounds(BlockSoundGroup.METAL)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+
     public static Block APPLE_CRATE = register(
             "apple_crate",
             Block::new,
@@ -1493,6 +1696,26 @@ public class GCBlocks {
             Block::new,
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DARK_RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block CABBAGE_CRATE = register(
+            "cabbage_crate",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block CARROT_CRATE_SPRUCE = register(
+            "carrot_crate_spruce",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.ORANGE)
                     .instrument(NoteBlockInstrument.BASS)
                     .sounds(BlockSoundGroup.WOOD)
                     .strength(2.0F, 3.0F),
@@ -1528,11 +1751,41 @@ public class GCBlocks {
                     .strength(2.0F, 3.0F),
             true
     );
+    public static Block ONION_CRATE = register(
+            "onion_crate",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.OAK_TAN)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .strength(2.0F, 3.0F),
+            true
+    );
     public static Block POTATO_CRATE = register(
             "potato_crate",
             Block::new,
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.PALE_YELLOW)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block POTATO_CRATE_SPRUCE = register(
+            "potato_crate_spruce",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PALE_YELLOW)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block TOMATO_CRATE = register(
+            "tomato_crate",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.RED)
                     .instrument(NoteBlockInstrument.BASS)
                     .sounds(BlockSoundGroup.WOOD)
                     .strength(2.0F, 3.0F),
@@ -1576,6 +1829,36 @@ public class GCBlocks {
                     .instrument(NoteBlockInstrument.BASS)
                     .sounds(BlockSoundGroup.WOOL)
                     .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block RICE_BAG = register(
+            "rice_bag",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block RICE_BALE = register(
+            "rice_bale",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sounds(BlockSoundGroup.GRASS)
+                    .strength(2.0F, 3.0F),
+            true
+    );
+    public static Block STRAW_BALE = register(
+            "straw_bale",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BROWN)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.GRASS),
             true
     );
     public static Block NETHER_WART_SACK = register(
@@ -2335,7 +2618,7 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.DEEPSLATE),
             true
     );
-
+//TODO finish smaragdant set
     public static Block BUDDING_SMARAGDANT_CRYSTAL = register(
             "budding_smaragdant_crystal",
             PillarBlock::new,
