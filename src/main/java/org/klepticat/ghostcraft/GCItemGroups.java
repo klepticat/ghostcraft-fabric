@@ -599,6 +599,7 @@ public class GCItemGroups {
                 entries.addAll(toList(NPC_SET));
                 entries.add(NOTES);
                 entries.add(NOTICE_BOARD);
+                entries.addAll(toList(SIGIL_SET));
                 entries.add(GoatHornItem.getStackForInstrument(MARIAH, Registries.INSTRUMENT.entryOf(GCInstruments.MARIAH_ITS_TIME)));
                 entries.add(GoatHornItem.getStackForInstrument(MARIAH, Registries.INSTRUMENT.entryOf(GCInstruments.MARIAH_AHH)));
                 entries.addAll(toList(WANTED_POSTERS_SET));

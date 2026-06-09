@@ -517,6 +517,19 @@ public class GCModelProvider extends FabricModelProvider {
         registerGeneratedItem(GCItems.SHADOW_TOOTH, "loot/mob_drops/shadow/", itemModelGenerator);
         registerPlaceableItem(GCItems.MARIAH, "placeables/", itemModelGenerator);
 
+        registerHandheldItem(GCItems.BERT, "placeables/critters/", itemModelGenerator);
+        registerHandheldItem(GCItems.CLARENCE, "placeables/critters/", itemModelGenerator);
+        registerHandheldItem(GCItems.EDWARD, "placeables/critters/", itemModelGenerator);
+        registerHandheldItem(GCItems.ELENA, "placeables/critters/", itemModelGenerator);
+        registerHandheldItem(GCItems.HENRY, "placeables/critters/", itemModelGenerator);
+        registerHandheldItem(GCItems.LEWIS, "placeables/critters/", itemModelGenerator);
+        registerHandheldItem(GCItems.PERCIVAL, "placeables/critters/", itemModelGenerator);
+        registerHandheldItem(GCItems.PETUNIA, "placeables/critters/", itemModelGenerator);
+        registerHandheldItem(GCItems.STEPHANINE, "placeables/critters/", itemModelGenerator);
+        registerHandheldItem(GCItems.STEVEN, "placeables/critters/", itemModelGenerator);
+        registerHandheldItem(GCItems.VANESSA, "placeables/critters/", itemModelGenerator);
+        registerHandheldItem(GCItems.WEASLEY, "placeables/critters/", itemModelGenerator);
+
         registerGeneratedItem(DARK_CHERRY_SIGN.asItem(), "", itemModelGenerator);
         registerGeneratedItem(EBONY_SIGN.asItem(), "", itemModelGenerator);
 
@@ -633,6 +646,10 @@ public class GCModelProvider extends FabricModelProvider {
             registerGeneratedItem(item, "placeables/critters/", itemModelGenerator);
         });
 
+        GCItems.INVMON_SET.forEach(item -> {
+            registerGeneratedItem(item, "placeables/critters/invmon/", itemModelGenerator);
+        });
+
         GCItems.ALCHEMY_SET.forEach(item -> {
             registerGeneratedItem(item, "tradeskill/alchemy/", itemModelGenerator);
         });
@@ -642,6 +659,10 @@ public class GCModelProvider extends FabricModelProvider {
         });
 
         GCItems.FLAG_SET.forEach(item -> {
+            registerPlaceableItem(item, "placeables/flags/", itemModelGenerator);
+        });
+
+        GCItems.SIGIL_SET.forEach(item -> {
             registerPlaceableItem(item, "placeables/flags/", itemModelGenerator);
         });
 

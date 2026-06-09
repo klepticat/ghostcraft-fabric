@@ -3063,6 +3063,7 @@ public class GCItems {
         public static final Item SKELYTRA = registerWithSet("skelytra", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/skelytra.png")), ELYTRA_SET);
         public static final Item VAMPIRE = registerWithSet("vampire", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/vampire.png")), ELYTRA_SET);
         public static final Item VEX_WINGS = registerWithSet("vex_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/vex.png")), ELYTRA_SET);
+        public static final Item VULTURE = registerWithSet("vulture", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/lightningdragwings.png")), ELYTRA_SET);
 
         public static final Item FIREDRAGWINGS = registerWithSet("firedragwings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/firedragwings.png")), ELYTRA_SET);
         public static final Item ICEDRAGWINGS = registerWithSet("icedragwings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/icedragwings.png")), ELYTRA_SET);
@@ -3432,7 +3433,6 @@ public class GCItems {
     public static final Item KAT_BALL = register("kat_ball", new GoatHornItem(new Item.Settings().maxCount(1), InstrumentTags.GOAT_HORNS));
 
     //OVERSIZE
-
     public static final Item POCKET_RAVNA = register("pocket_ravna", new Item(new Item.Settings()));
     public static final Item POCKET_LIMBY = register("pocket_limby", new Item(new Item.Settings()));
     public static final Item POCKET_GRIM = register("pocket_grim", new Item(new Item.Settings()));
@@ -3449,6 +3449,18 @@ public class GCItems {
     public static final Item MOLAMOLA = register("molamola", new Item(new Item.Settings().food(normalFood)));
     public static final Item MORAY_EEL = register("moray_eel", new Item(new Item.Settings().food(normalFood)));
 
+    public static final Item BERT = register("bert", new Item(new Item.Settings()));
+    public static final Item CLARENCE = register("clarence", new Item(new Item.Settings()));
+    public static final Item EDWARD = register("edward", new Item(new Item.Settings()));
+    public static final Item ELENA = register("elena", new Item(new Item.Settings()));
+    public static final Item HENRY = register("henry", new Item(new Item.Settings()));
+    public static final Item LEWIS = register("lewis", new Item(new Item.Settings()));
+    public static final Item PERCIVAL = register("percival", new Item(new Item.Settings()));
+    public static final Item PETUNIA = register("petunia", new Item(new Item.Settings()));
+    public static final Item STEPHANINE = register("stephanine", new Item(new Item.Settings()));
+    public static final Item STEVEN = register("steven", new Item(new Item.Settings()));
+    public static final Item VANESSA = register("vanessa", new Item(new Item.Settings()));
+    public static final Item WEASLEY = register("weasley", new Item(new Item.Settings()));
 
 
 
@@ -3482,64 +3494,74 @@ public class GCItems {
     public static final Item FAIRY_PURPLE = registerWithSet("fairy_purple", new Item(new Item.Settings()), CRITTER_SET);
 
     //INVMON
-    public static final Item BUDORA = registerWithSet("budora", new Item(new Item.Settings()), CRITTER_SET);
-    public static final Item ROSAROMA = registerWithSet("rosaroma", new Item(new Item.Settings()), CRITTER_SET);
+    public static HashSet<Item> INVMON_SET = new HashSet<>();
+    public static final Item BUDORA = registerWithSet("budora", new Item(new Item.Settings()), INVMON_SET);
+    public static final Item ROSAROMA = registerWithSet("rosaroma", new Item(new Item.Settings()), INVMON_SET);
 
 
-    public static final Item FLORANT = registerWithSet("florant", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item FLORANT = registerWithSet("florant", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item DROOLIT = registerWithSet("droolit", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item DROOLIT = registerWithSet("droolit", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item EELEPENO = registerWithSet("eelepeno", new Item(new Item.Settings()), CRITTER_SET);
-    public static final Item PEELEPER = registerWithSet("peeleper", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item EELEPENO = registerWithSet("eelepeno", new Item(new Item.Settings()), INVMON_SET);
+    public static final Item PEELEPER = registerWithSet("peeleper", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item ELIMINALATE = registerWithSet("eliminalate", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item ELIMINALATE = registerWithSet("eliminalate", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item GLUBIN = registerWithSet("glubin", new Item(new Item.Settings()), CRITTER_SET);
-    public static final Item GLAUBER = registerWithSet("glauber", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item GLUBIN = registerWithSet("glubin", new Item(new Item.Settings()), INVMON_SET);
+    public static final Item GLAUBER = registerWithSet("glauber", new Item(new Item.Settings()), INVMON_SET);
 
 
-    public static final Item EKHOLO = registerWithSet("ekholo", new Item(new Item.Settings()), CRITTER_SET);
-    public static final Item EKHOLIM = registerWithSet("ekholim", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item EKHOLO = registerWithSet("ekholo", new Item(new Item.Settings()), INVMON_SET);
+    public static final Item EKHOLIM = registerWithSet("ekholim", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item ELVLING = registerWithSet("elvling", new Item(new Item.Settings()), CRITTER_SET);
-    public static final Item ELVIIR = registerWithSet("elviir", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item ELVLING = registerWithSet("elvling", new Item(new Item.Settings()), INVMON_SET);
+    public static final Item ELVIIR = registerWithSet("elviir", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item FUNGAMENTAL = registerWithSet("fungamental", new Item(new Item.Settings()), CRITTER_SET);
-    public static final Item FUNPSY = registerWithSet("funpsy", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item FUNGAMENTAL = registerWithSet("fungamental", new Item(new Item.Settings()), INVMON_SET);
+    public static final Item FUNPSY = registerWithSet("funpsy", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item GLIMP = registerWithSet("glimp", new Item(new Item.Settings()), CRITTER_SET);
-    public static final Item GLOMPAH = registerWithSet("glompah", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item GLIMP = registerWithSet("glimp", new Item(new Item.Settings()), INVMON_SET);
+    public static final Item GLOMPAH = registerWithSet("glompah", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item GUSLING = registerWithSet("gusling", new Item(new Item.Settings()), CRITTER_SET);
-    public static final Item GUSWING = registerWithSet("guswing", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item GUSLING = registerWithSet("gusling", new Item(new Item.Settings()), INVMON_SET);
+    public static final Item GUSWING = registerWithSet("guswing", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item HELMLET = registerWithSet("helmlet", new Item(new Item.Settings()), CRITTER_SET);
-    public static final Item IMPADIN = registerWithSet("impadin", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item HELMLET = registerWithSet("helmlet", new Item(new Item.Settings()), INVMON_SET);
+    public static final Item IMPADIN = registerWithSet("impadin", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item KATRAT = registerWithSet("katrat", new Item(new Item.Settings()), CRITTER_SET);
-    public static final Item KLEPTIRAT = registerWithSet("kleptirat", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item KATRAT = registerWithSet("katrat", new Item(new Item.Settings()), INVMON_SET);
+    public static final Item KLEPTIRAT = registerWithSet("kleptirat", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item KINADOW = registerWithSet("kinadow", new Item(new Item.Settings()), CRITTER_SET);
-    public static final Item KINDRAX = registerWithSet("kindrax", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item KINADOW = registerWithSet("kinadow", new Item(new Item.Settings()), INVMON_SET);
+    public static final Item KINDRAX = registerWithSet("kindrax", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item MITTLET = registerWithSet("mittlet", new Item(new Item.Settings()), CRITTER_SET);
-    public static final Item MITTMAN = registerWithSet("mittman", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item MITTLET = registerWithSet("mittlet", new Item(new Item.Settings()), INVMON_SET);
+    public static final Item MITTMAN = registerWithSet("mittman", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item MORABEAK = registerWithSet("morabeak", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item MORABEAK = registerWithSet("morabeak", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item NOOKAT = registerWithSet("nookat", new Item(new Item.Settings()), CRITTER_SET);
-    public static final Item TANUKELINE = registerWithSet("tanukeline", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item NOOKAT = registerWithSet("nookat", new Item(new Item.Settings()), INVMON_SET);
+    public static final Item TANUKELINE = registerWithSet("tanukeline", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item PESUTO = registerWithSet("pesuto", new Item(new Item.Settings()), CRITTER_SET);
-    public static final Item PLAGA = registerWithSet("plaga", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item PESUTO = registerWithSet("pesuto", new Item(new Item.Settings()), INVMON_SET);
+    public static final Item PLAGA = registerWithSet("plaga", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item SNIF = registerWithSet("snif", new Item(new Item.Settings()), CRITTER_SET);
-    public static final Item SNIFFON = registerWithSet("sniffon", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item SNIF = registerWithSet("snif", new Item(new Item.Settings()), INVMON_SET);
+    public static final Item SNIFFON = registerWithSet("sniffon", new Item(new Item.Settings()), INVMON_SET);
 
-    public static final Item SOLIZARD = registerWithSet("solizard", new Item(new Item.Settings()), CRITTER_SET);
-    public static final Item SOLASAUR = registerWithSet("solasaur", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item SOLIZARD = registerWithSet("solizard", new Item(new Item.Settings()), INVMON_SET);
+    public static final Item SOLASAUR = registerWithSet("solasaur", new Item(new Item.Settings()), INVMON_SET);
 
+
+    public static HashSet<Item> SIGIL_SET = new HashSet<>();
+
+    public static final Item SIGIL = registerWithSet("sigil", new Item(new Item.Settings()), SIGIL_SET);
+    public static final Item SIGIL_AQUATIC = registerWithSet("sigil_aquatic", new Item(new Item.Settings()), SIGIL_SET);
+    public static final Item SIGIL_EVOCATION = registerWithSet("sigil_evocation", new Item(new Item.Settings()), SIGIL_SET);
+    public static final Item SIGIL_HOLY = registerWithSet("sigil_holy", new Item(new Item.Settings()), SIGIL_SET);
+    public static final Item SIGIL_IGNITED = registerWithSet("sigil_ignited", new Item(new Item.Settings()), SIGIL_SET);
+    public static final Item SIGIL_ILLUSION = registerWithSet("sigil_illusion", new Item(new Item.Settings()), SIGIL_SET);
 
 
     public static final Item NOTICE_BOARD = register("notice_board", new Item(new Item.Settings()));
@@ -4456,8 +4478,17 @@ public static final HashSet<Item> ALCHEMY_SET = new HashSet<>();
     public static final Item QUARTZ_POWDER = registerWithSet("quartz_powder", new Item(new Item.Settings()), ALCHEMY_SET);
     public static final Item SAPPHIRE_POWDER = registerWithSet("sapphire_powder", new Item(new Item.Settings()), ALCHEMY_SET);
     public static final Item SILVER_POWDER = registerWithSet("silver_powder", new Item(new Item.Settings()), ALCHEMY_SET);
+    public static final Item ROD_BLAZE = registerWithSet("rod_blaze", new Item(new Item.Settings()), ALCHEMY_SET);
+    public static final Item ROD_BONE = registerWithSet("rod_bone", new Item(new Item.Settings()), ALCHEMY_SET);
+    public static final Item ROD_GREATWOOD = registerWithSet("rod_greatwood", new Item(new Item.Settings()), ALCHEMY_SET);
+    public static final Item ROD_ICE = registerWithSet("rod_ice", new Item(new Item.Settings()), ALCHEMY_SET);
+    public static final Item ROD_OBSIDIAN = registerWithSet("rod_obsidian", new Item(new Item.Settings()), ALCHEMY_SET);
+    public static final Item ROD_QUARTZ = registerWithSet("rod_quartz", new Item(new Item.Settings()), ALCHEMY_SET);
+    public static final Item ROD_REED = registerWithSet("rod_reed", new Item(new Item.Settings()), ALCHEMY_SET);
+    public static final Item ROD_SILVERWOOD = registerWithSet("rod_silverwood", new Item(new Item.Settings()), ALCHEMY_SET);
 
-// SPELLCRAFT
+
+    // SPELLCRAFT
 public static final HashSet<Item> SPELLCRAFT_SET = new HashSet<>();
 
     public static final Item RUNE_AZ = registerWithSet("rune_az", new Item(new Item.Settings()), SPELLCRAFT_SET);
@@ -4675,6 +4706,24 @@ public static final HashSet<Item> BAR_SET = new HashSet<>();
     public static final Item RUBY_CLUSTER = registerWithSet("ruby_cluster", new Item(new Item.Settings()), GEMSTONE_SET);
     public static final Item SAPPHIRE_CLUSTER = registerWithSet("sapphire_cluster", new Item(new Item.Settings()), GEMSTONE_SET);
     public static final Item SILVER_CLUSTER = registerWithSet("silver_cluster", new Item(new Item.Settings()), GEMSTONE_SET);
+
+
+    public static final Item BLACK_SHARD = registerWithSet("black_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item BLUE_SHARD = registerWithSet("blue_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item BROWN_SHARD = registerWithSet("brown_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item CYAN_SHARD = registerWithSet("cyan_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item DIRTY_SHARD = registerWithSet("dirty_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item GRAY_SHARD = registerWithSet("gray_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item GREEN_SHARD = registerWithSet("green_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item LIGHT_BLUE_SHARD = registerWithSet("light_blue_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item LIGHT_GRAY_SHARD = registerWithSet("light_gray_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item LIME_SHARD = registerWithSet("lime_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item MAGENTA_SHARD = registerWithSet("magenta_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item ORANGE_SHARD = registerWithSet("orange_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item PINK_SHARD = registerWithSet("pink_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item PURPLE_SHARD = registerWithSet("purple_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item RED_SHARD = registerWithSet("red_shard", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item YELLOW_SHARD = registerWithSet("yellow_shard", new Item(new Item.Settings()), GEMSTONE_SET);
 
 
     // 2d Bows
