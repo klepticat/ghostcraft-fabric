@@ -1523,7 +1523,7 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
-//TODO Blue Enchanted DOOR/TRAPDOOR
+//TODO Blue Enchanted DOOR/TRAPDOOR block textures
     public static Block BLUE_ENCHANTED_LOG = register(
             "blue_enchanted_log",
             PillarBlock::new,

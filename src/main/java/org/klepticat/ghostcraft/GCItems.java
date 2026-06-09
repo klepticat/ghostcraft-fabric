@@ -2115,7 +2115,54 @@ public class GCItems {
                         -3.1f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
         ));
-
+        public static final Item GILDED_KEYBLADE = register("gilded_keyblade", new MeleeWeaponItem(
+                ToolMaterials.WOOD,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        6,
+                        -3.1f
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item SENTRY_AXE = register("sentry_axe", new MeleeWeaponItem(
+                ToolMaterials.WOOD,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item IRONHOLM_SPEAR = register("ironholm_spear", new MeleeWeaponItem(
+                ToolMaterials.WOOD,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item ORCISH_SPEAR = register("orcish_spear", new MeleeWeaponItem(
+                ToolMaterials.WOOD,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item HEMORRHAGE = register("hemorrhage", new MeleeWeaponItem(
+                ToolMaterials.WOOD,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
+        public static final Item ELTORVURIA_SPEAR = register("eltorvuria_spear", new MeleeWeaponItem(
+                ToolMaterials.WOOD,
+                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
+                        ToolMaterials.WOOD,
+                        1,
+                        -1.6f
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.RARE)
+        ));
         public static final Item SICKLE = register("sickle", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
@@ -2991,7 +3038,7 @@ public class GCItems {
         public static final Item BED = registerWithSet("bed_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bed.png")), ELYTRA_SET);
         public static final Item BEE = registerWithSet("bee_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/bee.png")), ELYTRA_SET);
         public static final Item BROOM = registerWithSet("broom", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/broom.png")), ELYTRA_SET);
-        public static final Item CARDBOARD_WINGS = registerWithSet("cardboard_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/cardboard.png")), ELYTRA_SET);
+        public static final Item CARDBOARD_WINGS = registerWithSet("cardboard_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/cardboard_wings.png")), ELYTRA_SET);
         public static final Item CEDRIC_WINGS = registerWithSet("cedric_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/cedric.png")), ELYTRA_SET);
         public static final Item COBWEB_WINGS = registerWithSet("cobweb_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/cobweb.png")), ELYTRA_SET);
         public static final Item DATA_WINGS = registerWithSet("data_wings", new ExtendedElytraItem(new Item.Settings().maxDamage(432), Identifier.of(MOD_ID, "textures/entity/elytra/data.png")), ELYTRA_SET);

@@ -1,16 +1,17 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "skins/character/qira",
-		"1": "skins/character/qira_flame",
-		"2": "skins/character/qira_magic",
-		"3": "skins/character/qira_magic_air",
-		"4": "skins/character/qira_magic_thunder",
-		"5": "skins/character/qira_magic_water",
-		"6": "skins/character/qira_magic_earth",
-		"7": "skins/character/qira_magic_fire"
+		"0": "ghostcraft:item/generic/character/qira",
+		"1": "ghostcraft:item/generic/character/qira_flame",
+		"2": "ghostcraft:item/generic/character/qira_magic",
+		"3": "ghostcraft:item/generic/character/qira_magic_air",
+		"4": "ghostcraft:item/generic/character/qira_magic_thunder",
+		"5": "ghostcraft:item/generic/character/qira_magic_water",
+		"6": "ghostcraft:item/generic/character/qira_magic_earth",
+		"7": "ghostcraft:item/generic/character/qira_magic_fire"
 	},
 	"elements": [
 		{
