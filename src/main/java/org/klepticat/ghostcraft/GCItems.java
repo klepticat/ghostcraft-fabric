@@ -3461,7 +3461,7 @@ public class GCItems {
     public static final Item STEVEN = register("steven", new Item(new Item.Settings()));
     public static final Item VANESSA = register("vanessa", new Item(new Item.Settings()));
     public static final Item WEASLEY = register("weasley", new Item(new Item.Settings()));
-
+    public static final Item SCRUNGLEPOCKETLARGE = register("scrunglepocketlarge", new Item(new Item.Settings()));
 
 
     // PLACEABLES

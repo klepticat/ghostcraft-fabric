@@ -760,6 +760,7 @@ public class GCItemGroups {
                 entries.add(POCKET_SILVER);
                 entries.add(POCKET_VIC);
 
+                entries.add(SCRUNGLEPOCKETLARGE);
                 entries.addAll(toList(TWOD_OVERSIZE_WARRIOR_ITEMS));
 
             })
