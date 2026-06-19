@@ -1083,8 +1083,28 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
-
-
+    public static Block ITERATOR_PROJECTION_TILE = register(
+            "iterator_projection_tile",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block ITERATOR_PULSE = register(
+            "iterator_pulse",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
     public static Block ITERATOR_PROCESSING_SCREEN = register(
             "iterator_processing_screen",
             RedstoneLampBlock::new,
@@ -1523,6 +1543,29 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+
+    public static Block WEEPING_BARK = register(
+            "weeping_bark",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block WATCHFUL_ASPEN = register(
+            "watchful_aspen",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
 //TODO Blue Enchanted DOOR/TRAPDOOR block textures
     public static Block BLUE_ENCHANTED_LOG = register(
             "blue_enchanted_log",
@@ -1557,26 +1600,15 @@ public class GCBlocks {
                     .burnable(),
             true
     );
-    public static Block STRIPPED_BLUE_ENCHANTED = register(
-            "stripped_blue_enchanted",
-            PillarBlock::new,
+    public static ImmutableMap<BlockType, Block> BLUE_ENCHANTED_SET = registerWoodSet(
+            "blue_enchanted",
             AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .mapColor(MapColor.BLUE)
                     .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F)
+                    .strength(2.0F, 3.0f)
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable(),
-            true
-    );
-    public static Block BLUE_ENCHANTED_PLANKS = register(
-            "blue_enchanted_planks",
-            PillarBlock::new,
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DEEPSLATE_GRAY)
-                    .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .burnable(),
+            GCWoodTypes.BLUE_ENCHANTED,
             true
     );
 
@@ -1605,7 +1637,7 @@ public class GCBlocks {
     public static ImmutableMap<BlockType, Block> TANGLEWOOD_SET = registerWoodSet(
             "tanglewood",
             AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .mapColor(MapColor.BLUE)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F, 3.0f)
                     .sounds(BlockSoundGroup.WOOD)
