@@ -155,6 +155,8 @@ public class GCItemGroups {
                 entries.add(GILDED_FANCY_LAPIS);
                 entries.add(GILDED_LAPIS_PILLAR);
 
+                entries.add(ITERATOR_PULSE);
+                entries.add(ITERATOR_PROJECTION_TILE);
                 entries.add(ITERATOR_PROCESSING_SCREEN);
 
                 entries.add(MARBLED_FLESH);
@@ -195,6 +197,9 @@ public class GCItemGroups {
                 entries.add(SLATE_SLAB);
                 entries.add(SLATE_WALL);
 
+                entries.add(WATCHFUL_ASPEN);
+                entries.add(WEEPING_BARK);
+
                 entries.add(DARK_CHERRY_LOG);
                 entries.add(DARK_CHERRY_WOOD);
                 entries.add(STRIPPED_DARK_CHERRY_LOG);
@@ -230,8 +235,6 @@ public class GCItemGroups {
                 entries.add(BLUE_ENCHANTED_LOG);
                 entries.add(BLUE_ENCHANTED);
                 entries.add(STRIPPED_BLUE_ENCHANTED_LOG);
-                entries.add(STRIPPED_BLUE_ENCHANTED);
-                entries.add(BLUE_ENCHANTED_PLANKS);
 
                 entries.add(TANGLEWOOD_LOG);
                 entries.add(TANGLEWOOD);
@@ -773,6 +776,7 @@ public class GCItemGroups {
                 entries.add(STEVEN);
                 entries.add(VANESSA);
                 entries.add(WESLEY);
+                entries.add(SCRUNGLEPOCKETLARGE);
 
                 entries.addAll(toList(TWOD_OVERSIZE_WARRIOR_ITEMS));
 

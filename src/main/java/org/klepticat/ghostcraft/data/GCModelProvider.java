@@ -320,6 +320,8 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(GILDED_LAPIS_BRICKS);
         blockStateModelGenerator.registerSingleton(GILDED_LAPIS_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ITERATOR_PROJECTION_TILE);
+        blockStateModelGenerator.registerSimpleCubeAll(ITERATOR_PULSE);
         registerRedstoneActivatedLamp(ITERATOR_PROCESSING_SCREEN, blockStateModelGenerator);
 
         blockStateModelGenerator.registerSimpleCubeAll(COOKING_POT);
@@ -368,8 +370,10 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerHangingSign(EBONY_LOG, EBONY_HANGING_SIGN, EBONY_WALL_HANGING_SIGN);
 
         blockStateModelGenerator.registerLog(BLUE_ENCHANTED_LOG).log(BLUE_ENCHANTED_LOG).wood(BLUE_ENCHANTED);
-        blockStateModelGenerator.registerLog(STRIPPED_BLUE_ENCHANTED_LOG).log(STRIPPED_BLUE_ENCHANTED_LOG).wood(STRIPPED_BLUE_ENCHANTED);
         blockStateModelGenerator.registerLog(TANGLEWOOD_LOG).log(TANGLEWOOD_LOG).wood(TANGLEWOOD);
+
+        blockStateModelGenerator.registerSimpleCubeAll(WEEPING_BARK);
+        blockStateModelGenerator.registerSimpleCubeAll(WATCHFUL_ASPEN);
 
         blockStateModelGenerator.registerLog(DARK_CHERRY_LOG).log(DARK_CHERRY_LOG).wood(DARK_CHERRY_WOOD);
         blockStateModelGenerator.registerLog(STRIPPED_DARK_CHERRY_LOG).log(STRIPPED_DARK_CHERRY_LOG).wood(STRIPPED_DARK_CHERRY_WOOD);
