@@ -517,19 +517,6 @@ public class GCModelProvider extends FabricModelProvider {
         registerGeneratedItem(GCItems.SHADOW_TOOTH, "loot/mob_drops/shadow/", itemModelGenerator);
         registerPlaceableItem(GCItems.MARIAH, "placeables/", itemModelGenerator);
 
-        registerHandheldItem(GCItems.BERT, "placeables/critters/", itemModelGenerator);
-        registerHandheldItem(GCItems.CLARENCE, "placeables/critters/", itemModelGenerator);
-        registerHandheldItem(GCItems.EDWARD, "placeables/critters/", itemModelGenerator);
-        registerHandheldItem(GCItems.ELENA, "placeables/critters/", itemModelGenerator);
-        registerHandheldItem(GCItems.HENRY, "placeables/critters/", itemModelGenerator);
-        registerHandheldItem(GCItems.LEWIS, "placeables/critters/", itemModelGenerator);
-        registerHandheldItem(GCItems.PERCIVAL, "placeables/critters/", itemModelGenerator);
-        registerHandheldItem(GCItems.PETUNIA, "placeables/critters/", itemModelGenerator);
-        registerHandheldItem(GCItems.STEPHANINE, "placeables/critters/", itemModelGenerator);
-        registerHandheldItem(GCItems.STEVEN, "placeables/critters/", itemModelGenerator);
-        registerHandheldItem(GCItems.VANESSA, "placeables/critters/", itemModelGenerator);
-        registerHandheldItem(GCItems.WEASLEY, "placeables/critters/", itemModelGenerator);
-
         registerGeneratedItem(DARK_CHERRY_SIGN.asItem(), "", itemModelGenerator);
         registerGeneratedItem(EBONY_SIGN.asItem(), "", itemModelGenerator);
 
@@ -649,6 +636,9 @@ public class GCModelProvider extends FabricModelProvider {
         GCItems.INVMON_SET.forEach(item -> {
             registerGeneratedItem(item, "placeables/critters/invmon/", itemModelGenerator);
         });
+        GCItems.BIGCRITTER_SET.forEach(item -> {
+            registerTwobyTwoItem(item, "placeables/critters/", itemModelGenerator);
+        });
 
         GCItems.ALCHEMY_SET.forEach(item -> {
             registerGeneratedItem(item, "tradeskill/alchemy/", itemModelGenerator);
@@ -663,7 +653,7 @@ public class GCModelProvider extends FabricModelProvider {
         });
 
         GCItems.SIGIL_SET.forEach(item -> {
-            registerPlaceableItem(item, "placeables/flags/", itemModelGenerator);
+            registerPlaceableItem(item, "tradeskill/spellcraft/", itemModelGenerator);
         });
 
         GCItems.PUMPKIN_SET.forEach(item -> {
@@ -937,6 +927,12 @@ public class GCModelProvider extends FabricModelProvider {
     public static void registerTileItem(Item item, String prefix, ItemModelGenerator generator) {
         Identifier itemId = Registries.ITEM.getId(item);
         Model model = new Model(Optional.of(Identifier.of(MOD_ID, "sources/16x_tile")), Optional.empty(), TextureKey.LAYER0);
+
+        model.upload(ModelIds.getItemModelId(item), TextureMap.layer0(itemId.withPrefixedPath(prefix).withPrefixedPath("item/")), generator.writer);
+    }
+    public static void registerTwobyTwoItem(Item item, String prefix, ItemModelGenerator generator) {
+        Identifier itemId = Registries.ITEM.getId(item);
+        Model model = new Model(Optional.of(Identifier.of(MOD_ID, "sources/2x2invitem")), Optional.empty(), TextureKey.LAYER0);
 
         model.upload(ModelIds.getItemModelId(item), TextureMap.layer0(itemId.withPrefixedPath(prefix).withPrefixedPath("item/")), generator.writer);
     }

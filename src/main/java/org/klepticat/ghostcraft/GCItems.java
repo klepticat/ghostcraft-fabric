@@ -3449,18 +3449,20 @@ public class GCItems {
     public static final Item MOLAMOLA = register("molamola", new Item(new Item.Settings().food(normalFood)));
     public static final Item MORAY_EEL = register("moray_eel", new Item(new Item.Settings().food(normalFood)));
 
-    public static final Item BERT = register("bert", new Item(new Item.Settings()));
-    public static final Item CLARENCE = register("clarence", new Item(new Item.Settings()));
-    public static final Item EDWARD = register("edward", new Item(new Item.Settings()));
-    public static final Item ELENA = register("elena", new Item(new Item.Settings()));
-    public static final Item HENRY = register("henry", new Item(new Item.Settings()));
-    public static final Item LEWIS = register("lewis", new Item(new Item.Settings()));
-    public static final Item PERCIVAL = register("percival", new Item(new Item.Settings()));
-    public static final Item PETUNIA = register("petunia", new Item(new Item.Settings()));
-    public static final Item STEPHANINE = register("stephanine", new Item(new Item.Settings()));
-    public static final Item STEVEN = register("steven", new Item(new Item.Settings()));
-    public static final Item VANESSA = register("vanessa", new Item(new Item.Settings()));
-    public static final Item WEASLEY = register("weasley", new Item(new Item.Settings()));
+    public static HashSet<Item> BIGCRITTER_SET = new HashSet<>();
+
+    public static final Item BERT = registerWithSet("bert", new Item(new Item.Settings()), BIGCRITTER_SET);
+    public static final Item CLARENCE = registerWithSet("clarence", new Item(new Item.Settings()), BIGCRITTER_SET);
+    public static final Item EDWARD = registerWithSet("edward", new Item(new Item.Settings()), BIGCRITTER_SET);
+    public static final Item ELENA = registerWithSet("elena", new Item(new Item.Settings()), BIGCRITTER_SET);
+    public static final Item HENRY = registerWithSet("henry", new Item(new Item.Settings()), BIGCRITTER_SET);
+    public static final Item LEWIS = registerWithSet("lewis", new Item(new Item.Settings()), BIGCRITTER_SET);
+    public static final Item PERCIVAL = registerWithSet("percival", new Item(new Item.Settings()), BIGCRITTER_SET);
+    public static final Item PETUNIA = registerWithSet("petunia", new Item(new Item.Settings()), BIGCRITTER_SET);
+    public static final Item STEPHANIE = registerWithSet("stephanie", new Item(new Item.Settings()), BIGCRITTER_SET);
+    public static final Item STEVEN = registerWithSet("steven", new Item(new Item.Settings()), BIGCRITTER_SET);
+    public static final Item VANESSA = registerWithSet("vanessa", new Item(new Item.Settings()), BIGCRITTER_SET);
+    public static final Item WESLEY = registerWithSet("wesley", new Item(new Item.Settings()), BIGCRITTER_SET);
 
 
 
@@ -3557,11 +3559,11 @@ public class GCItems {
     public static HashSet<Item> SIGIL_SET = new HashSet<>();
 
     public static final Item SIGIL = registerWithSet("sigil", new Item(new Item.Settings()), SIGIL_SET);
-    public static final Item SIGIL_AQUATIC = registerWithSet("sigil_aquatic", new Item(new Item.Settings()), SIGIL_SET);
-    public static final Item SIGIL_EVOCATION = registerWithSet("sigil_evocation", new Item(new Item.Settings()), SIGIL_SET);
-    public static final Item SIGIL_HOLY = registerWithSet("sigil_holy", new Item(new Item.Settings()), SIGIL_SET);
-    public static final Item SIGIL_IGNITED = registerWithSet("sigil_ignited", new Item(new Item.Settings()), SIGIL_SET);
-    public static final Item SIGIL_ILLUSION = registerWithSet("sigil_illusion", new Item(new Item.Settings()), SIGIL_SET);
+    public static final Item SIGIL_AQUATIC = register("sigil_aquatic", new Item(new Item.Settings()));
+    public static final Item SIGIL_EVOCATION = register("sigil_evocation", new Item(new Item.Settings()));
+    public static final Item SIGIL_HOLY = register("sigil_holy", new Item(new Item.Settings()));
+    public static final Item SIGIL_IGNITED = register("sigil_ignited", new Item(new Item.Settings()));
+    public static final Item SIGIL_ILLUSION = register("sigil_illusion", new Item(new Item.Settings()));
 
 
     public static final Item NOTICE_BOARD = register("notice_board", new Item(new Item.Settings()));

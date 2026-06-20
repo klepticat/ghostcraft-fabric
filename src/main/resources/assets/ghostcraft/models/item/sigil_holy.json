@@ -1,0 +1,6 @@
+{
+  "parent": "ghostcraft:sources/16x_tile",
+  "textures": {
+    "layer0": "ghostcraft:item/tradeskill/spellcraft/sigil_holy"
+  }
+}

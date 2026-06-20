@@ -1,0 +1,6 @@
+{
+  "parent": "ghostcraft:sources/2x2invitem",
+  "textures": {
+    "layer0": "ghostcraft:item/placeables/critters/edward"
+  }
+}
