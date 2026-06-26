@@ -3457,10 +3457,10 @@ public class GCItems {
     public static final Item LEWIS = register("lewis", new Item(new Item.Settings()));
     public static final Item PERCIVAL = register("percival", new Item(new Item.Settings()));
     public static final Item PETUNIA = register("petunia", new Item(new Item.Settings()));
-    public static final Item STEPHANINE = register("stephanine", new Item(new Item.Settings()));
+    public static final Item STEPHANIE = register("stephanine", new Item(new Item.Settings()));
     public static final Item STEVEN = register("steven", new Item(new Item.Settings()));
     public static final Item VANESSA = register("vanessa", new Item(new Item.Settings()));
-    public static final Item WEASLEY = register("weasley", new Item(new Item.Settings()));
+    public static final Item WESLEY = register("weasley", new Item(new Item.Settings()));
     public static final Item SCRUNGLEPOCKETLARGE = register("scrunglepocketlarge", new Item(new Item.Settings()));
 
 
