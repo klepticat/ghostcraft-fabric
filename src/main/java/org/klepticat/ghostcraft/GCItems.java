@@ -3457,10 +3457,10 @@ public class GCItems {
     public static final Item LEWIS = register("lewis", new Item(new Item.Settings()));
     public static final Item PERCIVAL = register("percival", new Item(new Item.Settings()));
     public static final Item PETUNIA = register("petunia", new Item(new Item.Settings()));
-    public static final Item STEPHANINE = register("stephanine", new Item(new Item.Settings()));
+    public static final Item STEPHANIE = register("stephanine", new Item(new Item.Settings()));
     public static final Item STEVEN = register("steven", new Item(new Item.Settings()));
     public static final Item VANESSA = register("vanessa", new Item(new Item.Settings()));
-    public static final Item WEASLEY = register("weasley", new Item(new Item.Settings()));
+    public static final Item WESLEY = register("weasley", new Item(new Item.Settings()));
     public static final Item SCRUNGLEPOCKETLARGE = register("scrunglepocketlarge", new Item(new Item.Settings()));
 
 
@@ -3557,11 +3557,11 @@ public class GCItems {
     public static HashSet<Item> SIGIL_SET = new HashSet<>();
 
     public static final Item SIGIL = registerWithSet("sigil", new Item(new Item.Settings()), SIGIL_SET);
-    public static final Item SIGIL_AQUATIC = registerWithSet("sigil_aquatic", new Item(new Item.Settings()), SIGIL_SET);
-    public static final Item SIGIL_EVOCATION = registerWithSet("sigil_evocation", new Item(new Item.Settings()), SIGIL_SET);
-    public static final Item SIGIL_HOLY = registerWithSet("sigil_holy", new Item(new Item.Settings()), SIGIL_SET);
-    public static final Item SIGIL_IGNITED = registerWithSet("sigil_ignited", new Item(new Item.Settings()), SIGIL_SET);
-    public static final Item SIGIL_ILLUSION = registerWithSet("sigil_illusion", new Item(new Item.Settings()), SIGIL_SET);
+    public static final Item SIGIL_AQUATIC = register("sigil_aquatic", new Item(new Item.Settings()));
+    public static final Item SIGIL_EVOCATION = register("sigil_evocation", new Item(new Item.Settings()));
+    public static final Item SIGIL_HOLY = register("sigil_holy", new Item(new Item.Settings()));
+    public static final Item SIGIL_IGNITED = register("sigil_ignited", new Item(new Item.Settings()));
+    public static final Item SIGIL_ILLUSION = register("sigil_illusion", new Item(new Item.Settings()));
 
 
     public static final Item NOTICE_BOARD = register("notice_board", new Item(new Item.Settings()));

@@ -546,6 +546,7 @@ public class GCItemGroups {
                 entries.add(POTENT_CHARGE);
                 entries.addAll(toList(MARBLES_SET));
                 entries.addAll(toList(CRITTER_SET));
+                entries.addAll(toList(INVMON_SET));
             })
     );
 
@@ -787,7 +788,20 @@ public class GCItemGroups {
                 entries.add(POCKET_SILVER);
                 entries.add(POCKET_VIC);
 
+                entries.add(BERT);
+                entries.add(CLARENCE);
+                entries.add(EDWARD);
+                entries.add(ELENA);
+                entries.add(HENRY);
+                entries.add(LEWIS);
+                entries.add(PERCIVAL);
+                entries.add(PETUNIA);
+                entries.add(STEPHANIE);
+                entries.add(STEVEN);
+                entries.add(VANESSA);
+                entries.add(WESLEY);
                 entries.add(SCRUNGLEPOCKETLARGE);
+
                 entries.addAll(toList(TWOD_OVERSIZE_WARRIOR_ITEMS));
 
             })
