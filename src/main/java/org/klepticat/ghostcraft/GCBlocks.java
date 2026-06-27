@@ -938,6 +938,10 @@ public class GCBlocks {
                     .burnable(),
             true
     );
+    public static Block SOUL_QUARTZ_PILLAR_STAIRS = register("soul_quartz_pillar_stairs", settings -> new StairsBlock(SOUL_QUARTZ_PILLAR.getDefaultState(), settings), AbstractBlock.Settings.copy(SOUL_QUARTZ_PILLAR), true);
+    public static Block SOUL_QUARTZ_PILLAR_SLAB = register("soul_quartz_pillar_slab", SlabBlock::new, AbstractBlock.Settings.copy(SOUL_QUARTZ_PILLAR), true);
+    public static Block SOUL_QUARTZ_PILLAR_WALL = register("soul_quartz_pillar_wall", WallBlock::new, AbstractBlock.Settings.copy(SOUL_QUARTZ_PILLAR), true);
+
 
     public static Block SOUL_QUARTZ_BLOCK = register(
             "soul_quartz_block",
@@ -959,6 +963,10 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK),
             true
     );
+    public static Block SMOOTH_SOUL_QUARTZ_STAIRS = register("smooth_soul_quartz_stairs", settings -> new StairsBlock(SMOOTH_SOUL_QUARTZ.getDefaultState(), settings), AbstractBlock.Settings.copy(SMOOTH_SOUL_QUARTZ), true);
+    public static Block SMOOTH_SOUL_QUARTZ_SLAB = register("smooth_soul_quartz_slab", SlabBlock::new, AbstractBlock.Settings.copy(SMOOTH_SOUL_QUARTZ), true);
+    public static Block SMOOTH_SOUL_QUARTZ_WALL = register("smooth_soul_quartz_wall", WallBlock::new, AbstractBlock.Settings.copy(SMOOTH_SOUL_QUARTZ), true);
+
     public static Block SOUL_QUARTZ_BRICKS = register(
             "soul_quartz_bricks",
             Block::new,
@@ -969,6 +977,10 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK),
             true
     );
+    public static Block SOUL_QUARTZ_BRICKS_STAIRS = register("soul_quartz_bricks_stairs", settings -> new StairsBlock(SOUL_QUARTZ_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(SOUL_QUARTZ_BRICKS), true);
+    public static Block SOUL_QUARTZ_BRICKS_SLAB = register("soul_quartz_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(SOUL_QUARTZ_BRICKS), true);
+    public static Block SOUL_QUARTZ_BRICKS_WALL = register("soul_quartz_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(SOUL_QUARTZ_BRICKS), true);
+
     public static Block CRACKED_SOUL_QUARTZ_BRICKS = register(
             "cracked_soul_quartz_bricks",
             Block::new,
@@ -979,6 +991,9 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK),
             true
     );
+    public static Block CRACKED_SOUL_QUARTZ_BRICKS_STAIRS = register("cracked_soul_quartz_bricks_stairs", settings -> new StairsBlock(CRACKED_SOUL_QUARTZ_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(CRACKED_SOUL_QUARTZ_BRICKS), true);
+    public static Block CRACKED_SOUL_QUARTZ_BRICKS_SLAB = register("cracked_soul_quartz_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(CRACKED_SOUL_QUARTZ_BRICKS), true);
+    public static Block CRACKED_SOUL_QUARTZ_BRICKS_WALL = register("cracked_soul_quartz_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(CRACKED_SOUL_QUARTZ_BRICKS), true);
 
     public static Block LAPIS_PILLAR = register(
             "lapis_pillar",
@@ -1094,6 +1109,10 @@ public class GCBlocks {
                     .burnable(),
             true
     );
+    public static Block ITERATOR_PROJECTION_TILE_STAIRS = register("iterator_projection_tile_stairs", settings -> new StairsBlock(ITERATOR_PROJECTION_TILE.getDefaultState(), settings), AbstractBlock.Settings.copy(ITERATOR_PROJECTION_TILE), true);
+    public static Block ITERATOR_PROJECTION_TILE_SLAB = register("iterator_projeciton_tile_slab", SlabBlock::new, AbstractBlock.Settings.copy(ITERATOR_PROJECTION_TILE), true);
+    public static Block ITERATOR_PROJECTION_TILE_WALL = register("iterator_projection_tile_wall", WallBlock::new, AbstractBlock.Settings.copy(ITERATOR_PROJECTION_TILE), true);
+
     public static Block ITERATOR_PULSE = register(
             "iterator_pulse",
             Block::new,
@@ -2742,6 +2761,10 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK),
             true
     );
+    public static Block SMARAGDANT_CRYSTAL_STAIRS = register("smaragdant_crystal_stairs", settings -> new StairsBlock(SMARAGDANT_CRYSTAL.getDefaultState(), settings), AbstractBlock.Settings.copy(SMARAGDANT_CRYSTAL), true);
+    public static Block SMARAGDANT_CRYSTAL_SLAB = register("smaragdant_crstal_slab", SlabBlock::new, AbstractBlock.Settings.copy(SMARAGDANT_CRYSTAL), true);
+    public static Block SMARAGDANT_CRYSTAL_WALL = register("smaragdant_crystal_wall", WallBlock::new, AbstractBlock.Settings.copy(SMARAGDANT_CRYSTAL), true);
+
     public static Block SMARAGDANT_CRYSTAL_BRICKS = register(
             "smaragdant_crystal_bricks",
             Block::new,
@@ -2753,6 +2776,10 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK),
             true
     );
+    public static Block SMARAGDANT_CRYSTAL_BRICKS_STAIRS = register("smaragdant_crystal_bricks_stairs", settings -> new StairsBlock(SMARAGDANT_CRYSTAL_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(SMARAGDANT_CRYSTAL_BRICKS), true);
+    public static Block SMARAGDANT_CRYSTAL_BRICKS_SLAB = register("smaragdant_crystal_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(SMARAGDANT_CRYSTAL_BRICKS), true);
+    public static Block SMARAGDANT_CRYSTAL_BRICKS_WALL = register("smaragdant_crystal_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(SMARAGDANT_CRYSTAL_BRICKS), true);
+
     public static Block POLISHED_SMARAGDANT_CRYSTAL = register(
             "polished_smaragdant_crystal",
             Block::new,
@@ -2775,6 +2802,10 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK),
             true
     );
+    public static Block SMARAGDANT_CRYSTAL_TILES_STAIRS = register("smaragdant_crystal_tiles_stairs", settings -> new StairsBlock(SMARAGDANT_CRYSTAL_TILES.getDefaultState(), settings), AbstractBlock.Settings.copy(SMARAGDANT_CRYSTAL_TILES), true);
+    public static Block SMARAGDANT_CRYSTAL_TILES_SLAB = register("smaragdant_crystal_tiles_slab", SlabBlock::new, AbstractBlock.Settings.copy(SMARAGDANT_CRYSTAL_TILES), true);
+    public static Block SMARAGDANT_CRYSTAL_TILES_WALL = register("smaragdatn_crystal_tiles_wall", WallBlock::new, AbstractBlock.Settings.copy(SMARAGDANT_CRYSTAL_TILES), true);
+
     public static Block SMARAGDANT_CRYSTAL_PILLAR = register(
             "smaragdant_crystal_pillar",
             PillarBlock::new,

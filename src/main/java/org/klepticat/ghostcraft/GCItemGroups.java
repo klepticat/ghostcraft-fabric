@@ -138,9 +138,21 @@ public class GCItemGroups {
 
                 entries.add(SOUL_QUARTZ_BLOCK);
                 entries.add(SMOOTH_SOUL_QUARTZ);
+                entries.add(SMOOTH_SOUL_QUARTZ_STAIRS);
+                entries.add(SMOOTH_SOUL_QUARTZ_SLAB);
+                entries.add(SMOOTH_SOUL_QUARTZ_WALL);
                 entries.add(SOUL_QUARTZ_BRICKS);
+                entries.add(SOUL_QUARTZ_BRICKS_STAIRS);
+                entries.add(SOUL_QUARTZ_BRICKS_SLAB);
+                entries.add(SOUL_QUARTZ_BRICKS_WALL);
                 entries.add(CRACKED_SOUL_QUARTZ_BRICKS);
+                entries.add(CRACKED_SOUL_QUARTZ_BRICKS_STAIRS);
+                entries.add(CRACKED_SOUL_QUARTZ_BRICKS_SLAB);
+                entries.add(CRACKED_SOUL_QUARTZ_BRICKS_WALL);
                 entries.add(SOUL_QUARTZ_PILLAR);
+                entries.add(SOUL_QUARTZ_PILLAR_STAIRS);
+                entries.add(SOUL_QUARTZ_PILLAR_SLAB);
+                entries.add(SOUL_QUARTZ_PILLAR_WALL);
 
 
                 entries.add(SMOOTH_LAPIS_BLOCK);
@@ -157,6 +169,9 @@ public class GCItemGroups {
 
                 entries.add(ITERATOR_PULSE);
                 entries.add(ITERATOR_PROJECTION_TILE);
+                entries.add(ITERATOR_PROJECTION_TILE_STAIRS);
+                entries.add(ITERATOR_PROJECTION_TILE_SLAB);
+                entries.add(ITERATOR_PROJECTION_TILE_WALL);
                 entries.add(ITERATOR_PROCESSING_SCREEN);
 
                 entries.add(MARBLED_FLESH);
@@ -398,9 +413,18 @@ public class GCItemGroups {
 
                 entries.add(SMARAGDANT_CRYSTAL_SHARD);
                 entries.add(SMARAGDANT_CRYSTAL);
+                entries.add(SMARAGDANT_CRYSTAL_STAIRS);
+                entries.add(SMARAGDANT_CRYSTAL_SLAB);
+                entries.add(SMARAGDANT_CRYSTAL_WALL);
                 entries.add(SMARAGDANT_CRYSTAL_BRICKS);
+                entries.add(SMARAGDANT_CRYSTAL_BRICKS_STAIRS);
+                entries.add(SMARAGDANT_CRYSTAL_BRICKS_SLAB);
+                entries.add(SMARAGDANT_CRYSTAL_BRICKS_WALL);
                 entries.add(SMARAGDANT_CRYSTAL_PILLAR);
                 entries.add(SMARAGDANT_CRYSTAL_TILES);
+                entries.add(SMARAGDANT_CRYSTAL_TILES_STAIRS);
+                entries.add(SMARAGDANT_CRYSTAL_TILES_SLAB);
+                entries.add(SMARAGDANT_CRYSTAL_TILES_WALL);
                 entries.add(BUDDING_SMARAGDANT_CRYSTAL);
                 entries.add(POLISHED_SMARAGDANT_CRYSTAL);
 
