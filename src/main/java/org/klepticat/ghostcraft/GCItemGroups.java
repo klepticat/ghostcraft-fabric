@@ -147,6 +147,7 @@ public class GCItemGroups {
                 entries.add(LAPIS_BRICKS);
                 entries.add(LAPIS_TILES);
                 entries.add(CHISELED_LAPIS);
+                entries.add(CHISELED_LAPIS_CARPET);
                 entries.add(LAPIS_PILLAR);
 
                 entries.add(GILDED_LAPIS_BLOCK);
@@ -516,10 +517,17 @@ public class GCItemGroups {
                 entries.addAll(toList(MUSHROOM_SET));
                 entries.addAll(toList(ALCHEMY_SET));
                 entries.addAll(toList(SPELLCRAFT_SET));
-                entries.add(DIRE_CHARGE);
+                entries.add(CHAOS_CHARGE);
                 entries.add(ETHEREAL_CHARGE);
-                entries.add(MAGIC_CHARGE);
                 entries.add(POTENT_CHARGE);
+                entries.add(MAGIC_CHARGE);
+                entries.add(BRAVE_CHARGE);
+                entries.add(CHARMING_CHARGE);
+                entries.add(DEATHLY_CHARGE);
+                entries.add(LIVING_CHARGE);
+                entries.add(UNITED_CHARGE);
+                entries.add(BALANCED_CHARGE);
+                entries.add(CLEAN_CHARGE);
                 entries.addAll(toList(MARBLES_SET));
                 entries.addAll(toList(CRITTER_SET));
                 entries.addAll(toList(INVMON_SET));

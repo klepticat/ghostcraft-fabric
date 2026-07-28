@@ -12,15 +12,20 @@ import java.util.function.IntFunction;
 import java.util.function.ToIntFunction;
 
 public enum ExtendedRarity implements StringIdentifiable {
-    TRASH(0, "trash", Formatting.GRAY),
-    COMMON(1, "common", Formatting.WHITE),
-    UNCOMMON(2, "uncommon", Formatting.GREEN),
-    RARE(3, "rare", Formatting.AQUA),
-    EPIC(4, "epic", Formatting.DARK_PURPLE),
-    UNIQUE(5, "unique", Formatting.GOLD),
-    LEGENDARY(6, "legendary", Formatting.DARK_RED);
+    NULL(0, "null", Formatting.GRAY),
+    CLEAN(1, "clean", Formatting.LIGHT_PURPLE),
+    BALANCED(2, "balanced", Formatting.DARK_BLUE),
+    UNITED(3, "united", Formatting.LIGHT_PURPLE),
+    LIVING(4, "living", Formatting.WHITE),
+    DEATHLY(5, "deathly", Formatting.BLACK),
+    CHARM(6, "charming", Formatting.YELLOW),
+    BRAVE(7, "brave", Formatting.GOLD),
+    MAGIC(8, "magic", Formatting.GREEN),
+    ETHEREAL(9, "ethereal", Formatting.AQUA),
+    POTENT(10, "potent", Formatting.DARK_PURPLE),
+    CHAOS(11, "chaotic", Formatting.DARK_RED);
 
-
+// Wh common, GR uncommon, AQ rare,  PU epic, GO unique, R legendary
     public static final Codec<ExtendedRarity> CODEC = StringIdentifiable.createBasicCodec(ExtendedRarity::values);
     public static final IntFunction<ExtendedRarity> ID_TO_VALUE = ValueLists.createIdToValueFunction((ToIntFunction<ExtendedRarity>) value -> value.index, values(), ValueLists.OutOfBoundsHandling.ZERO);
     public static final PacketCodec<ByteBuf, ExtendedRarity> PACKET_CODEC = PacketCodecs.indexed(ID_TO_VALUE, value -> value.index);

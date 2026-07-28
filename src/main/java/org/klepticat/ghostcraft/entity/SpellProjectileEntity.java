@@ -21,6 +21,8 @@ import org.klepticat.ghostcraft.GCEntityTypes;
 import org.klepticat.ghostcraft.GCItems;
 import org.klepticat.ghostcraft.item.MagicType;
 
+import static org.klepticat.ghostcraft.item.ExtendedRarity.*;
+
 public class SpellProjectileEntity extends ProjectileEntity implements FlyingItemEntity {
     private static final TrackedData<ItemStack> ITEM = DataTracker.registerData(SpellProjectileEntity.class, TrackedDataHandlerRegistry.ITEM_STACK);
     private MagicType magicType;
@@ -52,11 +54,32 @@ public class SpellProjectileEntity extends ProjectileEntity implements FlyingIte
             case ETHEREAL -> {
                 this.getDataTracker().set(ITEM, new ItemStack(GCItems.ETHEREAL_CHARGE));
             }
-            case DIRE -> {
-                this.getDataTracker().set(ITEM, new ItemStack(GCItems.DIRE_CHARGE));
+            case CHAOS -> {
+                this.getDataTracker().set(ITEM, new ItemStack(GCItems.CHAOS_CHARGE));
             }
             case POTENT -> {
                 this.getDataTracker().set(ITEM, new ItemStack(GCItems.POTENT_CHARGE));
+            }
+            case BRAVE -> {
+                this.getDataTracker().set(ITEM, new ItemStack(GCItems.BRAVE_CHARGE));
+            }
+            case CHARM -> {
+                this.getDataTracker().set(ITEM, new ItemStack(GCItems.CHARMING_CHARGE));
+            }
+            case DEATHLY -> {
+                this.getDataTracker().set(ITEM, new ItemStack(GCItems.DEATHLY_CHARGE));
+            }
+            case LIVING -> {
+                this.getDataTracker().set(ITEM, new ItemStack(GCItems.LIVING_CHARGE));
+            }
+            case UNITED -> {
+                this.getDataTracker().set(ITEM, new ItemStack(GCItems.UNITED_CHARGE));
+            }
+            case BALANCED -> {
+                this.getDataTracker().set(ITEM, new ItemStack(GCItems.BALANCED_CHARGE));
+            }
+            case CLEAN -> {
+                this.getDataTracker().set(ITEM, new ItemStack(GCItems.CLEAN_CHARGE));
             }
             default -> {
                 this.getDataTracker().set(ITEM, new ItemStack(GCItems.MAGIC_CHARGE));

@@ -1011,6 +1011,16 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+    public static Block CHISELED_LAPIS_CARPET = register(
+            "chiseled_lapis_carpet",
+            CarpetBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.WOOL)
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true
+    );
     public static Block LAPIS_TILES = register(
             "lapis_tiles",
             Block::new,
@@ -1137,6 +1147,7 @@ public class GCBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY),
             true
     );
+
     public static Block MARBLED_FLESH_STAIRS = register("marbled_flesh_stairs", settings -> new StairsBlock(MARBLED_FLESH.getDefaultState(), settings), AbstractBlock.Settings.copy(MARBLED_FLESH), true);
     public static Block MARBLED_FLESH_SLAB = register("marbled_flesh_slab", SlabBlock::new, AbstractBlock.Settings.copy(MARBLED_FLESH), true);
     public static Block MARBLED_FLESH_FENCE = register("marbled_flesh_fence", WallBlock::new, AbstractBlock.Settings.copy(MARBLED_FLESH), true);
@@ -1739,7 +1750,13 @@ public class GCBlocks {
                     .blockVision(Blocks::never)
                     .solidBlock(Blocks::never)
                     .sounds(BlockSoundGroup.METAL)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
                     .strength(2.0F, 3.0F),
+
             true
     );
     public static Block COOKING_POT_HANDLE = register(
@@ -1753,6 +1770,11 @@ public class GCBlocks {
                     .blockVision(Blocks::never)
                     .solidBlock(Blocks::never)
                     .sounds(BlockSoundGroup.METAL)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
                     .strength(2.0F, 3.0F),
             true
     );
@@ -1767,6 +1789,11 @@ public class GCBlocks {
                     .blockVision(Blocks::never)
                     .solidBlock(Blocks::never)
                     .sounds(BlockSoundGroup.METAL)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
                     .strength(2.0F, 3.0F),
             true
     );

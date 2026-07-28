@@ -309,7 +309,8 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSingleton(SOUL_QUARTZ_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
 
         blockStateModelGenerator.registerSimpleCubeAll(SMOOTH_LAPIS_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(CHISELED_LAPIS);
+        blockStateModelGenerator.registerWoolAndCarpet(CHISELED_LAPIS, CHISELED_LAPIS_CARPET);
+
         blockStateModelGenerator.registerSimpleCubeAll(LAPIS_TILES);
         blockStateModelGenerator.registerSimpleCubeAll(LAPIS_BRICKS);
         blockStateModelGenerator.registerSingleton(LAPIS_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
@@ -640,9 +641,7 @@ public class GCModelProvider extends FabricModelProvider {
         GCItems.INVMON_SET.forEach(item -> {
             registerGeneratedItem(item, "placeables/critters/invmon/", itemModelGenerator);
         });
-        GCItems.BIGCRITTER_SET.forEach(item -> {
-            registerTwobyTwoItem(item, "placeables/critters/", itemModelGenerator);
-        });
+
 
         GCItems.ALCHEMY_SET.forEach(item -> {
             registerGeneratedItem(item, "tradeskill/alchemy/", itemModelGenerator);
