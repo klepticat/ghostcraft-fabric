@@ -1,10 +1,11 @@
 {
+	"format_version": "1.21.11",
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/hat",
 	"textures": {
-		"0": "ghostcraft:item/generic/annihilation_disciple",
-		"1": "ghostcraft:item/generic/annihilation_disciple_a",
-		"particle": "ghostcraft:item/generic/annihilation_disciple"
+		"0": "ghostcraft:item/generic/disciple/annihilation_disciple",
+		"1": "ghostcraft:item/generic/disciple/annihilation_disciple_a",
+		"particle": "ghostcraft:item/generic/disciple/annihilation_disciple"
 	},
 	"elements": [
 		{

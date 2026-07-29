@@ -149,6 +149,34 @@ public class GhostCraftClient implements ClientModInitializer {
         TrinketRendererRegistry.registerRenderer(GCItems.VALKYRIE_HELM_HAT, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.WEREWOLF_MASK, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.MACH_HAT, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.ABYSSAL_CROWN, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.AUREATE_SHROUD, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.BLUEROSE_FACEPLATE, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.BLUESHIFT_FULLHELM, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.BLUESHIFT_INFESTATION, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.CANDY_CANE_HORNS, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.CHIME_KASA, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.DARK_HOOD_SHORT_HAT, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.DUNE_TURBAN, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.GALVANIC_MASK, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.ICICLE_HELMET, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.MONARCH_EBOSHI, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.MOSAIC_BARBS, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.MOSAIC_VEIL, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.SCRAP_RESPIRATOR, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.SERPENT_TORMENT, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.SILVER_BEVOR, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.STARGAZER_CROWN, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.VIRIDIAN_HELMET, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.VANGUARD_VISOR, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.WANDERER_WICK, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.DRAGONHELMFIRE, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.DRAGONHELMICE, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.DRAGONHELMLIGHTNING, new HatRenderer());
+
+
+
+
 
         BlockRenderLayerMap.INSTANCE.putBlock(DARK_CHERRY_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GLOWSHROOM_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());

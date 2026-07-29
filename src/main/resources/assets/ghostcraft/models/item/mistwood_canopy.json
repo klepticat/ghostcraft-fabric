@@ -3,8 +3,8 @@
 	"credit": "Made with Blockbench",
 	"parent": "item/wynn/template/weapon",
 	"textures": {
-		"0": "skins/fruma/mistwood_canopy",
-		"particle": "skins/fruma/mistwood_canopy"
+		"0": "ghostcraft:item/generic/fruma/mistwood_canopy",
+		"particle": "ghostcraft:item/generic/fruma/mistwood_canopy"
 	},
 	"elements": [
 		{

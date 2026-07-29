@@ -16,6 +16,7 @@ import org.klepticat.ghostcraft.command.LightningCommand;
 import org.klepticat.ghostcraft.command.LoreCommand;
 import org.klepticat.ghostcraft.command.SoulsCommand;
 import org.klepticat.ghostcraft.entity.GCPlayerEntityStickers;
+import org.klepticat.ghostcraft.networking.WaterBreathKeyPayload;
 import org.klepticat.ghostcraft.networking.InvisKeyPayload;
 import org.klepticat.ghostcraft.networking.NightVisKeyPayload;
 import org.klepticat.ghostcraft.networking.PlaceStickerPayload;
@@ -48,9 +49,15 @@ public class GhostCraft implements ModInitializer {
 		CommandRegistrationCallback.EVENT.register(new DevCommands()::execute);
 		CommandRegistrationCallback.EVENT.register(new SoulsCommand()::execute);
 
+		PayloadTypeRegistry.playC2S().register(WaterBreathKeyPayload.ID, WaterBreathKeyPayload.CODEC);
 		PayloadTypeRegistry.playC2S().register(InvisKeyPayload.ID, InvisKeyPayload.CODEC);
 		PayloadTypeRegistry.playC2S().register(NightVisKeyPayload.ID, NightVisKeyPayload.CODEC);
 		PayloadTypeRegistry.playC2S().register(PlaceStickerPayload.ID, PlaceStickerPayload.PACKET_CODEC);
+
+		ServerPlayNetworking.registerGlobalReceiver(WaterBreathKeyPayload.ID, (payload, context) -> {
+			if (!context.player().hasStatusEffect(StatusEffects.WATER_BREATHING)) context.player().addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, StatusEffectInstance.INFINITE, 0, true, false));
+			else context.player().removeStatusEffect(StatusEffects.WATER_BREATHING);
+		});
 
 		ServerPlayNetworking.registerGlobalReceiver(InvisKeyPayload.ID, (payload, context) -> {
 			if (!context.player().hasStatusEffect(StatusEffects.INVISIBILITY)) context.player().addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, StatusEffectInstance.INFINITE, 0, true, false));

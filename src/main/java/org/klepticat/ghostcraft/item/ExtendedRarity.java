@@ -17,7 +17,7 @@ public enum ExtendedRarity implements StringIdentifiable {
     BALANCED(2, "balanced", Formatting.DARK_BLUE),
     UNITED(3, "united", Formatting.LIGHT_PURPLE),
     LIVING(4, "living", Formatting.WHITE),
-    DEATHLY(5, "deathly", Formatting.BLACK),
+    DEATHLY(5, "deathly", Formatting.DARK_GRAY),
     CHARM(6, "charming", Formatting.YELLOW),
     BRAVE(7, "brave", Formatting.GOLD),
     MAGIC(8, "magic", Formatting.GREEN),

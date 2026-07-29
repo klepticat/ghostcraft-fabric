@@ -49,7 +49,6 @@ public class GCItems {
         public static final Item CANDY_BOW = register("candy_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.CHARM)));
         public static final Item CHARMS_REQUIME = register("charms_requime", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.BRAVE)));
         public static final Item CHRONOS_BOW = register("chronos_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)));
-        public static final Item CIPHER_BOW = register("cipher_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.BRAVE)));
         public static final Item COGWORK_SHARP_SHOOTER = register("cogwork_sharp_shooter", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)));
         public static final Item CROSSBOW_OF_THE_DAMNED = register("crossbow_of_the_damned", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.DEATHLY)));
         public static final Item DARK_ECHO = register("dark_echo", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)));
@@ -99,7 +98,6 @@ public class GCItems {
         public static final Item VALOR_BOW = register("valor_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)));
         public static final Item VERDANT_BOW = register("verdant_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)));
         public static final Item VIRUS = register("virus", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)));
-        public static final Item WAILING_GRIEF = register("wailing_grief", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)));
         public static final Item SHADOW_ECLIPSED_ARCH = register("shadow_eclipsed_arch", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)));
         public static final Item SUNDERING_ECLIPSED_ARCH = register("sundering_eclipsed_arch", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)));
         public static final Item ETHEREAL_ECLIPSED_ARCH = register("ethereal_eclipsed_arch", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)));
@@ -124,10 +122,10 @@ public class GCItems {
         public static final Item NIGHTSHINE_GRAPPLER = register("nightshine_grappler", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.DEATHLY)));
         public static final Item SCRAP_PISTOL = register("scrap_pistol", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)));
         public static final Item SERPENT_TONGUE = register("serpent_tongue", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)));
-        public static final Item SILVER_LONGBOW = register("silver_longbow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)));
+        public static final Item SILVER_LONGBOW = register("silver_longbow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.LIVING)));
         public static final Item SOVEREIGN_GAUNTLET = register("sovereign_gauntlet", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)));
         public static final Item STARGAZER_ARCH = register("stargazer_arch", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)));
-        public static final Item THEIF_REACH = register("theif_reach", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)));
+        public static final Item THIEF_REACH = register("thief_reach", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)));
         public static final Item VANGUARD_ROVER = register("vanguard_rover", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)));
         public static final Item VIRIDIAN_BOW = register("viridian_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)));
         public static final Item WANDERER_HORIZON = register("wanderer_horizon", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.BRAVE)));
@@ -422,14 +420,6 @@ public class GCItems {
                         4,
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
-        ));
-        public static final Item PERCOLATION = register("percolation", new MeleeWeaponItem(
-                ToolMaterials.WOOD,
-                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
-                        ToolMaterials.WOOD,
-                        1,
-                        -1.6f
-                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)
         ));
         public static final Item POKIN_STICK = register("pokin_stick", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -845,7 +835,7 @@ public class GCItems {
                         ToolMaterials.WOOD,
                         4,
                         -2.4f
-                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.LIVING)
         ));
         public static final Item SOVEREIGN_LIFFBANE = register("sovereign_liffbane", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -863,7 +853,7 @@ public class GCItems {
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)
         ));
-        public static final Item THEIF_BLADE = register("theif_blade", new MeleeWeaponItem(
+        public static final Item THIEF_BLADE = register("thief_blade", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
@@ -1363,14 +1353,6 @@ public class GCItems {
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.CLEAN)
         ));
-        public static final Item SANGUINE = register("sanguine", new MagicWeaponItem(
-                MagicType.CHAOS,
-                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
-                        ToolMaterials.WOOD,
-                        1,
-                        -1.6f
-                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)
-        ));
         public static final Item SENTRY_STAFF = register("sentry_staff", new MagicWeaponItem(
                 MagicType.MAGIC,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
@@ -1500,7 +1482,7 @@ public class GCItems {
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
         ));
         public static final Item ETHEREAL_ECLIPSED_STAFF = register("ethereal_eclipsed_staff", new MagicWeaponItem(
-                MagicType.MAGIC,
+                MagicType.ETHEREAL,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
                         3,
@@ -1700,12 +1682,12 @@ public class GCItems {
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)
         ));
         public static final Item SILVER_STAFF = register("silver_staff", new MagicWeaponItem(
-                MagicType.MAGIC,
+                MagicType.LIVING,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
                         3,
                         -2.4f
-                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.LIVING)
         ));
         public static final Item SOVEREIGN_GRACE = register("sovereign_grace", new MagicWeaponItem(
                 MagicType.POTENT,
@@ -1723,7 +1705,7 @@ public class GCItems {
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)
         ));
-        public static final Item THEIF_HEIST = register("theif_heist", new MagicWeaponItem(
+        public static final Item THIEF_HEIST = register("thief_heist", new MagicWeaponItem(
                 MagicType.POTENT,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
@@ -1821,7 +1803,7 @@ public class GCItems {
         public static final Item ARC_OF_THE_TUNDRA = register(
                 "arc_of_the_tundra",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
                         new TotemData.TotemParticle(ParticleTypes.SNOWFLAKE),
@@ -1837,15 +1819,15 @@ public class GCItems {
                         ((short) 600),
                         10,
                         new TotemData.TotemParticle(ParticleTypes.SOUL_FIRE_FLAME),
-                        StatusEffects.NIGHT_VISION,
-                        (byte) 0,
+                        StatusEffects.SPEED,
+                        (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.BRAVE)
                 )
         );
         public static final Item ATL = register(
                 "atl",
                 new RelikItem(
-                        10.0f,
+                        5.0f,
                         ((short) 600),
                         20,
                         TotemData.TotemParticle.makeDustParticle(0, 1, 0, 1),
@@ -1858,6 +1840,18 @@ public class GCItems {
         public static final Item ATLLA = register(
                 "atlla",
                 new RelikItem(
+                        5.0f,
+                        ((short) 600),
+                        20,
+                        TotemData.TotemParticle.makeDustParticle(0, 1, 0, 1),
+                        StatusEffects.SPEED,
+                        (byte) 1,
+                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
+                )
+        );
+        public static final Item ATLLANT = register(
+                "atllant",
+                new RelikItem(
                         10.0f,
                         ((short) 600),
                         20,
@@ -1867,27 +1861,15 @@ public class GCItems {
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
                 )
         );
-        public static final Item ATLLANT = register(
-                "atllant",
+        public static final Item ATLLANTRIUS = register(
+                "atllantrius",
                 new RelikItem(
                         15.0f,
                         ((short) 600),
                         20,
                         TotemData.TotemParticle.makeDustParticle(0, 1, 0, 1),
                         StatusEffects.SPEED,
-                        (byte) 4,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
-                )
-        );
-        public static final Item ATLLANTRIUS = register(
-                "atllantrius",
-                new RelikItem(
-                        20.0f,
-                        ((short) 600),
-                        20,
-                        TotemData.TotemParticle.makeDustParticle(0, 1, 0, 1),
-                        StatusEffects.SPEED,
-                        (byte) 4,
+                        (byte) 3,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
                 )
         );
@@ -1895,12 +1877,12 @@ public class GCItems {
         public static final Item ATLLANTRIUS_POST = register(
                 "atllantrius_post",
                 new RelikItem(
-                        30.0f,
+                        20.0f,
                         ((short) 600),
                         20,
                         TotemData.TotemParticle.makeDustParticle(0, 1, 0, 1),
                         StatusEffects.SPEED,
-                        (byte) 5,
+                        (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
                 )
         );
@@ -1912,32 +1894,20 @@ public class GCItems {
                         20,
                         new TotemData.TotemParticle(ParticleTypes.FLAME),
                         StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CLEAN)
+                        (byte) 2,
+                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)
                 )
         );
         public static final Item BLIZZARD_TOTEM = register(
                 "blizzard_totem",
                 new RelikItem(
-                        20.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
-                        StatusEffects.SLOW_FALLING,
+                        new TotemData.TotemParticle(ParticleTypes.BUBBLE),
+                        StatusEffects.DOLPHINS_GRACE,
                         (byte) 2,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)
-                )
-        );
-        public static final Item BLOOD_MOON = register(
-                "blood_moon",
-                new RelikItem(
-                        20.0f,
-                        ((short) 600),
-                        20,
-                        TotemData.TotemParticle.makeDustParticle(1, 0, 0, 1),
-                        StatusEffects.STRENGTH,
-                        (byte) 2,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)
+                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)
                 )
         );
         public static final Item BONE_CHILL_TOTEM = register(
@@ -1946,9 +1916,9 @@ public class GCItems {
                         15.0f,
                         ((short) 600),
                         20,
-                        TotemData.TotemParticle.makeDustParticle(0, 1, 1, 1),
-                        StatusEffects.DOLPHINS_GRACE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.SNOWFLAKE),
+                        StatusEffects.SLOWNESS,
+                        (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.DEATHLY)
                 )
         );
@@ -1960,14 +1930,14 @@ public class GCItems {
                         20,
                         TotemData.TotemParticle.makeDustParticle(0, 1, 0, 1),
                         StatusEffects.SATURATION,
-                        (byte) 3,
+                        (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHARM)
                 )
         );
         public static final Item CANDLEKEEPERS_ANCHOR = register(
                 "candlekeepers_anchor",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
                         new TotemData.TotemParticle(ParticleTypes.FLAME),
@@ -1979,7 +1949,7 @@ public class GCItems {
         public static final Item CENTURION_HANDFAN = register(
                 "centurion_handfan",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
                         new TotemData.TotemParticle(ParticleTypes.CHERRY_LEAVES),
@@ -2015,12 +1985,12 @@ public class GCItems {
         public static final Item DEVILS_ANCHOR = register(
                 "devils_anchor",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.DRIPPING_LAVA),
-                        StatusEffects.FIRE_RESISTANCE,
-                        (byte) 0,
+                        new TotemData.TotemParticle(ParticleTypes.FLAME),
+                        StatusEffects.STRENGTH,
+                        (byte) 3,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)
                 )
         );
@@ -2063,13 +2033,13 @@ public class GCItems {
         public static final Item ELTORVURIA_TOTEM = register(
                 "eltorvuria_totem",
                 new RelikItem(
-                        25.0f,
+                        20.0f,
                         ((short) 600),
                         20,
                         new TotemData.TotemParticle(),
                         StatusEffects.RESISTANCE,
-                        (byte) 10,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)
+                        (byte) 8,
+                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)
                 )
         );
         public static final Item ELVURS_TOTEM = register(
@@ -2080,17 +2050,17 @@ public class GCItems {
                         20,
                         new TotemData.TotemParticle(ParticleTypes.TRIAL_OMEN),
                         StatusEffects.RESISTANCE,
-                        (byte) 10,
+                        (byte) 9,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)
                 )
         );
         public static final Item FALLEN_FALSE_GOD = register(
                 "fallen_false_god",
                 new RelikItem(
-                        20.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.HEART),
+                        new TotemData.TotemParticle(ParticleTypes.CRIT),
                         StatusEffects.HERO_OF_THE_VILLAGE,
                         (byte) 3,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)
@@ -2099,7 +2069,7 @@ public class GCItems {
         public static final Item FEATHERED_TOTEM = register(
                 "feathered_totem",
                 new RelikItem(
-                        10.0f,
+                        5.0f,
                         ((short) 600),
                         20,
                         new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
@@ -2111,7 +2081,7 @@ public class GCItems {
         public static final Item FLEDGED_TOTEM = register(
                 "fledged_totem",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
                         new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
@@ -2123,7 +2093,7 @@ public class GCItems {
         public static final Item FLIGHT_TOTEM = register(
                 "flight_totem",
                 new RelikItem(
-                        20.0f,
+                        15.0f,
                         ((short) 600),
                         20,
                         new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
@@ -2140,14 +2110,14 @@ public class GCItems {
                         20,
                         TotemData.TotemParticle.makeDustParticle(1, 1, 1, 1),
                         StatusEffects.HASTE,
-                        (byte) 2,
+                        (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.DEATHLY)
                 )
         );
         public static final Item FROSTMOURN_TOTEM = register(
                 "frostmourn_totem",
                 new RelikItem(
-                        20.0f,
+                        15.0f,
                         ((short) 600),
                         20,
                         new TotemData.TotemParticle(ParticleTypes.SNOWFLAKE),
@@ -2183,13 +2153,13 @@ public class GCItems {
         public static final Item GEOMANCERS_TOTEM = register(
                 "geomancers_totem",
                 new RelikItem(
-                        20.0f,
+                        15.0f,
                         ((short) 600),
                         20,
                         TotemData.TotemParticle.makeBlockParticle(Identifier.ofVanilla("stone")),
                         StatusEffects.HASTE,
-                        (byte) 5,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)
+                        (byte) 4,
+                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
                 )
         );
         public static final Item GLITCH = register(
@@ -2200,7 +2170,7 @@ public class GCItems {
                         20,
                         TotemData.TotemParticle.makeDustParticle(0, 1, 0, 1),
                         StatusEffects.ABSORPTION,
-                        (byte) 10,
+                        (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
                 )
         );
@@ -2247,7 +2217,7 @@ public class GCItems {
                         ((short) 600),
                         20,
                         new TotemData.TotemParticle(ParticleTypes.HAPPY_VILLAGER),
-                        StatusEffects.LUCK,
+                        StatusEffects.HERO_OF_THE_VILLAGE,
                         (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LIVING)
                 )
@@ -2255,48 +2225,48 @@ public class GCItems {
         public static final Item ICICLE_TOTEM = register(
                 "icicle_totem",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
-                        StatusEffects.SLOW_FALLING,
+                        new TotemData.TotemParticle(ParticleTypes.BUBBLE),
+                        StatusEffects.DOLPHINS_GRACE,
                         (byte) 1,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)
+                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)
                 )
         );
         public static final Item INTERMEDIATE_TOTEM = register(
                 "intermediate_totem",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.ITEM_COBWEB),
-                        StatusEffects.SLOW_FALLING,
-                        (byte) 1,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)
+                        new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
+                        StatusEffects.LEVITATION,
+                        (byte) 4,
+                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)
                 )
         );
         public static final Item SIMPLE_TOTEM = register(
                 "simple_totem",
                 new RelikItem(
-                                15.0f,
+                                5.0f,
                                 ((short) 600),
                                 20,
-                                new TotemData.TotemParticle(ParticleTypes.ITEM_COBWEB),
-                                StatusEffects.SLOW_FALLING,
-                                (byte) 1,
-                                new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
+                                new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
+                                StatusEffects.LEVITATION,
+                                (byte) 4,
+                                new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)
                 )
         );
         public static final Item IRONHOLM_TOTEM = register(
                 "ironholm_totem",
                 new RelikItem(
-                        15.0f,
+                        20.0f,
                         ((short) 600),
                         20,
                         new TotemData.TotemParticle(ParticleTypes.FLAME),
                         StatusEffects.HASTE,
-                        (byte) 10,
+                        (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)
                 )
         );
@@ -2314,13 +2284,13 @@ public class GCItems {
         public static final Item JOLT_TOTEM = register(
                 "jolt_totem",
                 new RelikItem(
-                        10.0f,
+                        15.0f,
                         ((short) 600),
                         20,
                         new TotemData.TotemParticle(ParticleTypes.ELECTRIC_SPARK),
-                        StatusEffects.SLOWNESS,
-                        (byte) 1,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)
+                        StatusEffects.SPEED,
+                        (byte) 4,
+                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHARM)
                 )
         );
         public static final Item MATURED_TOTEM = register(
@@ -2329,10 +2299,10 @@ public class GCItems {
                         15.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.ITEM_COBWEB),
-                        StatusEffects.SLOW_FALLING,
-                        (byte) 1,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)
+                        new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
+                        StatusEffects.LEVITATION,
+                        (byte) 4,
+                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)
                 )
         );
         public static final Item NIGHTS_GUIDE = register(
@@ -2365,9 +2335,9 @@ public class GCItems {
                         20.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.SOUL),
-                        StatusEffects.WITHER,
-                        (byte) 2,
+                        TotemData.TotemParticle.makeEffectParticle(1, 0, 0, 1),
+                        StatusEffects.REGENERATION,
+                        (byte) 9,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)
                 )
         );
@@ -2377,7 +2347,7 @@ public class GCItems {
                         10.0f,
                         ((short) 600),
                         20,
-                        TotemData.TotemParticle.makeEffectParticle(1, 1, 1, 1),
+                        TotemData.TotemParticle.makeEffectParticle(1, 0, 0, 1),
                         StatusEffects.INVISIBILITY,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CLEAN)
@@ -2386,13 +2356,13 @@ public class GCItems {
         public static final Item RUBY_TOTEM = register(
                 "ruby_totem",
                 new RelikItem(
-                        10.0f,
+                        5.0f,
                         ((short) 600),
                         20,
                         new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
+                        StatusEffects.FIRE_RESISTANCE,
                         (byte) 0,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CLEAN)
+                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)
                 )
         );
         public static final Item RUM_BOTTLE = register(
@@ -2410,7 +2380,7 @@ public class GCItems {
         public static final Item SAKURA_GROVE_WAND = register(
                 "sakura_grove_wand",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
                         new TotemData.TotemParticle(ParticleTypes.CHERRY_LEAVES),
@@ -2422,11 +2392,11 @@ public class GCItems {
         public static final Item SENTRY_TOWER = register(
                 "sentry_tower",
                 new RelikItem(
-                        10.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.WAX_OFF),
-                        StatusEffects.STRENGTH,
+                        TotemData.TotemParticle.makeEffectParticle(0, 0, 1, 1),
+                        StatusEffects.GLOWING,
                         (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)
                 )
@@ -2439,19 +2409,19 @@ public class GCItems {
                         20,
                         new TotemData.TotemParticle(),
                         StatusEffects.JUMP_BOOST,
-                        (byte) 10,
+                        (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CLEAN)
                 )
         );
         public static final Item SHADRAXS_PROTECTION = register(
                 "shadraxs_protection",
                 new RelikItem(
-                        20.0f,
+                        15.0f,
                         ((short) 600),
                         20,
-                        TotemData.TotemParticle.makeEffectParticle(1, 0, 1, 1),
-                        StatusEffects.RESISTANCE,
-                        (byte) 2,
+                        TotemData.TotemParticle.makeEffectParticle(0, 0, 0, 1),
+                        StatusEffects.DARKNESS,
+                        (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)
                 )
         );
@@ -2487,7 +2457,7 @@ public class GCItems {
                         20,
                         TotemData.TotemParticle.makeDustParticle(1, 0, 0, 1),
                         StatusEffects.STRENGTH,
-                        (byte) 10,
+                        (byte) 9,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)
                 )
         );
@@ -2506,19 +2476,19 @@ public class GCItems {
         public static final Item SNOWFLAKE_TOTEM = register(
                 "snowflake_totem",
                 new RelikItem(
-                        10.0f,
+                        5.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
-                        StatusEffects.SLOW_FALLING,
+                        new TotemData.TotemParticle(ParticleTypes.BUBBLE),
+                        StatusEffects.DOLPHINS_GRACE,
                         (byte) 0,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)
+                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)
                 )
         );
         public static final Item SORROWFUL_ANGEL = register(
                 "sorrowful_angel",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
                         new TotemData.TotemParticle(ParticleTypes.ENCHANT),
@@ -2530,7 +2500,7 @@ public class GCItems {
         public static final Item SOUL_KEEPERS_CAGE = register(
                 "soul_keepers_cage",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
                         new TotemData.TotemParticle(ParticleTypes.SCULK_SOUL),
@@ -2571,7 +2541,7 @@ public class GCItems {
                         20,
                         TotemData.TotemParticle.makeDustParticle(1, 0, 1, 1),
                         StatusEffects.DARKNESS,
-                        (byte) 10,
+                        (byte) 9,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)
                 )
         );
@@ -2581,9 +2551,9 @@ public class GCItems {
                         20.0f,
                         ((short) 600),
                         20,
-                        TotemData.TotemParticle.makeDustParticle(0.33f, 0.33f, 1, 1),
+                        new TotemData.TotemParticle(),
                         StatusEffects.REGENERATION,
-                        (byte) 3,
+                        (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)
                 )
         );
@@ -2602,13 +2572,13 @@ public class GCItems {
         public static final Item WINGED_RUBY_TOTEM = register(
                 "winged_ruby_totem",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
                         new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
+                        StatusEffects.FIRE_RESISTANCE,
                         (byte) 1,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CLEAN)
+                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)
                 )
         );
         public static final Item ETHEREAL_ECLIPSED_RELIK = register(
@@ -2617,9 +2587,9 @@ public class GCItems {
                         15.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        TotemData.TotemParticle.makeDustParticle(0 ,0 ,1 , 1),
+                        StatusEffects.INSTANT_HEALTH,
+                        (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)
                 )
         );
@@ -2629,9 +2599,9 @@ public class GCItems {
                         15.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        TotemData.TotemParticle.makeDustParticle(1,0 ,1 , 1),
+                        StatusEffects.RESISTANCE,
+                        (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)
                 )
         );
@@ -2641,33 +2611,33 @@ public class GCItems {
                         15.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        TotemData.TotemParticle.makeDustParticle(1,0 ,0 , 1),
+                        StatusEffects.INSTANT_DAMAGE,
+                        (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)
                 )
         );
         public static final Item ABYSSAL_ANOMALY = register(
                 "abyssal_anomaly",
                 new RelikItem(
-                        15.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        new TotemData.TotemParticle(ParticleTypes.BUBBLE),
+                        StatusEffects.DOLPHINS_GRACE,
+                        (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)
                 )
         );
         public static final Item AUREATE_PARAGON = register(
                 "aureate_paragon",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        TotemData.TotemParticle.makeEffectParticle(1, 1, 0, 1),
+                        StatusEffects.SPEED,
+                        (byte) 9,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)
                 )
         );
@@ -2677,8 +2647,8 @@ public class GCItems {
                         15.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
+                        new TotemData.TotemParticle(ParticleTypes.HAPPY_VILLAGER),
+                        StatusEffects.HASTE,
                         (byte) 1,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LIVING)
                 )
@@ -2686,23 +2656,23 @@ public class GCItems {
         public static final Item BLOODSONG_THRALL = register(
                 "bloodsong_thrall",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        TotemData.TotemParticle.makeEffectParticle(1, 0, 0, 1),
+                        StatusEffects.WITHER,
+                        (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)
                 )
         );
         public static final Item BLUEROSE_LYRE = register(
                 "bluerose_lyre",
                 new RelikItem(
-                        15.0f,
+                        19.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
+                        TotemData.TotemParticle.makeNoteParticle(0, 0, 1, 1),
+                        StatusEffects.ABSORPTION,
                         (byte) 1,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
                 )
@@ -2713,9 +2683,9 @@ public class GCItems {
                         15.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        TotemData.TotemParticle.makeDustParticle(0, 0, 1, 1),
+                        StatusEffects.RESISTANCE,
+                        (byte) 9,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)
                 )
         );
@@ -2725,32 +2695,32 @@ public class GCItems {
                         15.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        TotemData.TotemParticle.makeDustParticle(1, 1, 1, 1),
+                        StatusEffects.SPEED,
+                        (byte) 49,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHARM)
                 )
         );
         public static final Item CHIME_RELIK = register(
                 "chime_relik",
                 new RelikItem(
-                        15.0f,
+                        5.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        TotemData.TotemParticle.makeNoteParticle(1, 1, 0, 1),
+                        StatusEffects.INVISIBILITY,
+                        (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHARM)
                 )
         );
         public static final Item DUNE_VAJRA = register(
                 "dune_vajra",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
+                        new TotemData.TotemParticle(ParticleTypes.SOUL),
+                        StatusEffects.SPEED,
                         (byte) 1,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)
                 )
@@ -2758,36 +2728,36 @@ public class GCItems {
         public static final Item ESSENTIA_SPIRIT = register(
                 "essentia_spirit",
                 new RelikItem(
-                        15.0f,
+                        5.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        TotemData.TotemParticle.makeDustParticle(1, 1, 1, 1),
+                        StatusEffects.WEAKNESS,
+                        (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
                 )
         );
         public static final Item EVERGREEN_RELIK = register(
                 "evergreen_relik",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        TotemData.TotemParticle.makeEffectParticle(0, 1, 0, 1),
+                        StatusEffects.OOZING,
+                        (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)
                 )
         );
         public static final Item FAIRYTALE_RELIK = register(
                 "fairytale_relik",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        TotemData.TotemParticle.makeDustParticle(1,0.60f, 0.60f, 1),
+                        StatusEffects.LUCK,
+                        (byte) 3,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)
                 )
         );
@@ -2797,44 +2767,44 @@ public class GCItems {
                         15.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        new TotemData.TotemParticle(ParticleTypes.OMINOUS_SPAWNING),
+                        StatusEffects.GLOWING,
+                        (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)
                 )
         );
         public static final Item GALVANIC_TOLL = register(
                 "galvanic_toll",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        new TotemData.TotemParticle(ParticleTypes.WAX_ON),
+                        StatusEffects.BLINDNESS,
+                        (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.BRAVE)
                 )
         );
         public static final Item HEXPHAE_FLARE = register(
                 "hexphae_flare",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        new TotemData.TotemParticle(ParticleTypes.CHERRY_LEAVES),
+                        StatusEffects.LEVITATION,
+                        (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)
                 )
         );
         public static final Item ICICLE_RELIK = register(
                 "icicle_relik",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
+                        new TotemData.TotemParticle(ParticleTypes.SNOWFLAKE),
+                        StatusEffects.SLOWNESS,
                         (byte) 1,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)
                 )
@@ -2842,24 +2812,24 @@ public class GCItems {
         public static final Item JADE_TEAPOT = register(
                 "jade_teapot",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        new TotemData.TotemParticle(ParticleTypes.HAPPY_VILLAGER),
+                        StatusEffects.LUCK,
+                        (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CLEAN)
                 )
         );
         public static final Item MONARCH_KNELL = register(
                 "monarch_knell",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        TotemData.TotemParticle.makeDustParticle(1, 1, 0, 1),
+                        StatusEffects.HERO_OF_THE_VILLAGE,
+                        (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)
                 )
         );
@@ -2869,58 +2839,58 @@ public class GCItems {
                         15.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        new TotemData.TotemParticle(),
+                        StatusEffects.STRENGTH,
+                        (byte) 2,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)
                 )
         );
         public static final Item NIGHTSHINE_PINCER = register(
                 "nightshine_pincer",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        TotemData.TotemParticle.makeDustParticle(0, 0, 0, 1),
+                        StatusEffects.DARKNESS,
+                        (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.DEATHLY)
                 )
         );
         public static final Item SCRAP_RELIK = register(
                 "scrap_relik",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        new TotemData.TotemParticle(ParticleTypes.WAX_ON),
+                        StatusEffects.WATER_BREATHING,
+                        (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)
                 )
         );
         public static final Item SERPENT_TORRENT = register(
                 "serpent_torrent",
                 new RelikItem(
-                        15.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        new TotemData.TotemParticle(ParticleTypes.SOUL_FIRE_FLAME),
+                        StatusEffects.INVISIBILITY,
+                        (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)
                 )
         );
         public static final Item SILVER_RELIK = register(
                 "silver_relik",
                 new RelikItem(
-                        15.0f,
+                        5.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
-                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
+                        TotemData.TotemParticle.makeDustParticle(1, 1, 1, 1),
+                        StatusEffects.SPEED,
+                        (byte) 0,
+                        new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LIVING)
                 )
         );
         public static final Item SOVEREIGN_REFLECTION = register(
@@ -2929,44 +2899,44 @@ public class GCItems {
                         15.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        new TotemData.TotemParticle(ParticleTypes.ENCHANT),
+                        StatusEffects.GLOWING,
+                        (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)
                 )
         );
         public static final Item STARGAZER_NEBULA = register(
                 "stargazer_nebula",
                 new RelikItem(
-                        15.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        TotemData.TotemParticle.makeDustParticle(0, 0, 1, 1),
+                        StatusEffects.NIGHT_VISION,
+                        (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)
                 )
         );
-        public static final Item THEIF_IDOL = register(
-                "theif_idol",
+        public static final Item THIEF_IDOL = register(
+                "thief_idol",
                 new RelikItem(
-                        15.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        TotemData.TotemParticle.makeDustParticle(0, 0, 0, 0),
+                        StatusEffects.INVISIBILITY,
+                        (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)
                 )
         );
         public static final Item VANGUARD_INVOKER = register(
                 "vanguard_invoker",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
+                        TotemData.TotemParticle.makeEffectParticle(0, 0, 0, 1),
+                        StatusEffects.TRIAL_OMEN,
                         (byte) 1,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)
                 )
@@ -2974,23 +2944,23 @@ public class GCItems {
         public static final Item VIRIDIAN_RELIK = register(
                 "viridian_relik",
                 new RelikItem(
-                        15.0f,
+                        10.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        TotemData.TotemParticle.makeDustParticle(0, 1, 0, 1),
+                        StatusEffects.SATURATION,
+                        (byte) 4,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
                 )
         );
-        public static final Item WANDERER_HARBRINGER = register(
-                "wanderer_harbringer",
+        public static final Item WANDERER_HARBINGER = register(
+                "wanderer_harbinger",
                 new RelikItem(
-                        15.0f,
+                        20.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
+                        new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
+                        StatusEffects.LEVITATION,
                         (byte) 1,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.BRAVE)
                 )
@@ -2998,12 +2968,12 @@ public class GCItems {
         public static final Item ZEPHYR_COIL = register(
                 "zephyr_coil",
                 new RelikItem(
-                        15.0f,
+                        5.0f,
                         ((short) 600),
                         20,
-                        new TotemData.TotemParticle(ParticleTypes.FLAME),
-                        StatusEffects.JUMP_BOOST,
-                        (byte) 1,
+                        new TotemData.TotemParticle(ParticleTypes.SMALL_GUST),
+                        StatusEffects.WIND_CHARGED,
+                        (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)
                 )
         );
@@ -3114,14 +3084,6 @@ public class GCItems {
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)
         ));
-        public static final Item DEATHS_RESPITE = register("deaths_respite", new MeleeWeaponItem(
-                ToolMaterials.WOOD,
-                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
-                        ToolMaterials.WOOD,
-                        4,
-                        -2.0f
-                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.BRAVE)
-        ));
         public static final Item DEATHSWORD = register("deathsword", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
@@ -3160,7 +3122,7 @@ public class GCItems {
                         ToolMaterials.WOOD,
                         3,
                         -2.4f
-                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)
         ));
         public static final Item DEVILS_CONQUEST = register("devils_conquest", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -3195,14 +3157,6 @@ public class GCItems {
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)
         ));
         public static final Item ORCISH_SPEAR = register("orcish_spear", new MeleeWeaponItem(
-                ToolMaterials.WOOD,
-                new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
-                        ToolMaterials.WOOD,
-                        1,
-                        -1.6f
-                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)
-        ));
-        public static final Item HEMORRHAGE = register("hemorrhage", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
@@ -3786,7 +3740,7 @@ public class GCItems {
                         ToolMaterials.WOOD,
                         3,
                         -2.4f
-                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)
+                )).component(GCDataComponents.GC_RARITY, ExtendedRarity.LIVING)
         ));
         public static final Item SOVEREIGN_MIGHT = register("silver_zweihander", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
@@ -3804,7 +3758,7 @@ public class GCItems {
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)
         ));
-        public static final Item THEIF_SPIKE = register("theif_spike", new MeleeWeaponItem(
+        public static final Item THIEF_SPIKE = register("thief_spike", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
@@ -4632,6 +4586,7 @@ public class GCItems {
     public static final Item BLIZZARD_MAGE_HAT = register("blizzard_mage", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)));
     public static final Item BLUEROSE_FACEPLATE = register("bluerose_faceplate", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)));
     public static final Item BLUESHIFT_FULLHELM = register("blueshift_fullhelm", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)));
+    public static final Item BLUESHIFT_INFESTATION = register("blueshift_infestation", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)));
     public static final Item CANDLE_KEEPER_HAT = register("candle_keeper", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)));
     public static final Item CANDY_CANE_HORNS = register("candy_cane_horns", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHARM)));
     public static final Item CELESTIAL_BAND_HAT = register("celestial_band", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CLEAN)));
@@ -4683,12 +4638,12 @@ public class GCItems {
     public static final Item SERAPHIM_CROWN_HAT = register("seraphim_crown", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CLEAN)));
     public static final Item SHADOW_STALKER_HAT = register("shadow_stalker", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)));
     public static final Item SERPENT_TORMENT = register("serpent_torment", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)));
-    public static final Item SILVER_BEVOR = register("silver_bevor", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)));
+    public static final Item SILVER_BEVOR = register("silver_bevor", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LIVING)));
     public static final Item SHADRAX_FINS_HAT = register("shadrax_fins", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)));
     public static final Item SNOWSTORM_HOOD_HAT = register("snowstorm_hood", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)));
     public static final Item SPORELING_HAT = register("sporeling", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)));
     public static final Item STARGAZER_CROWN = register("stargazer_crown", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)));
-    public static final Item THEIF_HOOD = register("theif_hood", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)));
+    public static final Item THIEF_HOOD = register("thief_hood", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)));
     public static final Item VALKYRIE_HELM_HAT = register("valkyrie_helm", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)));
     public static final Item VANGUARD_VISOR = register("vanguard_visor", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)));
     public static final Item VIRIDIAN_HELMET = register("viridian_helmet", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)));
@@ -4703,6 +4658,157 @@ public class GCItems {
     public static final Item CLAWFIRE = register("clawfire", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)));
     public static final Item CLAWICE = register("clawice", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)));
     public static final Item CLAWLIGHTNING = register("clawlightning", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)));
+
+//unsorted hats
+
+    public static final Item ADVENTURER_HAT = register("adventurer_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item ANCIENT_DIADEM = register("ancient_diadem", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item ANTI_BOVEMIST_MASK = register("anti_bovemist_mask", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item ARCHER_HAT = register("archer_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item ARISTROCAT_HAT = register("aristrocat_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item ARMISTICE_CAP = register("armistice_cap", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item AVO_HEADDRESS = register("avo_headdress", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item BANDANA = register("bandana", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item BANDIT_MASK = register("bandit_mask", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item BEACHCOMBER_BONNET = register("beachcomber_bonnet", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item BERET = register("beret", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item BEWITCHING_HAT = register("bewitching_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item BIRD_NEST = register("bird_nest", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item BLACK_CAT_EARS = register("black_cat_ears", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item BONFIRE_CROWN = register("bonfire_crown", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item BOOKWORM = register("bookworm", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item BOUNTY_HUNTER_HAT = register("bounty_hunter_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item BREWING_CAULDRON = register("brewing_cauldron", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item BUCKET_HAT = register("bucket_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item BUNNY_EARS= register("bunny_ears", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item CAT_HAT = register("cat_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item CERULEAN_HEADDRESS = register("cerulean_headdress", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item CHEESE_WHEEL = register("cheese_wheel", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item CHEF_POULTRY = register("chef_poultry", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item CHEFS_HAT = register("chefs_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item CHILLY_SNOWMAN = register("chilly_snowman", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item COMFY_SCARF = register("comfy_scarf", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item COOKIE_JAR = register("cookie_jar", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item COZY_BEANIE = register("cozy_beanie", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item CORKIAN_GOGGLES = register("corkian_goggles", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item COWBOY_HAT = register("cowboy_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item CROOK_COWL = register("crook_cowl", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item CROWN_OF_CHAINS = register("crown_of_chains", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item DAPPER_TOPPER = register("dapper_topper", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item DECAY_HAT = register("decay_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item DECORATED_BICORN = register("decorated_bicorn", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item DIAMOND_HELMET = register("diamond_helmet", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item DIVINE_PRESENCE = register("divine_presence", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item DIVING_HELMET = register("diving_helmet", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item DWARVEN_HELMET = register("dwarven_helmet", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item DYNASTY_GUANMAO = register("dynasty_guanmao", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item DYNASTY_HAT = register("dynasty_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item ELF_HAT = register("elf_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item EMBELLISHED_TRICORN = register("embellished_tricorn", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item ENTREPRENEUR_HAT = register("entrepreneur_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item EXQUISITE_PAGRI = register("exquisite_pagri", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item FANCY_CROWN = register("fancy_crown", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item FENNEC_EARS = register("fennec_ears", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item FESTIVE_WREATH = register("festive_wreath", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item FISHING_HAT = register("fishing_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item FLUFFY_FOX_MASK = register("fluffy_fox_mask", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item FOSSIL_SKULL_HAT = register("fossil_skull_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item FOX_EARS = register("fox_ears", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item FROG_BEANIE = register("frog_beanie", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item FROSTBOUND_HALO = register("frostbound_halo", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item FRUIT_BASKET = register("fruit_basket", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item FUNGI_CAP = register("fungi_cap", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item FUR_HOOD = register("fur_hood", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item FURY_CORONET = register("fury_coronet", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item GARDENER_HAT = register("gardener_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item GENDARME_HELMET = register("gendarme_helmet", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item GEOMANCER_BOULDERCREST = register("geomancer_bouldercrest", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item GLUTTONY_GOURD = register("gluttony_gourd", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item GNOME_CAP = register("gnome_cap", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item GOATHORNS = register("goathorns", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item GOLD_HELMET = register("gold_helmet", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item GOTHIC_TIARA = register("gothic_tiara", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item GRAFTER_AGGREGATE = register("grafter_aggregate", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item GRIZZLY_HEADPIECE = register("grizzly_headpiece", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item GROOK_MASK = register("grook_mask", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item HAUNTED_HOLD = register("haunted_hold", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item HERMIT_HOOD = register("hermit_hood", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item HEROES_BERET = register("heroes_beret", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item HEROIC_WINGWREATH = register("heroic_wingwreath", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item HIGHLANDS_USHANKA = register("highlands_ushanka", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item HOBELF_RUFF = register("hobelf_ruff", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item HOLIDAY_LIGHTS = register("holiday_lights", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item FLAMINGHOT_HEAD = register("flaminghot_head", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item HUNTER_HAT = register("hunter_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item HYDRATION_HEADGEAR = register("hydration_headgear", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item ICE_DRAGON_HOOD = register("ice_dragon_hood", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item IVY_HORNS = register("ivy_horns", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item KETTLE_HELMET = register("kettle_helmet", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item KNIGHT_HELMET = register("knight_helmet", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item LAVENDER_BOW = register("lavender_bow", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item LEAF_CREST = register("leaf_crest", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item LILY_PAD = register("lily_pad", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item LOTUS_OF_THE_WILDS = register("lotus_of_the_wilds", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item LUNBERJACK_STUMP = register("lumberjack_stump", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item LUSH_BRIM = register("lush_brim", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item MAHOGANY_HORNS = register("mahogany_horns", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item MASK_DEER = register("mask_deer", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item MASK_FOX = register("mask_fox", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item MASK_OWL = register("mask_owl", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item MASQUERADE_MASK = register("masquerade_mask", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item MELON_BAND = register("melon_band", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item MINER_HELMET = register("miner_helmet", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item MISER_HAT = register("miser_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item MONSTER_MASK = register("monster_mask", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item MYSTICAL_TOPPER = register("mystical_topper", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item NIGHTSHINE_HOOD = register("nightshine_hood", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item NIVLAN_BEAUTY = register("nivlan_beauty", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item NOBLE_BERET = register("noble_beret", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item NUTCRACKER_HAT = register("nutcracker_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item ORPHION_MESSENGER = register("orphion_messenger", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item PAPER_BAG = register("paper_bag", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item PEPPERMINT_HORNS = register("peppermint_horns", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item PIRATE_HAT = register("pirate_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item PLAGUE_DOCTOR = register("plague_doctor", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item PRIVATEER_HAT = register("privateer_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item PROPELLER_HAT = register("propeller_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item QUEEN_CROWN = register("queen_crown", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item RACCOON_CAP = register("raccoon_cap", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item RAINBOW_PANAMA = register("rainbow_panama", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item REGAL_CHAPERON = register("regal_chaperon", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item REPURPOSED_PLANTER = register("repurposed_planter", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item ROSE_HAT = register("rose_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item SAFARI_HAT = register("safari_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item SALLET_OF_YORE = register("sallet_of_yore", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item SANTA_HAT = register("santa_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item SCARECROW_HAT = register("scarecrow_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item SCOUT_CAP = register("scout_cap", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item SEASKIPPER_CAP = register("seaskipper_cap", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item SKULL_TOPHAT = register("skull_tophat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item SNOW_CLOUD_HAT = register("snow_cloud_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item SNOW_FOX_EARS = register("snow_fox_ears", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item SOMBRERO = register("sombrero", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item SPECTRAL_MASK = register("spectral_mask", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item SPRING_FLOWERS_CIRCLET = register("spring_flowers_circlet", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item SPRING_HAT = register("spring_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item STALWART_MORION = register("stalwart_morion", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item STOUT_SHAKO = register("stout_shako", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item STRAW_HAT = register("straw_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item SUNFLOWER_BONNET = register("sunflower_bonnet", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item THANKFUL_CAPOTAIN = register("thankful_capotain", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item TOWERING_HAT = register("towering_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item TUNDRA_GOGGLES = register("tundra_goggles", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item VALOROUS_HELMET = register("valorous_helmet", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item VELVET_BERET = register("velvet_beret", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item VERDANT_LAUREL = register("verdant_laurel", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item WEREWOLF_EARS = register("werewolf_ears", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item WINGS_HAT = register("wings_hat", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item WINGS_KABUTO = register("wings_kabuto", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item WINTER_SCARF = register("winter_scarf", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item WORN_KASA = register("worn_kasa", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item WYBEL_BEANIE = register("wybel_beanie", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item YARN_HEAD = register("yarn_head", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
+    public static final Item yule_beret = register("yule_beret", new TrinketItem(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.NULL)));
 
 
 
