@@ -77,6 +77,97 @@ public class GCBlocks {
                     .luminance(state -> 5),
             true
     );
+    public static Block BLEEDING_COIL = register(
+            "bleeding_coil",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.SHROOMLIGHT)
+                    .luminance(state -> 1),
+            true
+    );
+
+    public static Block PERDITE = register(
+            "perdite",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.COPPER)
+                    .luminance(state -> 1),
+            true
+    );
+    public static Block BLAZONITE = register(
+            "blazonite",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.ORANGE)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.MOSS_BLOCK)
+                    .luminance(state -> 1),
+            true
+    );
+    public static Block APHRODITE = register(
+            "aphrodite",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.YELLOW)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.CALCITE)
+                    .luminance(state -> 1),
+            true
+    );
+    public static Block UNUSITE = register(
+            "unusite",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLACK)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.BONE)
+                    .luminance(state -> 1),
+            true
+    );
+    public static Block ANNUSITE = register(
+            "annusite",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.BONE)
+                    .luminance(state -> 1),
+            true
+    );
+    public static Block AMICA = register(
+            "amica",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PINK)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.CHAIN)
+                    .luminance(state -> 1),
+            true
+    );
+    public static Block STRATOS = register(
+            "stratos",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLUE)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.MUD_BRICKS)
+                    .luminance(state -> 1),
+            true
+    );
+    public static Block PAXIA = register(
+            "paxia",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.MAGENTA)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .luminance(state -> 1),
+            true
+    );
     public static Block AURORA_CRYSTAL = register(
             "aurora_crystal",
             Block::new,
@@ -86,16 +177,6 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK)
                     .strength(1.5F)
                     .luminance(state -> 5),
-            true
-    );
-    public static Block BLEEDING_COIL = register(
-            "bleeding_coil",
-            Block::new,
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DARK_RED)
-                    .strength(1.0F)
-                    .sounds(BlockSoundGroup.SHROOMLIGHT)
-                    .luminance(state -> 1),
             true
     );
     public static Block BLUE_NETHERRACK = register(
@@ -1427,6 +1508,24 @@ public class GCBlocks {
             GCWoodTypes.EBONY
     );
 
+    public static Block ANCHOR_LEAVES = register(
+            "anchor_leaves",
+            LeavesBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GREEN)
+                    .strength(0.2F)
+                    .ticksRandomly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)
+                    .luminance(value -> 15),
+            true
+    );
     public static Block ANCHOR_LOG = register(
             "anchor_log",
             PillarBlock::new,
@@ -1577,7 +1676,97 @@ public class GCBlocks {
                     .burnable(),
             true
     );
-//TODO Blue Enchanted DOOR/TRAPDOOR block textures
+
+    public static Block PALO_VERDE_LOG = register(
+            "palo_verde_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block PALO_VERDE_WOOD = register(
+            "palo_verde_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_PALO_VERDE_LOG = register(
+            "stripped_palo_verde_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_PALO_VERDE_WOOD = register(
+            "stripped_palo_verde_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block PALO_VERDE_SAPLING = register(
+            "palo_verde_sapling",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLUE)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.GRASS),
+            true
+    );
+    public static Block PALO_VERDE_LEAVES = register(
+            "palo_verde_leaves",
+            LeavesBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GREEN)
+                    .strength(0.2F)
+                    .ticksRandomly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)
+                    .luminance(value -> 15),
+            true
+    );
+    public static Block PALO_VERDE_LEAVES_FLOWERING = register(
+            "palo_verde_leaves_flowering",
+            LeavesBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GREEN)
+                    .strength(0.2F)
+                    .ticksRandomly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)
+                    .luminance(value -> 15),
+            true
+    );
     public static Block BLUE_ENCHANTED_LOG = register(
             "blue_enchanted_log",
             PillarBlock::new,
@@ -1589,8 +1778,54 @@ public class GCBlocks {
                     .burnable(),
             true
     );
-    public static Block BLUE_ENCHANTED = register(
-            "blue_enchanted",
+    public static Block BLUE_ENCHANTED_WOOD = register(
+            "blue_enchanted_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block GLOWING_BLUE_ENCHANTED_LOG = register(
+            "blue_enchanted_glowing_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable()
+                    .luminance(state -> 2),
+            true
+    );
+    public static Block GLOWING_BLUE_ENCHANTED_WOOD = register(
+            "glowing_blue_enchanted_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable()
+                    .luminance(state -> 2),
+            true
+    );
+    public static Block BLUE_ENCHANTED_IMBUED_WOOD = register(
+            "blue_enchanted_imbued_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_BLUE_ENCHANTED_WOOD = register(
+            "stripped_blue_enchanted_wood",
             PillarBlock::new,
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.LAPIS_BLUE)
@@ -1604,11 +1839,70 @@ public class GCBlocks {
             "stripped_blue_enchanted_log",
             PillarBlock::new,
             AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .mapColor(MapColor.LAPIS_BLUE)
                     .instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F)
-                    .sounds(BlockSoundGroup.WOOD)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
                     .burnable(),
+            true
+    );
+    public static Block BLUE_ENCHANTED_SIGN = register(
+            "blue_enchanted_sign",
+            settings -> new SignBlock(GCWoodTypes.BLUE_ENCHANTED, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(1.0F)
+                    .burnable(),
+            false
+    );
+    public static final Block BLUE_ENCHANTED_WALL_SIGN = register(
+            "blue_enchanted_wall_sign",
+            settings -> new WallSignBlock(GCWoodTypes.BLUE_ENCHANTED, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(1.0F)
+                    .dropsLike(BLUE_ENCHANTED_SIGN)
+                    .burnable(),
+            false
+    );
+    public static Block BLUE_ENCHANTED_HANGING_SIGN = register(
+            "blue_enchanted_hanging_sign",
+            settings -> new HangingSignBlock(GCWoodTypes.BLUE_ENCHANTED, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .burnable(),
+            false
+    );
+    public static Block BLUE_ENCHANTED_WALL_HANGING_SIGN = register(
+            "blue_enchanted_wall_hanging_sign",
+            settings -> new WallHangingSignBlock(GCWoodTypes.BLUE_ENCHANTED, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .dropsLike(BLUE_ENCHANTED_HANGING_SIGN)
+                    .burnable(),
+            false
+    );
+    public static Block BLUE_ENCHANTED_SAPLING = register(
+            "blue_enchanted_sapling",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLUE)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.GRASS),
             true
     );
     public static ImmutableMap<BlockType, Block> BLUE_ENCHANTED_SET = registerWoodSet(
@@ -1675,6 +1969,284 @@ public class GCBlocks {
                     .luminance(value -> 15),
             true
     );
+
+    public static Block LAMENT_LEAVES = register(
+            "lament_leaves",
+            LeavesBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .strength(0.2F)
+                    .ticksRandomly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never),
+            true
+    );
+    public static Block LAMENT_LOG = register(
+            "lament_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block LAMENT_WOOD = register(
+            "lament_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_LAMENT_WOOD = register(
+            "stripped_lament_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_LAMENT_LOG = register(
+            "stripped_lament_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block LAMENT_SIGN = register(
+            "lament_sign",
+            settings -> new SignBlock(GCWoodTypes.LAMENT, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(1.0F)
+                    .burnable(),
+            false
+    );
+    public static final Block LAMENT_WALL_SIGN = register(
+            "lament_wall_sign",
+            settings -> new WallSignBlock(GCWoodTypes.LAMENT, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(1.0F)
+                    .dropsLike(LAMENT_SIGN)
+                    .burnable(),
+            false
+    );
+    public static Block LAMENT_HANGING_SIGN = register(
+            "lament_hanging_sign",
+            settings -> new HangingSignBlock(GCWoodTypes.LAMENT, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .burnable(),
+            false
+    );
+    public static Block LAMENT_WALL_HANGING_SIGN = register(
+            "lament_wall_hanging_sign",
+            settings -> new WallHangingSignBlock(GCWoodTypes.LAMENT, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .dropsLike(LAMENT_HANGING_SIGN)
+                    .burnable(),
+            false
+    );
+    public static Block LAMENT_SAPLING = register(
+            "lament_sapling",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.GRASS),
+            true
+    );
+    public static ImmutableMap<BlockType, Block> LAMENT_SET = registerWoodSet(
+            "lament",
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            GCWoodTypes.LAMENT,
+            true
+    );
+
+    public static Block SKYRIS_LEAVES = register(
+            "skyris_leaves",
+            LeavesBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PINK)
+                    .strength(0.2F)
+                    .ticksRandomly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never),
+            true
+    );
+    public static Block SKYRIS_LOG = register(
+            "skyris_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block SKYRIS_WOOD = register(
+            "skyris_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_SKYRIS_WOOD = register(
+            "stripped_skyris_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_SKYRIS_LOG = register(
+            "stripped_skyris_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block SKYRIS_SIGN = register(
+            "skyris_sign",
+            settings -> new SignBlock(GCWoodTypes.SKYRIS, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(1.0F)
+                    .burnable(),
+            false
+    );
+    public static final Block SKYRIS_WALL_SIGN = register(
+            "skyris_wall_sign",
+            settings -> new WallSignBlock(GCWoodTypes.SKYRIS, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(1.0F)
+                    .dropsLike(SKYRIS_SIGN)
+                    .burnable(),
+            false
+    );
+    public static Block SKYRIS_HANGING_SIGN = register(
+            "skyris_hanging_sign",
+            settings -> new HangingSignBlock(GCWoodTypes.SKYRIS, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .burnable(),
+            false
+    );
+    public static Block SKYRIS_WALL_HANGING_SIGN = register(
+            "skyris_wall_hanging_sign",
+            settings -> new WallHangingSignBlock(GCWoodTypes.SKYRIS, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .dropsLike(SKYRIS_HANGING_SIGN)
+                    .burnable(),
+            false
+    );
+    public static Block SKYRIS_SAPLING = register(
+            "skyris_sapling",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.GRASS),
+            true
+    );
+    public static ImmutableMap<BlockType, Block> SKYRIS_SET = registerWoodSet(
+            "skyris",
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            GCWoodTypes.SKYRIS,
+            true
+    );
+
+
+
+    public static Block BRIMSTONE = register(
+            "brimstone",
+            MossBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.YELLOW)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.STONE)
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true
+    );
+
     public static Block END_MOSS = register(
             "end_moss",
             MossBlock::new,
@@ -1685,8 +2257,109 @@ public class GCBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY),
             true
     );
+    public static Block SHULKREN_PHYLIUM = register(
+            "shulkren_phylium",
+            MossBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GREEN)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.MOSS_BLOCK)
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true
+    );
+    public static Block NIGHTSHADE_PHYLIUM = register(
+            "nightshade_phylium",
+            MossBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.MOSS_BLOCK)
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true
+    );
+    public static Block GLOOMY_GRASS = register(
+            "gloomy_grass",
+            MossBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLACK)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.GRASS),
+            true
+    );
+    public static Block GLOOMY_SOIL = register(
+            "gloomy_soil",
+            MossBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLACK)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.GRASS),
+            true
+    );
+    public static Block WAILING_NYLIUM = register(
+            "wailing_nylium",
+            MossBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.NETHER_WART),
+            true
+    );
+
+    public static Block SUBZERO_ASH = register(
+            "subzero_ash",
+            MossBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.SAND),
+            true
+    );
+    public static Block BLUE_SAND = register(
+            "blue_sand",
+            MossBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.SAND),
+            true
+    );
+
+    public static Block SUBZERO_CRYSTAL_BLOCK = register(
+            "subzero_crystal_block",
+            MossBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+
     public static Block NOISE = register(
             "noise",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PINK)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never),
+            true
+    );
+
+    public static Block STILLNOISE = register(
+            "stillnoise",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PINK)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never),
+            true
+    );
+
+    public static Block NOISE_UNSTABLE = register(
+            "noise_unstable",
             Block::new,
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.PINK)
@@ -1747,13 +2420,9 @@ public class GCBlocks {
                     .instrument(NoteBlockInstrument.BASS)
                     .nonOpaque()
                     .suffocates(Blocks::never)
-                    .blockVision(Blocks::never)
                     .solidBlock(Blocks::never)
                     .sounds(BlockSoundGroup.METAL)
-                    .nonOpaque()
                     .allowsSpawning(Blocks::never)
-                    .solidBlock(Blocks::never)
-                    .suffocates(Blocks::never)
                     .blockVision(Blocks::never)
                     .strength(2.0F, 3.0F),
 
@@ -1770,11 +2439,7 @@ public class GCBlocks {
                     .blockVision(Blocks::never)
                     .solidBlock(Blocks::never)
                     .sounds(BlockSoundGroup.METAL)
-                    .nonOpaque()
                     .allowsSpawning(Blocks::never)
-                    .solidBlock(Blocks::never)
-                    .suffocates(Blocks::never)
-                    .blockVision(Blocks::never)
                     .strength(2.0F, 3.0F),
             true
     );
@@ -1784,10 +2449,6 @@ public class GCBlocks {
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.GRAY)
                     .instrument(NoteBlockInstrument.BASS)
-                    .nonOpaque()
-                    .suffocates(Blocks::never)
-                    .blockVision(Blocks::never)
-                    .solidBlock(Blocks::never)
                     .sounds(BlockSoundGroup.METAL)
                     .nonOpaque()
                     .allowsSpawning(Blocks::never)
@@ -2881,8 +3542,53 @@ public class GCBlocks {
                     .burnable(),
             true
     );
+    public static Block GLOWSHROOM_CAP = register(
+            "mossy_glowshroom_cap",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block GLOWSHROOM_CAP_TRANSITION = register(
+            "mossy_glowshroom_cap_transition",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block GLOWSHROOM_FUR = register(
+            "mossy_glowshroom_fur",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BRIGHT_TEAL)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.GRASS),
+            true
+    );
+    public static Block GLOWSHROOM_SAPLING = register(
+            "mossy_glowshroom_sapling",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BRIGHT_TEAL)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.GRASS),
+            true
+    );
 
-    public static ImmutableSet<ImmutableMap<BlockType, Block>> BLOCK_SETS = ImmutableSet.of(EBONY_SET, DARK_CHERRY_SET, GLOWSHROOM_SET, TANGLEWOOD_SET, ANCHOR_SET);
+
+    public static ImmutableSet<ImmutableMap<BlockType, Block>> BLOCK_SETS = ImmutableSet.of(SKYRIS_SET, EBONY_SET, DARK_CHERRY_SET, GLOWSHROOM_SET, TANGLEWOOD_SET, BLUE_ENCHANTED_SET, ANCHOR_SET, LAMENT_SET);
 
     public static void initialize() {
     }

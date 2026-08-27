@@ -1,7 +1,7 @@
 {
-  "dire_charge": {
+  "chaos_charge": {
     "sounds": [
-      "ghostcraft:item/magic/dire_charge"
+      "ghostcraft:item/magic/chaos_charge"
     ]
   },
   "ethereal_charge": {
@@ -12,6 +12,41 @@
   "magic_charge": {
     "sounds": [
       "ghostcraft:item/magic/magic_charge"
+    ]
+  },
+  "balanced_charge": {
+    "sounds": [
+      "ghostcraft:item/magic/balanced_charge"
+    ]
+  },
+  "brave_charge": {
+    "sounds": [
+      "ghostcraft:item/magic/brave_charge"
+    ]
+  },
+  "charm_charge": {
+    "sounds": [
+      "ghostcraft:item/magic/charm_charge"
+    ]
+  },
+  "clean_charge": {
+    "sounds": [
+      "ghostcraft:item/magic/clean_charge"
+    ]
+  },
+  "deathly_charge": {
+    "sounds": [
+      "ghostcraft:item/magic/deathly_charge"
+    ]
+  },
+  "living_charge": {
+    "sounds": [
+      "ghostcraft:item/magic/living_charge"
+    ]
+  },
+  "united_charge": {
+    "sounds": [
+      "ghostcraft:item/magic/united_charge"
     ]
   },
   "potent_charge": {
@@ -46,6 +81,26 @@
       "ghostcraft:item/instruments/limby_toot_toot"
     ]
   },
+  "dawnsong": {
+    "sounds": [
+      "ghostcraft:item/instruments/dawnsong"
+    ]
+  },
+  "dusksong": {
+    "sounds": [
+      "ghostcraft:item/instruments/dusksong"
+    ]
+  },
+  "stormsong": {
+    "sounds": [
+      "ghostcraft:item/instruments/stormsong"
+    ]
+  },  "healingsong": {
+  "sounds": [
+    "ghostcraft:item/instruments/healingsong"
+  ]
+},
+
   "kat_ball": {
     "sounds": [
       "ghostcraft:item/instruments/kat_ball1",

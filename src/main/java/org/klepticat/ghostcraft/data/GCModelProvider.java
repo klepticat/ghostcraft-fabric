@@ -34,12 +34,32 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(AURITE);
         blockStateModelGenerator.registerSimpleCubeAll(AURORA_CRYSTAL);
         blockStateModelGenerator.registerSimpleCubeAll(BLEEDING_COIL);
+        blockStateModelGenerator.registerSimpleCubeAll(PERDITE);
+        blockStateModelGenerator.registerSimpleCubeAll(BLAZONITE);
+        blockStateModelGenerator.registerSimpleCubeAll(APHRODITE);
+        blockStateModelGenerator.registerSimpleCubeAll(UNUSITE);
+        blockStateModelGenerator.registerSimpleCubeAll(ANNUSITE);
+        blockStateModelGenerator.registerSimpleCubeAll(AMICA);
+        blockStateModelGenerator.registerSimpleCubeAll(STRATOS);
+        blockStateModelGenerator.registerSimpleCubeAll(PAXIA);
+
         blockStateModelGenerator.registerSimpleCubeAll(CANDY_CANE);
         blockStateModelGenerator.registerSimpleCubeAll(CABBAGE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(CHOGGY_BLOGGY);
         blockStateModelGenerator.registerSimpleCubeAll(ENCHANTED_LEAVES);
+
+        blockStateModelGenerator.registerSimpleCubeAll(BRIMSTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(BLUE_SAND);
+        blockStateModelGenerator.registerSimpleCubeAll(SUBZERO_ASH);
         blockStateModelGenerator.registerSimpleCubeAll(END_MOSS);
+        blockStateModelGenerator.registerSimpleCubeAll(WAILING_NYLIUM);
+        blockStateModelGenerator.registerSimpleCubeAll(NIGHTSHADE_PHYLIUM);
+        blockStateModelGenerator.registerSimpleCubeAll(SHULKREN_PHYLIUM);
+        blockStateModelGenerator.registerSimpleCubeAll(GLOOMY_GRASS);
+        blockStateModelGenerator.registerSimpleCubeAll(GLOOMY_SOIL);
         blockStateModelGenerator.registerSimpleCubeAll(NOISE);
+        blockStateModelGenerator.registerSimpleCubeAll(STILLNOISE);
+        blockStateModelGenerator.registerSimpleCubeAll(NOISE_UNSTABLE);
         blockStateModelGenerator.registerSimpleCubeAll(VOID);
         blockStateModelGenerator.registerSimpleCubeAll(CHECK_MARK);
         blockStateModelGenerator.registerSimpleCubeAll(X_MARK);
@@ -353,13 +373,20 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerWoolAndCarpet(CONFETTI_HALLOWEEN, CONFETTI_HALLOWEEN_CARPET);
         blockStateModelGenerator.registerWoolAndCarpet(CONFETTI_VALENTINES, CONFETTI_VALENTINES_CARPET);
 
-
+        blockStateModelGenerator.registerSimpleCubeAll(GLOWSHROOM_CAP);
         createLogWithVariants(GLOWSHROOM_LOG, 4, blockStateModelGenerator);
         createWoodWithVariants(GLOWSHROOM_WOOD, GLOWSHROOM_LOG, 4, blockStateModelGenerator);
         createLogWithVariants(STRIPPED_GLOWSHROOM_LOG, 4, blockStateModelGenerator);
         createWoodWithVariants(STRIPPED_GLOWSHROOM_WOOD, STRIPPED_GLOWSHROOM_LOG, 4, blockStateModelGenerator);
         createCubeWithVariants(GLOWSHROOM_HYMENOPHORE, 3, blockStateModelGenerator);
+        blockStateModelGenerator.blockStateCollector.accept(
+                crystalCluster(GLOWSHROOM_SAPLING, blockStateModelGenerator)
+        );
+        blockStateModelGenerator.blockStateCollector.accept(
+                crystalCluster(GLOWSHROOM_FUR, blockStateModelGenerator)
+        );
 
+        blockStateModelGenerator.registerSimpleCubeAll(ANCHOR_LEAVES);
         createLogWithVariants(ANCHOR_LOG, 2, blockStateModelGenerator);
         createWoodWithVariants(ANCHOR_WOOD, ANCHOR_LOG, 2, blockStateModelGenerator);
         createLogWithVariants(STRIPPED_ANCHOR_LOG, 2, blockStateModelGenerator);
@@ -370,7 +397,38 @@ public class GCModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerHangingSign(EBONY_LOG, EBONY_HANGING_SIGN, EBONY_WALL_HANGING_SIGN);
 
-        blockStateModelGenerator.registerLog(BLUE_ENCHANTED_LOG).log(BLUE_ENCHANTED_LOG).wood(BLUE_ENCHANTED);
+        blockStateModelGenerator.registerSimpleCubeAll(BLUE_ENCHANTED_IMBUED_WOOD);
+        blockStateModelGenerator.registerLog(BLUE_ENCHANTED_LOG).log(BLUE_ENCHANTED_LOG).wood(BLUE_ENCHANTED_WOOD);
+        blockStateModelGenerator.registerLog(GLOWING_BLUE_ENCHANTED_LOG).log(GLOWING_BLUE_ENCHANTED_LOG).wood(GLOWING_BLUE_ENCHANTED_WOOD);
+        blockStateModelGenerator.registerLog(STRIPPED_BLUE_ENCHANTED_LOG).log(STRIPPED_BLUE_ENCHANTED_LOG).wood(STRIPPED_BLUE_ENCHANTED_WOOD);
+        blockStateModelGenerator.blockStateCollector.accept(
+                crystalCluster(BLUE_ENCHANTED_SAPLING, blockStateModelGenerator)
+        );
+
+        blockStateModelGenerator.registerSimpleCubeAll(LAMENT_LEAVES);
+        blockStateModelGenerator.registerLog(LAMENT_LOG).log(LAMENT_LOG).wood(LAMENT_WOOD);
+        blockStateModelGenerator.registerLog(STRIPPED_LAMENT_LOG).log(STRIPPED_LAMENT_LOG).wood(STRIPPED_LAMENT_WOOD);
+        blockStateModelGenerator.registerHangingSign(LAMENT_LOG, LAMENT_HANGING_SIGN, LAMENT_WALL_HANGING_SIGN);
+        blockStateModelGenerator.blockStateCollector.accept(
+                crystalCluster(LAMENT_SAPLING, blockStateModelGenerator)
+        );
+
+        blockStateModelGenerator.registerSimpleCubeAll(SKYRIS_LEAVES);
+        blockStateModelGenerator.registerLog(SKYRIS_LOG).log(SKYRIS_LOG).wood(SKYRIS_WOOD);
+        blockStateModelGenerator.registerLog(STRIPPED_SKYRIS_LOG).log(STRIPPED_SKYRIS_LOG).wood(STRIPPED_SKYRIS_WOOD);
+        blockStateModelGenerator.registerHangingSign(SKYRIS_LOG, SKYRIS_HANGING_SIGN, SKYRIS_WALL_HANGING_SIGN);
+        blockStateModelGenerator.blockStateCollector.accept(
+                crystalCluster(SKYRIS_SAPLING, blockStateModelGenerator)
+        );
+
+        blockStateModelGenerator.registerSimpleCubeAll(PALO_VERDE_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(PALO_VERDE_LEAVES_FLOWERING);
+        blockStateModelGenerator.registerLog(PALO_VERDE_LOG).log(PALO_VERDE_LOG).wood(PALO_VERDE_WOOD);
+        blockStateModelGenerator.registerLog(STRIPPED_PALO_VERDE_LOG).log(STRIPPED_PALO_VERDE_LOG).wood(STRIPPED_PALO_VERDE_WOOD);
+        blockStateModelGenerator.blockStateCollector.accept(
+                crystalCluster(PALO_VERDE_SAPLING, blockStateModelGenerator)
+        );
+        
         blockStateModelGenerator.registerLog(TANGLEWOOD_LOG).log(TANGLEWOOD_LOG).wood(TANGLEWOOD);
 
         blockStateModelGenerator.registerSimpleCubeAll(WEEPING_BARK);
@@ -524,6 +582,7 @@ public class GCModelProvider extends FabricModelProvider {
 
         registerGeneratedItem(DARK_CHERRY_SIGN.asItem(), "", itemModelGenerator);
         registerGeneratedItem(EBONY_SIGN.asItem(), "", itemModelGenerator);
+        registerGeneratedItem(BLUE_ENCHANTED_SIGN.asItem(), "", itemModelGenerator);
 
         GCItems.GENERIC_FOODS_SET.forEach(item -> {
             registerGeneratedItem(item, "foods/", itemModelGenerator);

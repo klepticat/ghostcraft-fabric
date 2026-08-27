@@ -9,12 +9,24 @@ import net.minecraft.util.Identifier;
 import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
 
 public class GCSounds {
-    public static final SoundEvent DIRE_CHARGE = register("dire_charge");
+    public static final SoundEvent CHAOS_CHARGE = register("chaos_charge");
     public static final SoundEvent MAGIC_CHARGE = register("magic_charge");
     public static final SoundEvent ETHEREAL_CHARGE = register("ethereal_charge");
     public static final SoundEvent POTENT_CHARGE = register("potent_charge");
+    public static final SoundEvent BRAVE_CHARGE = register("brave_charge");
+    public static final SoundEvent CHARM_CHARGE = register("charm_charge");
+    public static final SoundEvent CLEAN_CHARGE = register("clean_charge");
+    public static final SoundEvent DEATHLY_CHARGE = register("deathly_charge");
+    public static final SoundEvent LIVING_CHARGE = register("living_charge");
+    public static final SoundEvent UNITED_CHARGE = register("united_charge");
+    public static final SoundEvent BALANCED_CHARGE = register("balanced_charge");
     public static final SoundEvent TOTEM_PLACE = register("totem_place");
     public static final SoundEvent GRAPPLE = register("grapple");
+
+    public static final RegistryEntry.Reference<SoundEvent> INSTRUMENT_DAWNSONG = registerReference("dawnsong");
+    public static final RegistryEntry.Reference<SoundEvent> DUSKSONG = registerReference("dusksong");
+    public static final RegistryEntry.Reference<SoundEvent> HEALINGSONG = registerReference("healingsong");
+    public static final RegistryEntry.Reference<SoundEvent> STORMSONG = registerReference("stormsong");
 
     public static final RegistryEntry.Reference<SoundEvent> INSTRUMENT_MEI_FLUTE = registerReference("mei_flute");
     public static final RegistryEntry.Reference<SoundEvent> INSTRUMENT_VIC_FLUTE = registerReference("vic_flute");

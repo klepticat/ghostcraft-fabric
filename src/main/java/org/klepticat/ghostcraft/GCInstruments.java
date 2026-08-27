@@ -12,6 +12,12 @@ import net.minecraft.util.Identifier;
 import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
 
 public class GCInstruments {
+
+    public static final RegistryKey<Instrument> DUSK_STONE = register("dusk_stone", GCSounds.INSTRUMENT_DAWNSONG);
+    public static final RegistryKey<Instrument> DAWN_STONE = register("dawn_stone", GCSounds.DUSKSONG);
+    public static final RegistryKey<Instrument> THUNDER_STONE = register("thunder_stone", GCSounds.STORMSONG);
+    public static final RegistryKey<Instrument> LIGHT_STONE = register("light_stone", GCSounds.HEALINGSONG);
+
     public static final RegistryKey<Instrument> MEI_FLUTE = register("mei_flute", GCSounds.INSTRUMENT_MEI_FLUTE);
     public static final RegistryKey<Instrument> VIC_FLUTE = register("vic_flute", GCSounds.INSTRUMENT_VIC_FLUTE);
     public static final RegistryKey<Instrument> LIMBY_TOOT_TOOT = register("limby_toot_toot", GCSounds.INSTRUMENT_LIMBY_TOOT_TOOT);

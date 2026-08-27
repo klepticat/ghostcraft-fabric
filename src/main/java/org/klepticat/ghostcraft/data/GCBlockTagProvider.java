@@ -107,7 +107,10 @@ public class GCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         GCBlocks.PURPLE_TERRACOTTA_BRICK_WALL,
 
 
-                        TANGLEWOOD_SET.get(BlockType.WALL)
+                        TANGLEWOOD_SET.get(BlockType.WALL),
+                        BLUE_ENCHANTED_SET.get(BlockType.WALL),
+                        LAMENT_SET.get(BlockType.WALL),
+                        SKYRIS_SET.get(BlockType.WALL)
                 );
     }
 }

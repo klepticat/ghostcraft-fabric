@@ -117,7 +117,7 @@ public class GCItems {
         public static final Item HEXPHAE_WHISPER = register("hexphae_whisper", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)));
         public static final Item ICICLE_BOW = register("icicle_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)));
         public static final Item JADE_BLOWPIPE = register("jade_blowpipe", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.CLEAN)));
-        public static final Item MONARCH_YUMI = register("jade_blowpipe", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)));
+        public static final Item MONARCH_YUMI = register("monarch_yumi", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)));
         public static final Item MOSAIC_BOW = register("mosaic_bow", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)));
         public static final Item NIGHTSHINE_GRAPPLER = register("nightshine_grappler", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.DEATHLY)));
         public static final Item SCRAP_PISTOL = register("scrap_pistol", new BowItem(new Item.Settings().maxCount(1).component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)));
@@ -2923,7 +2923,6 @@ public class GCItems {
                         20.0f,
                         ((short) 600),
                         20,
-                        TotemData.TotemParticle.makeDustParticle(0, 0, 0, 0),
                         StatusEffects.INVISIBILITY,
                         (byte) 0,
                         new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)
@@ -3742,7 +3741,7 @@ public class GCItems {
                         -2.4f
                 )).component(GCDataComponents.GC_RARITY, ExtendedRarity.LIVING)
         ));
-        public static final Item SOVEREIGN_MIGHT = register("silver_zweihander", new MeleeWeaponItem(
+        public static final Item SOVEREIGN_MIGHT = register("soverein_might", new MeleeWeaponItem(
                 ToolMaterials.WOOD,
                 new Item.Settings().attributeModifiers(MeleeWeaponItem.createAttributeModifiers(
                         ToolMaterials.WOOD,
@@ -4378,6 +4377,13 @@ public class GCItems {
     public static final Item DARK_CHERRY_HANGING_SIGN = register("dark_cherry_hanging_sign", new HangingSignItem(GCBlocks.DARK_CHERRY_HANGING_SIGN, GCBlocks.DARK_CHERRY_WALL_HANGING_SIGN, new Item.Settings()));
     public static final Item EBONY_SIGN = register("ebony_sign", new SignItem(new Item.Settings(), GCBlocks.EBONY_SIGN, GCBlocks.EBONY_WALL_SIGN));
     public static final Item EBONY_HANGING_SIGN = register("ebony_hanging_sign", new HangingSignItem(GCBlocks.EBONY_HANGING_SIGN, GCBlocks.EBONY_WALL_HANGING_SIGN, new Item.Settings()));
+    public static final Item BLUE_ENCHANTED_SIGN = register("blue_enchanted_sign", new SignItem(new Item.Settings(), GCBlocks.BLUE_ENCHANTED_SIGN, GCBlocks.BLUE_ENCHANTED_WALL_SIGN));
+    public static final Item BLUE_ENCHANTED_HANGING_SIGN = register("blue_enchanted_hanging_sign", new HangingSignItem(GCBlocks.BLUE_ENCHANTED_HANGING_SIGN, GCBlocks.BLUE_ENCHANTED_WALL_HANGING_SIGN, new Item.Settings()));
+    public static final Item LAMENT_SIGN = register("lament_sign", new SignItem(new Item.Settings(), GCBlocks.LAMENT_SIGN, GCBlocks.LAMENT_WALL_SIGN));
+    public static final Item LAMENT_HANGING_SIGN = register("lament_hanging_sign", new HangingSignItem(GCBlocks.LAMENT_HANGING_SIGN, GCBlocks.LAMENT_WALL_HANGING_SIGN, new Item.Settings()));
+    public static final Item SKYRIS_SIGN = register("skyris_sign", new SignItem(new Item.Settings(), GCBlocks.SKYRIS_SIGN, GCBlocks.SKYRIS_WALL_SIGN));
+    public static final Item SKYRIS_HANGING_SIGN = register("skyris_hanging_sign", new HangingSignItem(GCBlocks.SKYRIS_HANGING_SIGN, GCBlocks.SKYRIS_WALL_HANGING_SIGN, new Item.Settings()));
+
 
     // FOODS
     private static final FoodComponent trashFood = new FoodComponent.Builder().nutrition(1).saturationModifier(0.5f).alwaysEdible().build();
@@ -4933,10 +4939,10 @@ public class GCItems {
     public static final Item LEWIS = register("lewis", new Item(new Item.Settings()));
     public static final Item PERCIVAL = register("percival", new Item(new Item.Settings()));
     public static final Item PETUNIA = register("petunia", new Item(new Item.Settings()));
-    public static final Item STEPHANIE = register("stephanine", new Item(new Item.Settings()));
+    public static final Item STEPHANIE = register("stephanie", new Item(new Item.Settings()));
     public static final Item STEVEN = register("steven", new Item(new Item.Settings()));
     public static final Item VANESSA = register("vanessa", new Item(new Item.Settings()));
-    public static final Item WESLEY = register("weasley", new Item(new Item.Settings()));
+    public static final Item WESLEY = register("wesley", new Item(new Item.Settings()));
     public static final Item SCRUNGLEPOCKETLARGE = register("scrunglepocketlarge", new Item(new Item.Settings()));
 
 
@@ -4968,6 +4974,8 @@ public class GCItems {
     public static final Item FAIRY_RED = registerWithSet("fairy_red", new Item(new Item.Settings()), CRITTER_SET);
     public static final Item FAIRY_YELLOW = registerWithSet("fairy_yellow", new Item(new Item.Settings()), CRITTER_SET);
     public static final Item FAIRY_PURPLE = registerWithSet("fairy_purple", new Item(new Item.Settings()), CRITTER_SET);
+    public static final Item TINY_SCRUNKLE = registerWithSet("tiny_scrunkle", new Item(new Item.Settings()), CRITTER_SET);
+
 
     //INVMON
     public static HashSet<Item> INVMON_SET = new HashSet<>();
@@ -5176,16 +5184,16 @@ public class GCItems {
     // EVO STONES
     public static final HashSet<Item> EVO_SET = new HashSet<>();
 
-    public static final Item DAWN_STONE = registerWithSet("dawn_stone", new Item(new Item.Settings()), EVO_SET);
-    public static final Item DUSK_STONE = registerWithSet("dusk_stone", new Item(new Item.Settings()), EVO_SET);
+    public static final Item DAWN_STONE = registerWithSet("dawn_stone", new GoatHornItem(new Item.Settings(), InstrumentTags.GOAT_HORNS), EVO_SET);
+    public static final Item DUSK_STONE = registerWithSet("dusk_stone", new GoatHornItem(new Item.Settings(), InstrumentTags.GOAT_HORNS), EVO_SET);
     public static final Item EARTH_STONE = registerWithSet("earth_stone", new Item(new Item.Settings()), EVO_SET);
     public static final Item FIRE_STONE = registerWithSet("fire_stone", new Item(new Item.Settings()), EVO_SET);
     public static final Item ICE_STONE = registerWithSet("ice_stone", new Item(new Item.Settings()), EVO_SET);
-    public static final Item LIGHT_STONE = registerWithSet("light_stone", new Item(new Item.Settings()), EVO_SET);
+    public static final Item LIGHT_STONE = registerWithSet("light_stone", new GoatHornItem(new Item.Settings(), InstrumentTags.GOAT_HORNS), EVO_SET);
     public static final Item MOON_STONE = registerWithSet("moon_stone", new Item(new Item.Settings()), EVO_SET);
-    public static final Item SUN_STONE = registerWithSet("sun_stone", new Item(new Item.Settings()), EVO_SET);
-    public static final Item THUNDER_STONE = registerWithSet("thunder_stone", new Item(new Item.Settings()), EVO_SET);
-    public static final Item WATER_STONE = registerWithSet("water_stone", new Item(new Item.Settings()), EVO_SET);
+    public static final Item SUN_STONE = registerWithSet("sun_stone", new GoatHornItem(new Item.Settings(), InstrumentTags.GOAT_HORNS), EVO_SET);
+    public static final Item THUNDER_STONE = registerWithSet("thunder_stone", new GoatHornItem(new Item.Settings(), InstrumentTags.GOAT_HORNS), EVO_SET);
+    public static final Item WATER_STONE = registerWithSet("water_stone", new GoatHornItem(new Item.Settings(), InstrumentTags.GOAT_HORNS), EVO_SET);
 
     // MOB DROPS
     public static final Item ARTHROPOD_CHUNK = register("arthropod_chunk", new Item(new Item.Settings()));
@@ -5973,6 +5981,18 @@ public static final HashSet<Item> SPELLCRAFT_SET = new HashSet<>();
     public static final Item RUNE_TOL = registerWithSet("rune_tol", new Item(new Item.Settings()), SPELLCRAFT_SET);
     public static final Item RUNE_UTH = registerWithSet("rune_uth", new Item(new Item.Settings()), SPELLCRAFT_SET);
 
+    public static final Item WARD_CYAN = registerWithSet("ward_cyan", new Item(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.ETHEREAL)), SPELLCRAFT_SET);
+    public static final Item WARD_RED = registerWithSet("ward_red", new Item(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHAOS)), SPELLCRAFT_SET);
+    public static final Item WARD_PURPLE = registerWithSet("ward_purple", new Item(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.POTENT)), SPELLCRAFT_SET);
+    public static final Item WARD_GREEN = registerWithSet("ward_green", new Item(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.MAGIC)), SPELLCRAFT_SET);
+    public static final Item WARD_ORANGE = registerWithSet("ward_orange", new Item(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.BRAVE)), SPELLCRAFT_SET);
+    public static final Item WARD_YELLOW = registerWithSet("ward_yellow", new Item(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CHARM)), SPELLCRAFT_SET);
+    public static final Item WARD_BLACK = registerWithSet("ward_black", new Item(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.DEATHLY)), SPELLCRAFT_SET);
+    public static final Item WARD_WHITE = registerWithSet("ward_white", new Item(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.LIVING)), SPELLCRAFT_SET);
+    public static final Item WARD_PINK = registerWithSet("ward_pink", new Item(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.UNITED)), SPELLCRAFT_SET);
+    public static final Item WARD_BLUE = registerWithSet("ward_blue", new Item(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.BALANCED)), SPELLCRAFT_SET);
+    public static final Item WARD_MAGENTA = registerWithSet("ward_magenta", new Item(new Item.Settings().component(GCDataComponents.GC_RARITY, ExtendedRarity.CLEAN)), SPELLCRAFT_SET);
+
     public static final Item CONTRACT = registerWithSet("contract", new Item(new Item.Settings()), SPELLCRAFT_SET);
     public static final Item INKWELL = registerWithSet("inkwell", new Item(new Item.Settings()), SPELLCRAFT_SET);
     public static final Item NETHER_PAPER = registerWithSet("nether_paper", new Item(new Item.Settings()), SPELLCRAFT_SET);
@@ -6024,7 +6044,6 @@ public static final HashSet<Item> MISC_SET = new HashSet<>();
     public static final Item CROSS = registerWithSet("cross", new Item(new Item.Settings()), MISC_SET);
     public static final Item ONE_UP_GREEN = registerWithSet("one_up_green", new Item(new Item.Settings().food(goodFood)), MISC_SET);
     public static final Item ONE_UP_RED = registerWithSet("one_up_red", new Item(new Item.Settings().food(goodFood)), MISC_SET);
-
 
 
 

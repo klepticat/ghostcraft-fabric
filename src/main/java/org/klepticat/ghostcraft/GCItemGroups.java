@@ -1,6 +1,7 @@
 package org.klepticat.ghostcraft;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.block.CryingObsidianBlock;
 import net.minecraft.item.GoatHornItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -24,24 +25,44 @@ public class GCItemGroups {
     private static final ItemGroup GC_BLOCKS = register("blocks", FabricItemGroup.builder()
             .icon(GCBlocks.EBONY_LOG.asItem()::getDefaultStack)
             .entries((displayContext, entries) -> {
-                entries.add(ADENDA_LEAVES);
-                entries.add(ENCHANTED_LEAVES);
 
                 entries.add(ANCIENT_OAK_DOOR);
                 entries.add(BOSS_DOOR);
 
-                entries.add(AURITE);
                 entries.add(AURORA_CRYSTAL);
+                entries.add(AURITE);
+
                 entries.add(BLEEDING_COIL);
-                entries.add(CANDY_CANE);
-                entries.add(CABBAGE_BLOCK);
-                entries.add(CHOGGY_BLOGGY);
-                entries.add(END_MOSS);
+                entries.add(PERDITE);
+                entries.add(BLAZONITE);
+                entries.add(APHRODITE);
+                entries.add(UNUSITE);
+                entries.add(ANNUSITE);
+                entries.add(AMICA);
+                entries.add(STRATOS);
+                entries.add(PAXIA);
+
                 entries.add(NOISE);
+                entries.add(STILLNOISE);
+                entries.add(NOISE_UNSTABLE);
                 entries.add(VOID);
 
                 entries.add(CHECK_MARK);
                 entries.add(X_MARK);
+
+                entries.add(CANDY_CANE);
+                entries.add(CABBAGE_BLOCK);
+                entries.add(CHOGGY_BLOGGY);
+
+                entries.add(BRIMSTONE);
+                entries.add(BLUE_SAND);
+                entries.add(SUBZERO_ASH);
+                entries.add(END_MOSS);
+                entries.add(WAILING_NYLIUM);
+                entries.add(SHULKREN_PHYLIUM);
+                entries.add(NIGHTSHADE_PHYLIUM);
+                entries.add(GLOOMY_GRASS);
+                entries.add(GLOOMY_SOIL);
 
                 entries.add(LIGHT_COBBLED_DREADSTONE);
                 entries.add(LIGHT_COBBLED_DREADSTONE_STAIRS);
@@ -201,6 +222,8 @@ public class GCItemGroups {
                 entries.add(WATCHFUL_ASPEN);
                 entries.add(WEEPING_BARK);
 
+                entries.add(ADENDA_LEAVES);
+
                 entries.add(DARK_CHERRY_LOG);
                 entries.add(DARK_CHERRY_WOOD);
                 entries.add(STRIPPED_DARK_CHERRY_LOG);
@@ -233,10 +256,74 @@ public class GCItemGroups {
                 entries.add(GCItems.EBONY_SIGN);
                 entries.add(GCItems.EBONY_HANGING_SIGN);
 
+                entries.add(ENCHANTED_LEAVES);
+                entries.add(BLUE_ENCHANTED_SAPLING);
+                entries.add(BLUE_ENCHANTED_IMBUED_WOOD);
                 entries.add(BLUE_ENCHANTED_LOG);
-                entries.add(BLUE_ENCHANTED);
+                entries.add(BLUE_ENCHANTED_WOOD);
+                entries.add(GLOWING_BLUE_ENCHANTED_LOG);
+                entries.add(GLOWING_BLUE_ENCHANTED_WOOD);
                 entries.add(STRIPPED_BLUE_ENCHANTED_LOG);
+                entries.add(STRIPPED_BLUE_ENCHANTED_WOOD);
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.CUBE));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.STAIRS));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.SLAB));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.FENCE));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.GATE));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.DOOR));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.TRAPDOOR));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.PRESSURE_PLATE));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.BUTTON));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.WALL));
+                entries.add(GCItems.BLUE_ENCHANTED_SIGN);
+                entries.add(GCItems.BLUE_ENCHANTED_HANGING_SIGN);
 
+                entries.add(LAMENT_SAPLING);
+                entries.add(LAMENT_LEAVES);
+                entries.add(LAMENT_LOG);
+                entries.add(LAMENT_WOOD);
+                entries.add(STRIPPED_LAMENT_LOG);
+                entries.add(STRIPPED_LAMENT_WOOD);
+                entries.add(LAMENT_SET.get(BlockType.CUBE));
+                entries.add(LAMENT_SET.get(BlockType.STAIRS));
+                entries.add(LAMENT_SET.get(BlockType.SLAB));
+                entries.add(LAMENT_SET.get(BlockType.FENCE));
+                entries.add(LAMENT_SET.get(BlockType.GATE));
+                entries.add(LAMENT_SET.get(BlockType.DOOR));
+                entries.add(LAMENT_SET.get(BlockType.TRAPDOOR));
+                entries.add(LAMENT_SET.get(BlockType.PRESSURE_PLATE));
+                entries.add(LAMENT_SET.get(BlockType.BUTTON));
+                entries.add(LAMENT_SET.get(BlockType.WALL));
+                entries.add(GCItems.LAMENT_SIGN);
+                entries.add(GCItems.LAMENT_HANGING_SIGN);
+
+
+                entries.add(PALO_VERDE_SAPLING);
+                entries.add(PALO_VERDE_LEAVES_FLOWERING);
+                entries.add(PALO_VERDE_LEAVES);
+                entries.add(PALO_VERDE_LOG);
+                entries.add(PALO_VERDE_WOOD);
+                entries.add(STRIPPED_PALO_VERDE_LOG);
+                entries.add(STRIPPED_PALO_VERDE_WOOD);
+                
+                entries.add(SKYRIS_SAPLING);
+                entries.add(SKYRIS_LOG);
+                entries.add(SKYRIS_WOOD);
+                entries.add(STRIPPED_SKYRIS_LOG);
+                entries.add(STRIPPED_SKYRIS_WOOD);
+                entries.add(SKYRIS_SET.get(BlockType.CUBE));
+                entries.add(SKYRIS_SET.get(BlockType.STAIRS));
+                entries.add(SKYRIS_SET.get(BlockType.SLAB));
+                entries.add(SKYRIS_SET.get(BlockType.FENCE));
+                entries.add(SKYRIS_SET.get(BlockType.GATE));
+                entries.add(SKYRIS_SET.get(BlockType.DOOR));
+                entries.add(SKYRIS_SET.get(BlockType.TRAPDOOR));
+                entries.add(SKYRIS_SET.get(BlockType.PRESSURE_PLATE));
+                entries.add(SKYRIS_SET.get(BlockType.BUTTON));
+                entries.add(SKYRIS_SET.get(BlockType.WALL));
+                entries.add(GCItems.SKYRIS_SIGN);
+                entries.add(GCItems.SKYRIS_HANGING_SIGN);
+                
                 entries.add(TANGLEWOOD_LOG);
                 entries.add(TANGLEWOOD);
                 entries.add(TANGLEWOOD_SET.get(BlockType.CUBE));
@@ -244,10 +331,17 @@ public class GCItemGroups {
                 entries.add(TANGLEWOOD_SET.get(BlockType.SLAB));
                 entries.add(TANGLEWOOD_SET.get(BlockType.FENCE));
                 entries.add(TANGLEWOOD_SET.get(BlockType.GATE));
+               // entries.add(TANGLEWOOD_SET.get(BlockType.DOOR));
+              //  entries.add(TANGLEWOOD_SET.get(BlockType.TRAPDOOR));
                 entries.add(TANGLEWOOD_SET.get(BlockType.PRESSURE_PLATE));
                 entries.add(TANGLEWOOD_SET.get(BlockType.BUTTON));
                 entries.add(TANGLEWOOD_SET.get(BlockType.WALL));
+             //   entries.add(GCItems.EBONY_SIGN);
+               // entries.add(GCItems.EBONY_HANGING_SIGN);
 
+                entries.add(GLOWSHROOM_HYMENOPHORE);
+                entries.add(GLOWSHROOM_FUR);
+                entries.add(GLOWSHROOM_SAPLING);
                 entries.add(GLOWSHROOM_LOG);
                 entries.add(GLOWSHROOM_WOOD);
                 entries.add(STRIPPED_GLOWSHROOM_LOG);
@@ -257,8 +351,12 @@ public class GCItemGroups {
                 entries.add(GLOWSHROOM_SET.get(BlockType.SLAB));
                 entries.add(GLOWSHROOM_SET.get(BlockType.FENCE));
                 entries.add(GLOWSHROOM_SET.get(BlockType.GATE));
+                entries.add(GLOWSHROOM_SET.get(BlockType.DOOR));
+                entries.add(GLOWSHROOM_SET.get(BlockType.TRAPDOOR));
                 entries.add(GLOWSHROOM_SET.get(BlockType.PRESSURE_PLATE));
                 entries.add(GLOWSHROOM_SET.get(BlockType.BUTTON));
+            //    entries.add(GCItems.EBONY_SIGN);
+             //   entries.add(GCItems.EBONY_HANGING_SIGN);
 
                 entries.add(ANCHOR_LOG);
                 entries.add(ANCHOR_WOOD);
@@ -273,6 +371,11 @@ public class GCItemGroups {
                 entries.add(ANCHOR_SET.get(BlockType.TRAPDOOR));
                 entries.add(ANCHOR_SET.get(BlockType.PRESSURE_PLATE));
                 entries.add(ANCHOR_SET.get(BlockType.BUTTON));
+              //  entries.add(GCItems.EBONY_SIGN);
+              //  entries.add(GCItems.EBONY_HANGING_SIGN);
+
+
+
 
                 entries.add(COOKING_POT);
                 entries.add(COOKING_POT_HANDLE);
@@ -743,7 +846,16 @@ public class GCItemGroups {
             .icon(FIRE_OPAL::getDefaultStack)
             .entries((displayContext, entries) -> {
                 entries.addAll(toList(GEMSTONE_SET));
-                entries.addAll(toList(EVO_SET));
+                entries.add(GoatHornItem.getStackForInstrument(DUSK_STONE, Registries.INSTRUMENT.entryOf(GCInstruments.DUSK_STONE)));
+                entries.add(GoatHornItem.getStackForInstrument(DAWN_STONE, Registries.INSTRUMENT.entryOf(GCInstruments.DAWN_STONE)));
+                entries.add(EARTH_STONE);
+                entries.add(FIRE_STONE);
+                entries.add(ICE_STONE);
+                entries.add(GoatHornItem.getStackForInstrument(LIGHT_STONE, Registries.INSTRUMENT.entryOf(GCInstruments.LIGHT_STONE)));
+                entries.add(MOON_STONE);
+                entries.add(GoatHornItem.getStackForInstrument(SUN_STONE, Registries.INSTRUMENT.entryOf(GCInstruments.THUNDER_STONE)));
+                entries.add(GoatHornItem.getStackForInstrument(WATER_STONE, Registries.INSTRUMENT.entryOf(GCInstruments.THUNDER_STONE)));
+                entries.add(GoatHornItem.getStackForInstrument(THUNDER_STONE, Registries.INSTRUMENT.entryOf(GCInstruments.THUNDER_STONE)));
                 entries.addAll(toList(BAR_SET));
             })
     );

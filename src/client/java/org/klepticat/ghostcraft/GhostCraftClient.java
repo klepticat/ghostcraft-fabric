@@ -176,11 +176,30 @@ public class GhostCraftClient implements ClientModInitializer {
 
 
 
+        BlockRenderLayerMap.INSTANCE.putBlock(COOKING_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(COOKING_POT_HANDLE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(COOKING_POT_TRAY, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(LAMENT_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(LAMENT_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(LAMENT_SET.get(BlockType.DOOR), RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(BLUE_ENCHANTED_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BLUE_ENCHANTED_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BLUE_ENCHANTED_SET.get(BlockType.DOOR), RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(SKYRIS_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(SKYRIS_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(SKYRIS_SET.get(BlockType.DOOR), RenderLayer.getCutout());
+        
         BlockRenderLayerMap.INSTANCE.putBlock(DARK_CHERRY_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(GLOWSHROOM_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GLOWSHROOM_SET.get(BlockType.DOOR), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GLOWSHROOM_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GLOWSHROOM_FUR, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(PALO_VERDE_SAPLING, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_TRAPDOOR, RenderLayer.getCutout());
