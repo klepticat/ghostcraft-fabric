@@ -23,7 +23,7 @@ public class GCSounds {
     public static final SoundEvent TOTEM_PLACE = register("totem_place");
     public static final SoundEvent GRAPPLE = register("grapple");
 
-    public static final RegistryEntry.Reference<SoundEvent> INSTRUMENT_DAWNSONG = registerReference("dawnsong");
+    public static final RegistryEntry.Reference<SoundEvent> DAWNSONG = registerReference("dawnsong");
     public static final RegistryEntry.Reference<SoundEvent> DUSKSONG = registerReference("dusksong");
     public static final RegistryEntry.Reference<SoundEvent> HEALINGSONG = registerReference("healingsong");
     public static final RegistryEntry.Reference<SoundEvent> STORMSONG = registerReference("stormsong");

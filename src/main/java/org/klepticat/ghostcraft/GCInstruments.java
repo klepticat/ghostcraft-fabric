@@ -13,8 +13,8 @@ import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
 
 public class GCInstruments {
 
-    public static final RegistryKey<Instrument> DUSK_STONE = register("dusk_stone", GCSounds.INSTRUMENT_DAWNSONG);
-    public static final RegistryKey<Instrument> DAWN_STONE = register("dawn_stone", GCSounds.DUSKSONG);
+    public static final RegistryKey<Instrument> DUSK_STONE = register("dusk_stone", GCSounds.DUSKSONG);
+    public static final RegistryKey<Instrument> DAWN_STONE = register("dawn_stone", GCSounds.DAWNSONG);
     public static final RegistryKey<Instrument> THUNDER_STONE = register("thunder_stone", GCSounds.STORMSONG);
     public static final RegistryKey<Instrument> LIGHT_STONE = register("light_stone", GCSounds.HEALINGSONG);
 
