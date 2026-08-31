@@ -50,6 +50,30 @@ public class GCItemGroups {
                 entries.add(CHECK_MARK);
                 entries.add(X_MARK);
 
+                entries.add(COOKING_POT);
+                entries.add(COOKING_POT_HANDLE);
+                entries.add(COOKING_POT_TRAY);
+
+                entries.add(APPLE_CRATE);
+                entries.add(CABBAGE_CRATE);
+                entries.add(BEETROOT_CRATE);
+                entries.add(GOLDEN_APPLE_CRATE);
+                entries.add(GOLDEN_CARROT_CRATE);
+                entries.add(CARROT_CRATE);
+                entries.add(CARROT_CRATE_SPRUCE);
+                entries.add(POTATO_CRATE);
+                entries.add(POTATO_CRATE_SPRUCE);
+                entries.add(TOMATO_CRATE);
+                entries.add(ONION_CRATE);
+                entries.add(BERRY_SACK);
+                entries.add(RICE_BAG);
+                entries.add(RICE_BALE);
+                entries.add(STRAW_BALE);
+                entries.add(COCOA_BEANS_SACK);
+                entries.add(GLOWBERRY_SACK);
+                entries.add(GUNPOWDER_SACK);
+                entries.add(NETHER_WART_SACK);
+
                 entries.add(CANDY_CANE);
                 entries.add(CABBAGE_BLOCK);
                 entries.add(CHOGGY_BLOGGY);
@@ -142,6 +166,7 @@ public class GCItemGroups {
                 entries.add(DREADSTONE_GLASS_PURPLE);
                 entries.add(DREADSTONE_GLASS_RED);
                 entries.add(DREADSTONE_GLASS_SOUL);
+                entries.add(MAGIC_ASSIST);
                 entries.add(DREADSTONE_GLASS_WHITE);
                 entries.add(DREADSTONE_GLASS_YELLOW);
                 entries.add(DREADSTONE_BARS);
@@ -158,28 +183,63 @@ public class GCItemGroups {
                 entries.add(DREADWOOD_TRAPDOOR);
 
                 entries.add(SOUL_QUARTZ_BLOCK);
+                entries.add(SOUL_QUARTZ_BLOCK_STAIRS);
+                entries.add(SOUL_QUARTZ_BLOCK_SLAB);
+                entries.add(SOUL_QUARTZ_BLOCK_WALL);
                 entries.add(SMOOTH_SOUL_QUARTZ);
+                entries.add(SMOOTH_SOUL_QUARTZ_STAIRS);
+                entries.add(SMOOTH_SOUL_QUARTZ_SLAB);
+                entries.add(SMOOTH_SOUL_QUARTZ_WALL);
                 entries.add(SOUL_QUARTZ_BRICKS);
+                entries.add(SOUL_QUARTZ_BRICKS_STAIRS);
+                entries.add(SOUL_QUARTZ_BRICKS_SLAB);
+                entries.add(SOUL_QUARTZ_BRICKS_WALL);
                 entries.add(CRACKED_SOUL_QUARTZ_BRICKS);
+                entries.add(CRACKED_SOUL_QUARTZ_BRICKS_STAIRS);
+                entries.add(CRACKED_SOUL_QUARTZ_BRICKS_SLAB);
+                entries.add(CRACKED_SOUL_QUARTZ_BRICKS_WALL);
                 entries.add(SOUL_QUARTZ_PILLAR);
 
 
                 entries.add(SMOOTH_LAPIS_BLOCK);
+                entries.add(SMOOTH_LAPIS_BLOCK_STAIRS);
+                entries.add(SMOOTH_LAPIS_BLOCK_SLAB);
+                entries.add(SMOOTH_LAPIS_BLOCK_WALL);
                 entries.add(LAPIS_BRICKS);
+                entries.add(LAPIS_BRICKS_STAIRS);
+                entries.add(LAPIS_BRICKS_SLAB);
+                entries.add(LAPIS_BRICKS_WALL);
                 entries.add(LAPIS_TILES);
+                entries.add(LAPIS_TILES_STAIRS);
+                entries.add(LAPIS_TILES_SLAB);
+                entries.add(LAPIS_TILES_WALL);
                 entries.add(CHISELED_LAPIS);
                 entries.add(CHISELED_LAPIS_CARPET);
                 entries.add(LAPIS_PILLAR);
 
                 entries.add(GILDED_LAPIS_BLOCK);
+                entries.add(GILDED_LAPIS_BLOCK_STAIRS);
+                entries.add(GILDED_LAPIS_BLOCK_SLAB);
+                entries.add(GILDED_LAPIS_BLOCK_WALL);
                 entries.add(GILDED_LAPIS_BRICKS);
+                entries.add(GILDED_LAPIS_BRICKS_STAIRS);
+                entries.add(GILDED_LAPIS_BRICKS_SLAB);
+                entries.add(GILDED_LAPIS_BRICKS_WALL);
                 entries.add(GILDED_LAPIS_TILES);
+                entries.add(GILDED_LAPIS_TILES_STAIRS);
+                entries.add(GILDED_LAPIS_TILES_SLAB);
+                entries.add(GILDED_LAPIS_TILES_WALL);
                 entries.add(GILDED_FANCY_LAPIS);
+                entries.add(GILDED_FANCY_LAPIS_STAIRS);
+                entries.add(GILDED_FANCY_LAPIS_SLAB);
+                entries.add(GILDED_FANCY_LAPIS_WALL);
                 entries.add(GILDED_LAPIS_PILLAR);
 
                 entries.add(ITERATOR_PULSE);
                 entries.add(ITERATOR_PROJECTION_TILE);
+                entries.add(ITERATOR_PROCESSING_SCREEN_UNPOWERED);
                 entries.add(ITERATOR_PROCESSING_SCREEN);
+                entries.add(ITERATOR_PROCESSING_SCREEN_ERR);
 
                 entries.add(MARBLED_FLESH);
                 entries.add(MARBLED_FLESH_STAIRS);
@@ -219,187 +279,11 @@ public class GCItemGroups {
                 entries.add(SLATE_SLAB);
                 entries.add(SLATE_WALL);
 
-                entries.add(WATCHFUL_ASPEN);
-                entries.add(WEEPING_BARK);
-
-                entries.add(ADENDA_LEAVES);
-
-                entries.add(DARK_CHERRY_LOG);
-                entries.add(DARK_CHERRY_WOOD);
-                entries.add(STRIPPED_DARK_CHERRY_LOG);
-                entries.add(STRIPPED_DARK_CHERRY_WOOD);
-                entries.add(DARK_CHERRY_SET.get(BlockType.CUBE));
-                entries.add(DARK_CHERRY_SET.get(BlockType.STAIRS));
-                entries.add(DARK_CHERRY_SET.get(BlockType.SLAB));
-                entries.add(DARK_CHERRY_SET.get(BlockType.FENCE));
-                entries.add(DARK_CHERRY_SET.get(BlockType.GATE));
-                entries.add(DARK_CHERRY_SET.get(BlockType.DOOR));
-                entries.add(DARK_CHERRY_SET.get(BlockType.TRAPDOOR));
-                entries.add(DARK_CHERRY_SET.get(BlockType.PRESSURE_PLATE));
-                entries.add(DARK_CHERRY_SET.get(BlockType.BUTTON));
-                entries.add(GCItems.DARK_CHERRY_SIGN);
-                entries.add(GCItems.DARK_CHERRY_HANGING_SIGN);
-
-                entries.add(EBONY_LOG);
-                entries.add(EBONY_WOOD);
-                entries.add(STRIPPED_EBONY_LOG);
-                entries.add(STRIPPED_EBONY_WOOD);
-                entries.add(EBONY_SET.get(BlockType.CUBE));
-                entries.add(EBONY_SET.get(BlockType.STAIRS));
-                entries.add(EBONY_SET.get(BlockType.SLAB));
-                entries.add(EBONY_SET.get(BlockType.FENCE));
-                entries.add(EBONY_SET.get(BlockType.GATE));
-                entries.add(EBONY_SET.get(BlockType.DOOR));
-                entries.add(EBONY_SET.get(BlockType.TRAPDOOR));
-                entries.add(EBONY_SET.get(BlockType.PRESSURE_PLATE));
-                entries.add(EBONY_SET.get(BlockType.BUTTON));
-                entries.add(GCItems.EBONY_SIGN);
-                entries.add(GCItems.EBONY_HANGING_SIGN);
-
-                entries.add(ENCHANTED_LEAVES);
-                entries.add(BLUE_ENCHANTED_SAPLING);
-                entries.add(BLUE_ENCHANTED_IMBUED_WOOD);
-                entries.add(BLUE_ENCHANTED_LOG);
-                entries.add(BLUE_ENCHANTED_WOOD);
-                entries.add(GLOWING_BLUE_ENCHANTED_LOG);
-                entries.add(GLOWING_BLUE_ENCHANTED_WOOD);
-                entries.add(STRIPPED_BLUE_ENCHANTED_LOG);
-                entries.add(STRIPPED_BLUE_ENCHANTED_WOOD);
-                entries.add(BLUE_ENCHANTED_SET.get(BlockType.CUBE));
-                entries.add(BLUE_ENCHANTED_SET.get(BlockType.STAIRS));
-                entries.add(BLUE_ENCHANTED_SET.get(BlockType.SLAB));
-                entries.add(BLUE_ENCHANTED_SET.get(BlockType.FENCE));
-                entries.add(BLUE_ENCHANTED_SET.get(BlockType.GATE));
-                entries.add(BLUE_ENCHANTED_SET.get(BlockType.DOOR));
-                entries.add(BLUE_ENCHANTED_SET.get(BlockType.TRAPDOOR));
-                entries.add(BLUE_ENCHANTED_SET.get(BlockType.PRESSURE_PLATE));
-                entries.add(BLUE_ENCHANTED_SET.get(BlockType.BUTTON));
-                entries.add(BLUE_ENCHANTED_SET.get(BlockType.WALL));
-                entries.add(GCItems.BLUE_ENCHANTED_SIGN);
-                entries.add(GCItems.BLUE_ENCHANTED_HANGING_SIGN);
-
-                entries.add(LAMENT_SAPLING);
-                entries.add(LAMENT_LEAVES);
-                entries.add(LAMENT_LOG);
-                entries.add(LAMENT_WOOD);
-                entries.add(STRIPPED_LAMENT_LOG);
-                entries.add(STRIPPED_LAMENT_WOOD);
-                entries.add(LAMENT_SET.get(BlockType.CUBE));
-                entries.add(LAMENT_SET.get(BlockType.STAIRS));
-                entries.add(LAMENT_SET.get(BlockType.SLAB));
-                entries.add(LAMENT_SET.get(BlockType.FENCE));
-                entries.add(LAMENT_SET.get(BlockType.GATE));
-                entries.add(LAMENT_SET.get(BlockType.DOOR));
-                entries.add(LAMENT_SET.get(BlockType.TRAPDOOR));
-                entries.add(LAMENT_SET.get(BlockType.PRESSURE_PLATE));
-                entries.add(LAMENT_SET.get(BlockType.BUTTON));
-                entries.add(LAMENT_SET.get(BlockType.WALL));
-                entries.add(GCItems.LAMENT_SIGN);
-                entries.add(GCItems.LAMENT_HANGING_SIGN);
-
-
-                entries.add(PALO_VERDE_SAPLING);
-                entries.add(PALO_VERDE_LEAVES_FLOWERING);
-                entries.add(PALO_VERDE_LEAVES);
-                entries.add(PALO_VERDE_LOG);
-                entries.add(PALO_VERDE_WOOD);
-                entries.add(STRIPPED_PALO_VERDE_LOG);
-                entries.add(STRIPPED_PALO_VERDE_WOOD);
-                
-                entries.add(SKYRIS_SAPLING);
-                entries.add(SKYRIS_LOG);
-                entries.add(SKYRIS_WOOD);
-                entries.add(STRIPPED_SKYRIS_LOG);
-                entries.add(STRIPPED_SKYRIS_WOOD);
-                entries.add(SKYRIS_SET.get(BlockType.CUBE));
-                entries.add(SKYRIS_SET.get(BlockType.STAIRS));
-                entries.add(SKYRIS_SET.get(BlockType.SLAB));
-                entries.add(SKYRIS_SET.get(BlockType.FENCE));
-                entries.add(SKYRIS_SET.get(BlockType.GATE));
-                entries.add(SKYRIS_SET.get(BlockType.DOOR));
-                entries.add(SKYRIS_SET.get(BlockType.TRAPDOOR));
-                entries.add(SKYRIS_SET.get(BlockType.PRESSURE_PLATE));
-                entries.add(SKYRIS_SET.get(BlockType.BUTTON));
-                entries.add(SKYRIS_SET.get(BlockType.WALL));
-                entries.add(GCItems.SKYRIS_SIGN);
-                entries.add(GCItems.SKYRIS_HANGING_SIGN);
-                
-                entries.add(TANGLEWOOD_LOG);
-                entries.add(TANGLEWOOD);
-                entries.add(TANGLEWOOD_SET.get(BlockType.CUBE));
-                entries.add(TANGLEWOOD_SET.get(BlockType.STAIRS));
-                entries.add(TANGLEWOOD_SET.get(BlockType.SLAB));
-                entries.add(TANGLEWOOD_SET.get(BlockType.FENCE));
-                entries.add(TANGLEWOOD_SET.get(BlockType.GATE));
-               // entries.add(TANGLEWOOD_SET.get(BlockType.DOOR));
-              //  entries.add(TANGLEWOOD_SET.get(BlockType.TRAPDOOR));
-                entries.add(TANGLEWOOD_SET.get(BlockType.PRESSURE_PLATE));
-                entries.add(TANGLEWOOD_SET.get(BlockType.BUTTON));
-                entries.add(TANGLEWOOD_SET.get(BlockType.WALL));
-             //   entries.add(GCItems.EBONY_SIGN);
-               // entries.add(GCItems.EBONY_HANGING_SIGN);
-
-                entries.add(GLOWSHROOM_HYMENOPHORE);
-                entries.add(GLOWSHROOM_FUR);
-                entries.add(GLOWSHROOM_SAPLING);
-                entries.add(GLOWSHROOM_LOG);
-                entries.add(GLOWSHROOM_WOOD);
-                entries.add(STRIPPED_GLOWSHROOM_LOG);
-                entries.add(STRIPPED_GLOWSHROOM_WOOD);
-                entries.add(GLOWSHROOM_SET.get(BlockType.CUBE));
-                entries.add(GLOWSHROOM_SET.get(BlockType.STAIRS));
-                entries.add(GLOWSHROOM_SET.get(BlockType.SLAB));
-                entries.add(GLOWSHROOM_SET.get(BlockType.FENCE));
-                entries.add(GLOWSHROOM_SET.get(BlockType.GATE));
-                entries.add(GLOWSHROOM_SET.get(BlockType.DOOR));
-                entries.add(GLOWSHROOM_SET.get(BlockType.TRAPDOOR));
-                entries.add(GLOWSHROOM_SET.get(BlockType.PRESSURE_PLATE));
-                entries.add(GLOWSHROOM_SET.get(BlockType.BUTTON));
-            //    entries.add(GCItems.EBONY_SIGN);
-             //   entries.add(GCItems.EBONY_HANGING_SIGN);
-
-                entries.add(ANCHOR_LOG);
-                entries.add(ANCHOR_WOOD);
-                entries.add(STRIPPED_ANCHOR_LOG);
-                entries.add(STRIPPED_ANCHOR_WOOD);
-                entries.add(ANCHOR_SET.get(BlockType.CUBE));
-                entries.add(ANCHOR_SET.get(BlockType.STAIRS));
-                entries.add(ANCHOR_SET.get(BlockType.SLAB));
-                entries.add(ANCHOR_SET.get(BlockType.FENCE));
-                entries.add(ANCHOR_SET.get(BlockType.GATE));
-                entries.add(ANCHOR_SET.get(BlockType.DOOR));
-                entries.add(ANCHOR_SET.get(BlockType.TRAPDOOR));
-                entries.add(ANCHOR_SET.get(BlockType.PRESSURE_PLATE));
-                entries.add(ANCHOR_SET.get(BlockType.BUTTON));
-              //  entries.add(GCItems.EBONY_SIGN);
-              //  entries.add(GCItems.EBONY_HANGING_SIGN);
 
 
 
 
-                entries.add(COOKING_POT);
-                entries.add(COOKING_POT_HANDLE);
-                entries.add(COOKING_POT_TRAY);
 
-                entries.add(APPLE_CRATE);
-                entries.add(CABBAGE_CRATE);
-                entries.add(BEETROOT_CRATE);
-                entries.add(GOLDEN_APPLE_CRATE);
-                entries.add(GOLDEN_CARROT_CRATE);
-                entries.add(CARROT_CRATE);
-                entries.add(CARROT_CRATE_SPRUCE);
-                entries.add(POTATO_CRATE);
-                entries.add(POTATO_CRATE_SPRUCE);
-                entries.add(TOMATO_CRATE);
-                entries.add(ONION_CRATE);
-                entries.add(BERRY_SACK);
-                entries.add(RICE_BAG);
-                entries.add(RICE_BALE);
-                entries.add(STRAW_BALE);
-                entries.add(COCOA_BEANS_SACK);
-                entries.add(GLOWBERRY_SACK);
-                entries.add(GUNPOWDER_SACK);
-                entries.add(NETHER_WART_SACK);
 
                 entries.add(BLACK_CORUNDUM);
                 entries.add(BLACK_CORUNDUM_CLUSTER);
@@ -503,10 +387,19 @@ public class GCItemGroups {
                 entries.add(SMARAGDANT_CRYSTAL_SHARD);
                 entries.add(SMARAGDANT_CRYSTAL);
                 entries.add(SMARAGDANT_CRYSTAL_BRICKS);
+                entries.add(SMARAGDANT_CRYSTAL_BRICKS_STAIRS);
+                entries.add(SMARAGDANT_CRYSTAL_BRICKS_SLAB);
+                entries.add(SMARAGDANT_CRYSTAL_BRICKS_WALL);
                 entries.add(SMARAGDANT_CRYSTAL_PILLAR);
                 entries.add(SMARAGDANT_CRYSTAL_TILES);
+                entries.add(SMARAGDANT_CRYSTAL_TILES_STAIRS);
+                entries.add(SMARAGDANT_CRYSTAL_TILES_SLAB);
+                entries.add(SMARAGDANT_CRYSTAL_TILES_WALL);
                 entries.add(BUDDING_SMARAGDANT_CRYSTAL);
                 entries.add(POLISHED_SMARAGDANT_CRYSTAL);
+                entries.add(POLISHED_SMARAGDANT_CRYSTAL_STAIRS);
+                entries.add(POLISHED_SMARAGDANT_CRYSTAL_SLAB);
+                entries.add(POLISHED_SMARAGDANT_CRYSTAL_WALL);
 
                 entries.add(ECHO_SOIL);
                 entries.add(CHISELED_SCULK_STONE);
@@ -543,7 +436,161 @@ public class GCItemGroups {
                 entries.add(SMOOTH_SCULK_STONE_SLAB);
                 entries.add(SMOOTH_SCULK_STONE_WALL);
 
-                entries.add(MAGIC_ASSIST);
+
+                entries.add(WATCHFUL_ASPEN);
+                entries.add(WEEPING_BARK);
+
+                entries.add(ADENDA_LEAVES);
+
+                entries.add(DARK_CHERRY_LOG);
+                entries.add(DARK_CHERRY_WOOD);
+                entries.add(STRIPPED_DARK_CHERRY_LOG);
+                entries.add(STRIPPED_DARK_CHERRY_WOOD);
+                entries.add(DARK_CHERRY_SET.get(BlockType.CUBE));
+                entries.add(DARK_CHERRY_SET.get(BlockType.STAIRS));
+                entries.add(DARK_CHERRY_SET.get(BlockType.SLAB));
+                entries.add(DARK_CHERRY_SET.get(BlockType.FENCE));
+                entries.add(DARK_CHERRY_SET.get(BlockType.GATE));
+                entries.add(DARK_CHERRY_SET.get(BlockType.DOOR));
+                entries.add(DARK_CHERRY_SET.get(BlockType.TRAPDOOR));
+                entries.add(DARK_CHERRY_SET.get(BlockType.PRESSURE_PLATE));
+                entries.add(DARK_CHERRY_SET.get(BlockType.BUTTON));
+                entries.add(GCItems.DARK_CHERRY_SIGN);
+                entries.add(GCItems.DARK_CHERRY_HANGING_SIGN);
+
+                entries.add(EBONY_LOG);
+                entries.add(EBONY_WOOD);
+                entries.add(STRIPPED_EBONY_LOG);
+                entries.add(STRIPPED_EBONY_WOOD);
+                entries.add(EBONY_SET.get(BlockType.CUBE));
+                entries.add(EBONY_SET.get(BlockType.STAIRS));
+                entries.add(EBONY_SET.get(BlockType.SLAB));
+                entries.add(EBONY_SET.get(BlockType.FENCE));
+                entries.add(EBONY_SET.get(BlockType.GATE));
+                entries.add(EBONY_SET.get(BlockType.DOOR));
+                entries.add(EBONY_SET.get(BlockType.TRAPDOOR));
+                entries.add(EBONY_SET.get(BlockType.PRESSURE_PLATE));
+                entries.add(EBONY_SET.get(BlockType.BUTTON));
+                entries.add(GCItems.EBONY_SIGN);
+                entries.add(GCItems.EBONY_HANGING_SIGN);
+
+                entries.add(ENCHANTED_LEAVES);
+                entries.add(BLUE_ENCHANTED_SAPLING);
+                entries.add(BLUE_ENCHANTED_IMBUED_WOOD);
+                entries.add(BLUE_ENCHANTED_LOG);
+                entries.add(BLUE_ENCHANTED_WOOD);
+                entries.add(GLOWING_BLUE_ENCHANTED_LOG);
+                entries.add(GLOWING_BLUE_ENCHANTED_WOOD);
+                entries.add(STRIPPED_BLUE_ENCHANTED_LOG);
+                entries.add(STRIPPED_BLUE_ENCHANTED_WOOD);
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.CUBE));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.STAIRS));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.SLAB));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.FENCE));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.GATE));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.DOOR));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.TRAPDOOR));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.PRESSURE_PLATE));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.BUTTON));
+                entries.add(BLUE_ENCHANTED_SET.get(BlockType.WALL));
+                entries.add(GCItems.BLUE_ENCHANTED_SIGN);
+                entries.add(GCItems.BLUE_ENCHANTED_HANGING_SIGN);
+
+                entries.add(LAMENT_SAPLING);
+                entries.add(LAMENT_LEAVES);
+                entries.add(LAMENT_LOG);
+                entries.add(LAMENT_WOOD);
+                entries.add(STRIPPED_LAMENT_LOG);
+                entries.add(STRIPPED_LAMENT_WOOD);
+                entries.add(LAMENT_SET.get(BlockType.CUBE));
+                entries.add(LAMENT_SET.get(BlockType.STAIRS));
+                entries.add(LAMENT_SET.get(BlockType.SLAB));
+                entries.add(LAMENT_SET.get(BlockType.FENCE));
+                entries.add(LAMENT_SET.get(BlockType.GATE));
+                entries.add(LAMENT_SET.get(BlockType.DOOR));
+                entries.add(LAMENT_SET.get(BlockType.TRAPDOOR));
+                entries.add(LAMENT_SET.get(BlockType.PRESSURE_PLATE));
+                entries.add(LAMENT_SET.get(BlockType.BUTTON));
+                entries.add(LAMENT_SET.get(BlockType.WALL));
+                entries.add(GCItems.LAMENT_SIGN);
+                entries.add(GCItems.LAMENT_HANGING_SIGN);
+
+                entries.add(PALO_VERDE_SAPLING);
+                entries.add(PALO_VERDE_LEAVES_FLOWERING);
+                entries.add(PALO_VERDE_LEAVES);
+                entries.add(PALO_VERDE_LOG);
+                entries.add(PALO_VERDE_WOOD);
+                entries.add(STRIPPED_PALO_VERDE_LOG);
+                entries.add(STRIPPED_PALO_VERDE_WOOD);
+
+                entries.add(SKYRIS_LEAVES);
+                entries.add(SKYRIS_SAPLING);
+                entries.add(SKYRIS_LOG);
+                entries.add(SKYRIS_WOOD);
+                entries.add(STRIPPED_SKYRIS_LOG);
+                entries.add(STRIPPED_SKYRIS_WOOD);
+                entries.add(SKYRIS_SET.get(BlockType.CUBE));
+                entries.add(SKYRIS_SET.get(BlockType.STAIRS));
+                entries.add(SKYRIS_SET.get(BlockType.SLAB));
+                entries.add(SKYRIS_SET.get(BlockType.FENCE));
+                entries.add(SKYRIS_SET.get(BlockType.GATE));
+                entries.add(SKYRIS_SET.get(BlockType.DOOR));
+                entries.add(SKYRIS_SET.get(BlockType.TRAPDOOR));
+                entries.add(SKYRIS_SET.get(BlockType.PRESSURE_PLATE));
+                entries.add(SKYRIS_SET.get(BlockType.BUTTON));
+                entries.add(SKYRIS_SET.get(BlockType.WALL));
+                entries.add(GCItems.SKYRIS_SIGN);
+                entries.add(GCItems.SKYRIS_HANGING_SIGN);
+
+                entries.add(TANGLEWOOD_LOG);
+                entries.add(TANGLEWOOD);
+                entries.add(TANGLEWOOD_SET.get(BlockType.CUBE));
+                entries.add(TANGLEWOOD_SET.get(BlockType.STAIRS));
+                entries.add(TANGLEWOOD_SET.get(BlockType.SLAB));
+                entries.add(TANGLEWOOD_SET.get(BlockType.FENCE));
+                entries.add(TANGLEWOOD_SET.get(BlockType.GATE));
+                // entries.add(TANGLEWOOD_SET.get(BlockType.DOOR));
+                //  entries.add(TANGLEWOOD_SET.get(BlockType.TRAPDOOR));
+                entries.add(TANGLEWOOD_SET.get(BlockType.PRESSURE_PLATE));
+                entries.add(TANGLEWOOD_SET.get(BlockType.BUTTON));
+                entries.add(TANGLEWOOD_SET.get(BlockType.WALL));
+                //   entries.add(GCItems.EBONY_SIGN);
+                // entries.add(GCItems.EBONY_HANGING_SIGN);
+
+                entries.add(GLOWSHROOM_HYMENOPHORE);
+                entries.add(GLOWSHROOM_FUR);
+                entries.add(GLOWSHROOM_SAPLING);
+                entries.add(GLOWSHROOM_LOG);
+                entries.add(GLOWSHROOM_WOOD);
+                entries.add(STRIPPED_GLOWSHROOM_LOG);
+                entries.add(STRIPPED_GLOWSHROOM_WOOD);
+                entries.add(GLOWSHROOM_SET.get(BlockType.CUBE));
+                entries.add(GLOWSHROOM_SET.get(BlockType.STAIRS));
+                entries.add(GLOWSHROOM_SET.get(BlockType.SLAB));
+                entries.add(GLOWSHROOM_SET.get(BlockType.FENCE));
+                entries.add(GLOWSHROOM_SET.get(BlockType.GATE));
+                entries.add(GLOWSHROOM_SET.get(BlockType.DOOR));
+                entries.add(GLOWSHROOM_SET.get(BlockType.TRAPDOOR));
+                entries.add(GLOWSHROOM_SET.get(BlockType.PRESSURE_PLATE));
+                entries.add(GLOWSHROOM_SET.get(BlockType.BUTTON));
+                //    entries.add(GCItems.EBONY_SIGN);
+                //   entries.add(GCItems.EBONY_HANGING_SIGN);
+
+                entries.add(ANCHOR_LOG);
+                entries.add(ANCHOR_WOOD);
+                entries.add(STRIPPED_ANCHOR_LOG);
+                entries.add(STRIPPED_ANCHOR_WOOD);
+                entries.add(ANCHOR_SET.get(BlockType.CUBE));
+                entries.add(ANCHOR_SET.get(BlockType.STAIRS));
+                entries.add(ANCHOR_SET.get(BlockType.SLAB));
+                entries.add(ANCHOR_SET.get(BlockType.FENCE));
+                entries.add(ANCHOR_SET.get(BlockType.GATE));
+                entries.add(ANCHOR_SET.get(BlockType.DOOR));
+                entries.add(ANCHOR_SET.get(BlockType.TRAPDOOR));
+                entries.add(ANCHOR_SET.get(BlockType.PRESSURE_PLATE));
+                entries.add(ANCHOR_SET.get(BlockType.BUTTON));
+                //  entries.add(GCItems.EBONY_SIGN);
+                //  entries.add(GCItems.EBONY_HANGING_SIGN);
 
                 entries.add(CONFETTI);
                 entries.add(CONFETTI_CARPET);
