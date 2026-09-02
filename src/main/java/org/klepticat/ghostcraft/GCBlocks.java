@@ -210,8 +210,7 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.BONE),
             true
     );
-
-
+    
     public static Block CABBAGE_BLOCK = register(
             "cabbage_block",
             Block::new,
@@ -282,13 +281,19 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.NETHERRACK),
             true
     );
-    public static Block AMETHYST_STAIRS = register("amethyst_stairs", settings -> new StairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.DRIPSTONE_BLOCK), true);
-    public static Block AMETHYST_SLAB = register("amethyst_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK), true);
-    public static Block AMETHYST_WALL = register("amethyst_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK), true);
 
     public static Block BLUE_NETHERRACK_STAIRS = register("blue_netherrack_stairs", settings -> new StairsBlock(BLUE_NETHERRACK.getDefaultState(), settings), AbstractBlock.Settings.copy(BLUE_NETHERRACK), true);
     public static Block BLUE_NETHERRACK_SLAB = register("blue_netherrack_slab", SlabBlock::new, AbstractBlock.Settings.copy(BLUE_NETHERRACK), true);
     public static Block BLUE_NETHERRACK_WALL = register("blue_netherrack_wall", WallBlock::new, AbstractBlock.Settings.copy(BLUE_NETHERRACK), true);
+
+
+    public static Block AMETHYST_STAIRS = register("amethyst_stairs", settings -> new StairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK), true);
+    public static Block AMETHYST_SLAB = register("amethyst_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK), true);
+    public static Block AMETHYST_WALL = register("amethyst_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK), true);
+
+    public static Block CALCITE_STAIRS = register("calcite_stairs", settings -> new StairsBlock(Blocks.CALCITE.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.CALCITE), true);
+    public static Block CALCITE_SLAB = register("calcite_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.CALCITE), true);
+    public static Block CALCITE_WALL = register("calcite_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.CALCITE), true);
 
     public static Block NETHERRACK_STAIRS = register("netherrack_stairs", settings -> new StairsBlock(Blocks.NETHERRACK.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.NETHERRACK), true);
     public static Block NETHERRACK_SLAB = register("netherrack_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.NETHERRACK), true);
@@ -987,6 +992,67 @@ public class GCBlocks {
 
 
 
+    public static Block CALCITE_PILLAR = register(
+            "calcite_pillar",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.STONE)
+                    .burnable(),
+            true
+    );
+    
+    public static Block POLISHED_CALCITE = register(
+            "polished_calcite",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+
+    public static Block POLISHED_CALCITE_STAIRS = register("polished_calcite_stairs", settings -> new StairsBlock(POLISHED_CALCITE.getDefaultState(), settings), AbstractBlock.Settings.copy(POLISHED_CALCITE), true);
+    public static Block POLISHED_CALCITE_SLAB = register("polished_calcite_slab", SlabBlock::new, AbstractBlock.Settings.copy(POLISHED_CALCITE), true);
+    public static Block POLISHED_CALCITE_WALL = register("polished_calcite_wall", WallBlock::new, AbstractBlock.Settings.copy(POLISHED_CALCITE), true);
+
+    public static Block CALCITE_BRICKS = register(
+            "calcite_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block CALCITE_BRICKS_STAIRS = register("calcite_bricks_stairs", settings -> new StairsBlock(CALCITE_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(CALCITE_BRICKS), true);
+    public static Block CALCITE_BRICKS_SLAB = register("calcite_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(CALCITE_BRICKS), true);
+    public static Block CALCITE_BRICKS_WALL = register("calcite_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(CALCITE_BRICKS), true);
+
+    public static Block CHISELED_CALCITE_BRICKS = register(
+            "chiseled_calcite_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+
+    public static Block CHISELED_CALCITE_BRICKS_STAIRS = register("chiseled_calcite_bricks_stairs", settings -> new StairsBlock(CHISELED_CALCITE_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(CHISELED_CALCITE_BRICKS), true);
+    public static Block CHISELED_CALCITE_BRICKS_SLAB = register("chiseled_calcite_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(CHISELED_CALCITE_BRICKS), true);
+    public static Block CHISELED_CALCITE_BRICKS_WALL = register("chiseled_calcite_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(CHISELED_CALCITE_BRICKS), true);
+
+
+
+
+
+
     public static Block SOUL_QUARTZ_PILLAR = register(
             "soul_quartz_pillar",
             PillarBlock::new,
@@ -1043,6 +1109,17 @@ public class GCBlocks {
     public static Block SOUL_QUARTZ_BRICKS_SLAB = register("soul_quartz_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(SOUL_QUARTZ_BRICKS), true);
     public static Block SOUL_QUARTZ_BRICKS_WALL = register("soul_quartz_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(SOUL_QUARTZ_BRICKS), true);
 
+    public static Block CHISELED_SOUL_QUARTZ = register(
+            "chiseled_soul_quartz",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+
     public static Block CRACKED_SOUL_QUARTZ_BRICKS = register(
             "cracked_soul_quartz_bricks",
             Block::new,
@@ -1056,6 +1133,41 @@ public class GCBlocks {
     public static Block CRACKED_SOUL_QUARTZ_BRICKS_STAIRS = register("cracked_soul_quartz_bricks_stairs", settings -> new StairsBlock(CRACKED_SOUL_QUARTZ_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(CRACKED_SOUL_QUARTZ_BRICKS), true);
     public static Block CRACKED_SOUL_QUARTZ_BRICKS_SLAB = register("cracked_soul_quartz_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(CRACKED_SOUL_QUARTZ_BRICKS), true);
     public static Block CRACKED_SOUL_QUARTZ_BRICKS_WALL = register("cracked_soul_quartz_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(CRACKED_SOUL_QUARTZ_BRICKS), true);
+
+    public static Block ECTOPLASM_BLOCK = register(
+            "ectoplasm_block",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.SLIME),
+            true
+    );
+    public static Block ECTOPLASM_BLOCK_STAIRS = register("ectoplasm_block_stairs", settings -> new StairsBlock(ECTOPLASM_BLOCK.getDefaultState(), settings), AbstractBlock.Settings.copy(ECTOPLASM_BLOCK), true);
+    public static Block ECTOPLASM_BLOCK_SLAB = register("ectoplasm_block_slab", SlabBlock::new, AbstractBlock.Settings.copy(ECTOPLASM_BLOCK), true);
+    public static Block ECTOPLASM_BLOCK_WALL = register("ectoplasm_block_wall", WallBlock::new, AbstractBlock.Settings.copy(ECTOPLASM_BLOCK), true);
+
+    public static Block ECTOPLASM_JELLY = register(
+            "ectoplasm_jelly",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.SLIME)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never),
+            true
+    );
+    public static Block ECTOPLASM_JELLY_STAIRS = register("ectoplasm_jelly_stairs", settings -> new StairsBlock(ECTOPLASM_JELLY.getDefaultState(), settings), AbstractBlock.Settings.copy(ECTOPLASM_JELLY), true);
+    public static Block ECTOPLASM_JELLY_SLAB = register("ectoplasm_jelly_slab", SlabBlock::new, AbstractBlock.Settings.copy(ECTOPLASM_JELLY), true);
+    public static Block ECTOPLASM_JELLY_WALL = register("ectoplasm_jelly_wall", WallBlock::new, AbstractBlock.Settings.copy(ECTOPLASM_JELLY), true);
+
+
 
 
     public static Block LAPIS_PILLAR = register(
@@ -1417,6 +1529,8 @@ public class GCBlocks {
             true
     );
 
+    
+    //grass type blocks
 
     public static Block END_MOSS = register(
             "end_moss",
@@ -1428,6 +1542,9 @@ public class GCBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY),
             true
     );
+    public static Block END_MOSS_STAIRS = register("end_moss_stairs", settings -> new StairsBlock(END_MOSS.getDefaultState(), settings), AbstractBlock.Settings.copy(END_MOSS), true);
+    public static Block END_MOSS_SLAB = register("end_moss_slab", SlabBlock::new, AbstractBlock.Settings.copy(END_MOSS), true);
+    
     public static Block SHULKREN_PHYLIUM = register(
             "shulkren_phylium",
             MossBlock::new,
@@ -1438,6 +1555,10 @@ public class GCBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY),
             true
     );
+    public static Block SHULKREN_PHYLIUM_STAIRS = register("shulkren_phylium_stairs", settings -> new StairsBlock(SHULKREN_PHYLIUM.getDefaultState(), settings), AbstractBlock.Settings.copy(SHULKREN_PHYLIUM), true);
+    public static Block SHULKREN_PHYLIUM_SLAB = register("shulkren_phylium_slab", SlabBlock::new, AbstractBlock.Settings.copy(SHULKREN_PHYLIUM), true);
+   
+
     public static Block NIGHTSHADE_PHYLIUM = register(
             "nightshade_phylium",
             MossBlock::new,
@@ -1448,6 +1569,10 @@ public class GCBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY),
             true
     );
+    public static Block NIGHTSHADE_PHYLIUM_STAIRS = register("nightshade_phylium_stairs", settings -> new StairsBlock(NIGHTSHADE_PHYLIUM.getDefaultState(), settings), AbstractBlock.Settings.copy(NIGHTSHADE_PHYLIUM), true);
+    public static Block NIGHTSHADE_PHYLIUM_SLAB = register("nightshade_phylium_slab", SlabBlock::new, AbstractBlock.Settings.copy(NIGHTSHADE_PHYLIUM), true);
+   
+
     public static Block GLOOMY_GRASS = register(
             "gloomy_grass",
             MossBlock::new,
@@ -1457,15 +1582,9 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.GRASS),
             true
     );
-    public static Block GLOOMY_SOIL = register(
-            "gloomy_soil",
-            MossBlock::new,
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.BLACK)
-                    .strength(0.1F)
-                    .sounds(BlockSoundGroup.GRASS),
-            true
-    );
+    public static Block GLOOMY_GRASS_STAIRS = register("gloomy_grass_stairs", settings -> new StairsBlock(GLOOMY_GRASS.getDefaultState(), settings), AbstractBlock.Settings.copy(GLOOMY_GRASS), true);
+    public static Block GLOOMY_GRASS_SLAB = register("gloomy_grass_slab", SlabBlock::new, AbstractBlock.Settings.copy(GLOOMY_GRASS), true);
+    
     public static Block WAILING_NYLIUM = register(
             "wailing_nylium",
             MossBlock::new,
@@ -1475,16 +1594,19 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.NETHER_WART),
             true
     );
-
-    public static Block SUBZERO_ASH = register(
-            "subzero_ash",
+    public static Block WAILING_NYLIUM_STAIRS = register("wailing_nylium_stairs", settings -> new StairsBlock(WAILING_NYLIUM.getDefaultState(), settings), AbstractBlock.Settings.copy(WAILING_NYLIUM), true);
+    public static Block WAILING_NYLIUM_SLAB = register("wailing_nylium_slab", SlabBlock::new, AbstractBlock.Settings.copy(WAILING_NYLIUM), true);
+    
+    public static Block GLOOMY_SOIL = register(
+            "gloomy_soil",
             MossBlock::new,
             AbstractBlock.Settings.create()
-                    .mapColor(MapColor.WHITE)
+                    .mapColor(MapColor.BLACK)
                     .strength(0.1F)
-                    .sounds(BlockSoundGroup.SAND),
+                    .sounds(BlockSoundGroup.GRASS),
             true
     );
+    
     public static Block BLUE_SAND = register(
             "blue_sand",
             MossBlock::new,
@@ -1495,6 +1617,17 @@ public class GCBlocks {
             true
     );
 
+
+    public static Block SUBZERO_ASH = register(
+            "subzero_ash",
+            MossBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.SAND),
+            true
+    );
+    
     public static Block SUBZERO_CRYSTAL_BLOCK = register(
             "subzero_crystal_block",
             MossBlock::new,
@@ -1504,7 +1637,91 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK),
             true
     );
+    public static Block SUBZERO_CRYSTAL_BLOCK_STAIRS = register("subzero_crystal_block_stairs", settings -> new StairsBlock(SUBZERO_CRYSTAL_BLOCK.getDefaultState(), settings), AbstractBlock.Settings.copy(SUBZERO_CRYSTAL_BLOCK), true);
+    public static Block SUBZERO_CRYSTAL_BLOCK_SLAB = register("subzero_crystal_block_slab", SlabBlock::new, AbstractBlock.Settings.copy(SUBZERO_CRYSTAL_BLOCK), true);
+    public static Block SUBZERO_CRYSTAL_BLOCK_WALL = register("subzero_crystal_block_wall", WallBlock::new, AbstractBlock.Settings.copy(SUBZERO_CRYSTAL_BLOCK), true);
 
+    public static Block BUDDING_SUBZERO_CRYSTAL_BLOCK = register(
+            "budding_subzero_crystal_block",
+            MossBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+    public static Block SUBZERO_CRYSTAL_CLUSTER = register(
+            "subzero_crystal_cluster",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+    public static Block SUBZERO_CRYSTAL_BUD = register(
+            "subzero_crystal_bud",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+    public static Block SUBZERO_CRYSTAL_SPIKES = register(
+            "subzero_crystal_spikes",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+    public static Block SUBZERO_CRYSTAL_BUMP = register(
+            "subzero_crystal_bump",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+
+    public static Block PERMAFROST = register(
+            "permafrost",
+            MossBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.GLASS),
+            true
+    );
+    public static Block PERMAFROST_STAIRS = register("permafrost_stairs", settings -> new StairsBlock(PERMAFROST.getDefaultState(), settings), AbstractBlock.Settings.copy(PERMAFROST), true);
+    public static Block PERMAFROST_SLAB = register("permafrost_slab", SlabBlock::new, AbstractBlock.Settings.copy(PERMAFROST), true);
+    public static Block PERMAFROST_WALL = register("permafrost_wall", WallBlock::new, AbstractBlock.Settings.copy(PERMAFROST), true);
+
+    public static Block PERMAFROST_BRICKS = register(
+            "permafrost_bricks",
+            MossBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.GLASS),
+            true
+    );
+    public static Block PERMAFROST_BRICKS_STAIRS = register("permafrost_bricks_stairs", settings -> new StairsBlock(PERMAFROST_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(PERMAFROST_BRICKS), true);
+    public static Block PERMAFROST_BRICKS_SLAB = register("permafrost_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(PERMAFROST_BRICKS), true);
+    public static Block PERMAFROST_BRICKS_WALL = register("permafrost_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(PERMAFROST_BRICKS), true);
+
+    
     public static Block NOISE = register(
             "noise",
             Block::new,
@@ -2272,6 +2489,84 @@ public class GCBlocks {
     public static Block YELLOW_TERRACOTTA_BRICK_STAIRS = register("yellow_terracotta_brick_stairs", settings -> new StairsBlock(YELLOW_TERRACOTTA_BRICK.getDefaultState(), settings), AbstractBlock.Settings.copy(YELLOW_TERRACOTTA_BRICK), true);
     public static Block YELLOW_TERRACOTTA_BRICK_SLAB = register("yellow_terracotta_brick_slab", SlabBlock::new, AbstractBlock.Settings.copy(YELLOW_TERRACOTTA_BRICK), true);
     public static Block YELLOW_TERRACOTTA_BRICK_WALL = register("yellow_terracotta_brick_wall", WallBlock::new, AbstractBlock.Settings.copy(YELLOW_TERRACOTTA_BRICK), true);
+
+
+
+
+    public static Block DACITE = register(
+            "dacite",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block DACITE_STAIRS = register("dacite_stairs", settings -> new StairsBlock(DACITE.getDefaultState(), settings), AbstractBlock.Settings.copy(DACITE), true);
+    public static Block DACITE_SLAB = register("dacite_slab", SlabBlock::new, AbstractBlock.Settings.copy(DACITE), true);
+    public static Block DACITE_WALL = register("dacite_wall", WallBlock::new, AbstractBlock.Settings.copy(DACITE), true);
+
+
+    public static Block DACITE_COBBLESTONE = register(
+            "dacite_cobblestone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block DACITE_COBBLESTONE_STAIRS = register("dacite_cobblestone_stairs", settings -> new StairsBlock(DACITE_COBBLESTONE.getDefaultState(), settings), AbstractBlock.Settings.copy(DACITE_COBBLESTONE), true);
+    public static Block DACITE_COBBLESTONE_SLAB = register("dacite_cobblestone_slab", SlabBlock::new, AbstractBlock.Settings.copy(DACITE_COBBLESTONE), true);
+    public static Block DACITE_COBBLESTONE_WALL = register("dacite_cobblestone_wall", WallBlock::new, AbstractBlock.Settings.copy(DACITE_COBBLESTONE), true);
+
+
+    public static Block DACITE_TILE = register(
+            "dacite_tile",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block DACITE_TILE_STAIRS = register("dacite_tile_stairs", settings -> new StairsBlock(DACITE_TILE.getDefaultState(), settings), AbstractBlock.Settings.copy(DACITE_TILE), true);
+    public static Block DACITE_TILE_SLAB = register("dacite_tile_slab", SlabBlock::new, AbstractBlock.Settings.copy(DACITE_TILE), true);
+    public static Block DACITE_TILE_WALL = register("dacite_tile_wall", WallBlock::new, AbstractBlock.Settings.copy(DACITE_TILE), true);
+
+    public static Block DACITE_BRICKS = register(
+            "dacite_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block DACITE_BRICKS_STAIRS = register("dacite_bricks_stairs", settings -> new StairsBlock(DACITE_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(DACITE_BRICKS), true);
+    public static Block DACITE_BRICKS_SLAB = register("dacite_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(DACITE_BRICKS), true);
+    public static Block DACITE_BRICKS_WALL = register("dacite_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(DACITE_BRICKS), true);
+
+
+    public static Block DACITE_PILLAR = register(
+            "dacite_pillar",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
 
 
     public static Block ECHO_SOIL = register(

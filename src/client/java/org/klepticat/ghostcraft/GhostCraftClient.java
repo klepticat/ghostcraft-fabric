@@ -240,16 +240,26 @@ public class GhostCraftClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(GRATED_IRON_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GRATED_SPRUCE_TRAPDOOR, RenderLayer.getCutout());
 
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.BLACK_CORUNDUM_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.BLUE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.GREEN_CORUNDUM_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.INDIGO_CORUNDUM_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.ORANGE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.RED_CORUNDUM_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.VIOLET_CORUNDUM_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.WHITE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.YELLOW_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BLACK_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BLUE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GREEN_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(INDIGO_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ORANGE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(RED_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(VIOLET_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(WHITE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(YELLOW_CORUNDUM_CLUSTER, RenderLayer.getCutout());
 
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.SMARAGDANT_CRYSTAL_SHARD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(SMARAGDANT_CRYSTAL_SHARD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(SUBZERO_CRYSTAL_BUD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(SUBZERO_CRYSTAL_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(SUBZERO_CRYSTAL_BUMP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(SUBZERO_CRYSTAL_SPIKES, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ECTOPLASM_JELLY, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ECTOPLASM_JELLY_SLAB, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ECTOPLASM_JELLY_STAIRS, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ECTOPLASM_JELLY_WALL, RenderLayer.getTranslucent());
+
     }
 }

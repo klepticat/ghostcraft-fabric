@@ -1,6 +1,7 @@
 package org.klepticat.ghostcraft;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.block.Block;
 import net.minecraft.block.CryingObsidianBlock;
 import net.minecraft.item.GoatHornItem;
 import net.minecraft.item.Item;
@@ -30,8 +31,8 @@ public class GCItemGroups {
                 entries.add(BOSS_DOOR);
 
                 entries.add(AURORA_CRYSTAL);
-                entries.add(AURITE);
 
+                entries.add(AURITE);
                 entries.add(BLEEDING_COIL);
                 entries.add(PERDITE);
                 entries.add(BLAZONITE);
@@ -80,7 +81,6 @@ public class GCItemGroups {
 
                 entries.add(BRIMSTONE);
                 entries.add(BLUE_SAND);
-                entries.add(SUBZERO_ASH);
                 entries.add(END_MOSS);
                 entries.add(WAILING_NYLIUM);
                 entries.add(SHULKREN_PHYLIUM);
@@ -88,6 +88,96 @@ public class GCItemGroups {
                 entries.add(GLOOMY_GRASS);
                 entries.add(GLOOMY_SOIL);
 
+                entries.add(ITERATOR_PULSE);
+                entries.add(ITERATOR_PROJECTION_TILE);
+                entries.add(ITERATOR_PROCESSING_SCREEN_UNPOWERED);
+                entries.add(ITERATOR_PROCESSING_SCREEN);
+                entries.add(ITERATOR_PROCESSING_SCREEN_ERR);
+
+                entries.add(MARBLED_FLESH);
+                entries.add(MARBLED_FLESH_STAIRS);
+                entries.add(MARBLED_FLESH_SLAB);
+                entries.add(MARBLED_FLESH_FENCE);
+
+                entries.add(SCALED_FLESH);
+                entries.add(SCALED_FLESH_STAIRS);
+                entries.add(SCALED_FLESH_SLAB);
+                entries.add(SCALED_FLESH_WALL);
+
+                entries.add(CRIMSON_WOOL);
+                entries.add(CRIMSON_CARPET);
+
+                entries.add(BLUE_NETHERRACK);
+                entries.add(BLUE_NETHERRACK_STAIRS);
+                entries.add(BLUE_NETHERRACK_SLAB);
+                entries.add(BLUE_NETHERRACK_WALL);
+
+                entries.add(TEMPLE_BRICKS);
+                entries.add(TEMPLE_BRICKS_STAIRS);
+                entries.add(TEMPLE_BRICKS_SLAB);
+                entries.add(TEMPLE_BRICKS_WALL);
+
+                entries.add(BROWN_GRANITE);
+                entries.add(BROWN_GRANITE_STAIRS);
+                entries.add(BROWN_GRANITE_SLAB);
+                entries.add(BROWN_GRANITE_WALL);
+
+                entries.add(POLISHED_BROWN_GRANITE);
+                entries.add(POLISHED_BROWN_GRANITE_STAIRS);
+                entries.add(POLISHED_BROWN_GRANITE_SLAB);
+                entries.add(POLISHED_BROWN_GRANITE_WALL);
+
+                entries.add(SLATE);
+                entries.add(SLATE_STAIRS);
+                entries.add(SLATE_SLAB);
+                entries.add(SLATE_WALL);
+
+
+
+                entries.add(DACITE);
+                entries.add(DACITE_STAIRS);
+                entries.add(DACITE_SLAB);
+                entries.add(DACITE_WALL);
+
+                entries.add(DACITE_COBBLESTONE);
+                entries.add(DACITE_COBBLESTONE_STAIRS);
+                entries.add(DACITE_COBBLESTONE_SLAB);
+                entries.add(DACITE_COBBLESTONE_WALL);
+
+                entries.add(DACITE_TILE);
+                entries.add(DACITE_TILE_STAIRS);
+                entries.add(DACITE_TILE_SLAB);
+                entries.add(DACITE_TILE_WALL);
+
+                entries.add(DACITE_BRICKS);
+                entries.add(DACITE_BRICKS_STAIRS);
+                entries.add(DACITE_BRICKS_SLAB);
+                entries.add(DACITE_BRICKS_WALL);
+                entries.add(DACITE_PILLAR);
+
+
+                
+                entries.add(SUBZERO_ASH);
+                entries.add(SUBZERO_CRYSTAL_CLUSTER);
+                entries.add(SUBZERO_CRYSTAL_SPIKES);
+                entries.add(SUBZERO_CRYSTAL_BUD);
+                entries.add(SUBZERO_CRYSTAL_BUMP);
+                entries.add(BUDDING_SUBZERO_CRYSTAL_BLOCK);
+                entries.add(SUBZERO_CRYSTAL_BLOCK);
+                entries.add(SUBZERO_CRYSTAL_BLOCK_STAIRS);
+                entries.add(SUBZERO_CRYSTAL_BLOCK_SLAB);
+                entries.add(SUBZERO_CRYSTAL_BLOCK_WALL);
+
+                entries.add(PERMAFROST);
+                entries.add(PERMAFROST_STAIRS);
+                entries.add(PERMAFROST_SLAB);
+                entries.add(PERMAFROST_WALL);
+
+                entries.add(PERMAFROST_BRICKS);
+                entries.add(PERMAFROST_BRICKS_STAIRS);
+                entries.add(PERMAFROST_BRICKS_SLAB);
+                entries.add(PERMAFROST_BRICKS_WALL);
+                
                 entries.add(LIGHT_COBBLED_DREADSTONE);
                 entries.add(LIGHT_COBBLED_DREADSTONE_STAIRS);
                 entries.add(LIGHT_COBBLED_DREADSTONE_SLAB);
@@ -199,7 +289,17 @@ public class GCItemGroups {
                 entries.add(CRACKED_SOUL_QUARTZ_BRICKS_SLAB);
                 entries.add(CRACKED_SOUL_QUARTZ_BRICKS_WALL);
                 entries.add(SOUL_QUARTZ_PILLAR);
+                entries.add(CHISELED_SOUL_QUARTZ);
 
+                entries.add(ECTOPLASM_BLOCK);
+                entries.add(ECTOPLASM_BLOCK_STAIRS);
+                entries.add(ECTOPLASM_BLOCK_SLAB);
+                entries.add(ECTOPLASM_BLOCK_WALL);
+
+                entries.add(ECTOPLASM_JELLY);
+                entries.add(ECTOPLASM_JELLY_STAIRS);
+                entries.add(ECTOPLASM_JELLY_SLAB);
+                entries.add(ECTOPLASM_JELLY_WALL);
 
                 entries.add(SMOOTH_LAPIS_BLOCK);
                 entries.add(SMOOTH_LAPIS_BLOCK_STAIRS);
@@ -234,55 +334,59 @@ public class GCItemGroups {
                 entries.add(GILDED_FANCY_LAPIS_SLAB);
                 entries.add(GILDED_FANCY_LAPIS_WALL);
                 entries.add(GILDED_LAPIS_PILLAR);
+        
 
-                entries.add(ITERATOR_PULSE);
-                entries.add(ITERATOR_PROJECTION_TILE);
-                entries.add(ITERATOR_PROCESSING_SCREEN_UNPOWERED);
-                entries.add(ITERATOR_PROCESSING_SCREEN);
-                entries.add(ITERATOR_PROCESSING_SCREEN_ERR);
+                entries.add(SMARAGDANT_CRYSTAL_SHARD);
+                entries.add(SMARAGDANT_CRYSTAL);
+                entries.add(SMARAGDANT_CRYSTAL_BRICKS);
+                entries.add(SMARAGDANT_CRYSTAL_BRICKS_STAIRS);
+                entries.add(SMARAGDANT_CRYSTAL_BRICKS_SLAB);
+                entries.add(SMARAGDANT_CRYSTAL_BRICKS_WALL);
+                entries.add(SMARAGDANT_CRYSTAL_PILLAR);
+                entries.add(SMARAGDANT_CRYSTAL_TILES);
+                entries.add(SMARAGDANT_CRYSTAL_TILES_STAIRS);
+                entries.add(SMARAGDANT_CRYSTAL_TILES_SLAB);
+                entries.add(SMARAGDANT_CRYSTAL_TILES_WALL);
+                entries.add(BUDDING_SMARAGDANT_CRYSTAL);
+                entries.add(POLISHED_SMARAGDANT_CRYSTAL);
+                entries.add(POLISHED_SMARAGDANT_CRYSTAL_STAIRS);
+                entries.add(POLISHED_SMARAGDANT_CRYSTAL_SLAB);
+                entries.add(POLISHED_SMARAGDANT_CRYSTAL_WALL);
 
-                entries.add(MARBLED_FLESH);
-                entries.add(MARBLED_FLESH_STAIRS);
-                entries.add(MARBLED_FLESH_SLAB);
-                entries.add(MARBLED_FLESH_FENCE);
+                entries.add(ECHO_SOIL);
+                entries.add(CHISELED_SCULK_STONE);
 
-                entries.add(SCALED_FLESH);
-                entries.add(SCALED_FLESH_STAIRS);
-                entries.add(SCALED_FLESH_SLAB);
-                entries.add(SCALED_FLESH_WALL);
+                entries.add(COBBLED_SCULK_STONE);
+                entries.add(COBBLED_SCULK_STONE_STAIRS);
+                entries.add(COBBLED_SCULK_STONE_SLAB);
+                entries.add(COBBLED_SCULK_STONE_WALL);
 
-                entries.add(CRIMSON_WOOL);
-                entries.add(CRIMSON_CARPET);
+                entries.add(POLISHED_SCULK_STONE);
+                entries.add(POLISHED_SCULK_STONE_STAIRS);
+                entries.add(POLISHED_SCULK_STONE_SLAB);
+                entries.add(POLISHED_SCULK_STONE_WALL);
 
-                entries.add(BLUE_NETHERRACK);
-                entries.add(BLUE_NETHERRACK_STAIRS);
-                entries.add(BLUE_NETHERRACK_SLAB);
-                entries.add(BLUE_NETHERRACK_WALL);
+                entries.add(CUT_SCULK_STONE);
+                entries.add(CUT_SCULK_STONE_STAIRS);
+                entries.add(CUT_SCULK_STONE_SLAB);
 
-                entries.add(TEMPLE_BRICKS);
-                entries.add(TEMPLE_BRICKS_STAIRS);
-                entries.add(TEMPLE_BRICKS_SLAB);
-                entries.add(TEMPLE_BRICKS_WALL);
+                entries.add(SCULK_STONE);
+                entries.add(SCULK_STONE_STAIRS);
+                entries.add(SCULK_STONE_SLAB);
+                entries.add(SCULK_STONE_WALL);
 
-                entries.add(BROWN_GRANITE);
-                entries.add(BROWN_GRANITE_STAIRS);
-                entries.add(BROWN_GRANITE_SLAB);
-                entries.add(BROWN_GRANITE_WALL);
+                entries.add(SCULK_STONE_BRICKS);
+                entries.add(SCULK_STONE_BRICKS_STAIRS);
+                entries.add(SCULK_STONE_BRICKS_SLAB);
+                entries.add(SCULK_STONE_BRICKS_WALL);
 
-                entries.add(POLISHED_BROWN_GRANITE);
-                entries.add(POLISHED_BROWN_GRANITE_STAIRS);
-                entries.add(POLISHED_BROWN_GRANITE_SLAB);
-                entries.add(POLISHED_BROWN_GRANITE_WALL);
+                entries.add(SCULK_STONE_TILES);
+                entries.add(SCULK_STONE_TILES_SLAB);
 
-                entries.add(SLATE);
-                entries.add(SLATE_STAIRS);
-                entries.add(SLATE_SLAB);
-                entries.add(SLATE_WALL);
-
-
-
-
-
+                entries.add(SMOOTH_SCULK_STONE);
+                entries.add(SMOOTH_SCULK_STONE_STAIRS);
+                entries.add(SMOOTH_SCULK_STONE_SLAB);
+                entries.add(SMOOTH_SCULK_STONE_WALL);
 
 
                 entries.add(BLACK_CORUNDUM);
@@ -354,6 +458,11 @@ public class GCItemGroups {
                 entries.add(MAGENTA_TERRACOTTA_BRICK_SLAB);
                 entries.add(MAGENTA_TERRACOTTA_BRICK_WALL);
 
+                entries.add(PURPLE_TERRACOTTA_BRICK);
+                entries.add(PURPLE_TERRACOTTA_BRICK_STAIRS);
+                entries.add(PURPLE_TERRACOTTA_BRICK_SLAB);
+                entries.add(PURPLE_TERRACOTTA_BRICK_WALL);
+                
                 entries.add(ORANGE_TERRACOTTA_BRICK);
                 entries.add(ORANGE_TERRACOTTA_BRICK_STAIRS);
                 entries.add(ORANGE_TERRACOTTA_BRICK_SLAB);
@@ -383,60 +492,8 @@ public class GCItemGroups {
                 entries.add(YELLOW_TERRACOTTA_BRICK_STAIRS);
                 entries.add(YELLOW_TERRACOTTA_BRICK_SLAB);
                 entries.add(YELLOW_TERRACOTTA_BRICK_WALL);
-
-                entries.add(SMARAGDANT_CRYSTAL_SHARD);
-                entries.add(SMARAGDANT_CRYSTAL);
-                entries.add(SMARAGDANT_CRYSTAL_BRICKS);
-                entries.add(SMARAGDANT_CRYSTAL_BRICKS_STAIRS);
-                entries.add(SMARAGDANT_CRYSTAL_BRICKS_SLAB);
-                entries.add(SMARAGDANT_CRYSTAL_BRICKS_WALL);
-                entries.add(SMARAGDANT_CRYSTAL_PILLAR);
-                entries.add(SMARAGDANT_CRYSTAL_TILES);
-                entries.add(SMARAGDANT_CRYSTAL_TILES_STAIRS);
-                entries.add(SMARAGDANT_CRYSTAL_TILES_SLAB);
-                entries.add(SMARAGDANT_CRYSTAL_TILES_WALL);
-                entries.add(BUDDING_SMARAGDANT_CRYSTAL);
-                entries.add(POLISHED_SMARAGDANT_CRYSTAL);
-                entries.add(POLISHED_SMARAGDANT_CRYSTAL_STAIRS);
-                entries.add(POLISHED_SMARAGDANT_CRYSTAL_SLAB);
-                entries.add(POLISHED_SMARAGDANT_CRYSTAL_WALL);
-
-                entries.add(ECHO_SOIL);
-                entries.add(CHISELED_SCULK_STONE);
-
-                entries.add(COBBLED_SCULK_STONE);
-                entries.add(COBBLED_SCULK_STONE_STAIRS);
-                entries.add(COBBLED_SCULK_STONE_SLAB);
-                entries.add(COBBLED_SCULK_STONE_WALL);
-
-                entries.add(POLISHED_SCULK_STONE);
-                entries.add(POLISHED_SCULK_STONE_STAIRS);
-                entries.add(POLISHED_SCULK_STONE_SLAB);
-                entries.add(POLISHED_SCULK_STONE_WALL);
-
-                entries.add(CUT_SCULK_STONE);
-                entries.add(CUT_SCULK_STONE_STAIRS);
-                entries.add(CUT_SCULK_STONE_SLAB);
-
-                entries.add(SCULK_STONE);
-                entries.add(SCULK_STONE_STAIRS);
-                entries.add(SCULK_STONE_SLAB);
-                entries.add(SCULK_STONE_WALL);
-
-                entries.add(SCULK_STONE_BRICKS);
-                entries.add(SCULK_STONE_BRICKS_STAIRS);
-                entries.add(SCULK_STONE_BRICKS_SLAB);
-                entries.add(SCULK_STONE_BRICKS_WALL);
-
-                entries.add(SCULK_STONE_TILES);
-                entries.add(SCULK_STONE_TILES_SLAB);
-
-                entries.add(SMOOTH_SCULK_STONE);
-                entries.add(SMOOTH_SCULK_STONE_STAIRS);
-                entries.add(SMOOTH_SCULK_STONE_SLAB);
-                entries.add(SMOOTH_SCULK_STONE_WALL);
-
-
+                
+                
                 entries.add(WATCHFUL_ASPEN);
                 entries.add(WEEPING_BARK);
 
@@ -576,6 +633,7 @@ public class GCItemGroups {
                 //    entries.add(GCItems.EBONY_SIGN);
                 //   entries.add(GCItems.EBONY_HANGING_SIGN);
 
+                entries.add(ANCHOR_LEAVES);
                 entries.add(ANCHOR_LOG);
                 entries.add(ANCHOR_WOOD);
                 entries.add(STRIPPED_ANCHOR_LOG);
