@@ -8,6 +8,7 @@ import net.minecraft.client.option.KeyBinding;
 import net.minecraft.text.Text;
 import org.klepticat.ghostcraft.gui.screen.StickerSelectScreen;
 import org.klepticat.ghostcraft.networking.InvisKeyPayload;
+import org.klepticat.ghostcraft.networking.WaterBreathKeyPayload;
 import org.klepticat.ghostcraft.networking.NightVisKeyPayload;
 import org.lwjgl.glfw.GLFW;
 
@@ -21,6 +22,11 @@ public class GCKeyBindings {
     private static final KeyBinding DM_NIGHTVIS_KEY = KeyBindingHelper.registerKeyBinding(new KeyBinding(
             "key.ghostcraft.night_vision",
             GLFW.GLFW_KEY_B,
+            "category.ghostcraft.dm_utility"
+    ));
+    private static final KeyBinding DM_WATERBREATHING_KEY = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+            "key.ghostcraft.water_breathing",
+            GLFW.GLFW_KEY_N,
             "category.ghostcraft.dm_utility"
     ));
 
@@ -44,6 +50,10 @@ public class GCKeyBindings {
 
             while (DM_NIGHTVIS_KEY.wasPressed()) {
                 ClientPlayNetworking.send(new NightVisKeyPayload());
+            }
+
+            while (DM_WATERBREATHING_KEY.wasPressed()) {
+                ClientPlayNetworking.send(new WaterBreathKeyPayload());
             }
 
             while (STICKER_SELECTOR_KEY.wasPressed()) {

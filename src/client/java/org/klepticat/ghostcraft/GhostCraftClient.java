@@ -149,10 +149,57 @@ public class GhostCraftClient implements ClientModInitializer {
         TrinketRendererRegistry.registerRenderer(GCItems.VALKYRIE_HELM_HAT, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.WEREWOLF_MASK, new HatRenderer());
         TrinketRendererRegistry.registerRenderer(GCItems.MACH_HAT, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.ABYSSAL_CROWN, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.AUREATE_SHROUD, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.BLUEROSE_FACEPLATE, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.BLUESHIFT_FULLHELM, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.BLUESHIFT_INFESTATION, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.CANDY_CANE_HORNS, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.CHIME_KASA, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.DARK_HOOD_SHORT_HAT, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.DUNE_TURBAN, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.GALVANIC_MASK, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.ICICLE_HELMET, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.MONARCH_EBOSHI, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.MOSAIC_BARBS, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.MOSAIC_VEIL, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.SCRAP_RESPIRATOR, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.SERPENT_TORMENT, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.SILVER_BEVOR, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.STARGAZER_CROWN, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.VIRIDIAN_HELMET, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.VANGUARD_VISOR, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.WANDERER_WICK, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.DRAGONHELMFIRE, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.DRAGONHELMICE, new HatRenderer());
+        TrinketRendererRegistry.registerRenderer(GCItems.DRAGONHELMLIGHTNING, new HatRenderer());
 
+
+
+        BlockRenderLayerMap.INSTANCE.putBlock(COOKING_POT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(COOKING_POT_HANDLE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(COOKING_POT_TRAY, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(LAMENT_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(LAMENT_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(LAMENT_SET.get(BlockType.DOOR), RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(BLUE_ENCHANTED_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BLUE_ENCHANTED_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BLUE_ENCHANTED_SET.get(BlockType.DOOR), RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(SKYRIS_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(SKYRIS_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(SKYRIS_SET.get(BlockType.DOOR), RenderLayer.getCutout());
+        
         BlockRenderLayerMap.INSTANCE.putBlock(DARK_CHERRY_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(GLOWSHROOM_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GLOWSHROOM_SET.get(BlockType.DOOR), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GLOWSHROOM_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GLOWSHROOM_FUR, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(PALO_VERDE_SAPLING, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_TRAPDOOR, RenderLayer.getCutout());
@@ -193,16 +240,26 @@ public class GhostCraftClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(GRATED_IRON_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GRATED_SPRUCE_TRAPDOOR, RenderLayer.getCutout());
 
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.BLACK_CORUNDUM_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.BLUE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.GREEN_CORUNDUM_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.INDIGO_CORUNDUM_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.ORANGE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.RED_CORUNDUM_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.VIOLET_CORUNDUM_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.WHITE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.YELLOW_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BLACK_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BLUE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GREEN_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(INDIGO_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ORANGE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(RED_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(VIOLET_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(WHITE_CORUNDUM_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(YELLOW_CORUNDUM_CLUSTER, RenderLayer.getCutout());
 
-        BlockRenderLayerMap.INSTANCE.putBlock(GCBlocks.SMARAGDANT_CRYSTAL_SHARD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(SMARAGDANT_CRYSTAL_SHARD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(SUBZERO_CRYSTAL_BUD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(SUBZERO_CRYSTAL_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(SUBZERO_CRYSTAL_BUMP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(SUBZERO_CRYSTAL_SPIKES, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ECTOPLASM_JELLY, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ECTOPLASM_JELLY_SLAB, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ECTOPLASM_JELLY_STAIRS, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ECTOPLASM_JELLY_WALL, RenderLayer.getTranslucent());
+
     }
 }
