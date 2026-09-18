@@ -4383,6 +4383,10 @@ public class GCItems {
     public static final Item LAMENT_HANGING_SIGN = register("lament_hanging_sign", new HangingSignItem(GCBlocks.LAMENT_HANGING_SIGN, GCBlocks.LAMENT_WALL_HANGING_SIGN, new Item.Settings()));
     public static final Item SKYRIS_SIGN = register("skyris_sign", new SignItem(new Item.Settings(), GCBlocks.SKYRIS_SIGN, GCBlocks.SKYRIS_WALL_SIGN));
     public static final Item SKYRIS_HANGING_SIGN = register("skyris_hanging_sign", new HangingSignItem(GCBlocks.SKYRIS_HANGING_SIGN, GCBlocks.SKYRIS_WALL_HANGING_SIGN, new Item.Settings()));
+    public static final Item BLIGHTWILLOW_SIGN = register("blightwillow_sign", new SignItem(new Item.Settings(), GCBlocks.BLIGHTWILLOW_SIGN, GCBlocks.BLIGHTWILLOW_WALL_SIGN));
+    public static final Item BLIGHTWILLOW_HANGING_SIGN = register("blightwillow_hanging_sign", new HangingSignItem(GCBlocks.BLIGHTWILLOW_HANGING_SIGN, GCBlocks.BLIGHTWILLOW_WALL_HANGING_SIGN, new Item.Settings()));
+    public static final Item DARK_WILLOW_SIGN = register("dark_willow_sign", new SignItem(new Item.Settings(), GCBlocks.DARK_WILLOW_SIGN, GCBlocks.DARK_WILLOW_WALL_SIGN));
+    public static final Item DARK_WILLOW_HANGING_SIGN = register("dark_willow_hanging_sign", new HangingSignItem(GCBlocks.DARK_WILLOW_HANGING_SIGN, GCBlocks.DARK_WILLOW_WALL_HANGING_SIGN, new Item.Settings()));
 
 
     // FOODS
@@ -4403,6 +4407,7 @@ public class GCItems {
     private static final FoodComponent Deadly = new FoodComponent.Builder().alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 100, 30), 1.0f).build();
     private static final FoodComponent Hallu = new FoodComponent.Builder().alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 100, 1), 1.0f).statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 100, 1), 1.0f).statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 100, 1), 1.0f).build();
 
+    private static final FoodComponent Hung = new FoodComponent.Builder().alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 25, 1), 0.5f).build();
 
 
     //---------------------------------------------------------------
@@ -4884,7 +4889,7 @@ public class GCItems {
     public static final Item SUN_RING = registerWithSet("sun_ring", new Item(new Item.Settings()), TOOL_SET);
     public static final Item WOOL_MITTEN = registerWithSet("wool_mitten", new Item(new Item.Settings()), TOOL_SET);
     public static final Item ZARO_LUNG = registerWithSet("zaro_lung", new Item(new Item.Settings()), TOOL_SET);
-
+    public static final Item POST_MORTEM_TOTEM = registerWithSet("post_mortem_totem", new Item(new Item.Settings()), TOOL_SET);
 
 
     // CHARGES
@@ -5196,17 +5201,19 @@ public class GCItems {
     public static final Item WATER_STONE = registerWithSet("water_stone", new GoatHornItem(new Item.Settings(), InstrumentTags.GOAT_HORNS), EVO_SET);
 
     // MOB DROPS
-    public static final Item ARTHROPOD_CHUNK = register("arthropod_chunk", new Item(new Item.Settings()));
-    public static final Item ARTHROPOD_CHUNK_COOKED = register("arthropod_chunk_cooked", new Item(new Item.Settings()));
+    public static final Item ARTHROPOD_CHUNK = register("arthropod_chunk", new Item(new Item.Settings().food(junkFood)));
+    public static final Item ARTHROPOD_CHUNK_COOKED = register("arthropod_chunk_cooked", new Item(new Item.Settings().food(betterJunkFood)));
     public static final Item COBALT_SCALE = register("cobalt_scale", new Item(new Item.Settings()));
-    public static final Item FLESH = register("flesh", new Item(new Item.Settings()));
-    public static final Item MUTATION = register("mutation", new Item(new Item.Settings()));
-    public static final Item GUMMY_SLIME = register("gummy_slime", new Item(new Item.Settings()));
+    public static final Item FLESH = register("flesh", new Item(new Item.Settings().food(junkFood)));
+    public static final Item MUTATION = register("mutation", new Item(new Item.Settings().food(junkFood)));
+    public static final Item GUMMY_SLIME = register("gummy_slime", new Item(new Item.Settings().food(junkFood)));
     public static final Item SPIDER_SILK = register("spider_silk", new Item(new Item.Settings()));
-    public static final Item WING = register("wing", new Item(new Item.Settings()));
-    public static final Item WITCH_THUMB = register("witch_thumb", new Item(new Item.Settings()));
-    public static final Item ZOMBACON = register("zombacon", new Item(new Item.Settings()));
-    public static final Item ZOMBIE_LEG = register("zombie_leg", new Item(new Item.Settings()));
+    public static final Item WING = register("wing", new Item(new Item.Settings().food(junkFood)));
+    public static final Item WITCH_THUMB = register("witch_thumb", new Item(new Item.Settings().food(Pois)));
+    public static final Item ZOMBACON = register("zombacon", new Item(new Item.Settings().food(Hung)));
+    public static final Item ZOMBIE_LEG = register("zombie_leg", new Item(new Item.Settings().food(Hung)));
+    public static final Item SCULK_CHUNK = register("sculk_chunk", new Item(new Item.Settings().food(StrongPois)));
+    public static final Item DARK_SCALE = register("dark_scale", new Item(new Item.Settings()));
 
     public static final Item FEATHER_FYNYKS = register("feather_fynyks", new Item(new Item.Settings()));
     public static final Item FEATHER_LINI = register("feather_lini", new Item(new Item.Settings()));
@@ -5228,10 +5235,10 @@ public class GCItems {
     public static final Item HIDE_RAVAGER = register("hide_ravager", new Item(new Item.Settings()));
 
 
-    public static final Item TENTACLE_PINK = register("tentacle_pink", new Item(new Item.Settings()));
-    public static final Item TENTACLE_SEVERED = register("tentacle_severed", new Item(new Item.Settings()));
-    public static final Item TENDRIL_DARK = register("tendril_dark", new Item(new Item.Settings()));
-    public static final Item TENDRIL_SCULK = register("tendril_sculk", new Item(new Item.Settings()));
+    public static final Item TENTACLE_PINK = register("tentacle_pink", new Item(new Item.Settings().food(junkFood)));
+    public static final Item TENTACLE_SEVERED = register("tentacle_severed", new Item(new Item.Settings().food(junkFood)));
+    public static final Item TENDRIL_DARK = register("tendril_dark", new Item(new Item.Settings().food(junkFood)));
+    public static final Item TENDRIL_SCULK = register("tendril_sculk", new Item(new Item.Settings().food(StrongPois)));
 
     public static final Item BRAIN = register("brain", new Item(new Item.Settings()));
     public static final Item HEART = register("heart", new Item(new Item.Settings()));
@@ -5895,6 +5902,7 @@ public static final HashSet<Item> SPOOL_SET = new HashSet<>();
 public static final HashSet<Item> WOODCARVE_SET = new HashSet<>();
 
     public static final Item YOU_TRIED_PEEP = registerWithSet("you_tried_peep", new Item(new Item.Settings()), WOODCARVE_SET);
+    public static final Item YOU_TRIED_BOOF = registerWithSet("you_tried_boof", new Item(new Item.Settings()), WOODCARVE_SET);
     public static final Item CHISEL_IRON = registerWithSet("chisel_iron", new Item(new Item.Settings()), WOODCARVE_SET);
 
 
@@ -6098,6 +6106,8 @@ public static final HashSet<Item> BAR_SET = new HashSet<>();
     public static final Item RUBY_INGOT = registerWithSet("ruby_ingot", new Item(new Item.Settings()), BAR_SET);
     public static final Item SAPPHIRE_INGOT = registerWithSet("sapphire_ingot", new Item(new Item.Settings()), BAR_SET);
     public static final Item SILVER_INGOT = registerWithSet("silver_ingot", new Item(new Item.Settings()), BAR_SET);
+    public static final Item NECRONIUM_INGOT = registerWithSet("necronium_ingot", new Item(new Item.Settings()), BAR_SET);
+    public static final Item NECRONIUM_NUGGET = registerWithSet("necronium_nugget", new Item(new Item.Settings()), BAR_SET);
     public static final Item AQUAMARINE_WAND = registerWithSet("aquamarine_wand", new Item(new Item.Settings()), BAR_SET);
     public static final Item CITRINE_WAND = registerWithSet("citrine_wand", new Item(new Item.Settings()), BAR_SET);
     public static final Item EMERALD_WAND = registerWithSet("emerald_wand", new Item(new Item.Settings()), BAR_SET);

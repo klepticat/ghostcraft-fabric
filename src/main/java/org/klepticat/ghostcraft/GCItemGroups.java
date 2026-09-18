@@ -80,11 +80,24 @@ public class GCItemGroups {
                 entries.add(CHOGGY_BLOGGY);
 
                 entries.add(BRIMSTONE);
+                entries.add(BRIMSTONE_STAIRS);
+                entries.add(BRIMSTONE_SLAB);
                 entries.add(BLUE_SAND);
+                entries.add(DUSKY_MYALITE);
+                entries.add(DUSKY_MYALITE_STAIRS);
+                entries.add(DUSKY_MYALITE_SLAB);
                 entries.add(END_MOSS);
+                entries.add(END_MOSS_STAIRS);
+                entries.add(END_MOSS_SLAB);
                 entries.add(WAILING_NYLIUM);
+                entries.add(WAILING_NYLIUM_STAIRS);
+                entries.add(WAILING_NYLIUM_SLAB);
                 entries.add(SHULKREN_PHYLIUM);
+                entries.add(SHULKREN_PHYLIUM_STAIRS);
+                entries.add(SHULKREN_PHYLIUM_SLAB);
                 entries.add(NIGHTSHADE_PHYLIUM);
+                entries.add(NIGHTSHADE_PHYLIUM_STAIRS);
+                entries.add(NIGHTSHADE_PHYLIUM_SLAB);
                 entries.add(GLOOMY_GRASS);
                 entries.add(GLOOMY_SOIL);
 
@@ -106,6 +119,27 @@ public class GCItemGroups {
 
                 entries.add(CRIMSON_WOOL);
                 entries.add(CRIMSON_CARPET);
+
+                entries.add(BACKROOMS_WALLPAPER);
+                entries.add(BACKROOMS_WALLPAPER_STAIRS);
+                entries.add(BACKROOMS_WALLPAPER_SLAB);
+                entries.add(BACKROOMS_WALLPAPER_WALL);
+
+                entries.add(BACKROOMS_CEILING);
+                entries.add(BACKROOMS_CEILING_STAIRS);
+                entries.add(BACKROOMS_CEILING_SLAB);
+                entries.add(BACKROOMS_CEILING_WALL);
+                
+                entries.add(BACKROOMS_CARPET);
+                entries.add(BACKROOMS_CARPET_STAIRS);
+                entries.add(BACKROOMS_CARPET_SLAB);
+                
+                entries.add(BACKROOMS_CARPET_SOG);
+                entries.add(BACKROOMS_CARPET_SOG_STAIRS);
+                entries.add(BACKROOMS_CARPET_SOG_SLAB);
+
+                
+                
 
                 entries.add(BLUE_NETHERRACK);
                 entries.add(BLUE_NETHERRACK_STAIRS);
@@ -132,7 +166,26 @@ public class GCItemGroups {
                 entries.add(SLATE_SLAB);
                 entries.add(SLATE_WALL);
 
+                entries.add(SHALE);
+                entries.add(SHALE_STAIRS);
+                entries.add(SHALE_SLAB);
+                entries.add(SHALE_WALL);
 
+                entries.add(POLISHED_SHALE);
+                entries.add(POLISHED_SHALE_STAIRS);
+                entries.add(POLISHED_SHALE_SLAB);
+                entries.add(POLISHED_SHALE_WALL);
+
+                entries.add(CHISELED_SHALE_BRICKS);
+                entries.add(CHISELED_SHALE_BRICKS_STAIRS);
+                entries.add(CHISELED_SHALE_BRICKS_SLAB);
+                entries.add(CHISELED_SHALE_BRICKS_WALL);
+
+                entries.add(SHALE_BRICKS);
+                entries.add(SHALE_BRICKS_STAIRS);
+                entries.add(SHALE_BRICKS_SLAB);
+                entries.add(SHALE_BRICKS_WALL);
+                entries.add(SHALE_PILLAR);
 
                 entries.add(DACITE);
                 entries.add(DACITE_STAIRS);
@@ -264,6 +317,24 @@ public class GCItemGroups {
                 entries.add(DREADSTONE_WINDOW);
                 entries.add(DREADSTONE_GRATE);
 
+                entries.add(DREADSTONE_GLASS_PASSABLE);
+                entries.add(DREADSTONE_GLASS_PASSABLE_BLACK);
+                entries.add(DREADSTONE_GLASS_PASSABLE_BLUE);
+                entries.add(DREADSTONE_GLASS_PASSABLE_BROWN);
+                entries.add(DREADSTONE_GLASS_PASSABLE_CYAN);
+                entries.add(DREADSTONE_GLASS_PASSABLE_GREEN);
+                entries.add(DREADSTONE_GLASS_PASSABLE_LIGHT);
+                entries.add(DREADSTONE_GLASS_PASSABLE_LIGHT_BLUE);
+                entries.add(DREADSTONE_GLASS_PASSABLE_LIME);
+                entries.add(DREADSTONE_GLASS_PASSABLE_ORANGE);
+                entries.add(DREADSTONE_GLASS_PASSABLE_PINK);
+                entries.add(DREADSTONE_GLASS_PASSABLE_PURPLE);
+                entries.add(DREADSTONE_GLASS_PASSABLE_RED);
+                entries.add(DREADSTONE_GLASS_PASSABLE_SOUL);
+                entries.add(MAGIC_ASSIST_PASSABLE);
+                entries.add(DREADSTONE_GLASS_PASSABLE_WHITE);
+                entries.add(DREADSTONE_GLASS_PASSABLE_YELLOW);
+                
                 entries.add(DREADSTONE_DOOR);
                 entries.add(DREADSTONE_TRAPDOOR);
                 entries.add(LOCKED_DREADSTONE_DOOR);
@@ -553,6 +624,48 @@ public class GCItemGroups {
                 entries.add(GCItems.BLUE_ENCHANTED_SIGN);
                 entries.add(GCItems.BLUE_ENCHANTED_HANGING_SIGN);
 
+                entries.add(BLIGHTWILLOW_SAPLING);
+                entries.add(BLIGHTWILLOW_LEAVES);
+                entries.add(BLIGHTWILLOW_LOG);
+                entries.add(BLIGHTWILLOW_WOOD);
+                entries.add(SPORING_BLIGHTWILLOW_WOOD);
+                entries.add(STRIPPED_BLIGHTWILLOW_LOG);
+                entries.add(STRIPPED_BLIGHTWILLOW_WOOD);
+                entries.add(BLIGHTWILLOW_SET.get(BlockType.CUBE));
+                entries.add(BLIGHTWILLOW_SET.get(BlockType.STAIRS));
+                entries.add(BLIGHTWILLOW_SET.get(BlockType.SLAB));
+                entries.add(BLIGHTWILLOW_SET.get(BlockType.FENCE));
+                entries.add(BLIGHTWILLOW_SET.get(BlockType.GATE));
+                entries.add(BLIGHTWILLOW_SET.get(BlockType.DOOR));
+                entries.add(BLIGHTWILLOW_SET.get(BlockType.TRAPDOOR));
+                entries.add(BLIGHTWILLOW_SET.get(BlockType.PRESSURE_PLATE));
+                entries.add(BLIGHTWILLOW_SET.get(BlockType.BUTTON));
+                entries.add(BLIGHTWILLOW_SET.get(BlockType.WALL));
+                entries.add(GCItems.BLIGHTWILLOW_SIGN);
+                entries.add(GCItems.BLIGHTWILLOW_HANGING_SIGN);
+
+                entries.add(DARK_WILLOW_SAPLING);
+                entries.add(DARK_WILLOW_LEAVES);
+                entries.add(DARK_WILLOW_LOG);
+                entries.add(DARK_WILLOW_WOOD);
+                entries.add(STRIPPED_DARK_WILLOW_LOG);
+                entries.add(STRIPPED_DARK_WILLOW_WOOD);
+                entries.add(DARK_WILLOW_SET.get(BlockType.CUBE));
+                entries.add(DARK_WILLOW_SET.get(BlockType.STAIRS));
+                entries.add(DARK_WILLOW_SET.get(BlockType.SLAB));
+                entries.add(DARK_WILLOW_SET.get(BlockType.FENCE));
+                entries.add(DARK_WILLOW_SET.get(BlockType.GATE));
+                entries.add(DARK_WILLOW_SET.get(BlockType.DOOR));
+                entries.add(DARK_WILLOW_SET.get(BlockType.TRAPDOOR));
+                entries.add(DARK_WILLOW_SET.get(BlockType.PRESSURE_PLATE));
+                entries.add(DARK_WILLOW_SET.get(BlockType.BUTTON));
+                entries.add(DARK_WILLOW_SET.get(BlockType.WALL));
+                entries.add(GCItems.DARK_WILLOW_SIGN);
+                entries.add(GCItems.DARK_WILLOW_HANGING_SIGN);
+
+                entries.add(CINDER_LOG);
+                entries.add(CINDER_WOOD);
+
                 entries.add(LAMENT_SAPLING);
                 entries.add(LAMENT_LEAVES);
                 entries.add(LAMENT_LOG);
@@ -756,6 +869,7 @@ public class GCItemGroups {
                 entries.add(WITCH_THUMB);
                 entries.add(ZOMBACON);
                 entries.add(ZOMBIE_LEG);
+                entries.add(SCULK_CHUNK);
                 entries.add(FEATHER_FYNYKS);
                 entries.add(FEATHER_LINI);
                 entries.add(FEATHER_PARROT);
@@ -773,6 +887,7 @@ public class GCItemGroups {
                 entries.add(HIDE_STRIDER);
                 entries.add(HIDE_HOGLIN);
                 entries.add(HIDE_RAVAGER);
+                entries.add(DARK_SCALE);
                 entries.add(TENTACLE_PINK);
                 entries.add(TENTACLE_SEVERED);
                 entries.add(TENDRIL_DARK);

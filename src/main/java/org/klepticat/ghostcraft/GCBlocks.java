@@ -291,6 +291,14 @@ public class GCBlocks {
     public static Block AMETHYST_SLAB = register("amethyst_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK), true);
     public static Block AMETHYST_WALL = register("amethyst_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK), true);
 
+    public static Block CLAY_STAIRS = register("clay_stairs", settings -> new StairsBlock(Blocks.CLAY.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.CLAY), true);
+    public static Block CLAY_SLAB = register("clay_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.CLAY), true);
+    public static Block CLAY_WALL = register("clay_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.CLAY), true);
+
+    public static Block OBSIDIAN_STAIRS = register("obsidian_stairs", settings -> new StairsBlock(Blocks.OBSIDIAN.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.OBSIDIAN), true);
+    public static Block OBSIDIAN_SLAB = register("obsidian_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.OBSIDIAN), true);
+    public static Block OBSIDIAN_WALL = register("obsidian_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.OBSIDIAN), true);
+
     public static Block CALCITE_STAIRS = register("calcite_stairs", settings -> new StairsBlock(Blocks.CALCITE.getDefaultState(), settings), AbstractBlock.Settings.copy(Blocks.CALCITE), true);
     public static Block CALCITE_SLAB = register("calcite_slab", SlabBlock::new, AbstractBlock.Settings.copy(Blocks.CALCITE), true);
     public static Block CALCITE_WALL = register("calcite_wall", WallBlock::new, AbstractBlock.Settings.copy(Blocks.CALCITE), true);
@@ -769,6 +777,303 @@ public class GCBlocks {
                     .blockVision(Blocks::never),
             true
     );
+
+
+
+    public static Block MAGIC_ASSIST_PASSABLE = register(
+            "magic_assist_passable",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.MAGENTA)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block DREADSTONE_GLASS_PASSABLE_BLACK = register(
+            "dreadstone_glass_passable_black",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLACK)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block DREADSTONE_GLASS_PASSABLE_BLUE = register(
+            "dreadstone_glass_passable_blue",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block DREADSTONE_GLASS_PASSABLE_BROWN = register(
+            "dreadstone_glass_passable_brown",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BROWN)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block DREADSTONE_GLASS_PASSABLE_CYAN = register(
+            "dreadstone_glass_passable_cyan",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.CYAN)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block DREADSTONE_GLASS_PASSABLE_GREEN = register(
+            "dreadstone_glass_passable_green",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GREEN)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block DREADSTONE_GLASS_PASSABLE_LIGHT = register(
+            "dreadstone_glass_passable_light",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block DREADSTONE_GLASS_PASSABLE_LIGHT_BLUE = register(
+            "dreadstone_glass_passable_light_blue",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block DREADSTONE_GLASS_PASSABLE_LIME = register(
+            "dreadstone_glass_passable_lime",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block DREADSTONE_GLASS_PASSABLE_ORANGE = register(
+            "dreadstone_glass_passable_orange",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.ORANGE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block DREADSTONE_GLASS_PASSABLE_PINK = register(
+            "dreadstone_glass_passable_pink",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PINK)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block DREADSTONE_GLASS_PASSABLE_PURPLE = register(
+            "dreadstone_glass_passable_purple",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block DREADSTONE_GLASS_PASSABLE_RED = register(
+            "dreadstone_glass_passable_red",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.RED)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block DREADSTONE_GLASS_PASSABLE_SOUL = register(
+            "dreadstone_glass_passable_soul",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.CYAN)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block DREADSTONE_GLASS_PASSABLE_WHITE = register(
+            "dreadstone_glass_passable_white",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block DREADSTONE_GLASS_PASSABLE_YELLOW = register(
+            "dreadstone_glass_passable_yellow",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.YELLOW)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block DREADSTONE_GLASS_PASSABLE = register(
+            "dreadstone_glass_passable",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .noCollision()
+                    .blockVision(Blocks::never),
+            true
+    );
+    
+    
+    
+    
+    
+    
     public static Block DREADSTONE_GRATE = register(
             "dreadstone_grate",
             Block::new,
@@ -1048,6 +1353,77 @@ public class GCBlocks {
     public static Block CHISELED_CALCITE_BRICKS_SLAB = register("chiseled_calcite_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(CHISELED_CALCITE_BRICKS), true);
     public static Block CHISELED_CALCITE_BRICKS_WALL = register("chiseled_calcite_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(CHISELED_CALCITE_BRICKS), true);
 
+    public static Block SHALE = register(
+            "shale",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+
+    public static Block SHALE_STAIRS = register("shale_stairs", settings -> new StairsBlock(SHALE.getDefaultState(), settings), AbstractBlock.Settings.copy(SHALE), true);
+    public static Block SHALE_SLAB = register("shale_slab", SlabBlock::new, AbstractBlock.Settings.copy(SHALE), true);
+    public static Block SHALE_WALL = register("shale_wall", WallBlock::new, AbstractBlock.Settings.copy(SHALE), true);
+
+
+    public static Block SHALE_PILLAR = register(
+            "shale_pillar",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.STONE)
+                    .burnable(),
+            true
+    );
+
+    public static Block POLISHED_SHALE = register(
+            "polished_shale",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+
+    public static Block POLISHED_SHALE_STAIRS = register("polished_shale_stairs", settings -> new StairsBlock(POLISHED_SHALE.getDefaultState(), settings), AbstractBlock.Settings.copy(POLISHED_SHALE), true);
+    public static Block POLISHED_SHALE_SLAB = register("polished_shale_slab", SlabBlock::new, AbstractBlock.Settings.copy(POLISHED_SHALE), true);
+    public static Block POLISHED_SHALE_WALL = register("polished_shale_wall", WallBlock::new, AbstractBlock.Settings.copy(POLISHED_SHALE), true);
+
+    public static Block SHALE_BRICKS = register(
+            "shale_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block SHALE_BRICKS_STAIRS = register("shale_bricks_stairs", settings -> new StairsBlock(SHALE_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(SHALE_BRICKS), true);
+    public static Block SHALE_BRICKS_SLAB = register("shale_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(SHALE_BRICKS), true);
+    public static Block SHALE_BRICKS_WALL = register("shale_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(SHALE_BRICKS), true);
+
+    public static Block CHISELED_SHALE_BRICKS = register(
+            "chiseled_shale_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+
+    public static Block CHISELED_SHALE_BRICKS_STAIRS = register("chiseled_shale_bricks_stairs", settings -> new StairsBlock(CHISELED_SHALE_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(CHISELED_SHALE_BRICKS), true);
+    public static Block CHISELED_SHALE_BRICKS_SLAB = register("chiseled_shale_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(CHISELED_SHALE_BRICKS), true);
+    public static Block CHISELED_SHALE_BRICKS_WALL = register("chiseled_shale_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(CHISELED_SHALE_BRICKS), true);
 
 
 
@@ -1367,6 +1743,63 @@ public class GCBlocks {
     );
 
 
+    public static Block BACKROOMS_CARPET = register(
+            "backrooms_carpet",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.YELLOW)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.WOOL),
+            true
+    );
+    public static Block BACKROOMS_CARPET_STAIRS = register("backrooms_carpet_stairs", settings -> new StairsBlock(BACKROOMS_CARPET.getDefaultState(), settings), AbstractBlock.Settings.copy(BACKROOMS_CARPET), true);
+    public static Block BACKROOMS_CARPET_SLAB = register("backrooms_carpet_slab", SlabBlock::new, AbstractBlock.Settings.copy(BACKROOMS_CARPET), true);
+   
+    public static Block BACKROOMS_CARPET_SOG = register(
+            "backrooms_carpet_sog",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.YELLOW)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.WOOL),
+            true
+    );
+    public static Block BACKROOMS_CARPET_SOG_STAIRS = register("backrooms_carpet_sog_stairs", settings -> new StairsBlock(BACKROOMS_CARPET_SOG.getDefaultState(), settings), AbstractBlock.Settings.copy(BACKROOMS_CARPET_SOG), true);
+    public static Block BACKROOMS_CARPET_SOG_SLAB = register("backrooms_carpet_sog_slab", SlabBlock::new, AbstractBlock.Settings.copy(BACKROOMS_CARPET_SOG), true);
+
+    public static Block BACKROOMS_WALLPAPER = register(
+            "backrooms_wallpaper",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_YELLOW)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.BAMBOO),
+            true
+    );
+    public static Block BACKROOMS_WALLPAPER_STAIRS = register("backrooms_wallpaper_stairs", settings -> new StairsBlock(BACKROOMS_WALLPAPER.getDefaultState(), settings), AbstractBlock.Settings.copy(BACKROOMS_WALLPAPER), true);
+    public static Block BACKROOMS_WALLPAPER_SLAB = register("backrooms_wallpaper_slab", SlabBlock::new, AbstractBlock.Settings.copy(BACKROOMS_WALLPAPER), true);
+    public static Block BACKROOMS_WALLPAPER_WALL = register("backrooms_wallpaper_wall", WallBlock::new, AbstractBlock.Settings.copy(BACKROOMS_WALLPAPER), true);
+
+    public static Block BACKROOMS_CEILING = register(
+            "backrooms_ceiling",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_YELLOW)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.BAMBOO),
+            true
+    );
+    public static Block BACKROOMS_CEILING_STAIRS = register("backrooms_ceiling_stairs", settings -> new StairsBlock(BACKROOMS_CEILING.getDefaultState(), settings), AbstractBlock.Settings.copy(BACKROOMS_CEILING), true);
+    public static Block BACKROOMS_CEILING_SLAB = register("backrooms_ceiling_slab", SlabBlock::new, AbstractBlock.Settings.copy(BACKROOMS_CEILING), true);
+    public static Block BACKROOMS_CEILING_WALL = register("backrooms_ceiling_wall", WallBlock::new, AbstractBlock.Settings.copy(BACKROOMS_CEILING), true);
 
 
     public static Block CONFETTI = register(
@@ -1571,7 +2004,21 @@ public class GCBlocks {
     );
     public static Block NIGHTSHADE_PHYLIUM_STAIRS = register("nightshade_phylium_stairs", settings -> new StairsBlock(NIGHTSHADE_PHYLIUM.getDefaultState(), settings), AbstractBlock.Settings.copy(NIGHTSHADE_PHYLIUM), true);
     public static Block NIGHTSHADE_PHYLIUM_SLAB = register("nightshade_phylium_slab", SlabBlock::new, AbstractBlock.Settings.copy(NIGHTSHADE_PHYLIUM), true);
-   
+
+
+    public static Block DUSKY_MYALITE = register(
+            "dusky_myalite",
+            MossBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.STONE)
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true
+    );
+    public static Block DUSKY_MYALITE_STAIRS = register("dusky_myalite_stairs", settings -> new StairsBlock(DUSKY_MYALITE.getDefaultState(), settings), AbstractBlock.Settings.copy(DUSKY_MYALITE), true);
+    public static Block DUSKY_MYALITE_SLAB = register("dusky_myalite_slab", SlabBlock::new, AbstractBlock.Settings.copy(DUSKY_MYALITE), true);
+
 
     public static Block GLOOMY_GRASS = register(
             "gloomy_grass",
@@ -3053,6 +3500,144 @@ public class GCBlocks {
             true
     );
 
+    public static Block OBSIDIAN_BRICKS = register(
+            "obsidian_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BRIGHT_TEAL)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block OBSIDIAN_BRICKS_STAIRS = register("obsidian_bricks_stairs", settings -> new StairsBlock(OBSIDIAN_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(OBSIDIAN_BRICKS), true);
+    public static Block OBSIDIAN_BRICKS_SLAB = register("obsidian_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(OBSIDIAN_BRICKS), true);
+    public static Block OBSIDIAN_BRICKS_WALL = register("obsidian_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(OBSIDIAN_BRICKS), true);
+
+    public static Block POLISHED_OBSIDIAN = register(
+            "polished_obsidian",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BRIGHT_TEAL)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block POLISHED_OBSIDIAN_STAIRS = register("polished_obsidian_stairs", settings -> new StairsBlock(POLISHED_OBSIDIAN.getDefaultState(), settings), AbstractBlock.Settings.copy(POLISHED_OBSIDIAN), true);
+    public static Block POLISHED_OBSIDIAN_SLAB = register("polished_obsidian_slab", SlabBlock::new, AbstractBlock.Settings.copy(POLISHED_OBSIDIAN), true);
+    public static Block POLISHED_OBSIDIAN_WALL = register("polished_obsidian_wall", WallBlock::new, AbstractBlock.Settings.copy(POLISHED_OBSIDIAN), true);
+
+    public static Block OBSIDIAN_TILES = register(
+            "obsidian_tiles",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BRIGHT_TEAL)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block OBSIDIAN_TILES_STAIRS = register("obsidian_tiles_stairs", settings -> new StairsBlock(OBSIDIAN_TILES.getDefaultState(), settings), AbstractBlock.Settings.copy(OBSIDIAN_TILES), true);
+    public static Block OBSIDIAN_TILES_SLAB = register("obsidian_tiles_slab", SlabBlock::new, AbstractBlock.Settings.copy(OBSIDIAN_TILES), true);
+    public static Block OBSIDIAN_TILES_WALL = register("obsidian_tiles_wall", WallBlock::new, AbstractBlock.Settings.copy(OBSIDIAN_TILES), true);
+
+
+    public static Block POLISHED_OBSIDIAN_TILES = register(
+            "polished_obsidian_tiles",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BRIGHT_TEAL)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block POLISHED_OBSIDIAN_TILES_STAIRS = register("polished_obsidian_tiles_stairs", settings -> new StairsBlock(POLISHED_OBSIDIAN_TILES.getDefaultState(), settings), AbstractBlock.Settings.copy(POLISHED_OBSIDIAN_TILES), true);
+    public static Block POLISHED_OBSIDIAN_TILES_SLAB = register("polished_obsidian_tiles_slab", SlabBlock::new, AbstractBlock.Settings.copy(POLISHED_OBSIDIAN_TILES), true);
+    public static Block POLISHED_OBSIDIAN_TILES_WALL = register("polished_obsidian_tiles_wall", WallBlock::new, AbstractBlock.Settings.copy(POLISHED_OBSIDIAN_TILES), true);
+
+    public static Block OBSIDIAN_GLASS = register(
+            "obsidian_glass",
+            TransparentBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(1.0F)
+                    .sounds(BlockSoundGroup.GLASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::never)
+                    .solidBlock(Blocks::never)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never),
+            true
+    );
+
+    public static Block BASALT_BRICKS = register(
+            "basalt_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static Block BASALT_BRICKS_STAIRS = register("basalt_bricks_stairs", settings -> new StairsBlock(BASALT_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(BASALT_BRICKS), true);
+    public static Block BASALT_BRICKS_SLAB = register("basalt_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(BASALT_BRICKS), true);
+    public static Block BASALT_BRICKS_WALL = register("basalt_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(BASALT_BRICKS), true);
+
+    public static Block SMOOTH_BASALT_BRICKS = register(
+            "smooth_basalt_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static Block SMOOTH_BASALT_BRICKS_STAIRS = register("smooth_basalt_bricks_stairs", settings -> new StairsBlock(SMOOTH_BASALT_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(SMOOTH_BASALT_BRICKS), true);
+    public static Block SMOOTH_BASALT_BRICKS_SLAB = register("smooth_basalt_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(SMOOTH_BASALT_BRICKS), true);
+    public static Block SMOOTH_BASALT_BRICKS_WALL = register("smooth_basalt_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(SMOOTH_BASALT_BRICKS), true);
+
+    public static Block CRACKED_BASALT_BRICKS = register(
+            "cracked_basalt_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static Block CRACKED_BASALT_BRICKS_STAIRS = register("cracked_basalt_bricks_stairs", settings -> new StairsBlock(CRACKED_BASALT_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(CRACKED_BASALT_BRICKS), true);
+    public static Block CRACKED_BASALT_BRICKS_SLAB = register("cracked_basalt_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(CRACKED_BASALT_BRICKS), true);
+    public static Block CRACKED_BASALT_BRICKS_WALL = register("cracked_basalt_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(CRACKED_BASALT_BRICKS), true);
+
+    public static Block CRACKED_SMOOTH_BASALT_BRICKS = register(
+            "cracked_smooth_basalt_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+    public static Block CRACKED_SMOOTH_BASALT_BRICKS_STAIRS = register("cracked_smooth_basalt_bricks_stairs", settings -> new StairsBlock(CRACKED_SMOOTH_BASALT_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(CRACKED_SMOOTH_BASALT_BRICKS), true);
+    public static Block CRACKED_SMOOTH_BASALT_BRICKS_SLAB = register("cracked_smooth_basalt_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(CRACKED_SMOOTH_BASALT_BRICKS), true);
+    public static Block CRACKED_SMOOTH_BASALT_BRICKS_WALL = register("cracked_smooth_basalt_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(CRACKED_SMOOTH_BASALT_BRICKS), true);
+
+
     public static Block BRIMSTONE = register(
             "brimstone",
             MossBlock::new,
@@ -3063,6 +3648,9 @@ public class GCBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY),
             true
     );
+    public static Block BRIMSTONE_STAIRS = register("brimstone_stairs", settings -> new StairsBlock(BRIMSTONE.getDefaultState(), settings), AbstractBlock.Settings.copy(BRIMSTONE), true);
+    public static Block BRIMSTONE_SLAB = register("brimstone_slab", SlabBlock::new, AbstractBlock.Settings.copy(BRIMSTONE), true);
+    public static Block BRIMSTONE_WALL = register("brimstone_wall", WallBlock::new, AbstractBlock.Settings.copy(BRIMSTONE), true);
 
 
 
@@ -3380,8 +3968,7 @@ public class GCBlocks {
                     .blockVision(Blocks::never)
                     .burnable()
                     .pistonBehavior(PistonBehavior.DESTROY)
-                    .solidBlock(Blocks::never)
-                    .luminance(value -> 15),
+                    .solidBlock(Blocks::never),
             true
     );
     public static Block ANCHOR_LOG = register(
@@ -4081,6 +4668,305 @@ public class GCBlocks {
             GCWoodTypes.SKYRIS,
             true
     );
+
+    public static Block BLIGHTWILLOW_LEAVES = register(
+            "blightwillow_leaves",
+            LeavesBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PINK)
+                    .strength(0.2F)
+                    .ticksRandomly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never),
+            true
+    );
+    public static Block SPORING_BLIGHTWILLOW_WOOD = register(
+            "sporing_blightwillow_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block BLIGHTWILLOW_LOG = register(
+            "blightwillow_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block BLIGHTWILLOW_WOOD = register(
+            "blightwillow_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_BLIGHTWILLOW_WOOD = register(
+            "stripped_blightwillow_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_BLIGHTWILLOW_LOG = register(
+            "stripped_blightwillow_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block BLIGHTWILLOW_SIGN = register(
+            "blightwillow_sign",
+            settings -> new SignBlock(GCWoodTypes.BLIGHTWILLOW, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(1.0F)
+                    .burnable(),
+            false
+    );
+    public static final Block BLIGHTWILLOW_WALL_SIGN = register(
+            "blightwillow_wall_sign",
+            settings -> new WallSignBlock(GCWoodTypes.BLIGHTWILLOW, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(1.0F)
+                    .dropsLike(BLIGHTWILLOW_SIGN)
+                    .burnable(),
+            false
+    );
+    public static Block BLIGHTWILLOW_HANGING_SIGN = register(
+            "blightwillow_hanging_sign",
+            settings -> new HangingSignBlock(GCWoodTypes.BLIGHTWILLOW, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .burnable(),
+            false
+    );
+    public static Block BLIGHTWILLOW_WALL_HANGING_SIGN = register(
+            "blightwillow_wall_hanging_sign",
+            settings -> new WallHangingSignBlock(GCWoodTypes.BLIGHTWILLOW, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .dropsLike(BLIGHTWILLOW_HANGING_SIGN)
+                    .burnable(),
+            false
+    );
+    public static Block BLIGHTWILLOW_SAPLING = register(
+            "blightwillow_sapling",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.GRASS),
+            true
+    );
+    public static ImmutableMap<BlockType, Block> BLIGHTWILLOW_SET = registerWoodSet(
+            "blightwillow",
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.LIME)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            GCWoodTypes.BLIGHTWILLOW,
+            true
+    );
+
+    public static Block DARK_WILLOW_LEAVES = register(
+            "dark_willow_leaves",
+            LeavesBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLACK)
+                    .strength(0.2F)
+                    .ticksRandomly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never),
+            true
+    );
+    public static Block DARK_WILLOW_LOG = register(
+            "dark_willow_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLACK)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block DARK_WILLOW_WOOD = register(
+            "dark_willow_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLACK)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_DARK_WILLOW_WOOD = register(
+            "stripped_dark_willow_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLACK)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_DARK_WILLOW_LOG = register(
+            "stripped_dark_willow_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLACK)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block DARK_WILLOW_SIGN = register(
+            "dark_willow_sign",
+            settings -> new SignBlock(GCWoodTypes.DARK_WILLOW, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLACK)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(1.0F)
+                    .burnable(),
+            false
+    );
+    public static final Block DARK_WILLOW_WALL_SIGN = register(
+            "dark_willow_wall_sign",
+            settings -> new WallSignBlock(GCWoodTypes.DARK_WILLOW, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLACK)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(1.0F)
+                    .dropsLike(DARK_WILLOW_SIGN)
+                    .burnable(),
+            false
+    );
+    public static Block DARK_WILLOW_HANGING_SIGN = register(
+            "dark_willow_hanging_sign",
+            settings -> new HangingSignBlock(GCWoodTypes.DARK_WILLOW, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLACK)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .burnable(),
+            false
+    );
+    public static Block DARK_WILLOW_WALL_HANGING_SIGN = register(
+            "dark_willow_wall_hanging_sign",
+            settings -> new WallHangingSignBlock(GCWoodTypes.DARK_WILLOW, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLACK)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .dropsLike(DARK_WILLOW_HANGING_SIGN)
+                    .burnable(),
+            false
+    );
+    public static Block DARK_WILLOW_SAPLING = register(
+            "dark_willow_sapling",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLACK)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.GRASS),
+            true
+    );
+    public static ImmutableMap<BlockType, Block> DARK_WILLOW_SET = registerWoodSet(
+            "dark_willow",
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BLACK)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            GCWoodTypes.DARK_WILLOW,
+            true
+    );
+
+    public static Block CINDER_LOG = register(
+            "cinder_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.ORANGE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+    public static Block CINDER_WOOD = register(
+            "cinder_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.ORANGE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            true
+    );
+
 //</editor-fold>
 
 
@@ -4097,7 +4983,7 @@ public class GCBlocks {
     //END OF LIST
 
 
-    public static ImmutableSet<ImmutableMap<BlockType, Block>> BLOCK_SETS = ImmutableSet.of(SKYRIS_SET, EBONY_SET, DARK_CHERRY_SET, GLOWSHROOM_SET, TANGLEWOOD_SET, BLUE_ENCHANTED_SET, ANCHOR_SET, LAMENT_SET);
+    public static ImmutableSet<ImmutableMap<BlockType, Block>> BLOCK_SETS = ImmutableSet.of(SKYRIS_SET, EBONY_SET, DARK_CHERRY_SET, GLOWSHROOM_SET, TANGLEWOOD_SET, BLUE_ENCHANTED_SET, ANCHOR_SET, LAMENT_SET, BLIGHTWILLOW_SET, DARK_WILLOW_SET);
 
     public static void initialize() {
     }

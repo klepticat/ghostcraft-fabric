@@ -191,7 +191,15 @@ public class GhostCraftClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(SKYRIS_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(SKYRIS_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(SKYRIS_SET.get(BlockType.DOOR), RenderLayer.getCutout());
-        
+
+        BlockRenderLayerMap.INSTANCE.putBlock(BLIGHTWILLOW_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BLIGHTWILLOW_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BLIGHTWILLOW_SET.get(BlockType.DOOR), RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(DARK_WILLOW_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DARK_WILLOW_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DARK_WILLOW_SET.get(BlockType.DOOR), RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(DARK_CHERRY_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(GLOWSHROOM_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
@@ -221,9 +229,28 @@ public class GhostCraftClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_SOUL, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_WHITE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_YELLOW, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(MAGIC_ASSIST, RenderLayer.getTranslucent());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PASSABLE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PASSABLE_BLACK, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PASSABLE_BLUE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PASSABLE_BROWN, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PASSABLE_CYAN, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PASSABLE_GREEN, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PASSABLE_LIGHT, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PASSABLE_LIGHT_BLUE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PASSABLE_LIME, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PASSABLE_ORANGE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PASSABLE_PINK, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PASSABLE_PURPLE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PASSABLE_RED, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PASSABLE_SOUL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PASSABLE_WHITE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_GLASS_PASSABLE_YELLOW, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(MAGIC_ASSIST_PASSABLE, RenderLayer.getTranslucent());
+
         BlockRenderLayerMap.INSTANCE.putBlock(DREADSTONE_BARS, RenderLayer.getCutout());
 
-        BlockRenderLayerMap.INSTANCE.putBlock(MAGIC_ASSIST, RenderLayer.getTranslucent());
 
         BlockRenderLayerMap.INSTANCE.putBlock(CONFETTI, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(CONFETTI_CARPET, RenderLayer.getTranslucent());
@@ -236,6 +263,7 @@ public class GhostCraftClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(CONFETTI_VALENTINES, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(CONFETTI_VALENTINES_CARPET, RenderLayer.getTranslucent());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(OBSIDIAN_GLASS, RenderLayer.getTranslucent());
 
         BlockRenderLayerMap.INSTANCE.putBlock(GRATED_IRON_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GRATED_SPRUCE_TRAPDOOR, RenderLayer.getCutout());

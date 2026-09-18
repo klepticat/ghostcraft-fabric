@@ -48,12 +48,33 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(CHOGGY_BLOGGY);
         blockStateModelGenerator.registerSimpleCubeAll(ENCHANTED_LEAVES);
 
-        blockStateModelGenerator.registerSimpleCubeAll(BRIMSTONE);
+        BlockStateModelGenerator.BlockTexturePool BrimsPool = blockStateModelGenerator.registerCubeAllModelTexturePool(BRIMSTONE);
+        BrimsPool.stairs(BRIMSTONE_STAIRS);
+        BrimsPool.slab(BRIMSTONE_SLAB);
+        BrimsPool.wall(BRIMSTONE_WALL);
+        
         blockStateModelGenerator.registerSimpleCubeAll(BLUE_SAND);
-        blockStateModelGenerator.registerSimpleCubeAll(END_MOSS);
-        blockStateModelGenerator.registerSimpleCubeAll(WAILING_NYLIUM);
-        blockStateModelGenerator.registerSimpleCubeAll(NIGHTSHADE_PHYLIUM);
-        blockStateModelGenerator.registerSimpleCubeAll(SHULKREN_PHYLIUM);
+
+        BlockStateModelGenerator.BlockTexturePool MyaliteDuskPool = blockStateModelGenerator.registerCubeAllModelTexturePool(DUSKY_MYALITE);
+        MyaliteDuskPool.stairs(DUSKY_MYALITE_STAIRS);
+        MyaliteDuskPool.slab(DUSKY_MYALITE_SLAB);
+        
+        BlockStateModelGenerator.BlockTexturePool EndMossPool = blockStateModelGenerator.registerCubeAllModelTexturePool(END_MOSS);
+        EndMossPool.stairs(END_MOSS_STAIRS);
+        EndMossPool.slab(END_MOSS_SLAB);
+        
+        BlockStateModelGenerator.BlockTexturePool WailingNylPool = blockStateModelGenerator.registerCubeAllModelTexturePool(WAILING_NYLIUM);
+        WailingNylPool.stairs(WAILING_NYLIUM_STAIRS);
+        WailingNylPool.slab(WAILING_NYLIUM_SLAB);
+        
+        BlockStateModelGenerator.BlockTexturePool NightshadePhylPool = blockStateModelGenerator.registerCubeAllModelTexturePool(NIGHTSHADE_PHYLIUM);
+        NightshadePhylPool.stairs(NIGHTSHADE_PHYLIUM_STAIRS);
+        NightshadePhylPool.slab(NIGHTSHADE_PHYLIUM_SLAB);
+
+        BlockStateModelGenerator.BlockTexturePool ShulkrenPhylPool = blockStateModelGenerator.registerCubeAllModelTexturePool(SHULKREN_PHYLIUM);
+        ShulkrenPhylPool.stairs(SHULKREN_PHYLIUM_STAIRS);
+        ShulkrenPhylPool.slab(SHULKREN_PHYLIUM_SLAB);
+        
         blockStateModelGenerator.registerSimpleCubeAll(GLOOMY_GRASS);
         blockStateModelGenerator.registerSimpleCubeAll(GLOOMY_SOIL);
         blockStateModelGenerator.registerSimpleCubeAll(NOISE);
@@ -295,6 +316,7 @@ public class GCModelProvider extends FabricModelProvider {
         registerRedstoneActivatedLamp(DREADSTONE_LAMP, blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GRATE);
         registerBars(DREADSTONE_BARS, blockStateModelGenerator);
+        blockStateModelGenerator.registerSimpleCubeAll(MAGIC_ASSIST);
         blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS);
         blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_BLACK);
         blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_BLUE);
@@ -312,6 +334,26 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_WHITE);
         blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_YELLOW);
 
+        blockStateModelGenerator.registerSimpleCubeAll(MAGIC_ASSIST_PASSABLE);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PASSABLE);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PASSABLE_BLACK);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PASSABLE_BLUE);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PASSABLE_BROWN);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PASSABLE_CYAN);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PASSABLE_GREEN);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PASSABLE_LIGHT);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PASSABLE_LIGHT_BLUE);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PASSABLE_LIME);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PASSABLE_ORANGE);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PASSABLE_PINK);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PASSABLE_PURPLE);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PASSABLE_RED);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PASSABLE_SOUL);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PASSABLE_WHITE);
+        blockStateModelGenerator.registerSimpleCubeAll(DREADSTONE_GLASS_PASSABLE_YELLOW);
+
+        
+        
         BlockStateModelGenerator.BlockTexturePool dreadBrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(DREADSTONE_BRICKS);
         dreadBrickPool.stairs(DREADSTONE_BRICKS_STAIRS);
         dreadBrickPool.slab(DREADSTONE_BRICKS_SLAB);
@@ -391,6 +433,29 @@ public class GCModelProvider extends FabricModelProvider {
         ChiscalcbrickPool.stairs(CHISELED_CALCITE_BRICKS_STAIRS);
         ChiscalcbrickPool.slab(CHISELED_CALCITE_BRICKS_SLAB);
         ChiscalcbrickPool.wall(CHISELED_CALCITE_BRICKS_WALL);
+
+        
+        BlockStateModelGenerator.BlockTexturePool shaleQPool = blockStateModelGenerator.registerCubeAllModelTexturePool(SHALE);
+        shaleQPool.stairs(SHALE_STAIRS);
+        shaleQPool.slab(SHALE_SLAB);
+        shaleQPool.wall(SHALE_WALL);
+        
+        BlockStateModelGenerator.BlockTexturePool smoothshalQPool = blockStateModelGenerator.registerCubeAllModelTexturePool(POLISHED_SHALE);
+        smoothshalQPool.stairs(POLISHED_SHALE_STAIRS);
+        smoothshalQPool.slab(POLISHED_SHALE_SLAB);
+        smoothshalQPool.wall(POLISHED_SHALE_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool shalbrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(SHALE_BRICKS);
+        shalbrickPool.stairs(SHALE_BRICKS_STAIRS);
+        shalbrickPool.slab(SHALE_BRICKS_SLAB);
+        shalbrickPool.wall(SHALE_BRICKS_WALL);
+
+        blockStateModelGenerator.registerAxisRotated(SHALE_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+
+        BlockStateModelGenerator.BlockTexturePool ChisshalbrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(CHISELED_SHALE_BRICKS);
+        ChisshalbrickPool.stairs(CHISELED_SHALE_BRICKS_STAIRS);
+        ChisshalbrickPool.slab(CHISELED_SHALE_BRICKS_SLAB);
+        ChisshalbrickPool.wall(CHISELED_SHALE_BRICKS_WALL);
         
         
         
@@ -460,7 +525,24 @@ public class GCModelProvider extends FabricModelProvider {
         scaledfPool.slab(SCALED_FLESH_SLAB);
         scaledfPool.wall(SCALED_FLESH_WALL);
 
-        blockStateModelGenerator.registerSimpleCubeAll(MAGIC_ASSIST);
+        BlockStateModelGenerator.BlockTexturePool BackroomWallPool = blockStateModelGenerator.registerCubeAllModelTexturePool(BACKROOMS_WALLPAPER);
+        BackroomWallPool.stairs(BACKROOMS_WALLPAPER_STAIRS);
+        BackroomWallPool.slab(BACKROOMS_WALLPAPER_SLAB);
+        BackroomWallPool.wall(BACKROOMS_WALLPAPER_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool BackroomsceiliPool = blockStateModelGenerator.registerCubeAllModelTexturePool(BACKROOMS_CEILING);
+        BackroomsceiliPool.stairs(BACKROOMS_CEILING_STAIRS);
+        BackroomsceiliPool.slab(BACKROOMS_CEILING_SLAB);
+        BackroomsceiliPool.wall(BACKROOMS_CEILING_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool BackroomCARPool = blockStateModelGenerator.registerCubeAllModelTexturePool(BACKROOMS_CARPET);
+        BackroomCARPool.stairs(BACKROOMS_CARPET_STAIRS);
+        BackroomCARPool.slab(BACKROOMS_CARPET_SLAB);
+
+        BlockStateModelGenerator.BlockTexturePool BackroomCARSOGPool = blockStateModelGenerator.registerCubeAllModelTexturePool(BACKROOMS_CARPET_SOG);
+        BackroomCARSOGPool.stairs(BACKROOMS_CARPET_SOG_STAIRS);
+        BackroomCARSOGPool.slab(BACKROOMS_CARPET_SOG_SLAB);
+
 
 
         blockStateModelGenerator.registerWoolAndCarpet(CRIMSON_WOOL, CRIMSON_CARPET);
@@ -503,6 +585,25 @@ public class GCModelProvider extends FabricModelProvider {
                 crystalCluster(BLUE_ENCHANTED_SAPLING, blockStateModelGenerator)
         );
 
+        blockStateModelGenerator.registerSimpleCubeAll(BLIGHTWILLOW_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(SPORING_BLIGHTWILLOW_WOOD);
+        blockStateModelGenerator.registerLog(BLIGHTWILLOW_LOG).log(BLIGHTWILLOW_LOG).wood(BLIGHTWILLOW_WOOD);
+        blockStateModelGenerator.registerLog(STRIPPED_BLIGHTWILLOW_LOG).log(STRIPPED_BLIGHTWILLOW_LOG).wood(STRIPPED_BLIGHTWILLOW_WOOD);
+        blockStateModelGenerator.registerHangingSign(BLIGHTWILLOW_LOG, BLIGHTWILLOW_HANGING_SIGN, BLIGHTWILLOW_WALL_HANGING_SIGN);
+        blockStateModelGenerator.blockStateCollector.accept(
+                crystalCluster(BLIGHTWILLOW_SAPLING, blockStateModelGenerator)
+        );
+
+        blockStateModelGenerator.registerSimpleCubeAll(DARK_WILLOW_LEAVES);
+        blockStateModelGenerator.registerLog(DARK_WILLOW_LOG).log(DARK_WILLOW_LOG).wood(DARK_WILLOW_WOOD);
+        blockStateModelGenerator.registerLog(STRIPPED_DARK_WILLOW_LOG).log(STRIPPED_DARK_WILLOW_LOG).wood(STRIPPED_DARK_WILLOW_WOOD);
+        blockStateModelGenerator.registerHangingSign(DARK_WILLOW_LOG, DARK_WILLOW_HANGING_SIGN, DARK_WILLOW_WALL_HANGING_SIGN);
+        blockStateModelGenerator.blockStateCollector.accept(
+                crystalCluster(DARK_WILLOW_SAPLING, blockStateModelGenerator)
+        );
+
+        blockStateModelGenerator.registerLog(CINDER_LOG).log(CINDER_LOG).wood(CINDER_WOOD);
+
         blockStateModelGenerator.registerSimpleCubeAll(LAMENT_LEAVES);
         blockStateModelGenerator.registerLog(LAMENT_LOG).log(LAMENT_LOG).wood(LAMENT_WOOD);
         blockStateModelGenerator.registerLog(STRIPPED_LAMENT_LOG).log(STRIPPED_LAMENT_LOG).wood(STRIPPED_LAMENT_WOOD);
@@ -538,7 +639,10 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerHangingSign(STRIPPED_DARK_CHERRY_LOG, DARK_CHERRY_HANGING_SIGN, DARK_CHERRY_WALL_HANGING_SIGN);
 
 
-
+        BlockStateModelGenerator.BlockTexturePool clayPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.CLAY);
+        clayPool.stairs(CLAY_STAIRS);
+        clayPool.slab(CLAY_SLAB);
+        clayPool.wall(CLAY_WALL);
 
         BlockStateModelGenerator.BlockTexturePool amethystPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.AMETHYST_BLOCK);
         amethystPool.stairs(AMETHYST_STAIRS);
@@ -701,6 +805,55 @@ public class GCModelProvider extends FabricModelProvider {
         polsmaragPool.wall(POLISHED_SMARAGDANT_CRYSTAL_WALL);
 
         blockStateModelGenerator.registerAxisRotated(SMARAGDANT_CRYSTAL_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+
+
+        BlockStateModelGenerator.BlockTexturePool OBSIDIANPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.OBSIDIAN);
+        OBSIDIANPool.stairs(OBSIDIAN_STAIRS);
+        OBSIDIANPool.slab(OBSIDIAN_SLAB);
+        OBSIDIANPool.wall(OBSIDIAN_WALL);
+
+
+        BlockStateModelGenerator.BlockTexturePool OBbrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(OBSIDIAN_BRICKS);
+        OBbrickPool.stairs(OBSIDIAN_BRICKS_STAIRS);
+        OBbrickPool.slab(OBSIDIAN_BRICKS_SLAB);
+        OBbrickPool.wall(OBSIDIAN_BRICKS_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool OBtilePool = blockStateModelGenerator.registerCubeAllModelTexturePool(OBSIDIAN_TILES);
+        OBtilePool.stairs(OBSIDIAN_TILES_STAIRS);
+        OBtilePool.slab(OBSIDIAN_TILES_SLAB);
+        OBtilePool.wall(OBSIDIAN_TILES_WALL);
+
+
+        BlockStateModelGenerator.BlockTexturePool polObPool = blockStateModelGenerator.registerCubeAllModelTexturePool(POLISHED_OBSIDIAN);
+        polObPool.stairs(POLISHED_OBSIDIAN_STAIRS);
+        polObPool.slab(POLISHED_OBSIDIAN_SLAB);
+        polObPool.wall(POLISHED_OBSIDIAN_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool polObTPool = blockStateModelGenerator.registerCubeAllModelTexturePool(POLISHED_OBSIDIAN_TILES);
+        polObTPool.stairs(POLISHED_OBSIDIAN_TILES_STAIRS);
+        polObTPool.slab(POLISHED_OBSIDIAN_TILES_SLAB);
+        polObTPool.wall(POLISHED_OBSIDIAN_TILES_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(OBSIDIAN_GLASS);
+
+        BlockStateModelGenerator.BlockTexturePool BABbrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(BASALT_BRICKS);
+        BABbrickPool.stairs(BASALT_BRICKS_STAIRS);
+        BABbrickPool.slab(BASALT_BRICKS_SLAB);
+        BABbrickPool.wall(BASALT_BRICKS_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool CRACKED_BABbrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(CRACKED_BASALT_BRICKS);
+        CRACKED_BABbrickPool.stairs(CRACKED_BASALT_BRICKS_STAIRS);
+        CRACKED_BABbrickPool.slab(CRACKED_BASALT_BRICKS_SLAB);
+        CRACKED_BABbrickPool.wall(CRACKED_BASALT_BRICKS_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool SMOOTH_BABbrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(SMOOTH_BASALT_BRICKS);
+        SMOOTH_BABbrickPool.stairs(SMOOTH_BASALT_BRICKS_STAIRS);
+        SMOOTH_BABbrickPool.slab(SMOOTH_BASALT_BRICKS_SLAB);
+        SMOOTH_BABbrickPool.wall(SMOOTH_BASALT_BRICKS_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool CRACKED_SMOOTH_BABbrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(CRACKED_SMOOTH_BASALT_BRICKS);
+        CRACKED_SMOOTH_BABbrickPool.stairs(CRACKED_SMOOTH_BASALT_BRICKS_STAIRS);
+        CRACKED_SMOOTH_BABbrickPool.slab(CRACKED_SMOOTH_BASALT_BRICKS_SLAB);
+        CRACKED_SMOOTH_BABbrickPool.wall(CRACKED_SMOOTH_BASALT_BRICKS_WALL);
 
 
 

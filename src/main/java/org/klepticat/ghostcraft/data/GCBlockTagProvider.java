@@ -133,11 +133,25 @@ public class GCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         GCBlocks.CHISELED_CALCITE_BRICKS_WALL,
                         GCBlocks.ECTOPLASM_BLOCK_WALL,
                         GCBlocks.ECTOPLASM_JELLY_WALL,
+                        GCBlocks.SHALE_WALL,
+                        GCBlocks.SHALE_BRICKS_WALL,
+                        GCBlocks.CHISELED_SHALE_BRICKS_WALL,
+                        GCBlocks.POLISHED_SHALE_WALL,
+                        GCBlocks.CLAY_WALL,
+                        GCBlocks.POLISHED_OBSIDIAN_WALL,
+                        GCBlocks.POLISHED_OBSIDIAN_TILES_WALL,
+                        GCBlocks.OBSIDIAN_BRICKS_WALL,
+                        GCBlocks.OBSIDIAN_TILES_WALL,
+                        GCBlocks.OBSIDIAN_WALL,
+                        GCBlocks.BACKROOMS_WALLPAPER_WALL,
+                        GCBlocks.BACKROOMS_CEILING_WALL,
 
                         TANGLEWOOD_SET.get(BlockType.WALL),
                         BLUE_ENCHANTED_SET.get(BlockType.WALL),
                         LAMENT_SET.get(BlockType.WALL),
-                        SKYRIS_SET.get(BlockType.WALL)
+                        SKYRIS_SET.get(BlockType.WALL),
+                        BLIGHTWILLOW_SET.get(BlockType.WALL),
+                        DARK_WILLOW_SET.get(BlockType.WALL)
                 );
     }
 }
