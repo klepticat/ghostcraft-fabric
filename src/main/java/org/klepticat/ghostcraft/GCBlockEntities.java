@@ -13,8 +13,8 @@ import static org.klepticat.ghostcraft.GhostCraft.MOD_ID;
 
 public class GCBlockEntities {
     public static void initialize() {
-        addSupportedBlocks(BlockEntityType.SIGN, Set.of(GCBlocks.EBONY_SIGN, GCBlocks.EBONY_WALL_SIGN, GCBlocks.DARK_CHERRY_SIGN, GCBlocks.DARK_CHERRY_WALL_SIGN));
-        addSupportedBlocks(BlockEntityType.HANGING_SIGN, Set.of(GCBlocks.EBONY_HANGING_SIGN, GCBlocks.EBONY_WALL_HANGING_SIGN, GCBlocks.DARK_CHERRY_HANGING_SIGN, GCBlocks.DARK_CHERRY_WALL_HANGING_SIGN));
+        addSupportedBlocks(BlockEntityType.SIGN, Set.of(GCBlocks.SKYRIS_SIGN, GCBlocks.LAMENT_SIGN, GCBlocks.EBONY_SIGN, GCBlocks.EBONY_WALL_SIGN, GCBlocks.DARK_CHERRY_SIGN, GCBlocks.DARK_CHERRY_WALL_SIGN, GCBlocks.BLUE_ENCHANTED_SIGN, GCBlocks.BLUE_ENCHANTED_WALL_SIGN));
+        addSupportedBlocks(BlockEntityType.HANGING_SIGN, Set.of(GCBlocks.SKYRIS_HANGING_SIGN, GCBlocks.LAMENT_HANGING_SIGN, GCBlocks.EBONY_HANGING_SIGN, GCBlocks.EBONY_WALL_HANGING_SIGN, GCBlocks.DARK_CHERRY_HANGING_SIGN, GCBlocks.DARK_CHERRY_WALL_HANGING_SIGN, GCBlocks.BLUE_ENCHANTED_HANGING_SIGN, GCBlocks.BLUE_ENCHANTED_WALL_HANGING_SIGN));
     }
 
     public static void addSupportedBlocks(BlockEntityType<?> blockEntityType, Set<Block> blocks) {

@@ -16,6 +16,7 @@ import org.klepticat.ghostcraft.command.LightningCommand;
 import org.klepticat.ghostcraft.command.LoreCommand;
 import org.klepticat.ghostcraft.command.SoulsCommand;
 import org.klepticat.ghostcraft.entity.GCPlayerEntityStickers;
+import org.klepticat.ghostcraft.networking.WaterBreathKeyPayload;
 import org.klepticat.ghostcraft.networking.InvisKeyPayload;
 import org.klepticat.ghostcraft.networking.NightVisKeyPayload;
 import org.klepticat.ghostcraft.networking.PlaceStickerPayload;
@@ -48,9 +49,15 @@ public class GhostCraft implements ModInitializer {
 		CommandRegistrationCallback.EVENT.register(new DevCommands()::execute);
 		CommandRegistrationCallback.EVENT.register(new SoulsCommand()::execute);
 
+		PayloadTypeRegistry.playC2S().register(WaterBreathKeyPayload.ID, WaterBreathKeyPayload.CODEC);
 		PayloadTypeRegistry.playC2S().register(InvisKeyPayload.ID, InvisKeyPayload.CODEC);
 		PayloadTypeRegistry.playC2S().register(NightVisKeyPayload.ID, NightVisKeyPayload.CODEC);
 		PayloadTypeRegistry.playC2S().register(PlaceStickerPayload.ID, PlaceStickerPayload.PACKET_CODEC);
+
+		ServerPlayNetworking.registerGlobalReceiver(WaterBreathKeyPayload.ID, (payload, context) -> {
+			if (!context.player().hasStatusEffect(StatusEffects.WATER_BREATHING)) context.player().addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, StatusEffectInstance.INFINITE, 0, true, false));
+			else context.player().removeStatusEffect(StatusEffects.WATER_BREATHING);
+		});
 
 		ServerPlayNetworking.registerGlobalReceiver(InvisKeyPayload.ID, (payload, context) -> {
 			if (!context.player().hasStatusEffect(StatusEffects.INVISIBILITY)) context.player().addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, StatusEffectInstance.INFINITE, 0, true, false));
@@ -74,6 +81,8 @@ public class GhostCraft implements ModInitializer {
             content.addAfter(Items.NETHERRACK, GCBlocks.NETHERRACK_STAIRS, GCBlocks.NETHERRACK_SLAB, GCBlocks.NETHERRACK_WALL, GCBlocks.NETHERRACK_FENCE);
             content.addAfter(Items.SMOOTH_BASALT, GCBlocks.SMOOTH_BASALT_STAIRS, GCBlocks.SMOOTH_BASALT_SLAB, GCBlocks.SMOOTH_BASALT_WALL);
 			content.addAfter(Items.AMETHYST_BLOCK, GCBlocks.AMETHYST_STAIRS, GCBlocks.AMETHYST_SLAB, GCBlocks.AMETHYST_WALL);
+			content.addAfter(Items.POLISHED_ANDESITE_SLAB, Items.CALCITE, GCBlocks.CALCITE_STAIRS, GCBlocks.CALCITE_SLAB, GCBlocks.CALCITE_WALL, GCBlocks.POLISHED_CALCITE, GCBlocks.POLISHED_CALCITE_STAIRS, GCBlocks.POLISHED_CALCITE_SLAB, GCBlocks.POLISHED_CALCITE_WALL, GCBlocks.CALCITE_BRICKS, GCBlocks.CALCITE_BRICKS_STAIRS, GCBlocks.CALCITE_BRICKS_SLAB, GCBlocks.CALCITE_BRICKS_WALL, GCBlocks.CHISELED_CALCITE_BRICKS, GCBlocks.CHISELED_CALCITE_BRICKS_STAIRS, GCBlocks.CHISELED_CALCITE_BRICKS_SLAB, GCBlocks.CHISELED_CALCITE_BRICKS_WALL, GCBlocks.CALCITE_PILLAR);
         });
+
 	}
 }

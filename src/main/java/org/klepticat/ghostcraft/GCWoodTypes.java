@@ -13,6 +13,9 @@ public class GCWoodTypes {
     public static final WoodType TANGLEWOOD = WoodTypeBuilder.copyOf(WoodType.WARPED).register(Identifier.of(MOD_ID, "tanglewood"), BlockSetType.WARPED);
     public static final WoodType BLUE_ENCHANTED = WoodTypeBuilder.copyOf(WoodType.WARPED).register(Identifier.of(MOD_ID, "blue_enchanted"), BlockSetType.WARPED);
     public static final WoodType ANCHOR = WoodTypeBuilder.copyOf(WoodType.ACACIA).register(Identifier.of(MOD_ID, "anchor"), BlockSetType.ACACIA);
+    public static final WoodType LAMENT = WoodTypeBuilder.copyOf(WoodType.WARPED).register(Identifier.of(MOD_ID, "lament"), BlockSetType.WARPED);
+    public static final WoodType SKYRIS = WoodTypeBuilder.copyOf(WoodType.SPRUCE).register(Identifier.of(MOD_ID, "skyris"), BlockSetType.SPRUCE);
+
 
     public static void initialize() {
     }

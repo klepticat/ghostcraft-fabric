@@ -154,6 +154,15 @@ public class TotemData {
             return new TotemParticle(ParticleTypes.DUST, compound);
         }
 
+        public static TotemParticle makeNoteParticle(float r, float g, float b, float scale) {
+            NbtCompound compound = new NbtCompound();
+
+            compound.put("color", rgbColorComponent(r, g, b));
+            compound.putFloat("scale", scale);
+
+            return new TotemParticle(ParticleTypes.NOTE, compound);
+        }
+
         public static TotemParticle makeEffectParticle(float r, float g, float b, float a) {
             NbtCompound compound = new NbtCompound();
 
