@@ -284,6 +284,9 @@ public class GhostCraftClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(SUBZERO_CRYSTAL_BUMP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(SUBZERO_CRYSTAL_SPIKES, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ALLURITE_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GLINTED_ALLURITE_CLUSTER, RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(ECTOPLASM_JELLY, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ECTOPLASM_JELLY_SLAB, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ECTOPLASM_JELLY_STAIRS, RenderLayer.getTranslucent());

@@ -3104,6 +3104,69 @@ public class GCBlocks {
             true
     );
 
+    public static Block ALLURITE_CLUSTER = register(
+            "allurite_cluster",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BRIGHT_TEAL)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+
+    public static Block GLINTED_ALLURITE_CLUSTER = register(
+            "glinted_allurite_cluster",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.BRIGHT_TEAL)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
+
+    public static Block LICHEN_MOSS = register(
+            "lichen_moss",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.MOSS_BLOCK),
+            true
+    );
+    public static Block LICHEN_MOSS_CARPET = register("lichen_moss_carpet", CarpetBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.GRAY).strength(0.1F).sounds(BlockSoundGroup.WOOL).pistonBehavior(PistonBehavior.DESTROY), true);
+
+    public static Block LICHEN_MOSS_LIT = register(
+            "lichen_moss_lit",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.MOSS_BLOCK),
+            true
+    );
+    public static Block LICHEN_MOSS_CARPET_LIT = register("lichen_moss_carpet_lit", CarpetBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.GRAY).strength(0.1F).sounds(BlockSoundGroup.WOOL).pistonBehavior(PistonBehavior.DESTROY), true);
+
+    public static Block LICHEN_ROOTS = register(
+            "lichen_roots",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.GRASS),
+            true
+    );
+
+
     public static Block ECHO_SOIL = register(
             "echo_soil",
             Block::new,
@@ -3115,6 +3178,8 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.MOSS_BLOCK),
             true
     );
+
+
 
     public static Block CHISELED_SCULK_STONE = register(
             "chiseled_sculk_stone",

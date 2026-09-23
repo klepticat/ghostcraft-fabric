@@ -146,6 +146,11 @@ public class GCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         GCBlocks.BACKROOMS_WALLPAPER_WALL,
                         GCBlocks.BACKROOMS_CEILING_WALL,
 
+                        GCBlocks.ALLURITE_BRICKS_WALL,
+                        GCBlocks.SMOOTH_ALLURITE_WALL,
+                        GCBlocks.CHISELED_ALLURITE_WALL,
+                        GCBlocks.ALLURITE_WALL,
+
                         TANGLEWOOD_SET.get(BlockType.WALL),
                         BLUE_ENCHANTED_SET.get(BlockType.WALL),
                         LAMENT_SET.get(BlockType.WALL),

@@ -6125,6 +6125,7 @@ public static final HashSet<Item> BAR_SET = new HashSet<>();
     public static final Item FOSSIL_SKULL = registerWithSet("fossil_skull", new Item(new Item.Settings()), GEMSTONE_SET);
     public static final Item FOSSIL_IMPRINT = registerWithSet("fossil_imprint", new Item(new Item.Settings()), GEMSTONE_SET);
     public static final Item MAGMAEGG = registerWithSet("magmaegg", new Item(new Item.Settings()), GEMSTONE_SET);
+    public static final Item ALLURITE_SHARD = registerWithSet("allurite_shard", new Item(new Item.Settings()), GEMSTONE_SET);
 
     public static final Item SOUL_SHARD = registerWithSet("shard", new Item(new Item.Settings()), GEMSTONE_SET);
     public static final Item SHADOW_GEM = registerWithSet("shadgem", new Item(new Item.Settings()), GEMSTONE_SET);

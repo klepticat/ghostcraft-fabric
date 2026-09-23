@@ -717,27 +717,7 @@ public class GCModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerAxisRotated(DACITE_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
 
-        blockStateModelGenerator.registerSimpleCubeAll(SCORCHIA_CUT_POLISHED);
 
-        BlockStateModelGenerator.BlockTexturePool alluitePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ALLURITE);
-        alluitePool.stairs(ALLURITE_STAIRS);
-        alluitePool.slab(ALLURITE_SLAB);
-        alluitePool.wall(ALLURITE_WALL);
-
-        BlockStateModelGenerator.BlockTexturePool SMAlluitePool = blockStateModelGenerator.registerCubeAllModelTexturePool(SMOOTH_ALLURITE);
-        SMAlluitePool.stairs(SMOOTH_ALLURITE_STAIRS);
-        SMAlluitePool.slab(SMOOTH_ALLURITE_SLAB);
-        SMAlluitePool.wall(SMOOTH_ALLURITE_WALL);
-
-        BlockStateModelGenerator.BlockTexturePool CHAlluitePool = blockStateModelGenerator.registerCubeAllModelTexturePool(CHISELED_ALLURITE);
-        CHAlluitePool.stairs(CHISELED_ALLURITE_STAIRS);
-        CHAlluitePool.slab(CHISELED_ALLURITE_SLAB);
-        CHAlluitePool.wall(CHISELED_ALLURITE_WALL);
-        
-        BlockStateModelGenerator.BlockTexturePool alluBrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ALLURITE_BRICKS);
-        alluBrickPool.stairs(ALLURITE_BRICKS_STAIRS);
-        alluBrickPool.slab(ALLURITE_BRICKS_SLAB);
-        alluBrickPool.wall(ALLURITE_BRICKS_WALL);
 
 
         blockStateModelGenerator.registerSimpleCubeAll(ECHO_SOIL);
@@ -806,6 +786,34 @@ public class GCModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerAxisRotated(SMARAGDANT_CRYSTAL_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
 
+        BlockStateModelGenerator.BlockTexturePool alluitePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ALLURITE);
+        alluitePool.stairs(ALLURITE_STAIRS);
+        alluitePool.slab(ALLURITE_SLAB);
+        alluitePool.wall(ALLURITE_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool SMAlluitePool = blockStateModelGenerator.registerCubeAllModelTexturePool(SMOOTH_ALLURITE);
+        SMAlluitePool.stairs(SMOOTH_ALLURITE_STAIRS);
+        SMAlluitePool.slab(SMOOTH_ALLURITE_SLAB);
+        SMAlluitePool.wall(SMOOTH_ALLURITE_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool CHAlluitePool = blockStateModelGenerator.registerCubeAllModelTexturePool(CHISELED_ALLURITE);
+        CHAlluitePool.stairs(CHISELED_ALLURITE_STAIRS);
+        CHAlluitePool.slab(CHISELED_ALLURITE_SLAB);
+        CHAlluitePool.wall(CHISELED_ALLURITE_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool alluBrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ALLURITE_BRICKS);
+        alluBrickPool.stairs(ALLURITE_BRICKS_STAIRS);
+        alluBrickPool.slab(ALLURITE_BRICKS_SLAB);
+        alluBrickPool.wall(ALLURITE_BRICKS_WALL);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ALLURITE_LAMP);
+
+        blockStateModelGenerator.blockStateCollector.accept(
+                crystalCluster(ALLURITE_CLUSTER, blockStateModelGenerator)
+        );
+        blockStateModelGenerator.blockStateCollector.accept(
+                crystalCluster(GLINTED_ALLURITE_CLUSTER, blockStateModelGenerator)
+        );
 
         BlockStateModelGenerator.BlockTexturePool OBSIDIANPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.OBSIDIAN);
         OBSIDIANPool.stairs(OBSIDIAN_STAIRS);
@@ -854,6 +862,7 @@ public class GCModelProvider extends FabricModelProvider {
         CRACKED_SMOOTH_BABbrickPool.stairs(CRACKED_SMOOTH_BASALT_BRICKS_STAIRS);
         CRACKED_SMOOTH_BABbrickPool.slab(CRACKED_SMOOTH_BASALT_BRICKS_SLAB);
         CRACKED_SMOOTH_BABbrickPool.wall(CRACKED_SMOOTH_BASALT_BRICKS_WALL);
+
 
 
 

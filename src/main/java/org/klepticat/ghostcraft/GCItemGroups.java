@@ -209,6 +209,30 @@ public class GCItemGroups {
                 entries.add(DACITE_PILLAR);
 
                 entries.add(SCORCHIA_CUT_POLISHED);
+
+                entries.add(ALLURITE_CLUSTER);
+                entries.add(GLINTED_ALLURITE_CLUSTER);
+                entries.add(ALLURITE);
+                entries.add(ALLURITE_STAIRS);
+                entries.add(ALLURITE_SLAB);
+                entries.add(ALLURITE_WALL);
+
+                entries.add(SMOOTH_ALLURITE);
+                entries.add(SMOOTH_ALLURITE_STAIRS);
+                entries.add(SMOOTH_ALLURITE_SLAB);
+                entries.add(SMOOTH_ALLURITE_WALL);
+
+                entries.add(CHISELED_ALLURITE);
+                entries.add(CHISELED_ALLURITE_STAIRS);
+                entries.add(CHISELED_ALLURITE_SLAB);
+                entries.add(CHISELED_ALLURITE_WALL);
+
+                entries.add(ALLURITE_BRICKS);
+                entries.add(ALLURITE_BRICKS_STAIRS);
+                entries.add(ALLURITE_BRICKS_SLAB);
+                entries.add(ALLURITE_BRICKS_WALL);
+                entries.add(ALLURITE_LAMP);
+                
                 
                 entries.add(SUBZERO_ASH);
                 entries.add(SUBZERO_CRYSTAL_CLUSTER);
