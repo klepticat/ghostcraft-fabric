@@ -604,6 +604,24 @@ public class GCModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerLog(CINDER_LOG).log(CINDER_LOG).wood(CINDER_WOOD);
 
+        blockStateModelGenerator.registerSimpleCubeAll(YAGROOT_LEAVES);
+        blockStateModelGenerator.registerLog(YAGROOT_LOG).log(YAGROOT_LOG).wood(YAGROOT_WOOD);
+        blockStateModelGenerator.registerLog(STRIPPED_YAGROOT_LOG).log(STRIPPED_YAGROOT_LOG).wood(STRIPPED_YAGROOT_WOOD);
+        blockStateModelGenerator.registerHangingSign(YAGROOT_LOG, YAGROOT_HANGING_SIGN, YAGROOT_WALL_HANGING_SIGN);
+        blockStateModelGenerator.blockStateCollector.accept(
+                crystalCluster(YAGROOT_SAPLING, blockStateModelGenerator)
+        );
+        blockStateModelGenerator.registerAxisRotated(MUDDY_YAGROOT_ROOTS, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerAxisRotated(YAGROOT_ROOTS, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+
+        blockStateModelGenerator.registerSimpleCubeAll(STARLIT_LEAVES);
+        blockStateModelGenerator.registerLog(STARLIT_LOG).log(STARLIT_LOG).wood(STARLIT_WOOD);
+        blockStateModelGenerator.registerLog(STRIPPED_STARLIT_LOG).log(STRIPPED_STARLIT_LOG).wood(STRIPPED_STARLIT_WOOD);
+        blockStateModelGenerator.registerHangingSign(STARLIT_LOG, STARLIT_HANGING_SIGN, STARLIT_WALL_HANGING_SIGN);
+        blockStateModelGenerator.blockStateCollector.accept(
+                crystalCluster(STARLIT_SAPLING, blockStateModelGenerator)
+        );
+
         blockStateModelGenerator.registerSimpleCubeAll(LAMENT_LEAVES);
         blockStateModelGenerator.registerLog(LAMENT_LOG).log(LAMENT_LOG).wood(LAMENT_WOOD);
         blockStateModelGenerator.registerLog(STRIPPED_LAMENT_LOG).log(STRIPPED_LAMENT_LOG).wood(STRIPPED_LAMENT_WOOD);
@@ -717,7 +735,39 @@ public class GCModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerAxisRotated(DACITE_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
 
+        BlockStateModelGenerator.BlockTexturePool azure_seaPool = blockStateModelGenerator.registerCubeAllModelTexturePool(AZURE_SEASTONE);
+        azure_seaPool.stairs(AZURE_SEASTONE_STAIRS);
+        azure_seaPool.slab(AZURE_SEASTONE_SLAB);
+        azure_seaPool.wall(AZURE_SEASTONE_WALL);
 
+        BlockStateModelGenerator.BlockTexturePool POL_azseaPool = blockStateModelGenerator.registerCubeAllModelTexturePool(POLISHED_AZURE_SEASTONE);
+        POL_azseaPool.stairs(POLISHED_AZURE_SEASTONE_STAIRS);
+        POL_azseaPool.slab(POLISHED_AZURE_SEASTONE_SLAB);
+        POL_azseaPool.wall(POLISHED_AZURE_SEASTONE_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool Azur_seTilePool = blockStateModelGenerator.registerCubeAllModelTexturePool(AZURE_SEASTONE_TILE);
+        Azur_seTilePool.stairs(AZURE_SEASTONE_TILE_STAIRS);
+        Azur_seTilePool.slab(AZURE_SEASTONE_TILE_SLAB);
+        Azur_seTilePool.wall(AZURE_SEASTONE_TILE_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool Azur_seBrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(AZURE_SEASTONE_BRICKS);
+        Azur_seBrickPool.stairs(AZURE_SEASTONE_BRICKS_STAIRS);
+        Azur_seBrickPool.slab(AZURE_SEASTONE_BRICKS_SLAB);
+        Azur_seBrickPool.wall(AZURE_SEASTONE_BRICKS_WALL);
+
+        blockStateModelGenerator.registerAxisRotated(AZURE_SEASTONE_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerAxisRotated(CHISELED_AZURE_SEASTONE_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+
+
+        blockStateModelGenerator.registerWoolAndCarpet(LICHEN_MOSS, LICHEN_MOSS_CARPET);
+        blockStateModelGenerator.registerWoolAndCarpet(LICHEN_MOSS_LIT, LICHEN_MOSS_CARPET_LIT);
+
+        blockStateModelGenerator.blockStateCollector.accept(
+                crystalCluster(LICHEN_ROOTS, blockStateModelGenerator)
+        );
+        blockStateModelGenerator.blockStateCollector.accept(
+                crystalCluster(BOWL_LICHEN, blockStateModelGenerator)
+        );
 
 
         blockStateModelGenerator.registerSimpleCubeAll(ECHO_SOIL);

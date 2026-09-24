@@ -200,6 +200,16 @@ public class GhostCraftClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(DARK_WILLOW_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DARK_WILLOW_SET.get(BlockType.DOOR), RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(YAGROOT_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(YAGROOT_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(YAGROOT_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(YAGROOT_SET.get(BlockType.DOOR), RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(STARLIT_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(STARLIT_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(STARLIT_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(STARLIT_SET.get(BlockType.DOOR), RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(DARK_CHERRY_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(GLOWSHROOM_SET.get(BlockType.TRAPDOOR), RenderLayer.getCutout());

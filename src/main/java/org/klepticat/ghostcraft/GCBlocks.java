@@ -3128,6 +3128,93 @@ public class GCBlocks {
             true
     );
 
+    public static Block AZURE_SEASTONE = register(
+            "azure_seastone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block AZURE_SEASTONE_STAIRS = register("azure_seastone_stairs", settings -> new StairsBlock(AZURE_SEASTONE.getDefaultState(), settings), AbstractBlock.Settings.copy(AZURE_SEASTONE), true);
+    public static Block AZURE_SEASTONE_SLAB = register("azure_seastone_slab", SlabBlock::new, AbstractBlock.Settings.copy(AZURE_SEASTONE), true);
+    public static Block AZURE_SEASTONE_WALL = register("azure_seastone_wall", WallBlock::new, AbstractBlock.Settings.copy(AZURE_SEASTONE), true);
+
+    public static Block POLISHED_AZURE_SEASTONE = register(
+            "polished_azure_seastone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block POLISHED_AZURE_SEASTONE_STAIRS = register("polished_azure_seastone_stairs", settings -> new StairsBlock(POLISHED_AZURE_SEASTONE.getDefaultState(), settings), AbstractBlock.Settings.copy(POLISHED_AZURE_SEASTONE), true);
+    public static Block POLISHED_AZURE_SEASTONE_SLAB = register("polished_azure_seastone_slab", SlabBlock::new, AbstractBlock.Settings.copy(POLISHED_AZURE_SEASTONE), true);
+    public static Block POLISHED_AZURE_SEASTONE_WALL = register("polished_azure_seastone_wall", WallBlock::new, AbstractBlock.Settings.copy(POLISHED_AZURE_SEASTONE), true);
+
+
+    public static Block AZURE_SEASTONE_TILE = register(
+            "azure_seastone_tile",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block AZURE_SEASTONE_TILE_STAIRS = register("azure_seastone_tile_stairs", settings -> new StairsBlock(AZURE_SEASTONE_TILE.getDefaultState(), settings), AbstractBlock.Settings.copy(AZURE_SEASTONE_TILE), true);
+    public static Block AZURE_SEASTONE_TILE_SLAB = register("azure_seastone_tile_slab", SlabBlock::new, AbstractBlock.Settings.copy(AZURE_SEASTONE_TILE), true);
+    public static Block AZURE_SEASTONE_TILE_WALL = register("azure_seastone_tile_wall", WallBlock::new, AbstractBlock.Settings.copy(AZURE_SEASTONE_TILE), true);
+
+    public static Block AZURE_SEASTONE_BRICKS = register(
+            "azure_seastone_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block AZURE_SEASTONE_BRICKS_STAIRS = register("azure_seastone_bricks_stairs", settings -> new StairsBlock(AZURE_SEASTONE_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(AZURE_SEASTONE_BRICKS), true);
+    public static Block AZURE_SEASTONE_BRICKS_SLAB = register("azure_seastone_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(AZURE_SEASTONE_BRICKS), true);
+    public static Block AZURE_SEASTONE_BRICKS_WALL = register("azure_seastone_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(AZURE_SEASTONE_BRICKS), true);
+
+
+    public static Block AZURE_SEASTONE_PILLAR = register(
+            "azure_seastone_pillar",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+
+    public static Block CHISELED_AZURE_SEASTONE_PILLAR = register(
+            "chiseled_azure_seastone_pillar",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+
+
     public static Block LICHEN_MOSS = register(
             "lichen_moss",
             Block::new,
@@ -3166,6 +3253,17 @@ public class GCBlocks {
             true
     );
 
+    public static Block BOWL_LICHEN = register(
+            "bowl_lichen",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_CYAN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.GRASS),
+            true
+    );
 
     public static Block ECHO_SOIL = register(
             "echo_soil",
@@ -5032,6 +5130,298 @@ public class GCBlocks {
             true
     );
 
+    public static Block YAGROOT_LEAVES = register(
+            "yagroot_leaves",
+            LeavesBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .strength(0.2F)
+                    .ticksRandomly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never),
+            true
+    );
+    public static Block MUDDY_YAGROOT_ROOTS = register(
+            "muddy_yagroot_roots",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block YAGROOT_ROOTS = register(
+            "yagroot_roots",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+
+
+
+    public static Block YAGROOT_LOG = register(
+            "yagroot_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block YAGROOT_WOOD = register(
+            "yagroot_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_YAGROOT_WOOD = register(
+            "stripped_yagroot_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_YAGROOT_LOG = register(
+            "stripped_yagroot_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block YAGROOT_SIGN = register(
+            "yagroot_sign",
+            settings -> new SignBlock(GCWoodTypes.YAGROOT, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(1.0F)
+                    .burnable(),
+            false
+    );
+    public static final Block YAGROOT_WALL_SIGN = register(
+            "yagroot_wall_sign",
+            settings -> new WallSignBlock(GCWoodTypes.YAGROOT, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(1.0F)
+                    .dropsLike(YAGROOT_SIGN)
+                    .burnable(),
+            false
+    );
+    public static Block YAGROOT_HANGING_SIGN = register(
+            "yagroot_hanging_sign",
+            settings -> new HangingSignBlock(GCWoodTypes.YAGROOT, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .burnable(),
+            false
+    );
+    public static Block YAGROOT_WALL_HANGING_SIGN = register(
+            "yagroot_wall_hanging_sign",
+            settings -> new WallHangingSignBlock(GCWoodTypes.YAGROOT, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .dropsLike(YAGROOT_HANGING_SIGN)
+                    .burnable(),
+            false
+    );
+    public static Block YAGROOT_SAPLING = register(
+            "yagroot_sapling",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.GRASS),
+            true
+    );
+    public static ImmutableMap<BlockType, Block> YAGROOT_SET = registerWoodSet(
+            "yagroot",
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            GCWoodTypes.YAGROOT,
+            true
+    );
+
+
+    public static Block STARLIT_LEAVES = register(
+            "starlit_leaves",
+            LeavesBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_RED)
+                    .strength(0.2F)
+                    .ticksRandomly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never),
+            true
+    );
+
+    public static Block STARLIT_LOG = register(
+            "starlit_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block STARLIT_WOOD = register(
+            "starlit_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_STARLIT_WOOD = register(
+            "stripped_starlit_wood",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block STRIPPED_STARLIT_LOG = register(
+            "stripped_starlit_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F)
+                    .sounds(BlockSoundGroup.NETHER_STEM)
+                    .burnable(),
+            true
+    );
+    public static Block STARLIT_SIGN = register(
+            "starlit_sign",
+            settings -> new SignBlock(GCWoodTypes.STARLIT, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(1.0F)
+                    .burnable(),
+            false
+    );
+    public static final Block STARLIT_WALL_SIGN = register(
+            "starlit_wall_sign",
+            settings -> new WallSignBlock(GCWoodTypes.STARLIT, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(1.0F)
+                    .dropsLike(STARLIT_SIGN)
+                    .burnable(),
+            false
+    );
+    public static Block STARLIT_HANGING_SIGN = register(
+            "starlit_hanging_sign",
+            settings -> new HangingSignBlock(GCWoodTypes.STARLIT, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .burnable(),
+            false
+    );
+    public static Block STARLIT_WALL_HANGING_SIGN = register(
+            "starlit_wall_hanging_sign",
+            settings -> new WallHangingSignBlock(GCWoodTypes.STARLIT, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .solid()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .dropsLike(STARLIT_HANGING_SIGN)
+                    .burnable(),
+            false
+    );
+    public static Block STARLIT_SAPLING = register(
+            "starlit_sapling",
+            settings -> new AmethystClusterBlock(6, 4, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.GRASS),
+            true
+    );
+    public static ImmutableMap<BlockType, Block> STARLIT_SET = registerWoodSet(
+            "starlit",
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+            GCWoodTypes.STARLIT,
+            true
+    );
+    
+    
 //</editor-fold>
 
 
@@ -5048,7 +5438,7 @@ public class GCBlocks {
     //END OF LIST
 
 
-    public static ImmutableSet<ImmutableMap<BlockType, Block>> BLOCK_SETS = ImmutableSet.of(SKYRIS_SET, EBONY_SET, DARK_CHERRY_SET, GLOWSHROOM_SET, TANGLEWOOD_SET, BLUE_ENCHANTED_SET, ANCHOR_SET, LAMENT_SET, BLIGHTWILLOW_SET, DARK_WILLOW_SET);
+    public static ImmutableSet<ImmutableMap<BlockType, Block>> BLOCK_SETS = ImmutableSet.of(STARLIT_SET, YAGROOT_SET, SKYRIS_SET, EBONY_SET, DARK_CHERRY_SET, GLOWSHROOM_SET, TANGLEWOOD_SET, BLUE_ENCHANTED_SET, ANCHOR_SET, LAMENT_SET, BLIGHTWILLOW_SET, DARK_WILLOW_SET);
 
     public static void initialize() {
     }

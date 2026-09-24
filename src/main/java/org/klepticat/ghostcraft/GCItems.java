@@ -4387,6 +4387,10 @@ public class GCItems {
     public static final Item BLIGHTWILLOW_HANGING_SIGN = register("blightwillow_hanging_sign", new HangingSignItem(GCBlocks.BLIGHTWILLOW_HANGING_SIGN, GCBlocks.BLIGHTWILLOW_WALL_HANGING_SIGN, new Item.Settings()));
     public static final Item DARK_WILLOW_SIGN = register("dark_willow_sign", new SignItem(new Item.Settings(), GCBlocks.DARK_WILLOW_SIGN, GCBlocks.DARK_WILLOW_WALL_SIGN));
     public static final Item DARK_WILLOW_HANGING_SIGN = register("dark_willow_hanging_sign", new HangingSignItem(GCBlocks.DARK_WILLOW_HANGING_SIGN, GCBlocks.DARK_WILLOW_WALL_HANGING_SIGN, new Item.Settings()));
+    public static final Item YAGROOT_SIGN = register("yagroot_sign", new SignItem(new Item.Settings(), GCBlocks.YAGROOT_SIGN, GCBlocks.YAGROOT_WALL_SIGN));
+    public static final Item YAGROOT_HANGING_SIGN = register("yagroot_hanging_sign", new HangingSignItem(GCBlocks.YAGROOT_HANGING_SIGN, GCBlocks.YAGROOT_WALL_HANGING_SIGN, new Item.Settings()));
+    public static final Item STARLIT_SIGN = register("starlit_sign", new SignItem(new Item.Settings(), GCBlocks.STARLIT_SIGN, GCBlocks.STARLIT_WALL_SIGN));
+    public static final Item STARLIT_HANGING_SIGN = register("starlit_hanging_sign", new HangingSignItem(GCBlocks.STARLIT_HANGING_SIGN, GCBlocks.STARLIT_WALL_HANGING_SIGN, new Item.Settings()));
 
 
     // FOODS
@@ -5942,6 +5946,7 @@ public static final HashSet<Item> GATHERING_SET = new HashSet<>();
     public static final Item SHAGGYMANE = registerWithSet("shaggymane", new Item(new Item.Settings().food(betterJunkFood)), MUSHROOM_SET);
     public static final Item TOADSTOOL = registerWithSet("toadstool", new Item(new Item.Settings().food(Hallu)), MUSHROOM_SET);
     public static final Item VERDIGRISAGARICC = registerWithSet("verdigrisagaricc", new Item(new Item.Settings().food(MildPois)), MUSHROOM_SET);
+    public static final Item LICHEN_CORDYCEPS = registerWithSet("lichen_cordyceps", new Item(new Item.Settings().food(junkFood)), MUSHROOM_SET);
 
 
 

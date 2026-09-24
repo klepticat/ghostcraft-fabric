@@ -17,6 +17,9 @@ public class GCWoodTypes {
     public static final WoodType SKYRIS = WoodTypeBuilder.copyOf(WoodType.SPRUCE).register(Identifier.of(MOD_ID, "skyris"), BlockSetType.SPRUCE);
     public static final WoodType BLIGHTWILLOW = WoodTypeBuilder.copyOf(WoodType.MANGROVE).register(Identifier.of(MOD_ID, "blightwillow"), BlockSetType.MANGROVE);
     public static final WoodType DARK_WILLOW = WoodTypeBuilder.copyOf(WoodType.MANGROVE).register(Identifier.of(MOD_ID, "dark_willow"), BlockSetType.MANGROVE);
+    public static final WoodType YAGROOT = WoodTypeBuilder.copyOf(WoodType.SPRUCE).register(Identifier.of(MOD_ID, "yagroot"), BlockSetType.SPRUCE);
+    public static final WoodType STARLIT = WoodTypeBuilder.copyOf(WoodType.SPRUCE).register(Identifier.of(MOD_ID, "starlit"), BlockSetType.SPRUCE);
+
 
     public static void initialize() {
     }

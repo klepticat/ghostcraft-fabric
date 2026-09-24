@@ -156,7 +156,9 @@ public class GCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         LAMENT_SET.get(BlockType.WALL),
                         SKYRIS_SET.get(BlockType.WALL),
                         BLIGHTWILLOW_SET.get(BlockType.WALL),
-                        DARK_WILLOW_SET.get(BlockType.WALL)
+                        DARK_WILLOW_SET.get(BlockType.WALL),
+                        YAGROOT_SET.get(BlockType.WALL),
+                        STARLIT_SET.get(BlockType.WALL)
                 );
     }
 }

@@ -101,6 +101,11 @@ public class GCItemGroups {
                 entries.add(GLOOMY_GRASS);
                 entries.add(GLOOMY_SOIL);
 
+                entries.add(LICHEN_MOSS);
+                entries.add(LICHEN_MOSS_CARPET);
+                entries.add(LICHEN_MOSS_LIT);
+                entries.add(LICHEN_MOSS_CARPET_LIT);
+
                 entries.add(ITERATOR_PULSE);
                 entries.add(ITERATOR_PROJECTION_TILE);
                 entries.add(ITERATOR_PROCESSING_SCREEN_UNPOWERED);
@@ -232,7 +237,28 @@ public class GCItemGroups {
                 entries.add(ALLURITE_BRICKS_SLAB);
                 entries.add(ALLURITE_BRICKS_WALL);
                 entries.add(ALLURITE_LAMP);
-                
+
+                entries.add(AZURE_SEASTONE);
+                entries.add(AZURE_SEASTONE_STAIRS);
+                entries.add(AZURE_SEASTONE_SLAB);
+                entries.add(AZURE_SEASTONE_WALL);
+
+                entries.add(POLISHED_AZURE_SEASTONE);
+                entries.add(POLISHED_AZURE_SEASTONE_STAIRS);
+                entries.add(POLISHED_AZURE_SEASTONE_SLAB);
+                entries.add(POLISHED_AZURE_SEASTONE_WALL);
+
+                entries.add(AZURE_SEASTONE_TILE);
+                entries.add(AZURE_SEASTONE_TILE_STAIRS);
+                entries.add(AZURE_SEASTONE_TILE_SLAB);
+                entries.add(AZURE_SEASTONE_TILE_WALL);
+
+                entries.add(AZURE_SEASTONE_BRICKS);
+                entries.add(AZURE_SEASTONE_BRICKS_STAIRS);
+                entries.add(AZURE_SEASTONE_BRICKS_SLAB);
+                entries.add(AZURE_SEASTONE_BRICKS_WALL);
+                entries.add(AZURE_SEASTONE_PILLAR);
+                entries.add(CHISELED_AZURE_SEASTONE_PILLAR);
                 
                 entries.add(SUBZERO_ASH);
                 entries.add(SUBZERO_CRYSTAL_CLUSTER);
@@ -689,6 +715,45 @@ public class GCItemGroups {
 
                 entries.add(CINDER_LOG);
                 entries.add(CINDER_WOOD);
+
+                entries.add(YAGROOT_SAPLING);
+                entries.add(YAGROOT_LEAVES);
+                entries.add(YAGROOT_LOG);
+                entries.add(YAGROOT_WOOD);
+                entries.add(STRIPPED_YAGROOT_LOG);
+                entries.add(STRIPPED_YAGROOT_WOOD);
+                entries.add(YAGROOT_SET.get(BlockType.CUBE));
+                entries.add(YAGROOT_SET.get(BlockType.STAIRS));
+                entries.add(YAGROOT_SET.get(BlockType.SLAB));
+                entries.add(YAGROOT_SET.get(BlockType.FENCE));
+                entries.add(YAGROOT_SET.get(BlockType.GATE));
+                entries.add(YAGROOT_SET.get(BlockType.DOOR));
+                entries.add(YAGROOT_SET.get(BlockType.TRAPDOOR));
+                entries.add(YAGROOT_SET.get(BlockType.PRESSURE_PLATE));
+                entries.add(YAGROOT_SET.get(BlockType.BUTTON));
+                entries.add(YAGROOT_SET.get(BlockType.WALL));
+                entries.add(GCItems.YAGROOT_SIGN);
+                entries.add(GCItems.YAGROOT_HANGING_SIGN);
+
+                entries.add(STARLIT_SAPLING);
+                entries.add(STARLIT_LEAVES);
+                entries.add(STARLIT_LOG);
+                entries.add(STARLIT_WOOD);
+                entries.add(STRIPPED_STARLIT_LOG);
+                entries.add(STRIPPED_STARLIT_WOOD);
+                entries.add(STARLIT_SET.get(BlockType.CUBE));
+                entries.add(STARLIT_SET.get(BlockType.STAIRS));
+                entries.add(STARLIT_SET.get(BlockType.SLAB));
+                entries.add(STARLIT_SET.get(BlockType.FENCE));
+                entries.add(STARLIT_SET.get(BlockType.GATE));
+                entries.add(STARLIT_SET.get(BlockType.DOOR));
+                entries.add(STARLIT_SET.get(BlockType.TRAPDOOR));
+                entries.add(STARLIT_SET.get(BlockType.PRESSURE_PLATE));
+                entries.add(STARLIT_SET.get(BlockType.BUTTON));
+                entries.add(STARLIT_SET.get(BlockType.WALL));
+                entries.add(GCItems.STARLIT_SIGN);
+                entries.add(GCItems.STARLIT_HANGING_SIGN);
+
 
                 entries.add(LAMENT_SAPLING);
                 entries.add(LAMENT_LEAVES);
