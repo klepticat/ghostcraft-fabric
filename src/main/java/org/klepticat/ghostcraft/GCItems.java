@@ -5219,6 +5219,8 @@ public class GCItems {
     public static final Item SCULK_CHUNK = register("sculk_chunk", new Item(new Item.Settings().food(StrongPois)));
     public static final Item DARK_SCALE = register("dark_scale", new Item(new Item.Settings()));
 
+
+
     public static final Item FEATHER_FYNYKS = register("feather_fynyks", new Item(new Item.Settings()));
     public static final Item FEATHER_LINI = register("feather_lini", new Item(new Item.Settings()));
     public static final Item FEATHER_PARROT = register("feather_parrot", new Item(new Item.Settings()));
@@ -5261,6 +5263,7 @@ public class GCItems {
 
     public static final Item ANIMAL_TEETH = register("animal_teeth", new Item(new Item.Settings()));
     public static final Item TOOTH = register("tooth", new Item(new Item.Settings()));
+    public static final Item THRASHER_TOOTH = register("thrasher_tooth", new Item(new Item.Settings()));
     public static final Item FANGS_SHARP = register("fangs_sharp", new Item(new Item.Settings()));
     public static final Item FANGS_DULL = register("fangs_dull", new Item(new Item.Settings()));
     public static final Item UNICORN_HORN = register("unicorn_horn", new Item(new Item.Settings()));

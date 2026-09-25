@@ -151,6 +151,17 @@ public class GCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         GCBlocks.CHISELED_ALLURITE_WALL,
                         GCBlocks.ALLURITE_WALL,
 
+                        GCBlocks.AZURE_SEASTONE_WALL,
+                        GCBlocks.AZURE_SEASTONE_BRICKS_WALL,
+                        GCBlocks.AZURE_SEASTONE_TILE_WALL,
+                        GCBlocks.POLISHED_AZURE_SEASTONE_WALL,
+                        GCBlocks.CHISELED_AZURE_SEASTONE_WALL,
+
+                        GCBlocks.CHISELED_TOOTH_BRICKS_WALL,
+                        GCBlocks.TOOTH_BRICKS_WALL,
+                        GCBlocks.TOOTH_WALL,
+                        GCBlocks.TOOTH_TILES_WALL,
+
                         TANGLEWOOD_SET.get(BlockType.WALL),
                         BLUE_ENCHANTED_SET.get(BlockType.WALL),
                         LAMENT_SET.get(BlockType.WALL),

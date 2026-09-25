@@ -745,6 +745,11 @@ public class GCModelProvider extends FabricModelProvider {
         POL_azseaPool.slab(POLISHED_AZURE_SEASTONE_SLAB);
         POL_azseaPool.wall(POLISHED_AZURE_SEASTONE_WALL);
 
+        BlockStateModelGenerator.BlockTexturePool CHIS_azseaPool = blockStateModelGenerator.registerCubeAllModelTexturePool(CHISELED_AZURE_SEASTONE);
+        CHIS_azseaPool.stairs(CHISELED_AZURE_SEASTONE_STAIRS);
+        CHIS_azseaPool.slab(CHISELED_AZURE_SEASTONE_SLAB);
+        CHIS_azseaPool.wall(CHISELED_AZURE_SEASTONE_WALL);
+        
         BlockStateModelGenerator.BlockTexturePool Azur_seTilePool = blockStateModelGenerator.registerCubeAllModelTexturePool(AZURE_SEASTONE_TILE);
         Azur_seTilePool.stairs(AZURE_SEASTONE_TILE_STAIRS);
         Azur_seTilePool.slab(AZURE_SEASTONE_TILE_SLAB);
@@ -758,6 +763,25 @@ public class GCModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(AZURE_SEASTONE_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
         blockStateModelGenerator.registerAxisRotated(CHISELED_AZURE_SEASTONE_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
 
+        BlockStateModelGenerator.BlockTexturePool toothPool = blockStateModelGenerator.registerCubeAllModelTexturePool(TOOTH_BLOCK);
+        toothPool.stairs(TOOTH_STAIRS);
+        toothPool.slab(TOOTH_SLAB);
+        toothPool.wall(TOOTH_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool toothTilePool = blockStateModelGenerator.registerCubeAllModelTexturePool(TOOTH_TILES);
+        toothTilePool.stairs(TOOTH_TILES_STAIRS);
+        toothTilePool.slab(TOOTH_TILES_SLAB);
+        toothTilePool.wall(TOOTH_TILES_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool toothBrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(TOOTH_BRICKS);
+        toothBrickPool.stairs(TOOTH_BRICKS_STAIRS);
+        toothBrickPool.slab(TOOTH_BRICKS_SLAB);
+        toothBrickPool.wall(TOOTH_BRICKS_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool toothCHIBrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(CHISELED_TOOTH_BRICKS);
+        toothCHIBrickPool.stairs(CHISELED_TOOTH_BRICKS_STAIRS);
+        toothCHIBrickPool.slab(CHISELED_TOOTH_BRICKS_SLAB);
+        toothCHIBrickPool.wall(CHISELED_TOOTH_BRICKS_WALL);
 
         blockStateModelGenerator.registerWoolAndCarpet(LICHEN_MOSS, LICHEN_MOSS_CARPET);
         blockStateModelGenerator.registerWoolAndCarpet(LICHEN_MOSS_LIT, LICHEN_MOSS_CARPET_LIT);

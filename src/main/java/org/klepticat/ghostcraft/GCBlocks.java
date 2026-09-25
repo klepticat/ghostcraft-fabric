@@ -3158,6 +3158,20 @@ public class GCBlocks {
     public static Block POLISHED_AZURE_SEASTONE_SLAB = register("polished_azure_seastone_slab", SlabBlock::new, AbstractBlock.Settings.copy(POLISHED_AZURE_SEASTONE), true);
     public static Block POLISHED_AZURE_SEASTONE_WALL = register("polished_azure_seastone_wall", WallBlock::new, AbstractBlock.Settings.copy(POLISHED_AZURE_SEASTONE), true);
 
+    public static Block CHISELED_AZURE_SEASTONE = register(
+            "chiseled_azure_seastone",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block CHISELED_AZURE_SEASTONE_STAIRS = register("chiseled_azure_seastone_stairs", settings -> new StairsBlock(CHISELED_AZURE_SEASTONE.getDefaultState(), settings), AbstractBlock.Settings.copy(CHISELED_AZURE_SEASTONE), true);
+    public static Block CHISELED_AZURE_SEASTONE_SLAB = register("chiseled_azure_seastone_slab", SlabBlock::new, AbstractBlock.Settings.copy(CHISELED_AZURE_SEASTONE), true);
+    public static Block CHISELED_AZURE_SEASTONE_WALL = register("chiseled_azure_seastone_wall", WallBlock::new, AbstractBlock.Settings.copy(CHISELED_AZURE_SEASTONE), true);
 
     public static Block AZURE_SEASTONE_TILE = register(
             "azure_seastone_tile",
@@ -3213,6 +3227,68 @@ public class GCBlocks {
                     .sounds(BlockSoundGroup.STONE),
             true
     );
+
+    public static Block TOOTH_BLOCK = register(
+            "tooth_block",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block TOOTH_STAIRS = register("tooth_stairs", settings -> new StairsBlock(TOOTH_BLOCK.getDefaultState(), settings), AbstractBlock.Settings.copy(TOOTH_BLOCK), true);
+    public static Block TOOTH_SLAB = register("tooth_slab", SlabBlock::new, AbstractBlock.Settings.copy(TOOTH_BLOCK), true);
+    public static Block TOOTH_WALL = register("tooth_wall", WallBlock::new, AbstractBlock.Settings.copy(TOOTH_BLOCK), true);
+
+
+    public static Block TOOTH_TILES = register(
+            "tooth_tiles",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block TOOTH_TILES_STAIRS = register("tooth_tiles_stairs", settings -> new StairsBlock(TOOTH_TILES.getDefaultState(), settings), AbstractBlock.Settings.copy(TOOTH_TILES), true);
+    public static Block TOOTH_TILES_SLAB = register("tooth_tiles_slab", SlabBlock::new, AbstractBlock.Settings.copy(TOOTH_TILES), true);
+    public static Block TOOTH_TILES_WALL = register("tooth_tiles_wall", WallBlock::new, AbstractBlock.Settings.copy(TOOTH_TILES), true);
+
+
+    public static Block TOOTH_BRICKS = register(
+            "tooth_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block TOOTH_BRICKS_STAIRS = register("tooth_bricks_stairs", settings -> new StairsBlock(TOOTH_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(TOOTH_BRICKS), true);
+    public static Block TOOTH_BRICKS_SLAB = register("tooth_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(TOOTH_BRICKS), true);
+    public static Block TOOTH_BRICKS_WALL = register("tooth_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(TOOTH_BRICKS), true);
+
+    public static Block CHISELED_TOOTH_BRICKS = register(
+            "chiseled_tooth_bricks",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block CHISELED_TOOTH_BRICKS_STAIRS = register("chiseled_tooth_bricks_stairs", settings -> new StairsBlock(CHISELED_TOOTH_BRICKS.getDefaultState(), settings), AbstractBlock.Settings.copy(CHISELED_TOOTH_BRICKS), true);
+    public static Block CHISELED_TOOTH_BRICKS_SLAB = register("chiseled_tooth_bricks_slab", SlabBlock::new, AbstractBlock.Settings.copy(CHISELED_TOOTH_BRICKS), true);
+    public static Block CHISELED_TOOTH_BRICKS_WALL = register("chiseled_tooth_bricks_wall", WallBlock::new, AbstractBlock.Settings.copy(CHISELED_TOOTH_BRICKS), true);
 
 
     public static Block LICHEN_MOSS = register(

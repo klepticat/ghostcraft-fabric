@@ -101,6 +101,8 @@ public class GCItemGroups {
                 entries.add(GLOOMY_GRASS);
                 entries.add(GLOOMY_SOIL);
 
+                entries.add(BOWL_LICHEN);
+                entries.add(LICHEN_ROOTS);
                 entries.add(LICHEN_MOSS);
                 entries.add(LICHEN_MOSS_CARPET);
                 entries.add(LICHEN_MOSS_LIT);
@@ -253,6 +255,32 @@ public class GCItemGroups {
                 entries.add(AZURE_SEASTONE_TILE_SLAB);
                 entries.add(AZURE_SEASTONE_TILE_WALL);
 
+                entries.add(CHISELED_AZURE_SEASTONE);
+                entries.add(CHISELED_AZURE_SEASTONE_STAIRS);
+                entries.add(CHISELED_AZURE_SEASTONE_SLAB);
+                entries.add(CHISELED_AZURE_SEASTONE_WALL);
+
+                entries.add(TOOTH_BLOCK);
+                entries.add(TOOTH_STAIRS);
+                entries.add(TOOTH_SLAB);
+                entries.add(TOOTH_WALL);
+
+                entries.add(TOOTH_TILES);
+                entries.add(TOOTH_TILES_STAIRS);
+                entries.add(TOOTH_TILES_SLAB);
+                entries.add(TOOTH_TILES_WALL);
+
+                entries.add(TOOTH_BRICKS);
+                entries.add(TOOTH_BRICKS_STAIRS);
+                entries.add(TOOTH_BRICKS_SLAB);
+                entries.add(TOOTH_BRICKS_WALL);
+
+
+                entries.add(CHISELED_TOOTH_BRICKS);
+                entries.add(CHISELED_TOOTH_BRICKS_STAIRS);
+                entries.add(CHISELED_TOOTH_BRICKS_SLAB);
+                entries.add(CHISELED_TOOTH_BRICKS_WALL);
+                
                 entries.add(AZURE_SEASTONE_BRICKS);
                 entries.add(AZURE_SEASTONE_BRICKS_STAIRS);
                 entries.add(AZURE_SEASTONE_BRICKS_SLAB);
@@ -996,6 +1024,7 @@ public class GCItemGroups {
                 entries.add(BONE_SPINE);
                 entries.add(ANIMAL_TEETH);
                 entries.add(TOOTH);
+                entries.add(THRASHER_TOOTH);
                 entries.add(FANGS_SHARP);
                 entries.add(FANGS_DULL);
                 entries.add(UNICORN_HORN);
