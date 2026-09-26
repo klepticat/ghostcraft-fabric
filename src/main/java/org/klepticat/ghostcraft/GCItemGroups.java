@@ -101,6 +101,11 @@ public class GCItemGroups {
                 entries.add(GLOOMY_GRASS);
                 entries.add(GLOOMY_SOIL);
 
+                entries.add(WARPED_WELT);
+                entries.add(WARPED_WELT_STAIRS);
+                entries.add(WARPED_WELT_SLAB);
+                entries.add(WARPED_WELT_WALL);
+                
                 entries.add(BOWL_LICHEN);
                 entries.add(LICHEN_ROOTS);
                 entries.add(LICHEN_MOSS);

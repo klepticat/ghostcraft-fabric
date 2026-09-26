@@ -794,6 +794,11 @@ public class GCModelProvider extends FabricModelProvider {
         );
 
 
+        BlockStateModelGenerator.BlockTexturePool WWELTPool = blockStateModelGenerator.registerCubeAllModelTexturePool(WARPED_WELT);
+        WWELTPool.stairs(WARPED_WELT_STAIRS);
+        WWELTPool.slab(WARPED_WELT_SLAB);
+        WWELTPool.wall(WARPED_WELT_WALL);
+        
         blockStateModelGenerator.registerSimpleCubeAll(ECHO_SOIL);
         blockStateModelGenerator.registerSimpleCubeAll(CHISELED_SCULK_STONE);
 

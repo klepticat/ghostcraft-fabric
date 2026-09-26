@@ -3341,6 +3341,24 @@ public class GCBlocks {
             true
     );
 
+
+    public static Block WARPED_WELT = register(
+            "warped_welt",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(3.0F, 6.0F)
+                    .sounds(BlockSoundGroup.STONE),
+            true
+    );
+    public static Block WARPED_WELT_STAIRS = register("warped_welt_stairs", settings -> new StairsBlock(WARPED_WELT.getDefaultState(), settings), AbstractBlock.Settings.copy(WARPED_WELT), true);
+    public static Block WARPED_WELT_SLAB = register("warped_welt_slab", SlabBlock::new, AbstractBlock.Settings.copy(WARPED_WELT), true);
+    public static Block WARPED_WELT_WALL = register("warped_welt_wall", WallBlock::new, AbstractBlock.Settings.copy(WARPED_WELT), true);
+
+
+
     public static Block ECHO_SOIL = register(
             "echo_soil",
             Block::new,
