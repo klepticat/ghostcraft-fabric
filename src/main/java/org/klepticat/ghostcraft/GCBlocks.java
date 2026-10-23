@@ -3909,6 +3909,19 @@ public class GCBlocks {
     public static Block BRIMSTONE_SLAB = register("brimstone_slab", SlabBlock::new, AbstractBlock.Settings.copy(BRIMSTONE), true);
     public static Block BRIMSTONE_WALL = register("brimstone_wall", WallBlock::new, AbstractBlock.Settings.copy(BRIMSTONE), true);
 
+    public static Block COOLED_BRIMSTONE = register(
+            "cooled_brimstone",
+            MossBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.YELLOW)
+                    .strength(0.1F)
+                    .sounds(BlockSoundGroup.STONE)
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            true
+    );
+    public static Block COOLED_BRIMSTONE_STAIRS = register("cooled_brimstone_stairs", settings -> new StairsBlock(COOLED_BRIMSTONE.getDefaultState(), settings), AbstractBlock.Settings.copy(COOLED_BRIMSTONE), true);
+    public static Block COOLED_BRIMSTONE_SLAB = register("cooled_brimstone_slab", SlabBlock::new, AbstractBlock.Settings.copy(COOLED_BRIMSTONE), true);
+    public static Block COOLED_BRIMSTONE_WALL = register("cooled_brimstone_wall", WallBlock::new, AbstractBlock.Settings.copy(COOLED_BRIMSTONE), true);
 
 
     //<editor-fold desc="Wood Sets">

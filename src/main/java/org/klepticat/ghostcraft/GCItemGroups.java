@@ -82,6 +82,9 @@ public class GCItemGroups {
                 entries.add(BRIMSTONE);
                 entries.add(BRIMSTONE_STAIRS);
                 entries.add(BRIMSTONE_SLAB);
+                entries.add(COOLED_BRIMSTONE);
+                entries.add(COOLED_BRIMSTONE_STAIRS);
+                entries.add(COOLED_BRIMSTONE_SLAB);
                 entries.add(BLUE_SAND);
                 entries.add(DUSKY_MYALITE);
                 entries.add(DUSKY_MYALITE_STAIRS);

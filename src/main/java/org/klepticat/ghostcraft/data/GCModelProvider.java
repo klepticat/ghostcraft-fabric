@@ -713,6 +713,16 @@ public class GCModelProvider extends FabricModelProvider {
         slatePool.slab(SLATE_SLAB);
         slatePool.wall(SLATE_WALL);
 
+        BlockStateModelGenerator.BlockTexturePool brimPool = blockStateModelGenerator.registerCubeAllModelTexturePool(BRIMSTONE);
+        brimPool.stairs(BRIMSTONE_STAIRS);
+        brimPool.slab(BRIMSTONE_SLAB);
+        brimPool.wall(BRIMSTONE_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool CbrimPool = blockStateModelGenerator.registerCubeAllModelTexturePool(COOLED_BRIMSTONE);
+        CbrimPool.stairs(COOLED_BRIMSTONE_STAIRS);
+        CbrimPool.slab(COOLED_BRIMSTONE_SLAB);
+        CbrimPool.wall(COOLED_BRIMSTONE_WALL);
+
         BlockStateModelGenerator.BlockTexturePool dacitePool = blockStateModelGenerator.registerCubeAllModelTexturePool(DACITE);
         dacitePool.stairs(DACITE_STAIRS);
         dacitePool.slab(DACITE_SLAB);
